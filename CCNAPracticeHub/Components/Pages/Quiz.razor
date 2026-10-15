@@ -240,9 +240,12 @@ else if (QuizFinished)
     </div>
 }
 
+
 @code {
 
-    // Questions loaded from SQLite
+    // Maximum number of questions in one practice session
+    private const int MaxQuestions = 25;
+
     private List<Question> Questions = new();
 
     private int CurrentIndex = 0;
@@ -256,13 +259,11 @@ else if (QuizFinished)
 
     private string? ErrorMessage;
 
-    // Current question
     private Question? CurrentQuestion =>
         CurrentIndex < Questions.Count
             ? Questions[CurrentIndex]
             : null;
 
-    // Current progress
     private int ProgressPercentage =>
         Questions.Count == 0
             ? 0
@@ -270,7 +271,6 @@ else if (QuizFinished)
                 (double)(CurrentIndex + 1) /
                 Questions.Count * 100);
 
-    // Final score percentage
     private int FinalPercentage =>
         Questions.Count == 0
             ? 0
@@ -278,7 +278,7 @@ else if (QuizFinished)
                 (double)Score /
                 Questions.Count * 100);
 
-    // Load database questions when page opens
+    // Load a random selection from SQLite
     protected override async Task OnInitializedAsync()
     {
         await LoadQuestionsAsync();
@@ -296,7 +296,8 @@ else if (QuizFinished)
 
             Questions = await db.Questions
                 .AsNoTracking()
-                .OrderBy(q => q.Id)
+                .OrderBy(q => EF.Functions.Random())
+                .Take(MaxQuestions)
                 .ToListAsync();
 
             ResetQuizState();
@@ -315,21 +316,18 @@ else if (QuizFinished)
         }
     }
 
-    // Choose an answer
     private void SelectAnswer(int index)
     {
-        if (AnswerSubmitted)
+        if (AnswerSubmitted || CurrentQuestion is null)
             return;
 
-        if (CurrentQuestion is null ||
-            index < 0 ||
+        if (index < 0 ||
             index >= CurrentQuestion.Options.Count)
             return;
 
         SelectedAnswerIndex = index;
     }
 
-    // Submit selected answer
     private void SubmitAnswer()
     {
         if (CurrentQuestion is null ||
@@ -342,14 +340,11 @@ else if (QuizFinished)
             CurrentQuestion.CorrectAnswerIndex;
 
         if (AnswerCorrect)
-        {
             Score++;
-        }
 
         AnswerSubmitted = true;
     }
 
-    // Move to next question
     private void NextQuestion()
     {
         if (!AnswerSubmitted)
@@ -358,7 +353,6 @@ else if (QuizFinished)
         if (CurrentIndex < Questions.Count - 1)
         {
             CurrentIndex++;
-
             SelectedAnswerIndex = null;
             AnswerSubmitted = false;
             AnswerCorrect = false;
@@ -369,13 +363,12 @@ else if (QuizFinished)
         }
     }
 
-    // Restart using currently loaded questions
-    private void RestartQuiz()
+    // Starting again retrieves a fresh random selection
+    private async Task RestartQuiz()
     {
-        ResetQuizState();
+        await LoadQuestionsAsync();
     }
 
-    // Reset all quiz progress
     private void ResetQuizState()
     {
         CurrentIndex = 0;
@@ -387,7 +380,6 @@ else if (QuizFinished)
         QuizFinished = Questions.Count == 0;
     }
 
-    // Style selected and submitted answers
     private string GetOptionClass(int index)
     {
         string classes =

@@ -1,0 +1,302 @@
+[
+  {
+    "id": 12,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Easy",
+    "questionText": "Which subnet mask corresponds to the IPv4 prefix /27?",
+    "options": [
+      "255.255.255.192",
+      "255.255.255.224",
+      "255.255.255.240",
+      "255.255.255.248"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A /27 prefix has 27 network bits. The final octet of its subnet mask is 11100000 in binary, which equals 224."
+  },
+  {
+    "id": 13,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Easy",
+    "questionText": "How many usable host addresses are available in a conventional IPv4 /28 subnet?",
+    "options": [
+      "16",
+      "12",
+      "14",
+      "30"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "A /28 leaves 4 host bits: 2^4 = 16 total addresses. Excluding the network and broadcast addresses leaves 14 usable host addresses."
+  },
+  {
+    "id": 14,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Medium",
+    "questionText": "What is the network address containing host 192.168.10.77/26?",
+    "options": [
+      "192.168.10.0",
+      "192.168.10.64",
+      "192.168.10.77",
+      "192.168.10.128"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A /26 has blocks of 64 addresses in the last octet: 0–63, 64–127, 128–191 and 192–255. Address .77 belongs to 192.168.10.64/26."
+  },
+  {
+    "id": 15,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Medium",
+    "questionText": "What is the directed broadcast address for subnet 172.16.5.128/27?",
+    "options": [
+      "172.16.5.159",
+      "172.16.5.160",
+      "172.16.5.191",
+      "172.16.5.255"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "A /27 contains 32 addresses. The 172.16.5.128/27 block runs from .128 to .159, so .159 is its broadcast address."
+  },
+  {
+    "id": 16,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Medium",
+    "questionText": "What is the first usable host address in subnet 10.20.30.64/28?",
+    "options": [
+      "10.20.30.64",
+      "10.20.30.66",
+      "10.20.30.65",
+      "10.20.30.79"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "The network address is 10.20.30.64, so the first conventional usable host address is 10.20.30.65."
+  },
+  {
+    "id": 17,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Medium",
+    "questionText": "What is the last usable host address in subnet 192.168.50.32/27?",
+    "options": [
+      "192.168.50.63",
+      "192.168.50.62",
+      "192.168.50.61",
+      "192.168.50.64"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "The /27 block runs from .32 through .63. Because .63 is the broadcast, .62 is the last usable host address."
+  },
+  {
+    "id": 18,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Easy",
+    "questionText": "What is the dotted-decimal subnet mask for prefix /23?",
+    "options": [
+      "255.255.255.0",
+      "255.255.252.0",
+      "255.255.254.0",
+      "255.255.248.0"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "A /23 uses 23 network bits: 8 + 8 + 7, giving the mask 255.255.254.0."
+  },
+  {
+    "id": 19,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Medium",
+    "questionText": "Which is the smallest conventional IPv4 prefix that supports at least 50 usable hosts per subnet?",
+    "options": [
+      "/27",
+      "/25",
+      "/26",
+      "/28"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "A /26 has 6 host bits and provides 62 usable host addresses. A /27 provides only 30, while /25 is larger than necessary."
+  },
+  {
+    "id": 20,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Medium",
+    "questionText": "How many /27 subnets can be created from one /24 network using equal-size subnetting?",
+    "options": [
+      "4",
+      "6",
+      "8",
+      "16"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "Moving from /24 to /27 borrows 3 additional network bits, creating 2^3 = 8 equal-size /27 subnets."
+  },
+  {
+    "id": 21,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Medium",
+    "questionText": "Which address belongs to subnet 192.168.8.96/27 and can be assigned to a conventional host?",
+    "options": [
+      "192.168.8.95",
+      "192.168.8.96",
+      "192.168.8.127",
+      "192.168.8.110"
+    ],
+    "correctAnswerIndex": 3,
+    "explanation": "The 192.168.8.96/27 subnet spans .96 through .127, with usable hosts .97 through .126. The address .110 is inside that range."
+  },
+  {
+    "id": 22,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Hard",
+    "questionText": "Two hosts are configured as 192.168.1.30/27 and 192.168.1.33/27. Are they in the same IPv4 subnet?",
+    "options": [
+      "Yes, both are in 192.168.1.0/27",
+      "No, they belong to adjacent /27 subnets",
+      "Yes, because both use a /27 mask",
+      "No, because private IPv4 addresses cannot communicate directly"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A /27 block size is 32. Address .30 is in 192.168.1.0/27, while .33 is in 192.168.1.32/27. They require Layer 3 routing to communicate across subnets."
+  },
+  {
+    "id": 23,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Hard",
+    "questionText": "What is the network address for 10.14.173.200/20?",
+    "options": [
+      "10.14.160.0",
+      "10.14.172.0",
+      "10.14.173.0",
+      "10.14.176.0"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "A /20 mask is 255.255.240.0, so third-octet subnet blocks increase by 16. The third octet 173 falls within 160–175."
+  },
+  {
+    "id": 24,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Hard",
+    "questionText": "What is the broadcast address for the subnet containing 172.20.37.70/22?",
+    "options": [
+      "172.20.37.255",
+      "172.20.39.255",
+      "172.20.35.255",
+      "172.20.40.255"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A /22 mask is 255.255.252.0, so third-octet blocks span groups of 4. The address is in 172.20.36.0/22, whose broadcast is 172.20.39.255."
+  },
+  {
+    "id": 25,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Medium",
+    "questionText": "What is the total number of IPv4 addresses in a /29 subnet, including network and broadcast?",
+    "options": [
+      "6",
+      "16",
+      "8",
+      "14"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "A /29 leaves 3 host bits, producing 2^3 = 8 total addresses (normally 6 usable host addresses)."
+  },
+  {
+    "id": 26,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Hard",
+    "questionText": "A network needs at least 500 usable IPv4 host addresses in one conventional subnet. What is the longest suitable prefix?",
+    "options": [
+      "/24",
+      "/22",
+      "/25",
+      "/23"
+    ],
+    "correctAnswerIndex": 3,
+    "explanation": "A /23 leaves 9 host bits: 512 total addresses, or 510 usable. A /24 supplies only 254 usable, and /22 would allocate more addresses than necessary."
+  },
+  {
+    "id": 27,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Medium",
+    "questionText": "Which subnet mask is equivalent to IPv4 prefix /30?",
+    "options": [
+      "255.255.255.248",
+      "255.255.255.252",
+      "255.255.255.254",
+      "255.255.255.240"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A /30 uses 30 network bits and leaves 2 host bits. Its final mask octet is 11111100, or 252."
+  },
+  {
+    "id": 28,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Hard",
+    "questionText": "An interface is configured with 192.168.20.130/25. Which is the correct network address?",
+    "options": [
+      "192.168.20.0",
+      "192.168.20.64",
+      "192.168.20.128",
+      "192.168.20.192"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "A /25 divides a /24 into two 128-address subnets: .0–.127 and .128–.255. Address .130 falls into the second subnet."
+  },
+  {
+    "id": 29,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Medium",
+    "questionText": "Which IP address is the broadcast address of 10.0.4.0/23?",
+    "options": [
+      "10.0.4.255",
+      "10.0.5.255",
+      "10.0.6.255",
+      "10.0.5.254"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A /23 mask is 255.255.254.0. The network 10.0.4.0/23 spans third octets 4 and 5, ending at broadcast 10.0.5.255."
+  },
+  {
+    "id": 30,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Hard",
+    "questionText": "A technician assigns host 192.168.40.15 with mask 255.255.255.240. Why is this invalid for a conventional host interface?",
+    "options": [
+      "It is the network address of the /28 subnet",
+      "It is the directed broadcast address of the /28 subnet",
+      "The address requires a /24 mask",
+      "The address is outside the private IPv4 range"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "The /28 subnet 192.168.40.0/28 spans .0–.15. The final address .15 is reserved as the subnet broadcast in conventional IPv4 host addressing."
+  },
+  {
+    "id": 31,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Hard",
+    "questionText": "Two devices use addresses 10.1.8.62/26 and 10.1.8.65/26. Which statement is correct?",
+    "options": [
+      "They are in the same subnet and can exchange traffic directly",
+      "They are in different subnets and normally need a router to communicate",
+      "Both addresses are subnet broadcast addresses",
+      "Both addresses are subnet network addresses"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "With a /26 mask, .62 is in subnet 10.1.8.0/26 and .65 is in subnet 10.1.8.64/26. Communication between these subnets normally requires routing."
+  }
+]
