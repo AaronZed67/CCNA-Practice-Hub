@@ -1,0 +1,315 @@
+﻿
+@page "/quiz"
+@using CCNAPracticeHub.Models
+@using CCNAPracticeHub.Services
+
+<PageTitle>Practice Quiz | CCNA Practice Hub</PageTitle>
+
+<div class="mb-4">
+    <span class="dashboard-eyebrow">CCNA QUESTION PRACTICE</span>
+    <h1 class="mt-2">Practice Quiz</h1>
+    <p>Test your CCNA knowledge and review your answers.</p>
+</div>
+
+@if (!QuizFinished && CurrentQuestion is not null)
+{
+    <div class="card">
+        <div class="card-body p-4">
+
+            <!-- QUESTION INFORMATION -->
+
+            <div class="d-flex justify-content-between
+                        align-items-center flex-wrap gap-2 mb-3">
+
+                <span class="badge bg-primary">
+                    @CurrentQuestion.Domain
+                </span>
+
+                <span class="text-muted">
+                    Question @(CurrentIndex + 1) of @Questions.Count
+                </span>
+            </div>
+
+            <!-- PROGRESS BAR -->
+
+            <div class="progress dashboard-progress mb-4">
+                <div class="progress-bar"
+                     role="progressbar"
+                     style="width: @(ProgressPercentage)%"
+                     aria-valuenow="@ProgressPercentage"
+                     aria-valuemin="0"
+                     aria-valuemax="100">
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <span class="badge bg-primary">
+                    @CurrentQuestion.Difficulty
+                </span>
+
+                <span class="ms-2 text-muted">
+                    @CurrentQuestion.Subtopic
+                </span>
+            </div>
+
+            <!-- QUESTION -->
+
+            <h3 class="mb-4">
+                @CurrentQuestion.QuestionText
+            </h3>
+
+            <!-- ANSWER OPTIONS -->
+
+            <div class="d-grid gap-3">
+
+                @for (int i = 0; i < CurrentQuestion.Options.Count; i++)
+                {
+                    var optionIndex = i;
+
+                    <button type="button"
+                            class="@GetOptionClass(optionIndex)"
+                            disabled="@AnswerSubmitted"
+                            @onclick="() => SelectAnswer(optionIndex)">
+
+                        <strong class="me-2">
+                            @((char)('A' + optionIndex)).
+                        </strong>
+
+                        @CurrentQuestion.Options[optionIndex]
+
+                    </button>
+                }
+            </div>
+
+            <!-- FEEDBACK -->
+
+            @if (AnswerSubmitted)
+            {
+                <div class="alert @(AnswerCorrect
+                                ? "alert-success"
+                                : "alert-danger") mt-4">
+
+                    <strong>
+                        @(AnswerCorrect
+                            ? "Correct answer!"
+                            : "Incorrect answer")
+                    </strong>
+
+                    <p class="mb-2 mt-2">
+                        @CurrentQuestion.Explanation
+                    </p>
+
+                    @if (!AnswerCorrect)
+                    {
+                        <p class="mb-0">
+                            <strong>Correct answer:</strong>
+                            @CurrentQuestion.Options[
+                                CurrentQuestion.CorrectAnswerIndex]
+                        </p>
+                    }
+                </div>
+            }
+
+            <!-- ACTION BUTTONS -->
+
+            <div class="d-flex justify-content-between
+                        align-items-center mt-4 flex-wrap gap-3">
+
+                <span class="text-muted">
+                    Score: @Score / @Questions.Count
+                </span>
+
+                @if (!AnswerSubmitted)
+                {
+                    <button class="btn btn-primary"
+                            disabled="@(SelectedAnswerIndex is null)"
+                            @onclick="SubmitAnswer">
+
+                        Submit Answer
+
+                    </button>
+                }
+                else
+                {
+                    <button class="btn btn-primary"
+                            @onclick="NextQuestion">
+
+                        @(CurrentIndex == Questions.Count - 1
+                            ? "View Results"
+                            : "Next Question →")
+
+                    </button>
+                }
+
+            </div>
+
+        </div>
+    </div>
+}
+else if (QuizFinished)
+{
+    <!-- FINAL RESULTS -->
+
+    <div class="card">
+        <div class="card-body p-4 p-md-5 text-center">
+
+            <span class="dashboard-eyebrow">
+                PRACTICE COMPLETE
+            </span>
+
+            <h2 class="mt-3">Quiz Results</h2>
+
+            <h1 class="display-3 my-4">
+                @Score / @Questions.Count
+            </h1>
+
+            <h3>@FinalPercentage%</h3>
+
+            <p class="mt-3">
+                You answered @Score out of @Questions.Count
+                questions correctly.
+            </p>
+
+            <div class="progress dashboard-progress my-4">
+                <div class="progress-bar"
+                     role="progressbar"
+                     style="width: @(FinalPercentage)%"
+                     aria-valuenow="@FinalPercentage"
+                     aria-valuemin="0"
+                     aria-valuemax="100">
+                </div>
+            </div>
+
+            <button class="btn btn-primary mt-3"
+                    @onclick="RestartQuiz">
+
+                Try Again
+
+            </button>
+
+            <a href="/topics"
+               class="btn btn-outline-info mt-3 ms-2">
+
+                Back to Topics
+
+            </a>
+
+        </div>
+    </div>
+}
+
+@code {
+
+    private List<Question> Questions = new();
+
+    private int CurrentIndex = 0;
+    private int? SelectedAnswerIndex;
+    private int Score = 0;
+
+    private bool AnswerSubmitted = false;
+    private bool AnswerCorrect = false;
+    private bool QuizFinished = false;
+
+    private Question? CurrentQuestion =>
+        CurrentIndex < Questions.Count
+            ? Questions[CurrentIndex]
+            : null;
+
+    private int ProgressPercentage =>
+        Questions.Count == 0
+            ? 0
+            : (int)Math.Round(
+                (double)(CurrentIndex + 1) / Questions.Count * 100);
+
+    private int FinalPercentage =>
+        Questions.Count == 0
+            ? 0
+            : (int)Math.Round(
+                (double)Score / Questions.Count * 100);
+
+    protected override void OnInitialized()
+    {
+        RestartQuiz();
+    }
+
+    private void SelectAnswer(int index)
+    {
+        if (AnswerSubmitted)
+            return;
+
+        SelectedAnswerIndex = index;
+    }
+
+    private void SubmitAnswer()
+    {
+        if (CurrentQuestion is null ||
+            SelectedAnswerIndex is null ||
+            AnswerSubmitted)
+        {
+            return;
+        }
+
+        AnswerCorrect =
+            SelectedAnswerIndex.Value ==
+            CurrentQuestion.CorrectAnswerIndex;
+
+        if (AnswerCorrect)
+        {
+            Score++;
+        }
+
+        AnswerSubmitted = true;
+    }
+
+    private void NextQuestion()
+    {
+        if (!AnswerSubmitted)
+            return;
+
+        if (CurrentIndex < Questions.Count - 1)
+        {
+            CurrentIndex++;
+            SelectedAnswerIndex = null;
+            AnswerSubmitted = false;
+            AnswerCorrect = false;
+        }
+        else
+        {
+            QuizFinished = true;
+        }
+    }
+
+    private void RestartQuiz()
+    {
+        Questions = QuestionBank.GetQuestions();
+
+        CurrentIndex = 0;
+        SelectedAnswerIndex = null;
+        Score = 0;
+
+        AnswerSubmitted = false;
+        AnswerCorrect = false;
+
+        QuizFinished = Questions.Count == 0;
+    }
+
+    private string GetOptionClass(int index)
+    {
+        string classes =
+            "btn text-start p-3 ccna-answer-option";
+
+        if (AnswerSubmitted && CurrentQuestion is not null)
+        {
+            if (index == CurrentQuestion.CorrectAnswerIndex)
+                return classes + " ccna-answer-correct";
+
+            if (index == SelectedAnswerIndex)
+                return classes + " ccna-answer-incorrect";
+        }
+
+        if (SelectedAnswerIndex == index)
+            return classes + " ccna-answer-selected";
+
+        return classes;
+    }
+}

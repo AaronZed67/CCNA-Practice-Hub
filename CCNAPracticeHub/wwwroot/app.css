@@ -682,3 +682,66 @@ button:focus-visible {
     color: #FFFFFF !important;
     border-left-color: #E5E5E5;
 }
+
+
+/* ==========================================
+   CCNA PRACTICE QUIZ
+   ========================================== */
+
+.ccna-answer-option {
+    background: var(--theme-card, #151F33);
+    color: var(--theme-text, #F1F5F9);
+    border: 1px solid var(--theme-border, #26354D);
+    border-radius: 12px;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+    .ccna-answer-option:hover:not(:disabled) {
+        background: var(--theme-hover, #172D4A);
+        border-color: var(--theme-primary, #3B82F6);
+        color: var(--theme-text, #F1F5F9);
+    }
+
+.ccna-answer-selected {
+    border-color: var(--theme-primary, #3B82F6);
+    background: var(--theme-hover, #172D4A);
+    color: var(--theme-text, #F1F5F9);
+}
+
+.ccna-answer-correct {
+    background: #123C30 !important;
+    border-color: #22C55E !important;
+    color: #D1FAE5 !important;
+}
+
+.ccna-answer-incorrect {
+    background: #452026 !important;
+    border-color: #EF4444 !important;
+    color: #FEE2E2 !important;
+}
+
+.ccna-answer-option:disabled {
+    opacity: 1;
+    cursor: default;
+}
+
+.ccna-answer-option:focus-visible {
+    outline: 2px solid var(--theme-accent, #22D3EE);
+    outline-offset: 3px;
+}
+
+.page .alert-success {
+    background: #123C30;
+    border-color: #166534;
+    color: #D1FAE5;
+}
+
+.page .alert-danger {
+    background: #452026;
+    border-color: #991B1B;
+    color: #FEE2E2;
+}
+
+.page .alert p {
+    color: inherit !important;
+}
