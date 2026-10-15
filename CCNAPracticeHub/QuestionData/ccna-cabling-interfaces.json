@@ -1,0 +1,452 @@
+[
+  {
+    "id": 119,
+    "domain": "Network Fundamentals",
+    "subtopic": "Cabling & Interfaces",
+    "difficulty": "Easy",
+    "questionText": "Which cable type is commonly used to connect a desktop PC to an Ethernet switch?",
+    "options": [
+      "Coaxial cable with BNC connectors",
+      "Twisted-pair Ethernet cable",
+      "Fiber-optic cable with LC connectors",
+      "Serial DCE cable"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Copper twisted-pair Ethernet cabling, such as Cat5e or Cat6, is commonly used to connect PCs to Ethernet switches."
+  },
+  {
+    "id": 120,
+    "domain": "Network Fundamentals",
+    "subtopic": "Cabling & Interfaces",
+    "difficulty": "Easy",
+    "questionText": "Which connector is commonly used for copper twisted-pair Ethernet connections?",
+    "options": [
+      "RJ-45-style 8P8C connector",
+      "LC connector",
+      "SC connector",
+      "BNC connector"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "Copper twisted-pair Ethernet commonly uses an eight-position, eight-contact modular connector, often called RJ-45."
+  },
+  {
+    "id": 121,
+    "domain": "Network Fundamentals",
+    "subtopic": "Cabling & Interfaces",
+    "difficulty": "Easy",
+    "questionText": "Which medium transmits network data using pulses of light?",
+    "options": [
+      "Unshielded twisted pair",
+      "Coaxial copper cable",
+      "Fiber-optic cable",
+      "Shielded twisted pair"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "Fiber-optic cables transmit data as light through a glass or plastic optical medium rather than electrical signals through copper."
+  },
+  {
+    "id": 122,
+    "domain": "Network Fundamentals",
+    "subtopic": "Cabling & Interfaces",
+    "difficulty": "Easy",
+    "questionText": "What is a major advantage of fiber-optic cabling over copper Ethernet cabling?",
+    "options": [
+      "It requires no optical transceivers",
+      "It is immune to electromagnetic interference",
+      "It always costs less to install",
+      "It carries electrical power to endpoints"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Fiber-optic transmission uses light and is not affected by electromagnetic interference in the same way as electrical signals in copper cables."
+  },
+  {
+    "id": 123,
+    "domain": "Network Fundamentals",
+    "subtopic": "Cabling & Interfaces",
+    "difficulty": "Medium",
+    "questionText": "Which type of optical fiber is generally preferred for long-distance telecommunications links?",
+    "options": [
+      "Multimode fiber",
+      "Single-mode fiber",
+      "Cat6a copper",
+      "Coaxial cable"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Single-mode fiber has a small core and supports optical transmission over long distances with low modal dispersion, making it suitable for long-distance links."
+  },
+  {
+    "id": 124,
+    "domain": "Network Fundamentals",
+    "subtopic": "Cabling & Interfaces",
+    "difficulty": "Medium",
+    "questionText": "Which statement accurately describes multimode fiber?",
+    "options": [
+      "It carries electrical signals through copper pairs",
+      "It supports multiple propagation modes of light",
+      "It is restricted to one optical wavelength in every implementation",
+      "It never requires an optical transceiver"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Multimode fiber has a larger core than typical single-mode fiber and allows multiple light propagation modes, which can cause modal dispersion over distance."
+  },
+  {
+    "id": 125,
+    "domain": "Network Fundamentals",
+    "subtopic": "Cabling & Interfaces",
+    "difficulty": "Medium",
+    "questionText": "A company needs to connect two network buildings over a distance of several kilometers. Which cabling choice is generally most suitable?",
+    "options": [
+      "Cat5e copper Ethernet",
+      "Standard copper patch cord",
+      "Single-mode fiber",
+      "Unshielded telephone cable"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "Single-mode fiber, paired with suitable optical transceivers, is appropriate for kilometer-scale network connections. Standard twisted-pair Ethernet channels have much shorter distance limits."
+  },
+  {
+    "id": 126,
+    "domain": "Network Fundamentals",
+    "subtopic": "Cabling & Interfaces",
+    "difficulty": "Medium",
+    "questionText": "What is the usual maximum channel length for 1000BASE-T Ethernet over standards-compliant twisted-pair copper cabling?",
+    "options": [
+      "10 meters",
+      "55 meters",
+      "100 meters",
+      "500 meters"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "1000BASE-T Ethernet commonly supports a maximum twisted-pair channel length of 100 meters when suitable cable and installation standards are followed."
+  },
+  {
+    "id": 127,
+    "domain": "Network Fundamentals",
+    "subtopic": "Cabling & Interfaces",
+    "difficulty": "Medium",
+    "questionText": "Which Ethernet standard specifies Gigabit Ethernet over twisted-pair copper cabling?",
+    "options": [
+      "100BASE-FX",
+      "1000BASE-T",
+      "10GBASE-SR",
+      "1000BASE-LX"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "1000BASE-T is the Gigabit Ethernet physical-layer specification for twisted-pair copper cabling."
+  },
+  {
+    "id": 128,
+    "domain": "Network Fundamentals",
+    "subtopic": "Cabling & Interfaces",
+    "difficulty": "Medium",
+    "questionText": "Which Ethernet technology is designed for short-reach 10 Gigabit Ethernet over suitable multimode fiber?",
+    "options": [
+      "10GBASE-SR",
+      "10GBASE-LR",
+      "1000BASE-T",
+      "100BASE-TX"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "10GBASE-SR is a short-reach 10 Gigabit Ethernet optical standard that operates over supported multimode fiber types."
+  },
+  {
+    "id": 129,
+    "domain": "Network Fundamentals",
+    "subtopic": "Cabling & Interfaces",
+    "difficulty": "Hard",
+    "questionText": "A network engineer needs a 10 Gigabit Ethernet optical connection over approximately 10 kilometers of single-mode fiber. Which standard is the most suitable?",
+    "options": [
+      "10GBASE-SR",
+      "1000BASE-T",
+      "10GBASE-LR",
+      "100BASE-TX"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "10GBASE-LR is a long-reach 10 Gigabit Ethernet standard intended for single-mode fiber links up to approximately 10 kilometers under supported conditions."
+  },
+  {
+    "id": 130,
+    "domain": "Network Fundamentals",
+    "subtopic": "Cabling & Interfaces",
+    "difficulty": "Easy",
+    "questionText": "What does the abbreviation SFP stand for in networking?",
+    "options": [
+      "Secure Fiber Protocol",
+      "Small Form-factor Pluggable",
+      "Switch Forwarding Process",
+      "Single Frequency Port"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "SFP stands for Small Form-factor Pluggable, referring to a family of removable network transceiver modules."
+  },
+  {
+    "id": 131,
+    "domain": "Network Fundamentals",
+    "subtopic": "Cabling & Interfaces",
+    "difficulty": "Medium",
+    "questionText": "What is the primary purpose of an SFP or SFP+ transceiver installed in a compatible network device?",
+    "options": [
+      "Provide a removable physical network interface for a supported medium and speed",
+      "Replace the switch's routing table",
+      "Assign VLAN IDs to every connected endpoint",
+      "Store the switch's startup configuration"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "SFP-family modules provide removable physical-layer connectivity. The supported medium, signaling and speed depend on the module and equipment capabilities."
+  },
+  {
+    "id": 132,
+    "domain": "Network Fundamentals",
+    "subtopic": "Cabling & Interfaces",
+    "difficulty": "Medium",
+    "questionText": "Which optical connector is commonly associated with duplex fiber links using SFP transceivers?",
+    "options": [
+      "RJ-11",
+      "LC",
+      "BNC",
+      "DB-9"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "LC connectors are commonly used on duplex fiber patch leads connected to many SFP and SFP+ optical transceivers."
+  },
+  {
+    "id": 133,
+    "domain": "Network Fundamentals",
+    "subtopic": "Cabling & Interfaces",
+    "difficulty": "Medium",
+    "questionText": "What does full-duplex operation allow on an Ethernet interface?",
+    "options": [
+      "Transmission and reception at the same time",
+      "Transmission only when no other device is sending",
+      "Reception without any ability to transmit",
+      "Automatic conversion from copper to fiber"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "Full-duplex Ethernet allows simultaneous transmission and reception on a link, without the shared-medium collisions associated with half-duplex Ethernet."
+  },
+  {
+    "id": 134,
+    "domain": "Network Fundamentals",
+    "subtopic": "Cabling & Interfaces",
+    "difficulty": "Medium",
+    "questionText": "Which statement describes half-duplex Ethernet operation?",
+    "options": [
+      "Both endpoints transmit and receive simultaneously without contention",
+      "A device cannot transmit and receive simultaneously on the same shared medium",
+      "The link must use optical fiber",
+      "The connection automatically operates at 10 Gbps"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Half-duplex Ethernet does not allow simultaneous transmission and reception on the same shared medium and historically uses collision-handling mechanisms such as CSMA/CD."
+  },
+  {
+    "id": 135,
+    "domain": "Network Fundamentals",
+    "subtopic": "Cabling & Interfaces",
+    "difficulty": "Hard",
+    "questionText": "One end of a 100 Mbps Ethernet link is forced to full duplex while the other end operates at half duplex. What problem can this create?",
+    "options": [
+      "The link will necessarily become a 10 Gbps connection",
+      "Duplex mismatch causing frame errors and poor performance",
+      "Automatic conversion of the connection to single-mode fiber",
+      "The switch will automatically assign a new IPv4 subnet"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A duplex mismatch can produce poor throughput and interface errors because one side permits simultaneous communication while the other side operates in half duplex."
+  },
+  {
+    "id": 136,
+    "domain": "Network Fundamentals",
+    "subtopic": "Cabling & Interfaces",
+    "difficulty": "Hard",
+    "questionText": "A switch interface shows many increasing CRC errors. Which issue is a plausible physical-layer cause?",
+    "options": [
+      "A damaged copper cable",
+      "An incorrect DNS suffix",
+      "A missing static default route on a remote router",
+      "A duplicate website hostname"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "Damaged or poorly terminated copper cabling can corrupt Ethernet frames, resulting in failed frame check sequence or CRC checks. CRC errors can also have other physical causes."
+  },
+  {
+    "id": 137,
+    "domain": "Network Fundamentals",
+    "subtopic": "Cabling & Interfaces",
+    "difficulty": "Hard",
+    "questionText": "An Ethernet interface shows increasing late collisions on a half-duplex link. Which condition should the technician investigate?",
+    "options": [
+      "An incorrect NTP time zone",
+      "Excessive collision-domain diameter or a duplex mismatch",
+      "An expired web browser certificate",
+      "An incorrect IPv6 DNS record"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Late collisions can result from an oversized collision domain or duplex mismatch. They indicate an Ethernet media-access or physical-layer problem."
+  },
+  {
+    "id": 138,
+    "domain": "Network Fundamentals",
+    "subtopic": "Cabling & Interfaces",
+    "difficulty": "Medium",
+    "questionText": "What is the primary purpose of Auto-MDIX on supported copper Ethernet interfaces?",
+    "options": [
+      "Automatically adjust the transmit and receive pair mapping",
+      "Assign an IP address without DHCP",
+      "Encrypt traffic between network devices",
+      "Convert optical signals into radio waves"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "Auto-MDIX automatically handles transmit and receive pair orientation on supported copper Ethernet interfaces, reducing the need to choose a straight-through or crossover cable manually."
+  },
+  {
+    "id": 139,
+    "domain": "Network Fundamentals",
+    "subtopic": "Cabling & Interfaces",
+    "difficulty": "Easy",
+    "questionText": "Which cable was traditionally used to directly connect two similar 10/100 Mbps Ethernet switch ports when Auto-MDIX was unavailable?",
+    "options": [
+      "Fiber-optic patch cable",
+      "Ethernet crossover cable",
+      "Serial rollover cable",
+      "Coaxial television cable"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A crossover cable swaps the transmit and receive pairs used by 10/100 Mbps Ethernet. It was traditionally required for some like-device connections before Auto-MDIX became widespread."
+  },
+  {
+    "id": 140,
+    "domain": "Network Fundamentals",
+    "subtopic": "Cabling & Interfaces",
+    "difficulty": "Easy",
+    "questionText": "Which cable is traditionally used to connect a PC Ethernet NIC to a switch access port when Auto-MDIX is unavailable?",
+    "options": [
+      "Ethernet straight-through cable",
+      "Ethernet crossover cable",
+      "Serial rollover cable",
+      "Single-mode fiber patch cable"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "A straight-through copper Ethernet cable was traditionally used between unlike 10/100 Mbps Ethernet interfaces, such as a PC NIC and a switch port."
+  },
+  {
+    "id": 141,
+    "domain": "Network Fundamentals",
+    "subtopic": "Cabling & Interfaces",
+    "difficulty": "Medium",
+    "questionText": "What is a primary advantage of shielded twisted-pair cabling compared with unshielded twisted pair in an electrically noisy environment?",
+    "options": [
+      "It eliminates the need for correct termination",
+      "It can offer improved protection against electromagnetic interference",
+      "It guarantees unlimited transmission distance",
+      "It converts Ethernet traffic into optical signals"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Properly installed shielded twisted-pair cabling can reduce the impact of external electromagnetic interference in electrically noisy installations."
+  },
+  {
+    "id": 142,
+    "domain": "Network Fundamentals",
+    "subtopic": "Cabling & Interfaces",
+    "difficulty": "Hard",
+    "questionText": "A fiber-optic connection remains down after installing two optical transceivers. Which mismatch should be checked first?",
+    "options": [
+      "Whether the devices use different DNS domains",
+      "Whether the transceivers and fiber medium are compatible",
+      "Whether the switches have identical hostnames",
+      "Whether both interfaces share the same management IP address"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Optical modules must be compatible with their ports, fiber type, wavelengths and link requirements. Mismatched optical media or transceiver specifications can prevent link establishment."
+  },
+  {
+    "id": 143,
+    "domain": "Network Fundamentals",
+    "subtopic": "Cabling & Interfaces",
+    "difficulty": "Medium",
+    "questionText": "In a typical duplex fiber connection with separate transmit and receive strands, how should the strands be connected?",
+    "options": [
+      "Transmit to transmit and receive to receive",
+      "Both strands to the transmit connector",
+      "Transmit on one endpoint to receive on the other endpoint",
+      "Either strand orientation always works without checking"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "For conventional two-fiber duplex links, the transmit side of each endpoint connects to the receive side of the opposite endpoint."
+  },
+  {
+    "id": 144,
+    "domain": "Network Fundamentals",
+    "subtopic": "Cabling & Interfaces",
+    "difficulty": "Hard",
+    "questionText": "A copper Ethernet interface is configured with the shutdown command on Cisco IOS. What should the interface status normally indicate?",
+    "options": [
+      "Up and forwarding",
+      "Administratively down",
+      "Automatically converted to a trunk",
+      "Err-disabled due to a CRC error"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "The shutdown command administratively disables the interface. Cisco IOS reports the interface as administratively down until it is enabled with no shutdown."
+  },
+  {
+    "id": 145,
+    "domain": "Network Fundamentals",
+    "subtopic": "Cabling & Interfaces",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS command displays detailed Ethernet interface statistics, including errors and packet counters?",
+    "options": [
+      "show interfaces",
+      "show version",
+      "show startup-config",
+      "show ip protocols"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "The show interfaces command displays physical and data-link status, traffic counters, errors and other interface information."
+  },
+  {
+    "id": 146,
+    "domain": "Network Fundamentals",
+    "subtopic": "Cabling & Interfaces",
+    "difficulty": "Hard",
+    "questionText": "A switch port is up, but a connected application experiences poor throughput and the interface counter shows increasing input errors. What is the best initial troubleshooting action?",
+    "options": [
+      "Replace the organization's DNS servers",
+      "Inspect the physical cable, connectors and negotiated link settings",
+      "Change every workstation's IPv4 address",
+      "Disable all routing protocols on the network"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Input errors can originate from cabling, connectors, interference or speed and duplex issues. Checking the physical path and negotiated interface settings is an appropriate initial step."
+  },
+  {
+    "id": 147,
+    "domain": "Network Fundamentals",
+    "subtopic": "Cabling & Interfaces",
+    "difficulty": "Medium",
+    "questionText": "Which statement about Cat6a cabling is correct?",
+    "options": [
+      "It is exclusively an optical fiber standard",
+      "It is designed to support 10GBASE-T over a standards-compliant 100-meter channel",
+      "It cannot be used for Gigabit Ethernet",
+      "It requires LC fiber connectors"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Category 6A cabling is designed to support 10GBASE-T Ethernet over a standards-compliant channel of up to 100 meters and also supports lower Ethernet speeds."
+  },
+  {
+    "id": 148,
+    "domain": "Network Fundamentals",
+    "subtopic": "Cabling & Interfaces",
+    "difficulty": "Hard",
+    "questionText": "An optical link has excessive attenuation and intermittently loses connectivity. Which action is most appropriate?",
+    "options": [
+      "Inspect and clean the fiber connectors and check the optical power budget",
+      "Change the local PC's default gateway address",
+      "Increase the Ethernet collision-domain size",
+      "Configure a new DNS search domain"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "Dirty connectors, damaged fibers and excessive link loss can reduce received optical power. Inspecting and cleaning connectors and verifying the optical power budget are appropriate troubleshooting steps."
+  }
+]

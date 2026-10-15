@@ -1,0 +1,452 @@
+[
+  {
+    "id": 149,
+    "domain": "Network Fundamentals",
+    "subtopic": "TCP & UDP",
+    "difficulty": "Easy",
+    "questionText": "At which OSI layer do TCP and UDP operate?",
+    "options": [
+      "Network layer",
+      "Data link layer",
+      "Transport layer",
+      "Session layer"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "TCP and UDP are transport-layer protocols, corresponding to Layer 4 of the OSI model. They provide communication services between applications on network hosts."
+  },
+  {
+    "id": 150,
+    "domain": "Network Fundamentals",
+    "subtopic": "TCP & UDP",
+    "difficulty": "Easy",
+    "questionText": "Which statement best describes TCP?",
+    "options": [
+      "It is a connection-oriented transport protocol",
+      "It is a connectionless network-layer protocol",
+      "It does not use port numbers",
+      "It guarantees delivery without acknowledgments"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "TCP is a connection-oriented transport protocol. It establishes a connection and uses mechanisms such as sequence numbers, acknowledgments and retransmission to provide reliable delivery."
+  },
+  {
+    "id": 151,
+    "domain": "Network Fundamentals",
+    "subtopic": "TCP & UDP",
+    "difficulty": "Easy",
+    "questionText": "Which statement correctly describes UDP?",
+    "options": [
+      "UDP always establishes a connection before data transfer",
+      "UDP guarantees that every datagram arrives in order",
+      "UDP requires a three-way handshake",
+      "UDP is connectionless and has minimal transport overhead"
+    ],
+    "correctAnswerIndex": 3,
+    "explanation": "UDP is a connectionless transport protocol. It does not establish a transport connection or provide TCP-style acknowledgments, retransmission and ordered delivery."
+  },
+  {
+    "id": 152,
+    "domain": "Network Fundamentals",
+    "subtopic": "TCP & UDP",
+    "difficulty": "Easy",
+    "questionText": "Which sequence represents the normal TCP three-way handshake used to establish a connection?",
+    "options": [
+      "ACK, SYN, FIN",
+      "SYN, SYN-ACK, ACK",
+      "FIN, ACK, SYN",
+      "SYN, FIN, ACK"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "The initiating host sends SYN, the receiving host responds with SYN-ACK, and the initiating host sends ACK to complete the TCP three-way handshake."
+  },
+  {
+    "id": 153,
+    "domain": "Network Fundamentals",
+    "subtopic": "TCP & UDP",
+    "difficulty": "Medium",
+    "questionText": "What is the main purpose of TCP sequence numbers?",
+    "options": [
+      "Identify the physical switch port",
+      "Specify the DNS server address",
+      "Track byte positions so data can be acknowledged and reordered",
+      "Select the Ethernet duplex mode"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "TCP sequence numbers identify byte positions in a data stream. They help receivers reorder data and allow senders to determine what data needs retransmission."
+  },
+  {
+    "id": 154,
+    "domain": "Network Fundamentals",
+    "subtopic": "TCP & UDP",
+    "difficulty": "Medium",
+    "questionText": "What does a normal TCP acknowledgment number indicate?",
+    "options": [
+      "The next byte the receiver expects",
+      "The current Ethernet frame number",
+      "The sender's source port number",
+      "The total number of routers along the path"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "A TCP acknowledgment number normally identifies the sequence number of the next byte expected, cumulatively acknowledging the preceding bytes."
+  },
+  {
+    "id": 155,
+    "domain": "Network Fundamentals",
+    "subtopic": "TCP & UDP",
+    "difficulty": "Medium",
+    "questionText": "Which TCP mechanism helps prevent a fast sender from overwhelming a receiving application's available buffer space?",
+    "options": [
+      "ARP resolution",
+      "TCP receive-window flow control",
+      "Ethernet auto-negotiation",
+      "IP time-to-live"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "TCP flow control uses the receiver-advertised window to limit how much data a sender may have outstanding, helping protect the receiver's buffers."
+  },
+  {
+    "id": 156,
+    "domain": "Network Fundamentals",
+    "subtopic": "TCP & UDP",
+    "difficulty": "Medium",
+    "questionText": "A TCP segment carrying application data is lost during transmission. How can TCP recover?",
+    "options": [
+      "By changing the destination MAC address permanently",
+      "By automatically switching the connection to UDP",
+      "By disabling acknowledgments",
+      "By retransmitting the missing data"
+    ],
+    "correctAnswerIndex": 3,
+    "explanation": "TCP detects unacknowledged or missing data through its acknowledgment and loss-detection mechanisms and can retransmit the data to recover from packet loss."
+  },
+  {
+    "id": 157,
+    "domain": "Network Fundamentals",
+    "subtopic": "TCP & UDP",
+    "difficulty": "Hard",
+    "questionText": "A TCP sender transmits 500 bytes of data beginning with sequence number 1000. Assuming all bytes arrive in order, what acknowledgment number should the receiver send?",
+    "options": [
+      "1001",
+      "1499",
+      "1500",
+      "1501"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "TCP sequence numbers count bytes. A 500-byte segment starting at sequence number 1000 contains bytes 1000 through 1499, so the next expected byte is 1500."
+  },
+  {
+    "id": 158,
+    "domain": "Network Fundamentals",
+    "subtopic": "TCP & UDP",
+    "difficulty": "Medium",
+    "questionText": "Which transport protocol header has a minimum size of 20 bytes?",
+    "options": [
+      "TCP",
+      "UDP",
+      "ICMP",
+      "ARP"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "A TCP header is at least 20 bytes without options. A UDP header is fixed at 8 bytes."
+  },
+  {
+    "id": 159,
+    "domain": "Network Fundamentals",
+    "subtopic": "TCP & UDP",
+    "difficulty": "Easy",
+    "questionText": "What is the size of the standard UDP header?",
+    "options": [
+      "4 bytes",
+      "8 bytes",
+      "16 bytes",
+      "20 bytes"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "The UDP header is 8 bytes long. It contains four 16-bit fields: source port, destination port, length and checksum."
+  },
+  {
+    "id": 160,
+    "domain": "Network Fundamentals",
+    "subtopic": "TCP & UDP",
+    "difficulty": "Easy",
+    "questionText": "Which well-known TCP destination port is normally used by an SSH server?",
+    "options": [
+      "21",
+      "22",
+      "23",
+      "25"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "SSH servers normally listen on TCP port 22. SSH provides encrypted remote terminal access and related secure services."
+  },
+  {
+    "id": 161,
+    "domain": "Network Fundamentals",
+    "subtopic": "TCP & UDP",
+    "difficulty": "Easy",
+    "questionText": "Which TCP port is normally used for HTTPS connections?",
+    "options": [
+      "53",
+      "80",
+      "110",
+      "443"
+    ],
+    "correctAnswerIndex": 3,
+    "explanation": "Traditional HTTPS over TLS and TCP uses destination port 443. Modern HTTP/3 can also use UDP port 443 through QUIC."
+  },
+  {
+    "id": 162,
+    "domain": "Network Fundamentals",
+    "subtopic": "TCP & UDP",
+    "difficulty": "Easy",
+    "questionText": "Which TCP port is traditionally used by HTTP web servers for unencrypted HTTP traffic?",
+    "options": [
+      "20",
+      "53",
+      "80",
+      "161"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "Traditional HTTP web servers commonly listen on TCP port 80 for unencrypted HTTP connections."
+  },
+  {
+    "id": 163,
+    "domain": "Network Fundamentals",
+    "subtopic": "TCP & UDP",
+    "difficulty": "Medium",
+    "questionText": "Which transport protocol and destination port are normally used for a standard DNS query from a client when the response fits within UDP?",
+    "options": [
+      "UDP port 53",
+      "TCP port 25",
+      "UDP port 67",
+      "TCP port 110"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "Conventional DNS queries commonly use UDP destination port 53. DNS also uses TCP port 53 for operations such as zone transfers and responses requiring TCP."
+  },
+  {
+    "id": 164,
+    "domain": "Network Fundamentals",
+    "subtopic": "TCP & UDP",
+    "difficulty": "Medium",
+    "questionText": "Which pair correctly identifies the standard UDP ports used by DHCPv4 servers and clients?",
+    "options": [
+      "Server 53, client 54",
+      "Server 161, client 162",
+      "Server 68, client 67",
+      "Server 67, client 68"
+    ],
+    "correctAnswerIndex": 3,
+    "explanation": "DHCPv4 servers listen on UDP port 67, while DHCPv4 clients use UDP port 68."
+  },
+  {
+    "id": 165,
+    "domain": "Network Fundamentals",
+    "subtopic": "TCP & UDP",
+    "difficulty": "Medium",
+    "questionText": "Which protocol and port combination is normally used for SNMP polling requests?",
+    "options": [
+      "TCP port 161",
+      "UDP port 161",
+      "UDP port 162",
+      "TCP port 443"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "SNMP polling requests normally use UDP port 161. SNMP notifications such as traps are commonly sent to UDP port 162."
+  },
+  {
+    "id": 166,
+    "domain": "Network Fundamentals",
+    "subtopic": "TCP & UDP",
+    "difficulty": "Medium",
+    "questionText": "Which destination port and transport protocol are traditionally used by a syslog sender to transmit messages to a syslog server?",
+    "options": [
+      "UDP port 514",
+      "TCP port 22",
+      "UDP port 123",
+      "TCP port 179"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "Traditional syslog commonly sends log messages using UDP port 514. Other syslog transports, including TCP and TLS, are also available."
+  },
+  {
+    "id": 167,
+    "domain": "Network Fundamentals",
+    "subtopic": "TCP & UDP",
+    "difficulty": "Medium",
+    "questionText": "Which transport protocol and destination port are normally used by NTP clients?",
+    "options": [
+      "TCP port 123",
+      "TCP port 161",
+      "UDP port 123",
+      "UDP port 443"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "Network Time Protocol normally uses UDP port 123 to synchronize clocks between network devices and time servers."
+  },
+  {
+    "id": 168,
+    "domain": "Network Fundamentals",
+    "subtopic": "TCP & UDP",
+    "difficulty": "Medium",
+    "questionText": "Which transport protocol and well-known port does TFTP normally use for an initial read or write request?",
+    "options": [
+      "TCP port 21",
+      "UDP port 69",
+      "TCP port 69",
+      "UDP port 514"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "TFTP uses UDP port 69 for initial read and write requests. Subsequent file data transfers normally use dynamically selected UDP transfer identifiers."
+  },
+  {
+    "id": 169,
+    "domain": "Network Fundamentals",
+    "subtopic": "TCP & UDP",
+    "difficulty": "Medium",
+    "questionText": "Which TCP port does BGP normally use to establish sessions between neighboring routers?",
+    "options": [
+      "TCP port 179",
+      "UDP port 179",
+      "TCP port 520",
+      "UDP port 161"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "Border Gateway Protocol establishes peer sessions using TCP destination port 179."
+  },
+  {
+    "id": 170,
+    "domain": "Network Fundamentals",
+    "subtopic": "TCP & UDP",
+    "difficulty": "Hard",
+    "questionText": "A firewall must allow traditional HTTPS web traffic to an internal server. Which inbound rule is most appropriate?",
+    "options": [
+      "Allow UDP destination port 53",
+      "Allow TCP destination port 80",
+      "Allow TCP destination port 443",
+      "Allow UDP destination port 123"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "Traditional HTTPS uses TLS over TCP destination port 443. This rule permits the specified HTTPS service, though an actual firewall policy must also consider the intended source, destination and security requirements."
+  },
+  {
+    "id": 171,
+    "domain": "Network Fundamentals",
+    "subtopic": "TCP & UDP",
+    "difficulty": "Hard",
+    "questionText": "A host sends a TCP connection attempt to a server port that is closed, and the server is reachable. What response does the TCP server normally send?",
+    "options": [
+      "A SYN-ACK accepting the connection",
+      "A TCP RST indicating the connection is refused",
+      "A DHCP Offer",
+      "An Ethernet broadcast frame to all VLANs"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A TCP endpoint normally responds to a connection request for a closed port with a TCP reset (RST). A firewall may instead silently drop the packet."
+  },
+  {
+    "id": 172,
+    "domain": "Network Fundamentals",
+    "subtopic": "TCP & UDP",
+    "difficulty": "Medium",
+    "questionText": "Which TCP flag is used to initiate a normal TCP connection?",
+    "options": [
+      "FIN",
+      "RST",
+      "PSH",
+      "SYN"
+    ],
+    "correctAnswerIndex": 3,
+    "explanation": "The SYN flag initiates the TCP synchronization process used when establishing a new TCP connection."
+  },
+  {
+    "id": 173,
+    "domain": "Network Fundamentals",
+    "subtopic": "TCP & UDP",
+    "difficulty": "Medium",
+    "questionText": "Which TCP flag indicates that a sender has finished sending data and wishes to close its sending direction of the connection gracefully?",
+    "options": [
+      "FIN",
+      "SYN",
+      "RST",
+      "URG"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "TCP uses FIN to indicate that the sending endpoint has no further data to transmit. The receiving endpoint acknowledges the FIN during graceful connection termination."
+  },
+  {
+    "id": 174,
+    "domain": "Network Fundamentals",
+    "subtopic": "TCP & UDP",
+    "difficulty": "Hard",
+    "questionText": "A client uses source TCP port 52000 to connect to a web server at destination TCP port 443. What are the normal source and destination TCP ports in the server's reply?",
+    "options": [
+      "Source 52000, destination 443",
+      "Source 443, destination 52000",
+      "Source 443, destination 443",
+      "Source 52000, destination 52000"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "The reply travels in the opposite direction. The server sends from TCP port 443 to the client's TCP port 52000."
+  },
+  {
+    "id": 175,
+    "domain": "Network Fundamentals",
+    "subtopic": "TCP & UDP",
+    "difficulty": "Hard",
+    "questionText": "Two TCP clients connect to the same server IP address and TCP port 443. How can the server distinguish the connections?",
+    "options": [
+      "Every connection must use a different server MAC address",
+      "Every connection must use a different server destination port",
+      "TCP identifies connections using source and destination IP addresses and port numbers",
+      "The server distinguishes connections using only Ethernet frame length"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "TCP connections are distinguished by the combination of source IP, source port, destination IP and destination port, allowing multiple client sessions to use the same server listening port."
+  },
+  {
+    "id": 176,
+    "domain": "Network Fundamentals",
+    "subtopic": "TCP & UDP",
+    "difficulty": "Medium",
+    "questionText": "Why might a real-time voice application use UDP rather than TCP?",
+    "options": [
+      "UDP inherently encrypts all voice traffic",
+      "UDP guarantees every packet arrives in the correct order",
+      "UDP eliminates all network latency",
+      "UDP avoids TCP's retransmission and in-order delivery delays"
+    ],
+    "correctAnswerIndex": 3,
+    "explanation": "Real-time applications may prefer UDP because they can prioritize timely packet delivery rather than waiting for TCP retransmissions and ordered stream delivery. Applications may implement their own loss-handling mechanisms."
+  },
+  {
+    "id": 177,
+    "domain": "Network Fundamentals",
+    "subtopic": "TCP & UDP",
+    "difficulty": "Hard",
+    "questionText": "A network engineer captures repeated TCP retransmissions during a large file transfer. What does this most directly indicate?",
+    "options": [
+      "Some transmitted data was not acknowledged in time",
+      "The application must be using UDP",
+      "All transmitted data has already been acknowledged",
+      "The Ethernet interface must be operating in half duplex"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "TCP retransmissions occur when the sender's loss-detection mechanisms determine that data may not have been successfully received or acknowledged. Causes can include packet loss, congestion, delay or reordering."
+  },
+  {
+    "id": 178,
+    "domain": "Network Fundamentals",
+    "subtopic": "TCP & UDP",
+    "difficulty": "Hard",
+    "questionText": "Which statement correctly compares TCP and UDP checksums?",
+    "options": [
+      "TCP has no checksum, while UDP always uses an Ethernet checksum",
+      "TCP and UDP rely only on the IPv4 header checksum",
+      "Both protocols have transport-layer checksums, and UDP checksums are mandatory in IPv6 under normal operation",
+      "UDP never performs error detection"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "TCP and UDP both provide transport-layer checksum fields. UDP checksums are optional in IPv4 but generally mandatory in IPv6, apart from specific standardized exceptions."
+  }
+]

@@ -1,0 +1,640 @@
+﻿@page "/topic-quiz"
+@rendermode InteractiveServer
+
+@using CCNAPracticeHub.Data
+@using CCNAPracticeHub.Models
+@using Microsoft.EntityFrameworkCore
+
+@inject IDbContextFactory<CcnaDbContext> DbFactory
+
+<PageTitle>Topic Quiz - CCNA Hub</PageTitle>
+
+<div class="topic-quiz-page">
+
+    <a class="topic-back-link" href="/topics">
+        ← Back to CCNA Topics
+    </a>
+
+    <div class="topic-kicker">
+        TOPIC PRACTICE
+    </div>
+
+    <h1>@(Subtopic ?? "Topic Quiz")</h1>
+
+    <p class="topic-description">
+        @Domain · Up to 10 random questions
+    </p>
+
+    @if (IsLoading)
+    {
+        <div class="topic-panel">
+            Loading your questions...
+        </div>
+    }
+    else if (!string.IsNullOrEmpty(ErrorMessage))
+    {
+        <div class="topic-panel">
+            <h2>Unable to load questions</h2>
+
+            <p>@ErrorMessage</p>
+
+            <button class="topic-primary-button"
+                    @onclick="LoadQuestionsAsync">
+                Try Again
+            </button>
+        </div>
+    }
+    else if (Questions.Count == 0)
+    {
+        <div class="topic-panel">
+
+            <h2>No questions available yet</h2>
+
+            <p>
+                We haven't added any questions for
+                this subtopic yet.
+            </p>
+
+            <a class="topic-secondary-button"
+               href="/topics">
+                Back to Topics
+            </a>
+
+        </div>
+    }
+    else if (QuizFinished)
+    {
+        <div class="topic-panel topic-results">
+
+            <div class="topic-kicker">
+                SESSION COMPLETE
+            </div>
+
+            <h2>Practice Complete!</h2>
+
+            <div class="topic-result-score">
+                @FinalPercentage%
+            </div>
+
+            <p>
+                You answered @Score out of
+                @Questions.Count questions correctly.
+            </p>
+
+            <div class="topic-result-actions">
+
+                <button class="topic-primary-button"
+                        @onclick="LoadQuestionsAsync">
+                    Try Again — New Questions
+                </button>
+
+                <a class="topic-secondary-button"
+                   href="/topics">
+                    Choose Another Topic
+                </a>
+
+            </div>
+        </div>
+    }
+    else if (CurrentQuestion is not null)
+    {
+        <div class="topic-panel">
+
+            <div class="topic-question-top">
+
+                <span>
+                    QUESTION @(CurrentIndex + 1)
+                    OF @Questions.Count
+                </span>
+
+                <span>
+                    SCORE: @Score
+                </span>
+
+            </div>
+
+            <div class="topic-progress-track">
+                <div class="topic-progress-fill"
+                     style="width: @(ProgressPercentage)%">
+                </div>
+            </div>
+
+            <span class="topic-difficulty">
+                @CurrentQuestion.Difficulty
+            </span>
+
+            <h2 class="topic-question-text">
+                @CurrentQuestion.QuestionText
+            </h2>
+
+            <div class="topic-options">
+
+                @for (int i = 0;
+                      i < CurrentQuestion.Options.Count;
+                      i++)
+                {
+                    int optionIndex = i;
+
+                    <button type="button"
+                            class="@GetOptionClass(optionIndex)"
+                            disabled="@AnswerSubmitted"
+                            @onclick="() => SelectAnswer(optionIndex)">
+
+                        <span class="topic-option-letter">
+                            @((char)('A' + optionIndex))
+                        </span>
+
+                        <span>
+                            @CurrentQuestion.Options[optionIndex]
+                        </span>
+
+                    </button>
+                }
+
+            </div>
+
+            @if (AnswerSubmitted)
+            {
+                <div class="topic-feedback">
+
+                    <h3 class="@(AnswerCorrect
+                                                ? "topic-feedback-good"
+                                                : "topic-feedback-bad")">
+
+                        @(AnswerCorrect
+                            ? "✓ Correct Answer!"
+                            : "✕ Incorrect Answer")
+
+                    </h3>
+
+                    @if (!AnswerCorrect)
+                    {
+                        <p>
+                            <strong>Correct answer:</strong>
+                            @CurrentQuestion.Options[
+                                CurrentQuestion.CorrectAnswerIndex]
+                        </p>
+                    }
+
+                    <p>
+                        @CurrentQuestion.Explanation
+                    </p>
+
+                </div>
+
+                <button class="topic-primary-button"
+                        @onclick="NextQuestion">
+
+                    @(CurrentIndex == Questions.Count - 1
+                        ? "View Results"
+                        : "Next Question →")
+
+                </button>
+            }
+            else
+            {
+                <button class="topic-primary-button"
+                        disabled="@(SelectedAnswerIndex is null)"
+                        @onclick="SubmitAnswer">
+                    Submit Answer
+                </button>
+            }
+
+        </div>
+    }
+
+</div>
+
+<style>
+
+    .topic-quiz-page {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px 8px 60px;
+        color: inherit;
+    }
+
+    .topic-back-link {
+        color: #22d3ee;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+        .topic-back-link:hover {
+            text-decoration: underline;
+        }
+
+    .topic-kicker {
+        margin-top: 24px;
+        margin-bottom: 10px;
+        color: #22d3ee;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 2px;
+    }
+
+    .topic-quiz-page h1 {
+        font-size: 32px;
+        font-weight: 750;
+        margin: 8px 0;
+    }
+
+    .topic-description {
+        color: #8ba9cc;
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    .topic-panel {
+        padding: 28px;
+        border: 1px solid var(--border-color, #263650);
+        border-radius: 13px;
+        background: var(--card-bg, #151f33);
+    }
+
+        .topic-panel h2 {
+            font-size: 22px;
+        }
+
+    .topic-question-top {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        color: #22d3ee;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 1px;
+    }
+
+    .topic-progress-track {
+        height: 8px;
+        width: 100%;
+        margin: 18px 0 25px;
+        border-radius: 100px;
+        background: rgba(148, 163, 184, 0.18);
+        overflow: hidden;
+    }
+
+    .topic-progress-fill {
+        height: 100%;
+        background: #22d3ee;
+        transition: width 0.2s ease;
+    }
+
+    .topic-difficulty {
+        display: inline-block;
+        margin-bottom: 15px;
+        padding: 4px 10px;
+        border: 1px solid rgba(34, 211, 238, 0.2);
+        border-radius: 5px;
+        color: #22d3ee;
+        background: rgba(34, 211, 238, 0.07);
+        font-size: 12px;
+    }
+
+    .topic-question-text {
+        font-size: 22px;
+        line-height: 1.5;
+        font-weight: 650;
+        margin-bottom: 24px;
+    }
+
+    .topic-options {
+        display: grid;
+        gap: 12px;
+        margin-bottom: 24px;
+    }
+
+    .topic-option {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        width: 100%;
+        padding: 15px;
+        border: 1px solid var(--border-color, #263650);
+        border-radius: 8px;
+        background: transparent;
+        color: inherit;
+        text-align: left;
+        font: inherit;
+        cursor: pointer;
+        transition: 0.15s ease;
+    }
+
+        .topic-option:hover:not(:disabled) {
+            border-color: #22d3ee;
+            background: rgba(34, 211, 238, 0.07);
+        }
+
+        .topic-option:focus-visible {
+            outline: 2px solid #22d3ee;
+            outline-offset: 3px;
+        }
+
+        .topic-option:disabled {
+            cursor: default;
+            opacity: 1;
+        }
+
+    .topic-option-selected {
+        border-color: #22d3ee;
+        background: rgba(34, 211, 238, 0.1);
+    }
+
+    .topic-option-correct {
+        border-color: #22c55e;
+        background: rgba(34, 197, 94, 0.12);
+    }
+
+    .topic-option-incorrect {
+        border-color: #ef4444;
+        background: rgba(239, 68, 68, 0.12);
+    }
+
+    .topic-option-letter {
+        flex-shrink: 0;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 34px;
+        height: 34px;
+        border-radius: 7px;
+        background: rgba(148, 163, 184, 0.14);
+        font-weight: 700;
+    }
+
+    .topic-feedback {
+        margin: 20px 0;
+        padding: 18px;
+        border: 1px solid rgba(34, 211, 238, 0.25);
+        border-radius: 9px;
+        background: rgba(34, 211, 238, 0.05);
+    }
+
+        .topic-feedback h3 {
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .topic-feedback p {
+            line-height: 1.65;
+        }
+
+            .topic-feedback p:last-child {
+                margin-bottom: 0;
+            }
+
+    .topic-feedback-good {
+        color: #22c55e;
+    }
+
+    .topic-feedback-bad {
+        color: #ef4444;
+    }
+
+    .topic-primary-button,
+    .topic-secondary-button {
+        display: inline-block;
+        padding: 13px 20px;
+        border-radius: 8px;
+        font-weight: 700;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .topic-primary-button {
+        color: #07111f;
+        background: #22d3ee;
+        border: none;
+    }
+
+        .topic-primary-button:hover:not(:disabled) {
+            background: #67e8f9;
+        }
+
+        .topic-primary-button:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+    .topic-secondary-button {
+        color: inherit;
+        background: transparent;
+        border: 1px solid rgba(148, 163, 184, 0.4);
+    }
+
+    .topic-results {
+        text-align: center;
+    }
+
+        .topic-results .topic-kicker {
+            margin-top: 0;
+        }
+
+    .topic-result-score {
+        margin: 20px 0;
+        font-size: 70px;
+        font-weight: 800;
+        color: #22d3ee;
+    }
+
+    .topic-result-actions {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 25px;
+    }
+
+    @@media (max-width: 650px) {
+        .topic-panel {
+            padding: 18px;
+        }
+
+        .topic-quiz-page h1 {
+            font-size: 26px;
+        }
+
+        .topic-question-text {
+            font-size: 19px;
+        }
+
+        .topic-result-score {
+            font-size: 55px;
+        }
+    }
+
+</style>
+
+@code {
+
+    private const int QuestionsPerSession = 10;
+
+    [SupplyParameterFromQuery(Name = "domain")]
+    public string? Domain { get; set; }
+
+    [SupplyParameterFromQuery(Name = "subtopic")]
+    public string? Subtopic { get; set; }
+
+    private List<Question> Questions = new();
+
+    private int CurrentIndex;
+    private int? SelectedAnswerIndex;
+    private int Score;
+
+    private bool AnswerSubmitted;
+    private bool AnswerCorrect;
+    private bool QuizFinished;
+    private bool IsLoading = true;
+
+    private string? ErrorMessage;
+
+    private Question? CurrentQuestion =>
+        CurrentIndex >= 0 && CurrentIndex < Questions.Count
+            ? Questions[CurrentIndex]
+            : null;
+
+    private int ProgressPercentage =>
+        Questions.Count == 0
+            ? 0
+            : (int)Math.Round(
+                (double)(CurrentIndex + 1)
+                / Questions.Count * 100);
+
+    private int FinalPercentage =>
+        Questions.Count == 0
+            ? 0
+            : (int)Math.Round(
+                (double)Score
+                / Questions.Count * 100);
+
+    protected override async Task OnParametersSetAsync()
+    {
+        await LoadQuestionsAsync();
+    }
+
+    private async Task LoadQuestionsAsync()
+    {
+        IsLoading = true;
+        ErrorMessage = null;
+        Questions = new List<Question>();
+
+        try
+        {
+            if (string.IsNullOrWhiteSpace(Domain) ||
+                string.IsNullOrWhiteSpace(Subtopic))
+            {
+                ErrorMessage =
+                    "Please choose a subtopic from the CCNA Topics page.";
+
+                return;
+            }
+
+            await using var db =
+                await DbFactory.CreateDbContextAsync();
+
+            Questions = await db.Questions
+                .AsNoTracking()
+                .Where(q =>
+                    q.Domain == Domain &&
+                    q.Subtopic == Subtopic)
+                .OrderBy(q => EF.Functions.Random())
+                .Take(QuestionsPerSession)
+                .ToListAsync();
+
+            ResetQuizState();
+        }
+        catch (Exception)
+        {
+            Questions.Clear();
+
+            ErrorMessage =
+                "Unable to load questions from the database. " +
+                "Please check the database connection.";
+        }
+        finally
+        {
+            IsLoading = false;
+        }
+    }
+
+    private void ResetQuizState()
+    {
+        CurrentIndex = 0;
+        SelectedAnswerIndex = null;
+        Score = 0;
+
+        AnswerSubmitted = false;
+        AnswerCorrect = false;
+        QuizFinished = false;
+    }
+
+    private void SelectAnswer(int index)
+    {
+        if (AnswerSubmitted || CurrentQuestion is null)
+            return;
+
+        if (index < 0 ||
+            index >= CurrentQuestion.Options.Count)
+            return;
+
+        SelectedAnswerIndex = index;
+    }
+
+    private void SubmitAnswer()
+    {
+        if (CurrentQuestion is null ||
+            SelectedAnswerIndex is null ||
+            AnswerSubmitted)
+            return;
+
+        AnswerCorrect =
+            SelectedAnswerIndex.Value ==
+            CurrentQuestion.CorrectAnswerIndex;
+
+        if (AnswerCorrect)
+            Score++;
+
+        AnswerSubmitted = true;
+    }
+
+    private void NextQuestion()
+    {
+        if (!AnswerSubmitted)
+            return;
+
+        if (CurrentIndex < Questions.Count - 1)
+        {
+            CurrentIndex++;
+            SelectedAnswerIndex = null;
+            AnswerSubmitted = false;
+            AnswerCorrect = false;
+        }
+        else
+        {
+            QuizFinished = true;
+        }
+    }
+
+    private string GetOptionClass(int index)
+    {
+        const string baseClass = "topic-option";
+
+        if (AnswerSubmitted &&
+            CurrentQuestion is not null)
+        {
+            if (index == CurrentQuestion.CorrectAnswerIndex)
+                return baseClass + " topic-option-correct";
+
+            if (index == SelectedAnswerIndex)
+                return baseClass + " topic-option-incorrect";
+        }
+
+        if (index == SelectedAnswerIndex)
+            return baseClass + " topic-option-selected";
+
+        return baseClass;
+    }
+}
+

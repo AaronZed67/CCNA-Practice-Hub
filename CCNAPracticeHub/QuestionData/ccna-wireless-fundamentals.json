@@ -1,0 +1,452 @@
+[
+  {
+    "id": 179,
+    "domain": "Network Fundamentals",
+    "subtopic": "Wireless Fundamentals",
+    "difficulty": "Easy",
+    "questionText": "Which IEEE standard family defines wireless LAN technologies commonly known as Wi-Fi?",
+    "options": [
+      "IEEE 802.3",
+      "IEEE 802.11",
+      "IEEE 802.1Q",
+      "IEEE 802.15.4"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "IEEE 802.11 defines wireless LAN technologies. IEEE 802.3 defines Ethernet, while IEEE 802.1Q defines VLAN tagging and related bridging functions."
+  },
+  {
+    "id": 180,
+    "domain": "Network Fundamentals",
+    "subtopic": "Wireless Fundamentals",
+    "difficulty": "Easy",
+    "questionText": "Which frequency bands are supported by IEEE 802.11n Wi-Fi?",
+    "options": [
+      "Only 2.4 GHz",
+      "Only 5 GHz",
+      "2.4 GHz and 5 GHz",
+      "Only 6 GHz"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "IEEE 802.11n supports operation in both the 2.4 GHz and 5 GHz bands. A particular device may support only one of these bands."
+  },
+  {
+    "id": 181,
+    "domain": "Network Fundamentals",
+    "subtopic": "Wireless Fundamentals",
+    "difficulty": "Easy",
+    "questionText": "Which frequency band is used by IEEE 802.11ac wireless LAN technology?",
+    "options": [
+      "900 MHz",
+      "2.4 GHz only",
+      "5 GHz",
+      "60 GHz only"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "IEEE 802.11ac operates in the 5 GHz frequency band and supports technologies such as wider channels and multi-user MIMO."
+  },
+  {
+    "id": 182,
+    "domain": "Network Fundamentals",
+    "subtopic": "Wireless Fundamentals",
+    "difficulty": "Medium",
+    "questionText": "Which statement about IEEE 802.11ax, commonly called Wi-Fi 6, is correct?",
+    "options": [
+      "It operates only at 2.4 GHz",
+      "It introduces OFDMA to improve wireless resource sharing",
+      "It removes the need for access points",
+      "It requires every client to use a 160 MHz channel"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "IEEE 802.11ax introduces OFDMA, allowing supported clients to share channel resources more efficiently. Wi-Fi 6 supports 2.4 GHz and 5 GHz, with 6 GHz available through Wi-Fi 6E."
+  },
+  {
+    "id": 183,
+    "domain": "Network Fundamentals",
+    "subtopic": "Wireless Fundamentals",
+    "difficulty": "Medium",
+    "questionText": "In a typical 2.4 GHz Wi-Fi deployment using 20 MHz channels in a regulatory domain that permits them, which three channels are commonly selected to minimize overlap?",
+    "options": [
+      "1, 2 and 3",
+      "3, 6 and 9",
+      "1, 6 and 11",
+      "6, 7 and 8"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "Channels 1, 6 and 11 are the conventional nonoverlapping 20 MHz channel plan for 2.4 GHz Wi-Fi in domains where all three are permitted."
+  },
+  {
+    "id": 184,
+    "domain": "Network Fundamentals",
+    "subtopic": "Wireless Fundamentals",
+    "difficulty": "Medium",
+    "questionText": "Why is the 5 GHz Wi-Fi band often preferred in a crowded office environment?",
+    "options": [
+      "It always penetrates walls better than 2.4 GHz",
+      "It offers more channel choices and can reduce contention",
+      "It eliminates all radio-frequency interference",
+      "It does not require wireless authentication"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "The 5 GHz band generally offers more usable channel choices than 2.4 GHz, allowing better channel planning and potentially reducing co-channel contention."
+  },
+  {
+    "id": 185,
+    "domain": "Network Fundamentals",
+    "subtopic": "Wireless Fundamentals",
+    "difficulty": "Easy",
+    "questionText": "What does SSID stand for in wireless networking?",
+    "options": [
+      "Secure Signal Interface Domain",
+      "Service Set Identifier",
+      "Standard Switch Identification",
+      "Session Security Internet Device"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "SSID stands for Service Set Identifier. It is the network name associated with an IEEE 802.11 wireless service set."
+  },
+  {
+    "id": 186,
+    "domain": "Network Fundamentals",
+    "subtopic": "Wireless Fundamentals",
+    "difficulty": "Medium",
+    "questionText": "In an infrastructure wireless LAN, what does a BSSID normally identify?",
+    "options": [
+      "The access point radio's basic service set identifier, commonly represented by a MAC address",
+      "The DHCP server's IPv4 address",
+      "The user's wireless password",
+      "The entire organization's DNS domain"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "A BSSID identifies a basic service set. In a typical infrastructure WLAN, it is represented by a MAC address associated with the access point's wireless service."
+  },
+  {
+    "id": 187,
+    "domain": "Network Fundamentals",
+    "subtopic": "Wireless Fundamentals",
+    "difficulty": "Medium",
+    "questionText": "What is a primary function of 802.11 beacon frames transmitted by infrastructure access points?",
+    "options": [
+      "Carry every user's application data",
+      "Advertise wireless network information to nearby stations",
+      "Replace the need for IP addressing",
+      "Encrypt all traffic without using a security protocol"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Beacon frames advertise information about a wireless network, such as service set information, capabilities and timing, allowing nearby clients to discover it."
+  },
+  {
+    "id": 188,
+    "domain": "Network Fundamentals",
+    "subtopic": "Wireless Fundamentals",
+    "difficulty": "Medium",
+    "questionText": "Which medium-access approach is normally used by Wi-Fi stations to reduce collisions on a shared wireless channel?",
+    "options": [
+      "CSMA/CD",
+      "Token passing",
+      "CSMA/CA",
+      "Ethernet full-duplex switching"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "IEEE 802.11 uses carrier sense multiple access with collision avoidance (CSMA/CA). Ethernet's historical collision detection mechanism is not used in the same way by Wi-Fi."
+  },
+  {
+    "id": 189,
+    "domain": "Network Fundamentals",
+    "subtopic": "Wireless Fundamentals",
+    "difficulty": "Hard",
+    "questionText": "Two nearby access points operate on the same Wi-Fi channel and can detect one another. Which issue can reduce total throughput even when both networks are functioning correctly?",
+    "options": [
+      "Co-channel contention for shared airtime",
+      "Automatic conversion to wired Ethernet",
+      "Loss of every device's MAC address",
+      "An unavoidable IPv4 address conflict"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "Nearby Wi-Fi devices sharing a channel generally compete for airtime. Co-channel contention can reduce available throughput even when the wireless networks are operating normally."
+  },
+  {
+    "id": 190,
+    "domain": "Network Fundamentals",
+    "subtopic": "Wireless Fundamentals",
+    "difficulty": "Medium",
+    "questionText": "Which common household device can generate interference in the 2.4 GHz Wi-Fi band?",
+    "options": [
+      "Passive fiber patch panel",
+      "Microwave oven",
+      "Unpowered Ethernet connector",
+      "Single-mode optical transceiver"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Microwave ovens and some other consumer devices can emit interference in or near the 2.4 GHz band, affecting nearby Wi-Fi performance."
+  },
+  {
+    "id": 191,
+    "domain": "Network Fundamentals",
+    "subtopic": "Wireless Fundamentals",
+    "difficulty": "Easy",
+    "questionText": "What is the primary purpose of WPA2 in a wireless network?",
+    "options": [
+      "Provide wireless security using authentication and encryption mechanisms",
+      "Assign public IPv4 addresses to access points",
+      "Extend Ethernet cabling beyond 100 meters",
+      "Select the default gateway for every client"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "WPA2 is a Wi-Fi security framework that supports authentication and confidentiality mechanisms, including AES-CCMP for protected wireless data."
+  },
+  {
+    "id": 192,
+    "domain": "Network Fundamentals",
+    "subtopic": "Wireless Fundamentals",
+    "difficulty": "Medium",
+    "questionText": "Which data-protection mechanism is associated with WPA2 and uses AES encryption?",
+    "options": [
+      "WEP",
+      "TKIP only",
+      "CCMP",
+      "Telnet"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "WPA2 commonly uses AES-based CCMP for wireless data confidentiality and integrity. WEP and TKIP are legacy mechanisms with security weaknesses."
+  },
+  {
+    "id": 193,
+    "domain": "Network Fundamentals",
+    "subtopic": "Wireless Fundamentals",
+    "difficulty": "Medium",
+    "questionText": "Which authentication mechanism is used by WPA3-Personal instead of WPA2-Personal's traditional pre-shared-key handshake?",
+    "options": [
+      "PAP",
+      "SAE",
+      "SNMPv2c",
+      "RADIUS accounting only"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "WPA3-Personal uses Simultaneous Authentication of Equals (SAE), which strengthens password-based wireless authentication compared with traditional WPA2-Personal PSK authentication."
+  },
+  {
+    "id": 194,
+    "domain": "Network Fundamentals",
+    "subtopic": "Wireless Fundamentals",
+    "difficulty": "Medium",
+    "questionText": "Which authentication approach is commonly used in an enterprise WLAN to authenticate individual users through a centralized identity service?",
+    "options": [
+      "WPA2-Enterprise with 802.1X",
+      "An open WLAN with no authentication",
+      "A single shared WEP key",
+      "MAC address broadcasting"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "WPA2-Enterprise uses IEEE 802.1X and EAP-based authentication, often backed by a RADIUS server, to provide per-user or per-device access control."
+  },
+  {
+    "id": 195,
+    "domain": "Network Fundamentals",
+    "subtopic": "Wireless Fundamentals",
+    "difficulty": "Hard",
+    "questionText": "In an 802.1X enterprise WLAN, which device commonly acts as the authenticator between a wireless client and the authentication server?",
+    "options": [
+      "DNS resolver",
+      "Wireless access point",
+      "DHCP client",
+      "Ethernet patch panel"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "The access point commonly acts as the 802.1X authenticator, relaying authentication exchanges between the wireless supplicant and the authentication infrastructure."
+  },
+  {
+    "id": 196,
+    "domain": "Network Fundamentals",
+    "subtopic": "Wireless Fundamentals",
+    "difficulty": "Medium",
+    "questionText": "What is the primary role of a RADIUS server in an enterprise wireless authentication deployment?",
+    "options": [
+      "Transmit beacon frames for every SSID",
+      "Provide centralized authentication and authorization services",
+      "Choose copper cable categories",
+      "Convert wireless radio signals to optical wavelengths"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "RADIUS servers provide centralized AAA functions, commonly supporting authentication and authorization for enterprise wireless clients."
+  },
+  {
+    "id": 197,
+    "domain": "Network Fundamentals",
+    "subtopic": "Wireless Fundamentals",
+    "difficulty": "Hard",
+    "questionText": "Why is simply hiding an SSID not considered a strong wireless security control?",
+    "options": [
+      "It automatically disables all encryption",
+      "It prevents authorized clients from using WPA3",
+      "The SSID may still be discovered from other wireless management traffic",
+      "It forces every station to transmit on channel 1"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "Suppressing the SSID from ordinary beacon advertisements does not provide meaningful confidentiality, because the network name can still appear in other management exchanges."
+  },
+  {
+    "id": 198,
+    "domain": "Network Fundamentals",
+    "subtopic": "Wireless Fundamentals",
+    "difficulty": "Medium",
+    "questionText": "Which antenna type generally radiates in many horizontal directions around the antenna, making it useful for covering a central indoor area?",
+    "options": [
+      "Highly directional dish antenna",
+      "Omnidirectional antenna",
+      "Point-to-point parabolic antenna",
+      "Narrow-beam Yagi antenna"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "An omnidirectional antenna provides coverage over a broad horizontal pattern, making it suitable for many indoor access point installations."
+  },
+  {
+    "id": 199,
+    "domain": "Network Fundamentals",
+    "subtopic": "Wireless Fundamentals",
+    "difficulty": "Medium",
+    "questionText": "Which antenna type is generally most suitable for a fixed point-to-point wireless bridge between two buildings?",
+    "options": [
+      "A directional antenna aimed at the remote building",
+      "A low-gain omnidirectional antenna facing downward",
+      "An unconnected antenna port",
+      "An indoor Bluetooth headset antenna"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "Directional antennas focus radio energy toward a target direction and are commonly used for suitable point-to-point wireless bridge links."
+  },
+  {
+    "id": 200,
+    "domain": "Network Fundamentals",
+    "subtopic": "Wireless Fundamentals",
+    "difficulty": "Hard",
+    "questionText": "A wireless engineer increases channel width from 20 MHz to 80 MHz on a supported 5 GHz network. Which trade-off should be considered?",
+    "options": [
+      "Wider channels always eliminate interference",
+      "Wider channels can increase potential throughput but consume more spectrum",
+      "Wider channels guarantee stronger signals through concrete walls",
+      "Wider channels prevent clients from using encryption"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Wider channels can support higher physical-layer data rates under favorable conditions, but occupy more spectrum and reduce the number of separate nonoverlapping channels available."
+  },
+  {
+    "id": 201,
+    "domain": "Network Fundamentals",
+    "subtopic": "Wireless Fundamentals",
+    "difficulty": "Medium",
+    "questionText": "Which measurement expresses received wireless signal power relative to one milliwatt?",
+    "options": [
+      "dBm",
+      "Milliseconds",
+      "Megabytes",
+      "Packets per second"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "dBm is a logarithmic power measurement referenced to one milliwatt. Wireless received signal levels are often reported using negative dBm values."
+  },
+  {
+    "id": 202,
+    "domain": "Network Fundamentals",
+    "subtopic": "Wireless Fundamentals",
+    "difficulty": "Hard",
+    "questionText": "A wireless survey reports received signals of -45 dBm and -75 dBm at two locations. Which statement is correct?",
+    "options": [
+      "-75 dBm is the stronger received signal",
+      "The two signals have identical power",
+      "-45 dBm is the stronger received signal",
+      "Neither value describes signal power"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "Received signal power in dBm becomes stronger as the value increases. Therefore, -45 dBm represents stronger received power than -75 dBm."
+  },
+  {
+    "id": 203,
+    "domain": "Network Fundamentals",
+    "subtopic": "Wireless Fundamentals",
+    "difficulty": "Medium",
+    "questionText": "What does SNR represent in wireless networking?",
+    "options": [
+      "Switch Network Route",
+      "Signal-to-Noise Ratio",
+      "Secure Network Registration",
+      "Session Number Range"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Signal-to-Noise Ratio compares the strength of a received signal with the background noise level. A higher SNR generally supports more reliable reception and higher modulation rates."
+  },
+  {
+    "id": 204,
+    "domain": "Network Fundamentals",
+    "subtopic": "Wireless Fundamentals",
+    "difficulty": "Hard",
+    "questionText": "A wireless client's signal is measured at -60 dBm and the noise floor is -90 dBm. What is the approximate signal-to-noise ratio?",
+    "options": [
+      "15 dB",
+      "30 dB",
+      "60 dB",
+      "150 dB"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "SNR in decibels is the difference between the signal level and noise level: -60 dBm minus -90 dBm equals 30 dB."
+  },
+  {
+    "id": 205,
+    "domain": "Network Fundamentals",
+    "subtopic": "Wireless Fundamentals",
+    "difficulty": "Medium",
+    "questionText": "In a controller-based Cisco wireless LAN, which protocol is commonly used to manage and control supported lightweight access points?",
+    "options": [
+      "CAPWAP",
+      "FTP",
+      "ARP",
+      "SMTP"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "Control and Provisioning of Wireless Access Points (CAPWAP) supports communication between lightweight access points and wireless LAN controllers."
+  },
+  {
+    "id": 206,
+    "domain": "Network Fundamentals",
+    "subtopic": "Wireless Fundamentals",
+    "difficulty": "Hard",
+    "questionText": "Which statement correctly describes Cisco FlexConnect access point operation?",
+    "options": [
+      "It requires all client traffic to use a local Ethernet hub",
+      "It can allow locally switched client traffic at a branch site when configured appropriately",
+      "It prevents the access point from serving any wireless clients",
+      "It is a replacement for the IEEE 802.11 wireless standard"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "FlexConnect can support local switching of client traffic at a branch site while still allowing centralized management by a wireless LAN controller."
+  },
+  {
+    "id": 207,
+    "domain": "Network Fundamentals",
+    "subtopic": "Wireless Fundamentals",
+    "difficulty": "Hard",
+    "questionText": "Wireless users report intermittent connectivity near a warehouse containing many metal shelves. Which explanation is most plausible?",
+    "options": [
+      "Metal shelving guarantees stronger Wi-Fi coverage",
+      "Reflections and obstructions may create multipath effects and signal attenuation",
+      "Wi-Fi cannot operate in any building containing metal",
+      "The presence of shelving automatically changes the SSID"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Metal objects can reflect, block and alter radio propagation, contributing to multipath effects and coverage problems. A wireless site survey can help identify affected areas."
+  },
+  {
+    "id": 208,
+    "domain": "Network Fundamentals",
+    "subtopic": "Wireless Fundamentals",
+    "difficulty": "Hard",
+    "questionText": "A wireless client connects successfully to an SSID but cannot access resources on the wired LAN. Other clients on the same WLAN work normally. What should the technician check first?",
+    "options": [
+      "The affected client's IP address, default gateway and access policy",
+      "Whether all access points should be removed",
+      "Whether the wired switches support Token Ring",
+      "Whether every neighboring network uses the same wireless channel"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "Successful wireless association does not guarantee end-to-end IP connectivity. Checking the affected client's addressing, gateway and applicable access policy is a reasonable first step."
+  }
+]

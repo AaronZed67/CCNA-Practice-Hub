@@ -1,199 +1,506 @@
-﻿
-@page "/topics"
+﻿@page "/topics"
+@rendermode InteractiveServer
 
-<PageTitle>CCNA Topics | CCNA Practice Hub</PageTitle>
+@using CCNAPracticeHub.Data
+@using Microsoft.EntityFrameworkCore
 
-<div class="mb-4">
-    <span class="dashboard-eyebrow">
-        QUESTION PRACTICE
-    </span>
+@inject IDbContextFactory<CcnaDbContext> DbFactory
 
-    <h1 class="mt-2">CCNA Exam Topics</h1>
+<PageTitle>CCNA Exam Topics - CCNA Hub</PageTitle>
 
-    <p>
-        Choose an exam domain and select a subtopic
-        to practise your CCNA knowledge.
+<div class="topics-page">
+
+    <div class="topics-kicker">QUESTION PRACTICE</div>
+
+    <h1>CCNA Exam Topics</h1>
+
+    <p class="topics-intro">
+        Choose an exam domain and select a subtopic to
+        practice your CCNA knowledge.
     </p>
-</div>
 
-<div class="row g-4">
-
-    @foreach (var topic in ExamTopics)
+    @if (IsLoading)
     {
-        <div class="col-12 col-lg-6 col-xl-4"
-             @key="topic.Name">
-
-            <div class="card h-100">
-                <div class="card-body p-4">
-
-                    <div class="d-flex justify-content-between
-                                align-items-start gap-2 mb-3">
-
-                        <h5 class="card-title">
-                            @topic.Name
-                        </h5>
-
-                        <span class="badge bg-primary">
-                            @topic.Weight%
-                        </span>
-                    </div>
-
-                    <p class="card-text">
-                        @topic.Description
-                    </p>
-
-                    <button class="btn btn-outline-info w-100 mt-2"
-                            @onclick="() => ToggleTopic(topic.Name)">
-
-                        @(ExpandedTopic == topic.Name
-                            ? "Hide Subtopics −"
-                            : "View Subtopics +")
-
-                    </button>
-
-                    @if (ExpandedTopic == topic.Name)
-                    {
-                        <div class="mt-4">
-
-                            <h6 class="mb-3">
-                                Select a subtopic
-                            </h6>
-
-                            <div class="d-grid gap-2">
-
-                                @foreach (var subtopic in topic.Subtopics)
-                                {
-                                    <button class="btn btn-outline-light text-start"
-                                            disabled
-                                            title="Practice questions coming soon">
-
-                                        @subtopic
-
-                                    </button>
-                                }
-
-                            </div>
-
-                            <small class="d-block mt-3 text-muted">
-                                Practice questions will be available soon.
-                            </small>
-
-                        </div>
-                    }
-
-                </div>
-            </div>
+        <p class="topics-message">
+            Checking available questions...
+        </p>
+    }
+    else if (!string.IsNullOrEmpty(ErrorMessage))
+    {
+        <div class="topics-message">
+            @ErrorMessage
         </div>
     }
 
+    <div class="topics-grid">
+
+        @foreach (var domain in Domains)
+        {
+            var isExpanded = ExpandedDomains.Contains(domain.Name);
+
+            <div class="topics-card">
+
+                <div class="topics-card-header">
+                    <h2>@domain.Name</h2>
+
+                    <span class="topics-weight">
+                        @domain.Weight
+                    </span>
+                </div>
+
+                <p class="topics-card-description">
+                    @domain.Description
+                </p>
+
+                <button type="button"
+                        class="topics-expand-button"
+                        @onclick="() => ToggleDomain(domain.Name)">
+
+                    @(isExpanded
+                        ? "Hide Subtopics −"
+                        : "View Subtopics +")
+
+                </button>
+
+                @if (isExpanded)
+                {
+                    <div class="topics-subtopics">
+
+                        <h3>Select a subtopic</h3>
+
+                        @foreach (var subtopic in domain.Subtopics)
+                        {
+                            var count = GetQuestionCount(
+                                domain.Name,
+                                subtopic);
+
+                            @if (count > 0)
+                            {
+                                <a class="topics-subtopic-link"
+                                   href="@GetQuizUrl(domain.Name, subtopic)">
+
+                                    <span>@subtopic</span>
+
+                                    <span class="topics-question-count">
+                                        @count questions
+                                        <span aria-hidden="true">→</span>
+                                    </span>
+
+                                </a>
+                            }
+                            else
+                            {
+                                <div class="topics-subtopic-disabled">
+
+                                    <span>@subtopic</span>
+
+                                    <span class="topics-coming-soon">
+                                        Coming soon
+                                    </span>
+
+                                </div>
+                            }
+                        }
+
+                        <p class="topics-card-footer">
+                            Available subtopics launch a
+                            10-question random quiz.
+                        </p>
+
+                    </div>
+                }
+
+            </div>
+        }
+
+    </div>
+
 </div>
+
+<style>
+    .topics-page {
+        padding: 4px 0 45px;
+        color: inherit;
+    }
+
+    .topics-kicker {
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 2px;
+        color: #22d3ee;
+        margin-bottom: 13px;
+    }
+
+    .topics-page h1 {
+        font-size: 34px;
+        font-weight: 750;
+        margin-bottom: 8px;
+        color: inherit;
+    }
+
+    .topics-intro {
+        color: #8ba9cc;
+        font-size: 15px;
+        margin-bottom: 22px;
+    }
+
+    .topics-message {
+        margin: 15px 0;
+        color: #8ba9cc;
+    }
+
+    .topics-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px;
+        align-items: stretch;
+    }
+
+    .topics-card {
+        min-width: 0;
+        padding: 22px;
+        background: var(--card-bg, #151f33);
+        border: 1px solid var(--border-color, #263650);
+        border-radius: 13px;
+    }
+
+    .topics-card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 22px;
+    }
+
+        .topics-card-header h2 {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0;
+            color: inherit;
+        }
+
+    .topics-weight {
+        flex-shrink: 0;
+        padding: 3px 9px;
+        background: rgba(34, 211, 238, 0.09);
+        color: #22d3ee;
+        border: 1px solid rgba(34, 211, 238, 0.12);
+        border-radius: 5px;
+        font-size: 12px;
+        font-weight: 800;
+    }
+
+    .topics-card-description {
+        color: #8ba9cc;
+        font-size: 14px;
+        line-height: 1.6;
+        min-height: 45px;
+        margin-bottom: 17px;
+    }
+
+    .topics-expand-button {
+        display: block;
+        width: 100%;
+        padding: 8px 12px;
+        border-radius: 6px;
+        border: 1px solid var(--border-color, #263650);
+        background: transparent;
+        color: #22d3ee;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+        .topics-expand-button:hover {
+            background: rgba(34, 211, 238, 0.07);
+            border-color: #22d3ee;
+        }
+
+    .topics-subtopics {
+        margin-top: 22px;
+    }
+
+        .topics-subtopics h3 {
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 14px;
+            color: inherit;
+        }
+
+    .topics-subtopic-link,
+    .topics-subtopic-disabled {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+        min-height: 40px;
+        padding: 10px 12px;
+        margin-bottom: 7px;
+        border-radius: 6px;
+        border: 1px solid var(--border-color, #263650);
+        background: transparent;
+        font-size: 13px;
+        text-align: left;
+        text-decoration: none;
+    }
+
+    .topics-subtopic-link {
+        color: #22d3ee;
+        cursor: pointer;
+        transition: background 0.15s ease, border-color 0.15s ease;
+    }
+
+        .topics-subtopic-link:hover {
+            background: rgba(34, 211, 238, 0.09);
+            border-color: #22d3ee;
+            color: #67e8f9;
+        }
+
+        .topics-subtopic-link:focus-visible,
+        .topics-expand-button:focus-visible {
+            outline: 2px solid #22d3ee;
+            outline-offset: 3px;
+        }
+
+    .topics-subtopic-disabled {
+        color: #71839f;
+        opacity: 0.7;
+        cursor: not-allowed;
+    }
+
+    .topics-question-count {
+        flex-shrink: 0;
+        font-size: 11px;
+        opacity: 0.85;
+        white-space: nowrap;
+    }
+
+    .topics-coming-soon {
+        flex-shrink: 0;
+        font-size: 11px;
+        white-space: nowrap;
+    }
+
+    .topics-card-footer {
+        color: #8ba9cc;
+        font-size: 12px;
+        line-height: 1.6;
+        margin-top: 15px;
+        margin-bottom: 0;
+    }
+
+    @@media (max-width: 1200px) {
+        .topics-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
+    @@media (max-width: 760px) {
+        .topics-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .topics-page h1 {
+            font-size: 27px;
+        }
+
+        .topics-card {
+            padding: 18px;
+        }
+    }
+</style>
 
 @code {
 
-    private string? ExpandedTopic;
+    private sealed record DomainInfo(
+        string Name,
+        string Description,
+        string Weight,
+        string[] Subtopics
+    );
 
-    private void ToggleTopic(string topicName)
-    {
-        ExpandedTopic = ExpandedTopic == topicName
-            ? null
-            : topicName;
-    }
-
-    private List<ExamTopic> ExamTopics = new()
-    {
+    private static readonly DomainInfo[] Domains =
+    [
         new(
             "Network Fundamentals",
-            20,
             "Network devices, addressing, cabling and networking basics.",
-            new()
-            {
+            "20%",
+            [
                 "Network Devices",
                 "IPv4 Addressing & Subnetting",
                 "IPv6 Addressing",
                 "Cabling & Interfaces",
                 "TCP & UDP",
                 "Wireless Fundamentals"
-            }
+            ]
         ),
 
         new(
             "Network Access",
-            20,
             "Switching, VLANs, wireless networking and access technologies.",
-            new()
-            {
+            "20%",
+            [
                 "VLANs",
-                "Trunking",
+                "Trunking & 802.1Q",
+                "Inter-VLAN Routing",
                 "Spanning Tree Protocol",
                 "EtherChannel",
-                "Wireless Architecture",
-                "Switch Port Security"
-            }
+                "Cisco Discovery Protocol & LLDP",
+                "Wireless Architectures",
+                "Wireless LAN Configuration"
+            ]
         ),
 
         new(
             "IP Connectivity",
-            25,
             "Routing tables, static routing and dynamic routing protocols.",
-            new()
-            {
+            "25%",
+            [
                 "Routing Tables",
+                "Router Forwarding Decisions",
                 "Static Routing",
-                "Default Routes",
-                "OSPF",
-                "Route Selection"
-            }
+                "Default Routing",
+                "IPv6 Routing",
+                "OSPFv2",
+                "First Hop Redundancy"
+            ]
         ),
 
         new(
             "IP Services",
-            10,
             "Services supporting communication across networks.",
-            new()
-            {
+            "10%",
+            [
+                "NAT & PAT",
                 "DHCP",
                 "DNS",
-                "NAT",
                 "NTP",
                 "SNMP",
-                "QoS"
-            }
+                "Syslog",
+                "QoS",
+                "SSH & TFTP"
+            ]
         ),
 
         new(
             "Security Fundamentals",
-            15,
             "Network security concepts, threats and access control.",
-            new()
-            {
-                "Security Threats",
+            "15%",
+            [
+                "Security Concepts & Threats",
+                "Device Security",
                 "Access Control Lists",
-                "Authentication",
-                "Device Hardening",
-                "Wireless Security",
-                "VPN Concepts"
-            }
+                "AAA",
+                "Layer 2 Security",
+                "VPN Concepts",
+                "Wireless Security"
+            ]
         ),
 
         new(
             "Automation and Programmability",
-            10,
             "Network automation and programmable network technologies.",
-            new()
-            {
+            "10%",
+            [
                 "Network Automation",
-                "REST APIs",
-                "JSON",
                 "Controller-Based Networking",
-                "Configuration Management"
-            }
+                "Software-Defined Networking",
+                "REST APIs",
+                "JSON Data Formats",
+                "Configuration Management",
+                "AI & Machine Learning in Networking"
+            ]
         )
+    ];
+
+    private readonly HashSet<string> ExpandedDomains = new()
+    {
+        "Network Fundamentals"
     };
 
-    private record ExamTopic(
-        string Name,
-        int Weight,
-        string Description,
-        List<string> Subtopics
-    );
+    private readonly Dictionary<string, int> QuestionCounts = new();
+
+    private bool IsLoading = true;
+    private string? ErrorMessage;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            await using var db =
+                await DbFactory.CreateDbContextAsync();
+
+            var counts = await db.Questions
+                .AsNoTracking()
+                .GroupBy(q => new
+                {
+                    q.Domain,
+                    q.Subtopic
+                })
+                .Select(g => new
+                {
+                    g.Key.Domain,
+                    g.Key.Subtopic,
+                    Count = g.Count()
+                })
+                .ToListAsync();
+
+            foreach (var item in counts)
+            {
+                var key = MakeKey(
+                    item.Domain,
+                    item.Subtopic);
+
+                QuestionCounts[key] = item.Count;
+            }
+        }
+        catch (Exception)
+        {
+            ErrorMessage =
+                "Unable to check question availability. " +
+                "Please verify the database connection.";
+        }
+        finally
+        {
+            IsLoading = false;
+        }
+    }
+
+    private void ToggleDomain(string domainName)
+    {
+        if (!ExpandedDomains.Add(domainName))
+        {
+            ExpandedDomains.Remove(domainName);
+        }
+    }
+
+    private static string MakeKey(
+        string domain,
+        string subtopic)
+    {
+        return domain + "\u001F" + subtopic;
+    }
+
+    private int GetQuestionCount(
+        string domain,
+        string subtopic)
+    {
+        var key = MakeKey(domain, subtopic);
+
+        return QuestionCounts.TryGetValue(
+            key,
+            out var count)
+            ? count
+            : 0;
+    }
+
+    private static string GetQuizUrl(
+        string domain,
+        string subtopic)
+    {
+        return "/topic-quiz?domain=" +
+               Uri.EscapeDataString(domain) +
+               "&subtopic=" +
+               Uri.EscapeDataString(subtopic);
+    }
 }
