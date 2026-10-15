@@ -1,81 +1,134 @@
 ﻿
 @page "/"
 
-<PageTitle>Dashboard | CCNA Practice Hub</PageTitle>
+<PageTitle>Practice Dashboard | CCNA Practice Hub</PageTitle>
 
 <div class="dashboard-header mb-4">
     <span class="dashboard-eyebrow">CCNA PRACTICE HUB</span>
-    <h1 class="mt-2">Learning Dashboard</h1>
-    <p>Your journey to CCNA certification starts here.</p>
+
+    <h1 class="mt-2">Practice Dashboard</h1>
+
+    <p>
+        Practise CCNA questions, review your results
+        and track your progress.
+    </p>
 </div>
+
+<!-- DASHBOARD STATISTICS -->
 
 <div class="row g-4 mb-4">
 
+    <!-- Quizzes Completed -->
     <div class="col-12 col-md-6 col-xl-3">
         <div class="card h-100 dashboard-stat">
             <div class="card-body">
-                <span class="stat-label">Quizzes Completed</span>
+                <span class="stat-label">
+                    Quizzes Completed
+                </span>
+
                 <h2 class="stat-value">0</h2>
-                <span class="stat-detail">No attempts yet</span>
+
+                <span class="stat-detail">
+                    No attempts yet
+                </span>
             </div>
         </div>
     </div>
 
+    <!-- Average Score -->
     <div class="col-12 col-md-6 col-xl-3">
         <div class="card h-100 dashboard-stat">
             <div class="card-body">
-                <span class="stat-label">Average Score</span>
+                <span class="stat-label">
+                    Average Score
+                </span>
+
                 <h2 class="stat-value">—</h2>
-                <span class="stat-detail">Complete a quiz to begin</span>
+
+                <span class="stat-detail">
+                    Complete a quiz to begin
+                </span>
             </div>
         </div>
     </div>
 
+    <!-- Questions Answered -->
     <div class="col-12 col-md-6 col-xl-3">
         <div class="card h-100 dashboard-stat">
             <div class="card-body">
-                <span class="stat-label">Questions Answered</span>
+                <span class="stat-label">
+                    Questions Answered
+                </span>
+
                 <h2 class="stat-value">0</h2>
-                <span class="stat-detail">Start practising today</span>
+
+                <span class="stat-detail">
+                    Start practising today
+                </span>
             </div>
         </div>
     </div>
 
+    <!-- Domains Practised -->
     <div class="col-12 col-md-6 col-xl-3">
         <div class="card h-100 dashboard-stat">
             <div class="card-body">
-                <span class="stat-label">Domains Practised</span>
-                <h2 class="stat-value">0<span class="stat-total">/6</span></h2>
-                <span class="stat-detail">Six CCNA exam domains</span>
+                <span class="stat-label">
+                    Domains Practised
+                </span>
+
+                <h2 class="stat-value">
+                    0<span class="stat-total">/6</span>
+                </h2>
+
+                <span class="stat-detail">
+                    Six CCNA exam domains
+                </span>
             </div>
         </div>
     </div>
 
 </div>
 
+<!-- EXAM PREPARATION SECTION -->
+
 <div class="card dashboard-welcome">
     <div class="card-body p-4 p-md-5">
-        <div class="dashboard-eyebrow mb-2">YOUR LEARNING JOURNEY</div>
-        <h2>Ready to level up your networking skills?</h2>
+
+        <div class="dashboard-eyebrow mb-2">
+            YOUR EXAM PREPARATION
+        </div>
+
+        <h2>
+            Ready to test your CCNA knowledge?
+        </h2>
 
         <p class="mt-3">
-            Explore the six CCNA 200-301 exam domains,
-            build your networking knowledge, and prepare
-            for upcoming practice quizzes.
+            Already studying for your CCNA?
+            Put your knowledge to the test with
+            topic-based practice questions,
+            review your answers and identify
+            areas that need more revision.
         </p>
 
         <a class="btn btn-primary mt-3" href="/topics">
             Explore CCNA Topics →
         </a>
+
     </div>
 </div>
 
+<!-- PROGRESS SECTION -->
+
 <div class="card mt-4">
     <div class="card-body p-4">
-        <h4>Your Progress</h4>
+
+        <h4>Your Practice Progress</h4>
+
         <p>
-            Your learning statistics and performance trends
-            will appear here after completing your first quiz.
+            Your quiz statistics, scores and
+            performance trends will appear here
+            after completing your first practice quiz.
         </p>
 
         <div class="progress mt-3 dashboard-progress">
@@ -91,5 +144,6 @@
         <small class="d-block mt-3 dashboard-helper">
             No quiz attempts recorded yet.
         </small>
+
     </div>
 </div>
