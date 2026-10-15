@@ -3,39 +3,84 @@
 
 <PageTitle>CCNA Topics | CCNA Practice Hub</PageTitle>
 
-<h1>CCNA Exam Topics</h1>
+<div class="mb-4">
+    <span class="dashboard-eyebrow">
+        QUESTION PRACTICE
+    </span>
 
-<p class="text-muted">
-    Explore the six CCNA 200-301 exam domains.
-    Choose a topic to begin practising.
-</p>
+    <h1 class="mt-2">CCNA Exam Topics</h1>
 
-<div class="row g-4 mt-2">
+    <p>
+        Choose an exam domain and select a subtopic
+        to practise your CCNA knowledge.
+    </p>
+</div>
+
+<div class="row g-4">
 
     @foreach (var topic in ExamTopics)
     {
-        <div class="col-12 col-md-6 col-xl-4">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body">
+        <div class="col-12 col-lg-6 col-xl-4"
+             @key="topic.Name">
 
-                    <h5 class="card-title">
-                        @topic.Name
-                    </h5>
+            <div class="card h-100">
+                <div class="card-body p-4">
 
-                    <p class="card-text text-muted">
+                    <div class="d-flex justify-content-between
+                                align-items-start gap-2 mb-3">
+
+                        <h5 class="card-title">
+                            @topic.Name
+                        </h5>
+
+                        <span class="badge bg-primary">
+                            @topic.Weight%
+                        </span>
+                    </div>
+
+                    <p class="card-text">
                         @topic.Description
                     </p>
 
-                    <span class="badge bg-primary">
-                        @topic.Weight% of exam
-                    </span>
+                    <button class="btn btn-outline-info w-100 mt-2"
+                            @onclick="() => ToggleTopic(topic.Name)">
 
-                </div>
+                        @(ExpandedTopic == topic.Name
+                            ? "Hide Subtopics −"
+                            : "View Subtopics +")
 
-                <div class="card-footer bg-transparent border-0 pb-3">
-                    <button class="btn btn-primary" disabled>
-                        Practice Questions (Coming Soon)
                     </button>
+
+                    @if (ExpandedTopic == topic.Name)
+                    {
+                        <div class="mt-4">
+
+                            <h6 class="mb-3">
+                                Select a subtopic
+                            </h6>
+
+                            <div class="d-grid gap-2">
+
+                                @foreach (var subtopic in topic.Subtopics)
+                                {
+                                    <button class="btn btn-outline-light text-start"
+                                            disabled
+                                            title="Practice questions coming soon">
+
+                                        @subtopic
+
+                                    </button>
+                                }
+
+                            </div>
+
+                            <small class="d-block mt-3 text-muted">
+                                Practice questions will be available soon.
+                            </small>
+
+                        </div>
+                    }
+
                 </div>
             </div>
         </div>
@@ -44,30 +89,111 @@
 </div>
 
 @code {
+
+    private string? ExpandedTopic;
+
+    private void ToggleTopic(string topicName)
+    {
+        ExpandedTopic = ExpandedTopic == topicName
+            ? null
+            : topicName;
+    }
+
     private List<ExamTopic> ExamTopics = new()
     {
-        new("Network Fundamentals", 20,
-            "Network devices, IPv4 and IPv6, cabling, and network basics."),
+        new(
+            "Network Fundamentals",
+            20,
+            "Network devices, addressing, cabling and networking basics.",
+            new()
+            {
+                "Network Devices",
+                "IPv4 Addressing & Subnetting",
+                "IPv6 Addressing",
+                "Cabling & Interfaces",
+                "TCP & UDP",
+                "Wireless Fundamentals"
+            }
+        ),
 
-        new("Network Access", 20,
-            "Switching, VLANs, trunking, wireless networking, and STP."),
+        new(
+            "Network Access",
+            20,
+            "Switching, VLANs, wireless networking and access technologies.",
+            new()
+            {
+                "VLANs",
+                "Trunking",
+                "Spanning Tree Protocol",
+                "EtherChannel",
+                "Wireless Architecture",
+                "Switch Port Security"
+            }
+        ),
 
-        new("IP Connectivity", 25,
-            "Routing tables, static routes, and OSPF."),
+        new(
+            "IP Connectivity",
+            25,
+            "Routing tables, static routing and dynamic routing protocols.",
+            new()
+            {
+                "Routing Tables",
+                "Static Routing",
+                "Default Routes",
+                "OSPF",
+                "Route Selection"
+            }
+        ),
 
-        new("IP Services", 10,
-            "NAT, DHCP, DNS, NTP, and other network services."),
+        new(
+            "IP Services",
+            10,
+            "Services supporting communication across networks.",
+            new()
+            {
+                "DHCP",
+                "DNS",
+                "NAT",
+                "NTP",
+                "SNMP",
+                "QoS"
+            }
+        ),
 
-        new("Security Fundamentals", 15,
-            "Network security, access control, authentication, and threats."),
+        new(
+            "Security Fundamentals",
+            15,
+            "Network security concepts, threats and access control.",
+            new()
+            {
+                "Security Threats",
+                "Access Control Lists",
+                "Authentication",
+                "Device Hardening",
+                "Wireless Security",
+                "VPN Concepts"
+            }
+        ),
 
-        new("Automation and Programmability", 10,
-            "Network automation, APIs, controller-based networking, and JSON.")
+        new(
+            "Automation and Programmability",
+            10,
+            "Network automation and programmable network technologies.",
+            new()
+            {
+                "Network Automation",
+                "REST APIs",
+                "JSON",
+                "Controller-Based Networking",
+                "Configuration Management"
+            }
+        )
     };
 
     private record ExamTopic(
         string Name,
         int Weight,
-        string Description
+        string Description,
+        List<string> Subtopics
     );
 }
