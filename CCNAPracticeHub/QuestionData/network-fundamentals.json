@@ -1,0 +1,17 @@
+[
+  {
+    "id": 11,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Easy",
+    "questionText": "What is the subnet mask for an IPv4 /26 prefix?",
+    "options": [
+      "255.255.255.0",
+      "255.255.255.128",
+      "255.255.255.192",
+      "255.255.255.224"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "A /26 prefix uses 26 network bits, producing the subnet mask 255.255.255.192."
+  }
+]

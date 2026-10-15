@@ -1,6 +1,7 @@
 
 using CCNAPracticeHub.Components;
 using CCNAPracticeHub.Data;
+using CCNAPracticeHub.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,15 +19,55 @@ builder.Services.AddDbContextFactory<CcnaDbContext>(options =>
 
 var app = builder.Build();
 
-// Seed our initial CCNA question bank.
+// Import CCNA questions during development.
 if (app.Environment.IsDevelopment())
 {
     using var scope = app.Services.CreateScope();
 
-    var contextFactory = scope.ServiceProvider
+    var factory = scope.ServiceProvider
         .GetRequiredService<IDbContextFactory<CcnaDbContext>>();
 
-    await QuestionSeeder.SeedAsync(contextFactory);
+    // Import original prototype questions.
+    await QuestionSeeder.SeedAsync(factory);
+
+    // Locate question data directory.
+    string questionFolder = Path.Combine(
+        app.Environment.ContentRootPath,
+        "QuestionData");
+
+    if (Directory.Exists(questionFolder))
+    {
+        // Find every JSON file, including subfolders.
+        string[] files = Directory.GetFiles(
+            questionFolder,
+            "*.json",
+            SearchOption.AllDirectories);
+
+        int totalImported = 0;
+
+        foreach (string file in files.OrderBy(f => f))
+        {
+            int imported = await QuestionImporter.ImportAsync(
+                factory,
+                file);
+
+            totalImported += imported;
+
+            app.Logger.LogInformation(
+                "Imported {Count} questions from {File}",
+                imported,
+                Path.GetFileName(file));
+        }
+
+        app.Logger.LogInformation(
+            "Question import completed. {Count} new questions added.",
+            totalImported);
+    }
+    else
+    {
+        app.Logger.LogWarning(
+            "QuestionData folder was not found.");
+    }
 }
 
 // Configure HTTP pipeline.
