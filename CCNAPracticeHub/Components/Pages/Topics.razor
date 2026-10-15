@@ -1,0 +1,73 @@
+﻿
+@page "/topics"
+
+<PageTitle>CCNA Topics | CCNA Practice Hub</PageTitle>
+
+<h1>CCNA Exam Topics</h1>
+
+<p class="text-muted">
+    Explore the six CCNA 200-301 exam domains.
+    Choose a topic to begin practising.
+</p>
+
+<div class="row g-4 mt-2">
+
+    @foreach (var topic in ExamTopics)
+    {
+        <div class="col-12 col-md-6 col-xl-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+
+                    <h5 class="card-title">
+                        @topic.Name
+                    </h5>
+
+                    <p class="card-text text-muted">
+                        @topic.Description
+                    </p>
+
+                    <span class="badge bg-primary">
+                        @topic.Weight% of exam
+                    </span>
+
+                </div>
+
+                <div class="card-footer bg-transparent border-0 pb-3">
+                    <button class="btn btn-primary" disabled>
+                        Practice Questions (Coming Soon)
+                    </button>
+                </div>
+            </div>
+        </div>
+    }
+
+</div>
+
+@code {
+    private List<ExamTopic> ExamTopics = new()
+    {
+        new("Network Fundamentals", 20,
+            "Network devices, IPv4 and IPv6, cabling, and network basics."),
+
+        new("Network Access", 20,
+            "Switching, VLANs, trunking, wireless networking, and STP."),
+
+        new("IP Connectivity", 25,
+            "Routing tables, static routes, and OSPF."),
+
+        new("IP Services", 10,
+            "NAT, DHCP, DNS, NTP, and other network services."),
+
+        new("Security Fundamentals", 15,
+            "Network security, access control, authentication, and threats."),
+
+        new("Automation and Programmability", 10,
+            "Network automation, APIs, controller-based networking, and JSON.")
+    };
+
+    private record ExamTopic(
+        string Name,
+        int Weight,
+        string Description
+    );
+}
