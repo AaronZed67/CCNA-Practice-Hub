@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add Blazor services.
+// Register Blazor services.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
-// Register SQLite database factory.
+// Register SQLite database.
 builder.Services.AddDbContextFactory<CcnaDbContext>(options =>
     options.UseSqlite(
         builder.Configuration.GetConnectionString("CcnaDatabase")
@@ -18,7 +18,18 @@ builder.Services.AddDbContextFactory<CcnaDbContext>(options =>
 
 var app = builder.Build();
 
-// Configure HTTP request pipeline.
+// Seed our initial CCNA question bank.
+if (app.Environment.IsDevelopment())
+{
+    using var scope = app.Services.CreateScope();
+
+    var contextFactory = scope.ServiceProvider
+        .GetRequiredService<IDbContextFactory<CcnaDbContext>>();
+
+    await QuestionSeeder.SeedAsync(contextFactory);
+}
+
+// Configure HTTP pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error", createScopeForErrors: true);
@@ -26,9 +37,7 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseAntiforgery();
-
 app.MapStaticAssets();
 
 app.MapRazorComponents<App>()
