@@ -1,17 +1,55 @@
 ﻿
 @page "/quiz"
+@rendermode InteractiveServer
+
 @using CCNAPracticeHub.Models
-@using CCNAPracticeHub.Services
+@using CCNAPracticeHub.Data
+@using Microsoft.EntityFrameworkCore
+
+@inject IDbContextFactory<CcnaDbContext> DbFactory
 
 <PageTitle>Practice Quiz | CCNA Practice Hub</PageTitle>
 
 <div class="mb-4">
-    <span class="dashboard-eyebrow">CCNA QUESTION PRACTICE</span>
+    <span class="dashboard-eyebrow">
+        CCNA QUESTION PRACTICE
+    </span>
+
     <h1 class="mt-2">Practice Quiz</h1>
-    <p>Test your CCNA knowledge and review your answers.</p>
+
+    <p>
+        Test your CCNA knowledge and review your answers.
+    </p>
 </div>
 
-@if (!QuizFinished && CurrentQuestion is not null)
+@if (IsLoading)
+{
+    <div class="card">
+        <div class="card-body p-4">
+            <p>Loading questions from the database...</p>
+        </div>
+    </div>
+}
+else if (!string.IsNullOrEmpty(ErrorMessage))
+{
+    <div class="alert alert-danger">
+        @ErrorMessage
+    </div>
+}
+else if (Questions.Count == 0)
+{
+    <div class="card">
+        <div class="card-body p-4">
+            <h3>No Questions Available</h3>
+
+            <p>
+                The question database is currently empty.
+                Please check that the questions have been imported.
+            </p>
+        </div>
+    </div>
+}
+else if (!QuizFinished && CurrentQuestion is not null)
 {
     <div class="card">
         <div class="card-body p-4">
@@ -42,6 +80,8 @@
                 </div>
             </div>
 
+            <!-- QUESTION CATEGORY -->
+
             <div class="mb-3">
                 <span class="badge bg-primary">
                     @CurrentQuestion.Difficulty
@@ -52,7 +92,7 @@
                 </span>
             </div>
 
-            <!-- QUESTION -->
+            <!-- QUESTION TEXT -->
 
             <h3 class="mb-4">
                 @CurrentQuestion.QuestionText
@@ -62,7 +102,9 @@
 
             <div class="d-grid gap-3">
 
-                @for (int i = 0; i < CurrentQuestion.Options.Count; i++)
+                @for (int i = 0;
+                      i < CurrentQuestion.Options.Count;
+                      i++)
                 {
                     var optionIndex = i;
 
@@ -81,7 +123,7 @@
                 }
             </div>
 
-            <!-- FEEDBACK -->
+            <!-- ANSWER FEEDBACK -->
 
             @if (AnswerSubmitted)
             {
@@ -91,8 +133,8 @@
 
                     <strong>
                         @(AnswerCorrect
-                            ? "Correct answer!"
-                            : "Incorrect answer")
+                            ? "Correct Answer!"
+                            : "Incorrect Answer")
                     </strong>
 
                     <p class="mb-2 mt-2">
@@ -102,7 +144,8 @@
                     @if (!AnswerCorrect)
                     {
                         <p class="mb-0">
-                            <strong>Correct answer:</strong>
+                            <strong>Correct Answer:</strong>
+
                             @CurrentQuestion.Options[
                                 CurrentQuestion.CorrectAnswerIndex]
                         </p>
@@ -110,13 +153,13 @@
                 </div>
             }
 
-            <!-- ACTION BUTTONS -->
+            <!-- QUESTION CONTROLS -->
 
             <div class="d-flex justify-content-between
                         align-items-center mt-4 flex-wrap gap-3">
 
                 <span class="text-muted">
-                    Score: @Score / @Questions.Count
+                    Correct: @Score
                 </span>
 
                 @if (!AnswerSubmitted)
@@ -140,7 +183,6 @@
 
                     </button>
                 }
-
             </div>
 
         </div>
@@ -166,8 +208,8 @@ else if (QuizFinished)
             <h3>@FinalPercentage%</h3>
 
             <p class="mt-3">
-                You answered @Score out of @Questions.Count
-                questions correctly.
+                You answered @Score out of
+                @Questions.Count questions correctly.
             </p>
 
             <div class="progress dashboard-progress my-4">
@@ -200,6 +242,7 @@ else if (QuizFinished)
 
 @code {
 
+    // Questions loaded from SQLite
     private List<Question> Questions = new();
 
     private int CurrentIndex = 0;
@@ -209,45 +252,90 @@ else if (QuizFinished)
     private bool AnswerSubmitted = false;
     private bool AnswerCorrect = false;
     private bool QuizFinished = false;
+    private bool IsLoading = true;
 
+    private string? ErrorMessage;
+
+    // Current question
     private Question? CurrentQuestion =>
         CurrentIndex < Questions.Count
             ? Questions[CurrentIndex]
             : null;
 
+    // Current progress
     private int ProgressPercentage =>
         Questions.Count == 0
             ? 0
             : (int)Math.Round(
-                (double)(CurrentIndex + 1) / Questions.Count * 100);
+                (double)(CurrentIndex + 1) /
+                Questions.Count * 100);
 
+    // Final score percentage
     private int FinalPercentage =>
         Questions.Count == 0
             ? 0
             : (int)Math.Round(
-                (double)Score / Questions.Count * 100);
+                (double)Score /
+                Questions.Count * 100);
 
-    protected override void OnInitialized()
+    // Load database questions when page opens
+    protected override async Task OnInitializedAsync()
     {
-        RestartQuiz();
+        await LoadQuestionsAsync();
     }
 
+    private async Task LoadQuestionsAsync()
+    {
+        IsLoading = true;
+        ErrorMessage = null;
+
+        try
+        {
+            await using var db =
+                await DbFactory.CreateDbContextAsync();
+
+            Questions = await db.Questions
+                .AsNoTracking()
+                .OrderBy(q => q.Id)
+                .ToListAsync();
+
+            ResetQuizState();
+        }
+        catch (Exception)
+        {
+            Questions.Clear();
+
+            ErrorMessage =
+                "Unable to load questions from the database. " +
+                "Check your SQLite connection and try again.";
+        }
+        finally
+        {
+            IsLoading = false;
+        }
+    }
+
+    // Choose an answer
     private void SelectAnswer(int index)
     {
         if (AnswerSubmitted)
             return;
 
+        if (CurrentQuestion is null ||
+            index < 0 ||
+            index >= CurrentQuestion.Options.Count)
+            return;
+
         SelectedAnswerIndex = index;
     }
 
+    // Submit selected answer
     private void SubmitAnswer()
     {
         if (CurrentQuestion is null ||
             SelectedAnswerIndex is null ||
             AnswerSubmitted)
-        {
             return;
-        }
 
         AnswerCorrect =
             SelectedAnswerIndex.Value ==
@@ -261,6 +349,7 @@ else if (QuizFinished)
         AnswerSubmitted = true;
     }
 
+    // Move to next question
     private void NextQuestion()
     {
         if (!AnswerSubmitted)
@@ -269,6 +358,7 @@ else if (QuizFinished)
         if (CurrentIndex < Questions.Count - 1)
         {
             CurrentIndex++;
+
             SelectedAnswerIndex = null;
             AnswerSubmitted = false;
             AnswerCorrect = false;
@@ -279,26 +369,32 @@ else if (QuizFinished)
         }
     }
 
+    // Restart using currently loaded questions
     private void RestartQuiz()
     {
-        Questions = QuestionBank.GetQuestions();
+        ResetQuizState();
+    }
 
+    // Reset all quiz progress
+    private void ResetQuizState()
+    {
         CurrentIndex = 0;
         SelectedAnswerIndex = null;
         Score = 0;
 
         AnswerSubmitted = false;
         AnswerCorrect = false;
-
         QuizFinished = Questions.Count == 0;
     }
 
+    // Style selected and submitted answers
     private string GetOptionClass(int index)
     {
         string classes =
             "btn text-start p-3 ccna-answer-option";
 
-        if (AnswerSubmitted && CurrentQuestion is not null)
+        if (AnswerSubmitted &&
+            CurrentQuestion is not null)
         {
             if (index == CurrentQuestion.CorrectAnswerIndex)
                 return classes + " ccna-answer-correct";
