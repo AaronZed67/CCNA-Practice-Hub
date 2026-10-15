@@ -58,3 +58,190 @@ h1:focus {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
     text-align: start;
 }
+
+
+/* ========================================
+   CCNA PRACTICE HUB - DARK THEME
+   ======================================== */
+
+:root {
+    --ccna-bg: #0B1120;
+    --ccna-sidebar: #0F172A;
+    --ccna-surface: #151F33;
+    --ccna-border: #26354D;
+    --ccna-primary: #3B82F6;
+    --ccna-cyan: #22D3EE;
+    --ccna-text: #F1F5F9;
+    --ccna-muted: #94A3B8;
+}
+
+/* Main application */
+html, body {
+    background-color: var(--ccna-bg);
+    color: var(--ccna-text);
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+main {
+    background-color: var(--ccna-bg);
+    min-height: 100vh;
+}
+
+.content {
+    color: var(--ccna-text);
+}
+
+/* Sidebar */
+.sidebar {
+    background: var(--ccna-sidebar) !important;
+    border-right: 1px solid var(--ccna-border);
+}
+
+/* Top bar */
+.top-row {
+    background: var(--ccna-sidebar) !important;
+    border-bottom: 1px solid var(--ccna-border) !important;
+}
+
+    .top-row a {
+        color: var(--ccna-text) !important;
+    }
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--ccna-text);
+    font-weight: 600;
+}
+
+p {
+    color: var(--ccna-muted);
+}
+
+.text-muted {
+    color: var(--ccna-muted) !important;
+}
+
+/* Cards */
+.card {
+    background: var(--ccna-surface);
+    color: var(--ccna-text);
+    border: 1px solid var(--ccna-border);
+    border-radius: 14px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+    .card:hover {
+        transform: translateY(-3px);
+        border-color: var(--ccna-primary);
+    }
+
+.card-title {
+    color: var(--ccna-text);
+}
+
+.card-footer {
+    background: transparent;
+}
+
+/* Buttons */
+.btn-primary {
+    background: var(--ccna-primary);
+    border-color: var(--ccna-primary);
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+    .btn-primary:hover {
+        background: #2563EB;
+        border-color: #2563EB;
+    }
+
+    .btn-primary:disabled {
+        background: #284675;
+        border-color: #284675;
+        color: #CBD5E1;
+        opacity: 0.8;
+    }
+
+/* Badges */
+.badge.bg-primary {
+    background: #1E3A5F !important;
+    color: var(--ccna-cyan);
+    border: 1px solid #285A83;
+}
+
+/* Accessible keyboard focus */
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--ccna-cyan);
+    outline-offset: 3px;
+}
+
+
+/* ===================================
+   CCNA LEARNING DASHBOARD
+   =================================== */
+
+.dashboard-eyebrow {
+    color: #22D3EE;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.dashboard-header h1 {
+    font-size: clamp(28px, 3vw, 38px);
+    font-weight: 750;
+}
+
+.dashboard-stat {
+    min-height: 155px;
+}
+
+.stat-label {
+    color: #94A3B8;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.stat-value {
+    color: #F1F5F9;
+    font-size: 38px;
+    font-weight: 750;
+    margin: 12px 0 8px;
+}
+
+.stat-total {
+    color: #64748B;
+    font-size: 22px;
+}
+
+.stat-detail {
+    color: #64748B;
+    font-size: 12px;
+}
+
+.dashboard-welcome {
+    background: linear-gradient( 115deg, #151F33 0%, #172A4A 75%, #103651 100% );
+    border: 1px solid #28466B;
+}
+
+    .dashboard-welcome h2 {
+        font-size: clamp(22px, 2.5vw, 30px);
+        max-width: 650px;
+    }
+
+    .dashboard-welcome p {
+        max-width: 600px;
+        line-height: 1.8;
+    }
+
+.dashboard-progress {
+    height: 9px;
+    background: #26354D;
+    border-radius: 20px;
+}
+
+.dashboard-helper {
+    color: #94A3B8;
+}

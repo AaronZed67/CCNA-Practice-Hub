@@ -1,7 +1,95 @@
-﻿@page "/"
+﻿
+@page "/"
 
-<PageTitle>Home</PageTitle>
+<PageTitle>Dashboard | CCNA Practice Hub</PageTitle>
 
-<h1>Hello, world!</h1>
+<div class="dashboard-header mb-4">
+    <span class="dashboard-eyebrow">CCNA PRACTICE HUB</span>
+    <h1 class="mt-2">Learning Dashboard</h1>
+    <p>Your journey to CCNA certification starts here.</p>
+</div>
 
-Welcome to your new app.
+<div class="row g-4 mb-4">
+
+    <div class="col-12 col-md-6 col-xl-3">
+        <div class="card h-100 dashboard-stat">
+            <div class="card-body">
+                <span class="stat-label">Quizzes Completed</span>
+                <h2 class="stat-value">0</h2>
+                <span class="stat-detail">No attempts yet</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-3">
+        <div class="card h-100 dashboard-stat">
+            <div class="card-body">
+                <span class="stat-label">Average Score</span>
+                <h2 class="stat-value">—</h2>
+                <span class="stat-detail">Complete a quiz to begin</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-3">
+        <div class="card h-100 dashboard-stat">
+            <div class="card-body">
+                <span class="stat-label">Questions Answered</span>
+                <h2 class="stat-value">0</h2>
+                <span class="stat-detail">Start practising today</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-3">
+        <div class="card h-100 dashboard-stat">
+            <div class="card-body">
+                <span class="stat-label">Domains Practised</span>
+                <h2 class="stat-value">0<span class="stat-total">/6</span></h2>
+                <span class="stat-detail">Six CCNA exam domains</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="card dashboard-welcome">
+    <div class="card-body p-4 p-md-5">
+        <div class="dashboard-eyebrow mb-2">YOUR LEARNING JOURNEY</div>
+        <h2>Ready to level up your networking skills?</h2>
+
+        <p class="mt-3">
+            Explore the six CCNA 200-301 exam domains,
+            build your networking knowledge, and prepare
+            for upcoming practice quizzes.
+        </p>
+
+        <a class="btn btn-primary mt-3" href="/topics">
+            Explore CCNA Topics →
+        </a>
+    </div>
+</div>
+
+<div class="card mt-4">
+    <div class="card-body p-4">
+        <h4>Your Progress</h4>
+        <p>
+            Your learning statistics and performance trends
+            will appear here after completing your first quiz.
+        </p>
+
+        <div class="progress mt-3 dashboard-progress">
+            <div class="progress-bar"
+                 role="progressbar"
+                 style="width: 0%"
+                 aria-valuenow="0"
+                 aria-valuemin="0"
+                 aria-valuemax="100">
+            </div>
+        </div>
+
+        <small class="d-block mt-3 dashboard-helper">
+            No quiz attempts recorded yet.
+        </small>
+    </div>
+</div>

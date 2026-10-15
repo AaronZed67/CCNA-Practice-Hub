@@ -1,9 +1,9 @@
 ﻿
-<div class="top-row ps-3 navbar navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="">
-            CCNA Practice Hub
-        </a>
+<div class="ccna-brand">
+    <div class="ccna-brand-icon">⌘</div>
+    <div>
+        <div class="ccna-brand-title">CCNA HUB</div>
+        <div class="ccna-brand-subtitle">NETWORK LEARNING</div>
     </div>
 </div>
 
@@ -14,39 +14,48 @@
 <div class="nav-scrollable"
      onclick="document.querySelector('.navbar-toggler').click()">
 
-    <nav class="nav flex-column">
+    <nav class="nav flex-column ccna-navigation">
+
+        <div class="ccna-nav-label">WORKSPACE</div>
 
         <div class="nav-item px-3">
-            <NavLink class="nav-link"
-                     href=""
+            <NavLink class="nav-link" href=""
                      Match="NavLinkMatch.All">
-                Dashboard
+                <span class="ccna-nav-icon">⌂</span>
+                <span>Dashboard</span>
             </NavLink>
         </div>
 
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="topics">
-                CCNA Topics
+                <span class="ccna-nav-icon">▦</span>
+                <span>CCNA Topics</span>
             </NavLink>
         </div>
 
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="quiz">
-                Practice Quiz
+                <span class="ccna-nav-icon">✎</span>
+                <span>Practice Quiz</span>
             </NavLink>
         </div>
 
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="mock-exam">
-                Mock Exams
+                <span class="ccna-nav-icon">◷</span>
+                <span>Mock Exams</span>
             </NavLink>
         </div>
 
+        <div class="ccna-nav-label mt-4">ANALYTICS</div>
+
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="history">
-                Progress &amp; History
+                <span class="ccna-nav-icon">▥</span>
+                <span>Progress &amp; History</span>
             </NavLink>
         </div>
 
     </nav>
 </div>
+
