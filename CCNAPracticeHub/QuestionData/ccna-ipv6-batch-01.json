@@ -1,0 +1,452 @@
+[
+  {
+    "id": 84,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv6 Addressing",
+    "difficulty": "Easy",
+    "questionText": "How many hexadecimal characters are required to represent a full 128-bit IPv6 address without separators?",
+    "options": [ "16", "24", "32", "64" ],
+    "correctAnswerIndex": 2,
+    "explanation": "Each hexadecimal character represents 4 bits. Dividing 128 bits by 4 gives 32 hexadecimal characters."
+  },
+  {
+    "id": 85,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv6 Addressing",
+    "difficulty": "Easy",
+    "questionText": "Which prefix identifies the IPv6 link-local unicast address range?",
+    "options": [ "FC00::/7", "FE80::/10", "2000::/3", "FF00::/8" ],
+    "correctAnswerIndex": 1,
+    "explanation": "IPv6 link-local unicast addresses use FE80::/10. They are used for communication on a local link and are not routed between links."
+  },
+  {
+    "id": 86,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv6 Addressing",
+    "difficulty": "Easy",
+    "questionText": "Which prefix covers the IPv6 unique-local unicast address range?",
+    "options": [ "FE80::/10", "FF00::/8", "FC00::/7", "2000::/3" ],
+    "correctAnswerIndex": 2,
+    "explanation": "Unique-local IPv6 addresses fall within FC00::/7. They are intended for local communication rather than general Internet routing."
+  },
+  {
+    "id": 87,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv6 Addressing",
+    "difficulty": "Easy",
+    "questionText": "Which prefix identifies the currently allocated IPv6 global unicast address space?",
+    "options": [ "2000::/3", "FE80::/10", "FF00::/8", "FC00::/7" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The currently allocated IPv6 global unicast range is 2000::/3. Global unicast addresses are designed for globally unique addressing and routing."
+  },
+  {
+    "id": 88,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv6 Addressing",
+    "difficulty": "Easy",
+    "questionText": "What is the IPv6 loopback address?",
+    "options": [ "::", "::1", "FE80::1", "FF02::1" ],
+    "correctAnswerIndex": 1,
+    "explanation": "::1/128 identifies the local loopback interface. It is equivalent in purpose to IPv4 loopback address 127.0.0.1."
+  },
+  {
+    "id": 89,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv6 Addressing",
+    "difficulty": "Easy",
+    "questionText": "Which IPv6 address represents the unspecified address?",
+    "options": [ "::1", "FF02::1", "::", "FE80::" ],
+    "correctAnswerIndex": 2,
+    "explanation": "The unspecified IPv6 address is ::/128, consisting entirely of zero bits. It cannot be assigned as a normal destination address."
+  },
+  {
+    "id": 90,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv6 Addressing",
+    "difficulty": "Medium",
+    "questionText": "Which address is the correct compressed form of 2001:0DB8:0000:0000:0000:0000:0000:0005?",
+    "options": [ "2001:DB8::5", "2001:DB8:0:5::", "2001::DB8:5", "2001:DB8::0:5:0" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Leading zeros in each hextet can be removed, and the consecutive all-zero hextets can be compressed into a single double colon, giving 2001:DB8::5."
+  },
+  {
+    "id": 91,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv6 Addressing",
+    "difficulty": "Medium",
+    "questionText": "Which is the correct full expansion of 2001:DB8:12::AB?",
+    "options": [
+      "2001:0DB8:0012:0000:0000:0000:00AB:0000",
+      "2001:0DB8:0012:0000:0000:0000:0000:00AB",
+      "2001:0DB8:0012:0000:0000:0000:0000:0AB0",
+      "2001:0DB8:0012:0000:0000:0000:0000:000A"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "An IPv6 address has eight hextets. The double colon represents enough zero hextets to bring the total to eight, with 00AB as the final hextet."
+  },
+  {
+    "id": 92,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv6 Addressing",
+    "difficulty": "Medium",
+    "questionText": "How many times may the double-colon abbreviation appear in one valid IPv6 address?",
+    "options": [ "Zero or one time", "Up to two times", "Up to four times", "Any number of times" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The double-colon abbreviation can appear at most once in an IPv6 address, because multiple occurrences would make the number of omitted zero hextets ambiguous."
+  },
+  {
+    "id": 93,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv6 Addressing",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS command assigns IPv6 address 2001:DB8:1::1/64 to an interface in interface configuration mode?",
+    "options": [
+      "ip address 2001:DB8:1::1/64",
+      "ipv6 route 2001:DB8:1::1/64",
+      "ipv6 address 2001:DB8:1::1/64",
+      "ipv6 enable 2001:DB8:1::1/64"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "The ipv6 address command configures an IPv6 address and prefix length on a Cisco IOS interface."
+  },
+  {
+    "id": 94,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv6 Addressing",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS EXEC command provides a brief summary of IPv6 addresses and interface status?",
+    "options": [
+      "show ip interface brief",
+      "show ipv6 interface brief",
+      "show ipv6 route static",
+      "show interfaces switchport"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "The show ipv6 interface brief command displays a concise summary of IPv6 interface addressing and interface status."
+  },
+  {
+    "id": 95,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv6 Addressing",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS global configuration command enables IPv6 packet forwarding between interfaces?",
+    "options": [
+      "ip routing",
+      "ipv6 enable",
+      "ipv6 unicast-routing",
+      "ipv6 address autoconfig"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "The ipv6 unicast-routing command enables IPv6 unicast routing on supported Cisco IOS routers."
+  },
+  {
+    "id": 96,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv6 Addressing",
+    "difficulty": "Medium",
+    "questionText": "What does the IPv6 prefix length /64 indicate?",
+    "options": [
+      "The address contains 64 total bits",
+      "The first 64 bits identify the network prefix",
+      "The last 64 bits are always all zeros",
+      "The address supports exactly 64 hosts"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A /64 IPv6 prefix means that the first 64 bits form the network prefix, leaving 64 bits outside that prefix."
+  },
+  {
+    "id": 97,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv6 Addressing",
+    "difficulty": "Hard",
+    "questionText": "Which address belongs to the IPv6 subnet 2001:DB8:ABCD:1200::/56?",
+    "options": [
+      "2001:DB8:ABCD:12FF::1",
+      "2001:DB8:ABCD:1300::1",
+      "2001:DB8:ABCD:1100::1",
+      "2001:DB8:ABCE:1200::1"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "A /56 prefix fixes the first three hextets and the first eight bits of the fourth hextet. Fourth-hextet values 1200 through 12FF belong to this subnet."
+  },
+  {
+    "id": 98,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv6 Addressing",
+    "difficulty": "Hard",
+    "questionText": "How many /64 subnets can be created from one IPv6 /56 allocation?",
+    "options": [ "8", "16", "64", "256" ],
+    "correctAnswerIndex": 3,
+    "explanation": "Changing a /56 allocation into /64 subnets adds eight subnet bits. That produces 2^8, or 256, separate /64 networks."
+  },
+  {
+    "id": 99,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv6 Addressing",
+    "difficulty": "Hard",
+    "questionText": "How many /64 subnets are available inside one IPv6 /60 prefix?",
+    "options": [ "4", "8", "16", "32" ],
+    "correctAnswerIndex": 2,
+    "explanation": "There are four additional network bits between /60 and /64. Therefore, 2^4 = 16 separate /64 subnets fit inside the /60 prefix."
+  },
+  {
+    "id": 100,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv6 Addressing",
+    "difficulty": "Medium",
+    "questionText": "Which IPv6 address is used to reach all IPv6 nodes on the local link?",
+    "options": [ "FF02::1", "FF02::2", "FF05::1", "FE80::1" ],
+    "correctAnswerIndex": 0,
+    "explanation": "FF02::1 is the link-local all-nodes multicast address. IPv6 devices on the same link listen for this multicast group."
+  },
+  {
+    "id": 101,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv6 Addressing",
+    "difficulty": "Medium",
+    "questionText": "Which IPv6 multicast address identifies all IPv6 routers on the local link?",
+    "options": [ "FF02::1", "FF02::2", "FF02::5", "FF02::FB" ],
+    "correctAnswerIndex": 1,
+    "explanation": "FF02::2 is the IPv6 link-local all-routers multicast address."
+  },
+  {
+    "id": 102,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv6 Addressing",
+    "difficulty": "Easy",
+    "questionText": "Which prefix identifies IPv6 multicast addresses?",
+    "options": [ "FE80::/10", "2000::/3", "FF00::/8", "FC00::/7" ],
+    "correctAnswerIndex": 2,
+    "explanation": "IPv6 multicast addresses use FF00::/8 and identify groups of receiving devices rather than a single unicast destination."
+  },
+  {
+    "id": 103,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv6 Addressing",
+    "difficulty": "Easy",
+    "questionText": "Which statement about broadcast communication in IPv6 is correct?",
+    "options": [
+      "IPv6 uses the address FFFF:: for broadcasts",
+      "IPv6 uses the same broadcast address as IPv4",
+      "IPv6 does not have broadcast addresses and uses multicast instead",
+      "Every IPv6 /64 subnet reserves its last address for broadcast"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "IPv6 does not define broadcast addresses. Multicast is used for relevant group delivery mechanisms instead."
+  },
+  {
+    "id": 104,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv6 Addressing",
+    "difficulty": "Medium",
+    "questionText": "What is the primary purpose of an IPv6 link-local address?",
+    "options": [
+      "Communication with devices on the same local link",
+      "Globally routed communication across the Internet",
+      "Transmission to every host on the Internet",
+      "Replacement of every IPv6 multicast address"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "IPv6 link-local addresses support communication on the same local link and are used by mechanisms including Neighbor Discovery and router communication."
+  },
+  {
+    "id": 105,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv6 Addressing",
+    "difficulty": "Medium",
+    "questionText": "Which statement correctly describes IPv6 anycast addressing?",
+    "options": [
+      "It delivers every packet to all members of a multicast group",
+      "It uses a special IPv6 broadcast prefix",
+      "It sends packets to one member of a group sharing an anycast address, according to routing",
+      "It always sends packets to the geographically closest receiver"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "An IPv6 anycast address can be assigned to multiple interfaces, with routing delivering traffic to one reachable member according to routing metrics and topology."
+  },
+  {
+    "id": 106,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv6 Addressing",
+    "difficulty": "Medium",
+    "questionText": "Which IPv6 mechanism allows a host to configure its own address using information from Router Advertisements?",
+    "options": [ "NAT64", "SLAAC", "OSPFv3", "DNS" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Stateless Address Autoconfiguration (SLAAC) allows an IPv6 host to form an address using advertised network prefix information and an interface identifier."
+  },
+  {
+    "id": 107,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv6 Addressing",
+    "difficulty": "Medium",
+    "questionText": "Which ICMPv6 message type does a router send to advertise IPv6 prefix and default-router information?",
+    "options": [
+      "Neighbor Solicitation",
+      "Echo Reply",
+      "Router Advertisement",
+      "Redirect"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "Router Advertisement messages can provide information such as prefixes, default-router availability and address-configuration flags."
+  },
+  {
+    "id": 108,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv6 Addressing",
+    "difficulty": "Medium",
+    "questionText": "Which protocol replaces ARP's address-resolution role for IPv6 on Ethernet networks?",
+    "options": [ "NDP using ICMPv6", "IPv4 DHCP", "FTP", "IGMP" ],
+    "correctAnswerIndex": 0,
+    "explanation": "IPv6 Neighbor Discovery uses ICMPv6 messages, including Neighbor Solicitation and Neighbor Advertisement, to resolve neighboring IPv6 addresses to link-layer addresses."
+  },
+  {
+    "id": 109,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv6 Addressing",
+    "difficulty": "Hard",
+    "questionText": "What is the solicited-node multicast address associated with IPv6 address 2001:DB8::ABCD:1234?",
+    "options": [
+      "FF02::1:FFCD:1234",
+      "FF02::1:FFAB:CD12",
+      "FF02::1:FF00:1234",
+      "FF02::2:FFCD:1234"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "A solicited-node multicast address has prefix FF02::1:FF00:0/104 followed by the lowest 24 bits of the unicast address. The final 24 bits here are CD1234."
+  },
+  {
+    "id": 110,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv6 Addressing",
+    "difficulty": "Hard",
+    "questionText": "Which ICMPv6 message is sent during Duplicate Address Detection to determine whether a tentative IPv6 address is already in use?",
+    "options": [
+      "Router Advertisement",
+      "Neighbor Solicitation",
+      "Echo Request",
+      "Time Exceeded"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Duplicate Address Detection sends Neighbor Solicitation messages for the tentative address to check whether another interface is already using it."
+  },
+  {
+    "id": 111,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv6 Addressing",
+    "difficulty": "Medium",
+    "questionText": "Which statement about IPv6 default gateways on hosts is correct?",
+    "options": [
+      "A default gateway must always use a global unicast address",
+      "A host cannot use an IPv6 link-local gateway address",
+      "A router's link-local address can be used as an IPv6 default gateway",
+      "IPv6 hosts never require a default gateway"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "An IPv6 host can use the link-local address of a router on the same link as its next-hop default gateway."
+  },
+  {
+    "id": 112,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv6 Addressing",
+    "difficulty": "Hard",
+    "questionText": "What is the modified EUI-64 interface identifier derived from MAC address 00:11:22:33:44:55?",
+    "options": [
+      "0011:22FF:FE33:4455",
+      "0211:22FF:FE33:4455",
+      "0011:2233:44FF:FE55",
+      "0211:2233:4455:0000"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Modified EUI-64 inserts FFFE between the first three and last three MAC bytes and inverts the universal/local bit of the first byte. Thus 00 becomes 02."
+  },
+  {
+    "id": 113,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv6 Addressing",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS interface command generates an IPv6 interface identifier using modified EUI-64 for prefix 2001:DB8:10::/64?",
+    "options": [
+      "ipv6 enable 2001:DB8:10::/64",
+      "ipv6 address 2001:DB8:10::/64 eui-64",
+      "ip address 2001:DB8:10::/64 eui-64",
+      "ipv6 route 2001:DB8:10::/64 eui-64"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "The Cisco IOS command ipv6 address 2001:DB8:10::/64 eui-64 assigns an address using the specified prefix and a modified EUI-64 interface identifier."
+  },
+  {
+    "id": 114,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv6 Addressing",
+    "difficulty": "Hard",
+    "questionText": "Two IPv6 interfaces have addresses 2001:DB8:50:10::A/64 and 2001:DB8:50:11::B/64. Which statement is correct?",
+    "options": [
+      "Both interfaces belong to the same /64 subnet",
+      "The interfaces belong to different /64 subnets",
+      "The second address is an IPv6 multicast address",
+      "Both addresses are IPv6 link-local addresses"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A /64 prefix fixes the first four hextets. These addresses differ in the fourth hextet (0010 versus 0011), so they belong to separate /64 networks."
+  },
+  {
+    "id": 115,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv6 Addressing",
+    "difficulty": "Hard",
+    "questionText": "Which network prefix contains IPv6 address 2001:DB8:100:2F::1234/60?",
+    "options": [
+      "2001:DB8:100:20::/60",
+      "2001:DB8:100:2F::/60",
+      "2001:DB8:100:30::/60",
+      "2001:DB8:100:2E::/60"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "A /60 prefix fixes the first 12 bits of the fourth hextet. Fourth-hextet values 0020 through 002F belong to the 2001:DB8:100:20::/60 network."
+  },
+  {
+    "id": 116,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv6 Addressing",
+    "difficulty": "Medium",
+    "questionText": "Which command enables an IPv6 link-local address on a supported Cisco IOS interface without manually specifying a global unicast address?",
+    "options": [
+      "ipv6 enable",
+      "ip routing",
+      "ipv6 unicast-routing",
+      "ip address dhcp"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "The ipv6 enable interface command enables IPv6 processing and generates a link-local address without requiring an explicitly configured global unicast address."
+  },
+  {
+    "id": 117,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv6 Addressing",
+    "difficulty": "Hard",
+    "questionText": "An IPv6 host has a global unicast address but cannot communicate with devices outside its local subnet. Which missing configuration would most directly explain this problem?",
+    "options": [
+      "An IPv4 subnet mask",
+      "An IPv6 default route",
+      "An Ethernet broadcast address",
+      "A second IPv6 loopback address"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A host needs an appropriate IPv6 route, normally a default route via a local router, to reach destinations outside its connected network."
+  },
+  {
+    "id": 118,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv6 Addressing",
+    "difficulty": "Medium",
+    "questionText": "Which statement about IPv6 address 2001:DB8::1 is correct?",
+    "options": [
+      "It is a link-local unicast address",
+      "It is a unique-local address",
+      "It belongs to a prefix reserved for documentation and examples",
+      "It is an all-routers multicast address"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "The IPv6 prefix 2001:DB8::/32 is reserved for documentation and examples. It should not be used as a publicly routed production address."
+  }
+]

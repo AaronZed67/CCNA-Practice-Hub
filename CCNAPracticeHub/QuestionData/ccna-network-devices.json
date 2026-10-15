@@ -1,0 +1,362 @@
+[
+  {
+    "id": 60,
+    "domain": "Network Fundamentals",
+    "subtopic": "Network Devices",
+    "difficulty": "Easy",
+    "questionText": "Which network device primarily forwards Ethernet frames using destination MAC addresses?",
+    "options": [
+      "Router",
+      "Layer 2 switch",
+      "Firewall",
+      "Wireless LAN controller"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A Layer 2 switch uses its MAC address table to forward Ethernet frames to the appropriate switch ports within a VLAN."
+  },
+  {
+    "id": 61,
+    "domain": "Network Fundamentals",
+    "subtopic": "Network Devices",
+    "difficulty": "Medium",
+    "questionText": "A company needs routing between VLANs without adding a separate physical router. Which device is most suitable?",
+    "options": [
+      "Unmanaged Layer 2 switch",
+      "Ethernet repeater",
+      "Layer 3 switch",
+      "Wireless access point"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "A Layer 3 switch supports switching and IP routing. It can route between VLANs using switched virtual interfaces or other supported Layer 3 interfaces."
+  },
+  {
+    "id": 62,
+    "domain": "Network Fundamentals",
+    "subtopic": "Network Devices",
+    "difficulty": "Easy",
+    "questionText": "Which device typically provides wireless clients with access to a wired Ethernet LAN?",
+    "options": [
+      "Wireless access point",
+      "Router",
+      "Intrusion prevention system",
+      "Network storage server"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "A wireless access point provides Wi-Fi connectivity and commonly bridges traffic between wireless stations and a wired network."
+  },
+  {
+    "id": 63,
+    "domain": "Network Fundamentals",
+    "subtopic": "Network Devices",
+    "difficulty": "Medium",
+    "questionText": "What is the main purpose of a wireless LAN controller in a controller-based wireless network?",
+    "options": [
+      "Convert Ethernet traffic into optical signals",
+      "Provide centralized management of wireless access points",
+      "Assign MAC addresses to wireless clients",
+      "Replace every Layer 3 router in the network"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A wireless LAN controller centrally manages supported access points, including wireless network configuration, security policies and radio settings."
+  },
+  {
+    "id": 64,
+    "domain": "Network Fundamentals",
+    "subtopic": "Network Devices",
+    "difficulty": "Easy",
+    "questionText": "Which network component provides services or resources to client devices?",
+    "options": [
+      "Repeater",
+      "Patch panel",
+      "Server",
+      "Layer 2 bridge"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "A server provides resources or services to clients, such as web hosting, file sharing, authentication and application access."
+  },
+  {
+    "id": 65,
+    "domain": "Network Fundamentals",
+    "subtopic": "Network Devices",
+    "difficulty": "Medium",
+    "questionText": "What is the primary role of a network intrusion prevention system (IPS)?",
+    "options": [
+      "Provide wireless authentication only",
+      "Detect and actively block selected malicious traffic",
+      "Assign IP addresses to hosts",
+      "Forward Ethernet frames based only on MAC addresses"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "An IPS examines traffic for threats and can actively block or prevent detected malicious activity when deployed appropriately."
+  },
+  {
+    "id": 66,
+    "domain": "Network Fundamentals",
+    "subtopic": "Network Devices",
+    "difficulty": "Medium",
+    "questionText": "Which feature commonly distinguishes a next-generation firewall from a basic traditional packet-filtering firewall?",
+    "options": [
+      "Application-aware traffic inspection",
+      "MAC address learning",
+      "Ethernet signal regeneration",
+      "Wireless channel assignment"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "Next-generation firewalls commonly provide application awareness and deeper traffic inspection, often combined with intrusion prevention capabilities."
+  },
+  {
+    "id": 67,
+    "domain": "Network Fundamentals",
+    "subtopic": "Network Devices",
+    "difficulty": "Easy",
+    "questionText": "Which device is best described as a network endpoint?",
+    "options": [
+      "Ethernet patch panel",
+      "Core network switch",
+      "Employee laptop",
+      "WAN router"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "An endpoint is a device that originates or receives application traffic, such as a laptop, desktop computer, mobile phone or network printer."
+  },
+  {
+    "id": 68,
+    "domain": "Network Fundamentals",
+    "subtopic": "Network Devices",
+    "difficulty": "Medium",
+    "questionText": "What is the main benefit of Power over Ethernet (PoE)?",
+    "options": [
+      "It eliminates the need for Ethernet frames",
+      "It carries electrical power and data over supported Ethernet cabling",
+      "It encrypts all Ethernet communications",
+      "It allows switches to route without IP addresses"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "PoE allows supported network equipment to receive electrical power and exchange data using Ethernet cabling, reducing the need for separate power connections."
+  },
+  {
+    "id": 69,
+    "domain": "Network Fundamentals",
+    "subtopic": "Network Devices",
+    "difficulty": "Hard",
+    "questionText": "A switch receives a unicast Ethernet frame whose destination MAC address is not in its MAC address table. What does a normal Layer 2 switch do?",
+    "options": [
+      "Discard the frame immediately in every case",
+      "Send the frame only to the default gateway",
+      "Flood the frame out eligible ports in the same VLAN except the receiving port",
+      "Send the frame to every VLAN on the switch"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "Unknown unicast frames are normally flooded within their VLAN through eligible forwarding ports, excluding the ingress port. The switch does not flood them across unrelated VLANs."
+  },
+  {
+    "id": 70,
+    "domain": "Network Fundamentals",
+    "subtopic": "Network Devices",
+    "difficulty": "Medium",
+    "questionText": "How does a Layer 2 Ethernet switch normally learn MAC address table entries?",
+    "options": [
+      "By examining source MAC addresses of received frames",
+      "By querying a DNS server for each device",
+      "By examining only destination IP addresses",
+      "By assigning a new MAC address to each connected host"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "A switch learns the source MAC address of incoming Ethernet frames and associates it with the receiving port and VLAN."
+  },
+  {
+    "id": 71,
+    "domain": "Network Fundamentals",
+    "subtopic": "Network Devices",
+    "difficulty": "Hard",
+    "questionText": "A PC sends traffic to an IPv4 destination outside its local subnet. Which device will normally receive the Ethernet frame as the next hop?",
+    "options": [
+      "The destination server on the remote subnet",
+      "The default gateway",
+      "The local DNS server",
+      "Every access point on the LAN"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "For a remote IPv4 destination, the host normally forwards the packet to its configured default gateway. On Ethernet, the frame uses the gateway's MAC address as the destination."
+  },
+  {
+    "id": 72,
+    "domain": "Network Fundamentals",
+    "subtopic": "Network Devices",
+    "difficulty": "Medium",
+    "questionText": "What information does an IP router primarily use when selecting the next hop for a packet?",
+    "options": [
+      "The source Ethernet port number",
+      "The application window title",
+      "The destination IP address and routing table",
+      "The destination device's monitor resolution"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "Routers examine destination IP addresses and consult routing tables to determine how to forward packets toward their destinations."
+  },
+  {
+    "id": 73,
+    "domain": "Network Fundamentals",
+    "subtopic": "Network Devices",
+    "difficulty": "Medium",
+    "questionText": "Which device is most suitable for centrally applying security policies between a corporate network and an untrusted external network?",
+    "options": [
+      "Next-generation firewall",
+      "Unmanaged Ethernet repeater",
+      "Passive patch panel",
+      "Wireless antenna"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "A next-generation firewall can enforce security policies between network zones using traffic filtering, application awareness and other security functions."
+  },
+  {
+    "id": 74,
+    "domain": "Network Fundamentals",
+    "subtopic": "Network Devices",
+    "difficulty": "Hard",
+    "questionText": "Which statement correctly describes the difference between an IDS and an inline IPS?",
+    "options": [
+      "An IDS always blocks traffic while an IPS only records logs",
+      "An IPS is used exclusively for wireless networks",
+      "An IDS primarily detects and alerts, while an inline IPS can block malicious traffic",
+      "An IDS replaces the need for IP routing"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "An intrusion detection system primarily identifies and reports suspicious activity, while an inline intrusion prevention system can take action to block traffic."
+  },
+  {
+    "id": 75,
+    "domain": "Network Fundamentals",
+    "subtopic": "Network Devices",
+    "difficulty": "Medium",
+    "questionText": "A company wants to power several supported IP phones through their Ethernet connections. Which switch capability is required?",
+    "options": [
+      "Port mirroring",
+      "Power over Ethernet",
+      "Link aggregation",
+      "Static routing"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A PoE-capable switch can deliver power to supported IP phones over their Ethernet connections while also providing network connectivity."
+  },
+  {
+    "id": 76,
+    "domain": "Network Fundamentals",
+    "subtopic": "Network Devices",
+    "difficulty": "Hard",
+    "questionText": "A network administrator wants to reduce the number of separate broadcast domains within a LAN using VLAN segmentation. Which device normally maintains a separate MAC address table context for each VLAN?",
+    "options": [
+      "Ethernet hub",
+      "Layer 2 managed switch",
+      "Passive network tap",
+      "Copper patch panel"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A managed Layer 2 switch supports VLAN-based segmentation and maintains MAC forwarding information in VLAN context, helping keep traffic separated."
+  },
+  {
+    "id": 77,
+    "domain": "Network Fundamentals",
+    "subtopic": "Network Devices",
+    "difficulty": "Medium",
+    "questionText": "Which component commonly provides centralized configuration and monitoring for multiple wireless access points?",
+    "options": [
+      "Wireless LAN controller",
+      "Ethernet hub",
+      "DHCP relay agent",
+      "Unmanaged Layer 2 switch"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "A wireless LAN controller is designed to centralize the management and monitoring of multiple supported wireless access points."
+  },
+  {
+    "id": 78,
+    "domain": "Network Fundamentals",
+    "subtopic": "Network Devices",
+    "difficulty": "Medium",
+    "questionText": "Which statement about a Layer 3 switch is correct?",
+    "options": [
+      "It can never forward Ethernet frames",
+      "It can perform both Layer 2 switching and Layer 3 routing",
+      "It operates only as a wireless controller",
+      "It must use a separate router for every VLAN"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A Layer 3 switch combines Ethernet switching capabilities with IP routing, allowing it to forward frames within VLANs and route between IP networks."
+  },
+  {
+    "id": 79,
+    "domain": "Network Fundamentals",
+    "subtopic": "Network Devices",
+    "difficulty": "Hard",
+    "questionText": "A company deploys a controller-managed wireless network. What is one operational advantage over individually configuring every access point?",
+    "options": [
+      "Every client receives the same fixed MAC address",
+      "The network no longer needs authentication",
+      "Wireless configuration and policy management can be centralized",
+      "Ethernet switches are no longer needed"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "Controller-managed wireless networks allow administrators to manage supported access points through centralized configuration and policy control."
+  },
+  {
+    "id": 80,
+    "domain": "Network Fundamentals",
+    "subtopic": "Network Devices",
+    "difficulty": "Easy",
+    "questionText": "Which network component would typically host a shared company file repository that employees access over the LAN?",
+    "options": [
+      "File server",
+      "Ethernet repeater",
+      "Wireless antenna",
+      "Layer 2 bridge"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "A file server makes centrally stored files available to authorized network clients using file-sharing services."
+  },
+  {
+    "id": 81,
+    "domain": "Network Fundamentals",
+    "subtopic": "Network Devices",
+    "difficulty": "Medium",
+    "questionText": "What happens if a PoE switch cannot provide enough power for an attached powered device?",
+    "options": [
+      "The device automatically gains a higher Ethernet speed",
+      "The switch always assigns a public IPv4 address",
+      "The device may fail to power on or receive sufficient power",
+      "The device automatically becomes a Layer 3 router"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "PoE-powered devices depend on sufficient power being available from the power sourcing equipment. Insufficient power can prevent normal operation."
+  },
+  {
+    "id": 82,
+    "domain": "Network Fundamentals",
+    "subtopic": "Network Devices",
+    "difficulty": "Hard",
+    "questionText": "A switch has learned MAC address 00:11:22:33:44:55 on port Gi0/3 in VLAN 10. It receives a frame on Gi0/1 in VLAN 10 destined for that address. What should it normally do?",
+    "options": [
+      "Flood the frame out all VLANs",
+      "Forward the frame out Gi0/3",
+      "Discard the frame because its destination is known",
+      "Forward the frame only to the default gateway"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "The switch has a known destination MAC address associated with Gi0/3 in VLAN 10, so it normally forwards the frame out that port."
+  },
+  {
+    "id": 83,
+    "domain": "Network Fundamentals",
+    "subtopic": "Network Devices",
+    "difficulty": "Medium",
+    "questionText": "A network administrator needs centralized monitoring, policy-based automation and configuration management across supported Cisco network devices. Which type of platform is most appropriate?",
+    "options": [
+      "Ethernet repeater",
+      "Wireless client adapter",
+      "Network management and automation controller",
+      "Passive fiber patch panel"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "Network management and automation controllers, such as Cisco Catalyst Center, provide centralized management, monitoring and automation capabilities for supported network infrastructure."
+  }
+]

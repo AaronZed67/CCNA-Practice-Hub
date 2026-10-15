@@ -1,0 +1,422 @@
+[
+  {
+    "id": 32,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Medium",
+    "questionText": "What is the network address containing 192.168.14.199/27?",
+    "options": [
+      "192.168.14.160",
+      "192.168.14.192",
+      "192.168.14.196",
+      "192.168.14.224"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A /27 subnet contains 32 addresses. Its last-octet boundaries include 160, 192 and 224. Address .199 belongs to the subnet beginning at .192."
+  },
+  {
+    "id": 33,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Medium",
+    "questionText": "What is the broadcast address of the subnet containing 192.168.14.199/27?",
+    "options": [
+      "192.168.14.207",
+      "192.168.14.223",
+      "192.168.14.224",
+      "192.168.14.255"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "The address belongs to 192.168.14.192/27. This subnet spans .192 through .223, making .223 its broadcast address."
+  },
+  {
+    "id": 34,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Easy",
+    "questionText": "Which IPv4 address belongs to an RFC 1918 private address range?",
+    "options": [
+      "172.32.10.5",
+      "192.169.1.10",
+      "10.45.8.20",
+      "11.0.0.15"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "The RFC 1918 private ranges are 10.0.0.0/8, 172.16.0.0/12 and 192.168.0.0/16. The address 10.45.8.20 is within the first range."
+  },
+  {
+    "id": 35,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Easy",
+    "questionText": "Which IPv4 address range is reserved for IPv4 link-local addressing?",
+    "options": [
+      "169.254.0.0/16",
+      "172.16.0.0/12",
+      "192.168.0.0/16",
+      "224.0.0.0/4"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "169.254.0.0/16 is reserved for IPv4 link-local addressing. Devices may configure an address from this range when automatic address configuration is needed."
+  },
+  {
+    "id": 36,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Medium",
+    "questionText": "How many usable host addresses are available in a conventional /25 IPv4 subnet?",
+    "options": [
+      "254",
+      "128",
+      "126",
+      "62"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "A /25 prefix leaves 7 host bits. This gives 128 total addresses, with 126 normally available for host assignment after excluding network and broadcast."
+  },
+  {
+    "id": 37,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Hard",
+    "questionText": "What is the network address containing host 172.18.91.26/19?",
+    "options": [
+      "172.18.32.0",
+      "172.18.64.0",
+      "172.18.80.0",
+      "172.18.96.0"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A /19 mask is 255.255.224.0. Third-octet subnet boundaries occur at 0, 32, 64 and 96. The third octet 91 lies in the 64–95 range."
+  },
+  {
+    "id": 38,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Hard",
+    "questionText": "What is the broadcast address of the subnet containing 172.18.91.26/19?",
+    "options": [
+      "172.18.91.255",
+      "172.18.95.255",
+      "172.18.96.255",
+      "172.18.127.255"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "The containing /19 network is 172.18.64.0/19. The third octet spans 64 through 95, so the broadcast address is 172.18.95.255."
+  },
+  {
+    "id": 39,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Medium",
+    "questionText": "A network requires at least 100 usable IPv4 addresses in a single conventional subnet. Which is the longest suitable prefix?",
+    "options": [
+      "/26",
+      "/27",
+      "/25",
+      "/24"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "A /25 subnet provides 126 usable host addresses. A /26 provides only 62, whereas /24 would allocate more addresses than necessary."
+  },
+  {
+    "id": 40,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Hard",
+    "questionText": "A company has network 192.168.100.0/24 and needs four equal-size subnets. Which new prefix should it use?",
+    "options": [
+      "/25",
+      "/26",
+      "/27",
+      "/28"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Creating four equal-size subnets requires borrowing 2 bits because 2^2 = 4. Extending /24 by 2 bits produces /26."
+  },
+  {
+    "id": 41,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Hard",
+    "questionText": "What is the third /26 subnet when 192.168.100.0/24 is divided into four equal-size networks, counting from zero?",
+    "options": [
+      "192.168.100.64/26",
+      "192.168.100.96/26",
+      "192.168.100.128/26",
+      "192.168.100.192/26"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "The four /26 networks begin at .0, .64, .128 and .192. The third subnet in this sequence is 192.168.100.128/26."
+  },
+  {
+    "id": 42,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Medium",
+    "questionText": "Which address is the last usable host in subnet 192.168.72.160/28?",
+    "options": [
+      "192.168.72.159",
+      "192.168.72.174",
+      "192.168.72.175",
+      "192.168.72.176"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "The /28 subnet spans .160 through .175. Address .160 is the network, .175 is the broadcast, and .174 is the last usable host."
+  },
+  {
+    "id": 43,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Easy",
+    "questionText": "Which IPv4 address is used as the loopback address for testing the local TCP/IP stack?",
+    "options": [
+      "0.0.0.0",
+      "127.0.0.1",
+      "169.254.0.1",
+      "255.255.255.255"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "127.0.0.1 is the commonly used IPv4 loopback address. Traffic sent to this address is handled locally rather than forwarded onto the network."
+  },
+  {
+    "id": 44,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Medium",
+    "questionText": "Which subnet mask corresponds to a /21 IPv4 prefix?",
+    "options": [
+      "255.255.248.0",
+      "255.255.240.0",
+      "255.255.252.0",
+      "255.255.224.0"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "A /21 uses 21 network bits. The first two octets are 255 and the third contains five set bits, producing 248."
+  },
+  {
+    "id": 45,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Hard",
+    "questionText": "What is the network address containing IPv4 host 10.25.67.203/21?",
+    "options": [
+      "10.25.56.0",
+      "10.25.64.0",
+      "10.25.67.0",
+      "10.25.72.0"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A /21 mask is 255.255.248.0, giving third-octet subnet boundaries every 8. The third octet 67 belongs to the 64–71 range."
+  },
+  {
+    "id": 46,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Medium",
+    "questionText": "What does the IPv4 address 255.255.255.255 represent?",
+    "options": [
+      "A limited broadcast address",
+      "A private host address",
+      "A multicast group address",
+      "A loopback address"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "255.255.255.255 is the IPv4 limited broadcast address. It is used to reach hosts on the local network segment and is not forwarded by routers."
+  },
+  {
+    "id": 47,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Medium",
+    "questionText": "Which IPv4 destination address falls within the multicast address range?",
+    "options": [
+      "192.168.1.255",
+      "172.16.255.255",
+      "239.1.1.1",
+      "127.0.0.1"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "IPv4 multicast uses 224.0.0.0/4, covering addresses from 224.0.0.0 through 239.255.255.255."
+  },
+  {
+    "id": 48,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Hard",
+    "questionText": "A company uses 10.10.0.0/24. What is the smallest conventional subnet that supports 20 usable hosts?",
+    "options": [
+      "/29",
+      "/28",
+      "/27",
+      "/26"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "A /27 provides 32 total addresses and 30 usable hosts. A /28 provides only 14 usable hosts, making /27 the smallest suitable allocation."
+  },
+  {
+    "id": 49,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Hard",
+    "questionText": "An organisation needs separate conventional subnets for 100 hosts, 50 hosts and 20 hosts. Which VLSM prefix combination minimises allocated address space?",
+    "options": [
+      "/24, /25, /26",
+      "/25, /26, /27",
+      "/26, /26, /27",
+      "/25, /27, /28"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "100 hosts require /25 (126 usable), 50 require /26 (62 usable), and 20 require /27 (30 usable). These are the smallest suitable subnet sizes."
+  },
+  {
+    "id": 50,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Medium",
+    "questionText": "Which pair of IPv4 addresses belongs to the same /26 subnet?",
+    "options": [
+      "192.168.5.62 and 192.168.5.65",
+      "192.168.5.125 and 192.168.5.130",
+      "192.168.5.70 and 192.168.5.100",
+      "192.168.5.190 and 192.168.5.195"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "A /26 divides the final octet into 0–63, 64–127, 128–191 and 192–255. Addresses .70 and .100 are both in the 64–127 subnet."
+  },
+  {
+    "id": 51,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Hard",
+    "questionText": "What is the broadcast address for subnet 172.22.16.0/23?",
+    "options": [
+      "172.22.16.255",
+      "172.22.17.255",
+      "172.22.18.255",
+      "172.22.19.255"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A /23 contains 512 addresses and spans two consecutive third-octet values. The 172.22.16.0/23 subnet ends at 172.22.17.255."
+  },
+  {
+    "id": 52,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Easy",
+    "questionText": "Which subnet mask provides exactly 64 total IPv4 addresses per subnet?",
+    "options": [
+      "255.255.255.128",
+      "255.255.255.224",
+      "255.255.255.192",
+      "255.255.255.240"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "A /26 subnet has 6 host bits, yielding 2^6 = 64 total addresses. The corresponding mask is 255.255.255.192."
+  },
+  {
+    "id": 53,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Hard",
+    "questionText": "A host uses 192.168.100.140/26. Which address is a usable destination in its local subnet?",
+    "options": [
+      "192.168.100.127",
+      "192.168.100.190",
+      "192.168.100.191",
+      "192.168.100.192"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "The host belongs to 192.168.100.128/26. Usable addresses run from .129 through .190; .191 is the broadcast."
+  },
+  {
+    "id": 54,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Medium",
+    "questionText": "A conventional /30 IPv4 subnet has how many usable host addresses?",
+    "options": [
+      "1",
+      "2",
+      "4",
+      "6"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A /30 leaves 2 host bits, giving four total addresses. After reserving the network and broadcast addresses, two remain usable."
+  },
+  {
+    "id": 55,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Hard",
+    "questionText": "A point-to-point link uses a /31 prefix under RFC 3021. How many IPv4 addresses can be used as endpoints?",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "4"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "RFC 3021 allows both addresses in a /31 subnet to be used as endpoints on supported point-to-point links, avoiding the usual network and broadcast reservations."
+  },
+  {
+    "id": 56,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Medium",
+    "questionText": "What is the first usable host address of subnet 192.168.77.208/29?",
+    "options": [
+      "192.168.77.208",
+      "192.168.77.209",
+      "192.168.77.210",
+      "192.168.77.215"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A /29 subnet contains eight addresses. This subnet spans .208–.215, with .208 as the network and .209 as the first usable host."
+  },
+  {
+    "id": 57,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Hard",
+    "questionText": "A router interface uses 10.8.255.1/18. What is the corresponding subnet broadcast address?",
+    "options": [
+      "10.8.191.255",
+      "10.8.255.255",
+      "10.9.0.255",
+      "10.8.255.254"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A /18 mask is 255.255.192.0. Third-octet boundaries increase by 64, and 255 falls in the 192–255 block. Its broadcast is 10.8.255.255."
+  },
+  {
+    "id": 58,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Hard",
+    "questionText": "A company has network 192.168.10.0/24. After allocating 192.168.10.0/25 to a large department, which /26 network can be allocated next without overlap?",
+    "options": [
+      "192.168.10.32/26",
+      "192.168.10.64/26",
+      "192.168.10.128/26",
+      "192.168.10.96/26"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "The first /25 uses addresses .0–.127. The next valid /26 boundary is .128, giving subnet 192.168.10.128/26."
+  },
+  {
+    "id": 59,
+    "domain": "Network Fundamentals",
+    "subtopic": "IPv4 Addressing & Subnetting",
+    "difficulty": "Hard",
+    "questionText": "A technician configures a PC with 192.168.20.62/26 and a default gateway of 192.168.20.65. What is the addressing problem?",
+    "options": [
+      "The PC address is a broadcast address",
+      "The gateway belongs to a different /26 subnet",
+      "The PC address is a network address",
+      "The gateway address is a multicast address"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "The PC belongs to 192.168.20.0/26, whose usable range is .1–.62. The gateway .65 belongs to 192.168.20.64/26, so it is not directly reachable as an on-link gateway under normal configuration."
+  }
+]
