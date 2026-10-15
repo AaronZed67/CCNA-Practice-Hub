@@ -245,3 +245,440 @@ button:focus-visible {
 .dashboard-helper {
     color: #94A3B8;
 }
+
+
+/* ========================================
+   CCNA HUB - TOP HEADER
+   ======================================== */
+
+.ccna-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between !important;
+    gap: 16px;
+    min-height: 64px;
+    background: #0F172A !important;
+    border-bottom: 1px solid #26354D;
+}
+
+.ccna-topbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.ccna-topbar-label {
+    color: #94A3B8;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+}
+
+.ccna-user-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.ccna-user-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #1E3A5F;
+    color: #22D3EE;
+    border: 1px solid #285A83;
+}
+
+.ccna-user-greeting {
+    color: #F1F5F9;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+@media (max-width: 640px) {
+    .ccna-topbar {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    .ccna-topbar-label {
+        display: none;
+    }
+
+    .ccna-user-greeting {
+        font-size: 12px;
+    }
+}
+
+
+/* ==========================================
+   CCNA HUB - INTERACTIVE THEME SYSTEM
+   ========================================== */
+
+/* Theme palettes */
+
+.page.ccna-theme-cyber {
+    --theme-bg: #0B1120;
+    --theme-sidebar: #0F172A;
+    --theme-card: #151F33;
+    --theme-border: #26354D;
+    --theme-text: #F1F5F9;
+    --theme-muted: #94A3B8;
+    --theme-primary: #3B82F6;
+    --theme-accent: #22D3EE;
+    --theme-hover: #172D4A;
+}
+
+.page.ccna-theme-purple {
+    --theme-bg: #130F20;
+    --theme-sidebar: #1B1530;
+    --theme-card: #241C3A;
+    --theme-border: #403354;
+    --theme-text: #F5F3FF;
+    --theme-muted: #B5A9CC;
+    --theme-primary: #8B5CF6;
+    --theme-accent: #C4B5FD;
+    --theme-hover: #372750;
+}
+
+.page.ccna-theme-slate {
+    --theme-bg: #1B232E;
+    --theme-sidebar: #202B38;
+    --theme-card: #293646;
+    --theme-border: #415064;
+    --theme-text: #F1F5F9;
+    --theme-muted: #A8B6C7;
+    --theme-primary: #0284C7;
+    --theme-accent: #38BDF8;
+    --theme-hover: #33475D;
+}
+
+.page.ccna-theme-light {
+    --theme-bg: #F1F5F9;
+    --theme-sidebar: #FFFFFF;
+    --theme-card: #FFFFFF;
+    --theme-border: #D8E0EA;
+    --theme-text: #172033;
+    --theme-muted: #52637B;
+    --theme-primary: #2563EB;
+    --theme-accent: #1D4ED8;
+    --theme-hover: #E5EDFA;
+}
+
+/* Apply theme to application */
+
+.page {
+    background: var(--theme-bg);
+    color: var(--theme-text);
+    min-height: 100vh;
+}
+
+    .page main,
+    .page .content {
+        background: var(--theme-bg);
+        color: var(--theme-text);
+    }
+
+    .page .sidebar,
+    .page .ccna-topbar,
+    .page .top-row {
+        background: var(--theme-sidebar) !important;
+        border-color: var(--theme-border) !important;
+    }
+
+    .page .card {
+        background: var(--theme-card);
+        color: var(--theme-text);
+        border-color: var(--theme-border);
+    }
+
+        .page .card:hover {
+            border-color: var(--theme-primary);
+        }
+
+    .page h1,
+    .page h2,
+    .page h3,
+    .page h4,
+    .page h5,
+    .page h6,
+    .page .card-title,
+    .page .stat-value,
+    .page .ccna-user-greeting {
+        color: var(--theme-text);
+    }
+
+    .page p,
+    .page .text-muted,
+    .page .stat-label,
+    .page .stat-detail,
+    .page .dashboard-helper {
+        color: var(--theme-muted) !important;
+    }
+
+    .page .dashboard-eyebrow,
+    .page .ccna-topbar-label {
+        color: var(--theme-accent);
+    }
+
+    .page .btn-primary {
+        background: var(--theme-primary);
+        border-color: var(--theme-primary);
+        color: #FFFFFF;
+    }
+
+        .page .btn-primary:disabled {
+            opacity: 0.6;
+        }
+
+    .page .dashboard-welcome {
+        background: var(--theme-card);
+        border-color: var(--theme-border);
+    }
+
+    .page .dashboard-progress {
+        background: var(--theme-border);
+    }
+
+    .page .progress-bar {
+        background: var(--theme-primary);
+    }
+
+    .page .badge.bg-primary {
+        background: var(--theme-hover) !important;
+        border-color: var(--theme-border);
+        color: var(--theme-accent);
+    }
+
+    /* Sidebar colour overrides */
+
+    .page .ccna-brand {
+        border-color: var(--theme-border);
+    }
+
+    .page .ccna-brand-title {
+        color: var(--theme-text);
+    }
+
+    .page .ccna-brand-subtitle,
+    .page .ccna-nav-label {
+        color: var(--theme-muted);
+    }
+
+    .page .ccna-brand-icon {
+        color: var(--theme-accent);
+        background: var(--theme-hover);
+    }
+
+    .page .ccna-navigation .nav-item .nav-link {
+        color: var(--theme-muted) !important;
+    }
+
+        .page .ccna-navigation .nav-item .nav-link:hover {
+            background: var(--theme-hover) !important;
+            color: var(--theme-text) !important;
+        }
+
+        .page .ccna-navigation .nav-item .nav-link.active {
+            background: var(--theme-hover) !important;
+            color: var(--theme-accent) !important;
+            border-left-color: var(--theme-primary);
+        }
+
+    .page .ccna-nav-icon {
+        color: var(--theme-accent);
+    }
+
+    /* Subtopic buttons */
+
+    .page .btn-outline-info,
+    .page .btn-outline-light {
+        color: var(--theme-accent);
+        border-color: var(--theme-border);
+    }
+
+        .page .btn-outline-info:hover,
+        .page .btn-outline-light:hover {
+            background: var(--theme-hover);
+            color: var(--theme-text);
+        }
+
+/* ==========================================
+   PROFILE AND HOVER DROPDOWN
+   ========================================== */
+
+.ccna-profile-dropdown {
+    position: relative;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+.ccna-profile-trigger {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+    border: 0;
+    border-radius: 10px;
+    background: transparent;
+    cursor: pointer;
+}
+
+    .ccna-profile-trigger:hover,
+    .ccna-profile-trigger:focus-visible {
+        background: var(--theme-hover);
+    }
+
+.ccna-user-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--theme-hover);
+    border: 1px solid var(--theme-border);
+    color: var(--theme-accent);
+}
+
+.ccna-dropdown-arrow {
+    color: var(--theme-muted);
+    font-size: 18px;
+}
+
+.ccna-theme-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 255px;
+    z-index: 1000;
+    padding: 14px;
+    border-radius: 14px;
+    border: 1px solid var(--theme-border);
+    background: var(--theme-card);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+}
+
+.ccna-profile-dropdown:hover .ccna-theme-menu,
+.ccna-profile-dropdown:focus-within .ccna-theme-menu {
+    display: block;
+}
+
+.ccna-theme-heading {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: var(--theme-text);
+}
+
+.ccna-theme-description {
+    margin-top: 4px;
+    margin-bottom: 12px;
+    font-size: 12px;
+    color: var(--theme-muted);
+}
+
+.ccna-theme-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 11px;
+    margin: 3px 0;
+    border: none;
+    border-radius: 9px;
+    background: transparent;
+    color: var(--theme-text);
+    text-align: left;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+    .ccna-theme-option:hover,
+    .ccna-theme-option:focus-visible {
+        background: var(--theme-hover);
+    }
+
+.ccna-theme-preview {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 7px;
+    border: 2px solid var(--theme-border);
+    flex-shrink: 0;
+}
+
+.cyber-preview {
+    background: linear-gradient(135deg, #0B1120 50%, #3B82F6 50%);
+}
+
+.purple-preview {
+    background: linear-gradient(135deg, #130F20 50%, #8B5CF6 50%);
+}
+
+.slate-preview {
+    background: linear-gradient(135deg, #1B232E 50%, #38BDF8 50%);
+}
+
+.light-preview {
+    background: linear-gradient(135deg, #F1F5F9 50%, #2563EB 50%);
+}
+
+.ccna-theme-check {
+    margin-left: auto;
+    font-weight: bold;
+    color: var(--theme-accent);
+}
+
+@media (max-width: 640px) {
+    .ccna-theme-menu {
+        width: min(255px, 85vw);
+    }
+}
+
+
+/* ==========================================
+   AMOLED BLACK THEME
+   ========================================== */
+
+.page.ccna-theme-black {
+    --theme-bg: #000000;
+    --theme-sidebar: #050505;
+    --theme-card: #101010;
+    --theme-border: #303030;
+    --theme-text: #FFFFFF;
+    --theme-muted: #A3A3A3;
+    --theme-primary: #E5E5E5;
+    --theme-accent: #E5E5E5;
+    --theme-hover: #202020;
+}
+
+/* Theme preview in dropdown */
+.black-preview {
+    background: linear-gradient( 135deg, #000000 50%, #E5E5E5 50% );
+}
+
+/* Keep button text readable */
+.page.ccna-theme-black .btn-primary {
+    background: #E5E5E5;
+    border-color: #E5E5E5;
+    color: #000000;
+}
+
+    .page.ccna-theme-black .btn-primary:hover {
+        background: #FFFFFF;
+        border-color: #FFFFFF;
+        color: #000000;
+    }
+
+/* Maintain contrast on selected navigation items */
+.page.ccna-theme-black .ccna-navigation
+.nav-item .nav-link.active {
+    background: #202020 !important;
+    color: #FFFFFF !important;
+    border-left-color: #E5E5E5;
+}
