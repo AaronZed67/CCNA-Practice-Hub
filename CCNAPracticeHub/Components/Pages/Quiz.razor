@@ -1,5 +1,4 @@
-﻿
-@page "/quiz"
+﻿@page "/quiz"
 @rendermode InteractiveServer
 
 @using CCNAPracticeHub.Models
@@ -57,7 +56,7 @@ else if (!QuizFinished && CurrentQuestion is not null)
             <!-- QUESTION INFORMATION -->
 
             <div class="d-flex justify-content-between
-                        align-items-center flex-wrap gap-2 mb-3">
+                align-items-center flex-wrap gap-2 mb-3">
 
                 <span class="badge bg-primary">
                     @CurrentQuestion.Domain
@@ -124,12 +123,11 @@ else if (!QuizFinished && CurrentQuestion is not null)
             </div>
 
             <!-- ANSWER FEEDBACK -->
-
             @if (AnswerSubmitted)
             {
                 <div class="alert @(AnswerCorrect
-                                ? "alert-success"
-                                : "alert-danger") mt-4">
+                                                    ? "alert-success"
+                                                    : "alert-danger") mt-4">
 
                     <strong>
                         @(AnswerCorrect
@@ -156,7 +154,7 @@ else if (!QuizFinished && CurrentQuestion is not null)
             <!-- QUESTION CONTROLS -->
 
             <div class="d-flex justify-content-between
-                        align-items-center mt-4 flex-wrap gap-3">
+                align-items-center mt-4 flex-wrap gap-3">
 
                 <span class="text-muted">
                     Correct: @Score
@@ -240,7 +238,6 @@ else if (QuizFinished)
     </div>
 }
 
-
 @code {
 
     // Maximum number of questions in one practice session
@@ -300,6 +297,14 @@ else if (QuizFinished)
                 .Take(MaxQuestions)
                 .ToListAsync();
 
+            // NEW: Randomize the answers for every loaded question.
+            // This changes only the in-memory question objects.
+            // SQLite and the original JSON files remain unchanged.
+            foreach (var question in Questions)
+            {
+                ShuffleAnswerOptions(question);
+            }
+
             ResetQuizState();
         }
         catch (Exception)
@@ -314,6 +319,53 @@ else if (QuizFinished)
         {
             IsLoading = false;
         }
+    }
+
+    // NEW: Shuffle the answer choices using Fisher-Yates.
+    //
+    // Whenever two options swap positions, we also update
+    // CorrectAnswerIndex if the correct option is involved.
+    //
+    // This keeps scoring and feedback accurate even after
+    // the answer order changes.
+    private static void ShuffleAnswerOptions(Question question)
+    {
+        if (question.Options is null ||
+            question.Options.Count < 2)
+        {
+            return;
+        }
+
+        // Work with a new list so we do not modify the
+        // original list returned for this question.
+        var shuffledOptions = question.Options.ToList();
+
+        int correctIndex = question.CorrectAnswerIndex;
+
+        // Move through the options from last to first.
+        for (int i = shuffledOptions.Count - 1; i > 0; i--)
+        {
+            int randomIndex = Random.Shared.Next(i + 1);
+
+            // Swap the two answer choices.
+            (shuffledOptions[i], shuffledOptions[randomIndex]) =
+                (shuffledOptions[randomIndex], shuffledOptions[i]);
+
+            // Keep the correct-answer index synchronized
+            // with the movement of the correct option.
+            if (correctIndex == i)
+            {
+                correctIndex = randomIndex;
+            }
+            else if (correctIndex == randomIndex)
+            {
+                correctIndex = i;
+            }
+        }
+
+        // Update this session's copy of the question.
+        question.Options = shuffledOptions;
+        question.CorrectAnswerIndex = correctIndex;
     }
 
     private void SelectAnswer(int index)
@@ -363,7 +415,8 @@ else if (QuizFinished)
         }
     }
 
-    // Starting again retrieves a fresh random selection
+    // Starting again retrieves fresh random questions
+    // and shuffles their answers again.
     private async Task RestartQuiz()
     {
         await LoadQuestionsAsync();

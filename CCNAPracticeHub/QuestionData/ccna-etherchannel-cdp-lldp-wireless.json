@@ -1,0 +1,602 @@
+[
+  {
+    "id": 329,
+    "domain": "Network Access",
+    "subtopic": "EtherChannel",
+    "difficulty": "Easy",
+    "questionText": "What is the primary purpose of EtherChannel?",
+    "options": [ "Combine multiple physical Ethernet links into one logical link", "Convert IPv4 into IPv6", "Create additional broadcast domains", "Replace Ethernet with wireless" ],
+    "correctAnswerIndex": 0,
+    "explanation": "EtherChannel bundles compatible physical Ethernet interfaces into one logical port-channel, providing aggregated bandwidth and link redundancy."
+  },
+  {
+    "id": 330,
+    "domain": "Network Access",
+    "subtopic": "EtherChannel",
+    "difficulty": "Easy",
+    "questionText": "Which standards-based protocol negotiates an EtherChannel?",
+    "options": [ "DTP", "LACP", "CDP", "VTP" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Link Aggregation Control Protocol (LACP) is standardized by IEEE and negotiates compatible aggregated Ethernet links."
+  },
+  {
+    "id": 331,
+    "domain": "Network Access",
+    "subtopic": "EtherChannel",
+    "difficulty": "Easy",
+    "questionText": "Which Cisco-proprietary protocol can negotiate EtherChannel formation?",
+    "options": [ "LLDP", "OSPF", "PAgP", "STP" ],
+    "correctAnswerIndex": 2,
+    "explanation": "Port Aggregation Protocol (PAgP) is a Cisco-proprietary protocol for negotiating EtherChannel bundles."
+  },
+  {
+    "id": 332,
+    "domain": "Network Access",
+    "subtopic": "EtherChannel",
+    "difficulty": "Medium",
+    "questionText": "Which LACP mode actively initiates negotiation?",
+    "options": [ "Passive", "Auto", "Active", "Desirable" ],
+    "correctAnswerIndex": 2,
+    "explanation": "LACP active mode initiates negotiation by transmitting LACP packets. Passive mode responds but does not actively initiate."
+  },
+  {
+    "id": 333,
+    "domain": "Network Access",
+    "subtopic": "EtherChannel",
+    "difficulty": "Medium",
+    "questionText": "Two switch ports use LACP active mode at both ends. Assuming compatible settings, will an EtherChannel normally form?",
+    "options": [ "Yes, because either end can initiate LACP", "No, both ends must be passive", "No, active requires PAgP", "Only when VLAN 1 is removed" ],
+    "correctAnswerIndex": 0,
+    "explanation": "LACP active-active is a valid negotiation combination, provided the physical and logical interface settings are compatible."
+  },
+  {
+    "id": 334,
+    "domain": "Network Access",
+    "subtopic": "EtherChannel",
+    "difficulty": "Medium",
+    "questionText": "What normally happens when both ends of a potential EtherChannel use LACP passive mode?",
+    "options": [ "The bundle always forms", "Neither end initiates LACP, so negotiation does not form the bundle", "The ports automatically switch to PAgP", "Spanning tree becomes disabled globally" ],
+    "correctAnswerIndex": 1,
+    "explanation": "LACP passive-passive does not normally establish an aggregate because neither side initiates negotiation."
+  },
+  {
+    "id": 335,
+    "domain": "Network Access",
+    "subtopic": "EtherChannel",
+    "difficulty": "Medium",
+    "questionText": "Which PAgP mode actively initiates EtherChannel negotiation?",
+    "options": [ "Desirable", "Auto", "Passive", "Active" ],
+    "correctAnswerIndex": 0,
+    "explanation": "PAgP desirable mode initiates aggregation negotiation. PAgP auto mode waits to respond."
+  },
+  {
+    "id": 336,
+    "domain": "Network Access",
+    "subtopic": "EtherChannel",
+    "difficulty": "Medium",
+    "questionText": "What is the expected result if both ends of an EtherChannel use PAgP auto mode?",
+    "options": [ "A trunk always forms immediately", "A static channel forms without negotiation", "The channel normally does not form", "The ports change to LACP active" ],
+    "correctAnswerIndex": 2,
+    "explanation": "Two PAgP auto interfaces do not normally form a bundle because neither initiates negotiation."
+  },
+  {
+    "id": 337,
+    "domain": "Network Access",
+    "subtopic": "EtherChannel",
+    "difficulty": "Medium",
+    "questionText": "What does the Cisco IOS channel-group 1 mode on command configure on a physical interface?",
+    "options": [ "A dynamically negotiated LACP bundle", "A static EtherChannel without LACP or PAgP negotiation", "An STP root port", "A routed interface with OSPF" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Mode on statically places an interface into the specified EtherChannel without negotiating through LACP or PAgP. Both ends must be configured consistently."
+  },
+  {
+    "id": 338,
+    "domain": "Network Access",
+    "subtopic": "EtherChannel",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS interface command adds a port to LACP group 5 in active mode?",
+    "options": [ "channel-group 5 mode active", "channel-group 5 mode desirable", "channel-group 5 mode auto", "port-channel 5 active" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The interface command channel-group 5 mode active assigns the port to LACP EtherChannel group 5 and actively negotiates."
+  },
+  {
+    "id": 339,
+    "domain": "Network Access",
+    "subtopic": "EtherChannel",
+    "difficulty": "Medium",
+    "questionText": "Which logical interface is commonly created when physical interfaces join EtherChannel group 3?",
+    "options": [ "Vlan3", "Loopback3", "Port-channel3", "Tunnel3" ],
+    "correctAnswerIndex": 2,
+    "explanation": "EtherChannel group 3 is represented by a logical Port-channel3 interface on Cisco IOS."
+  },
+  {
+    "id": 340,
+    "domain": "Network Access",
+    "subtopic": "EtherChannel",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS command displays a concise summary of EtherChannel groups and member-port status?",
+    "options": [ "show interfaces trunk", "show etherchannel summary", "show ip route", "show cdp neighbors" ],
+    "correctAnswerIndex": 1,
+    "explanation": "The show etherchannel summary command shows channel groups, protocols, logical ports and member status flags."
+  },
+  {
+    "id": 341,
+    "domain": "Network Access",
+    "subtopic": "EtherChannel",
+    "difficulty": "Hard",
+    "questionText": "Two interfaces are intended to join the same Layer 2 EtherChannel, but one is configured as an access port and the other as a trunk. What is the likely problem?",
+    "options": [ "The switch automatically converts them to routed ports", "Their inconsistent switchport modes prevent proper bundling", "LACP increases both ports to 10 Gbps", "Their MAC addresses must be identical" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Layer 2 EtherChannel member interfaces must have compatible characteristics, including switchport mode and relevant VLAN settings."
+  },
+  {
+    "id": 342,
+    "domain": "Network Access",
+    "subtopic": "EtherChannel",
+    "difficulty": "Hard",
+    "questionText": "Two ports are configured for a trunk EtherChannel. One permits VLANs 10 and 20, while the other permits VLANs 10 and 30. What should be corrected?",
+    "options": [ "Assign different native VLANs", "Match the allowed VLAN lists across member ports", "Configure separate spanning-tree roots on each member", "Disable all VLANs" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Ports within a Layer 2 trunk EtherChannel must have compatible trunk parameters, including allowed VLAN configurations."
+  },
+  {
+    "id": 343,
+    "domain": "Network Access",
+    "subtopic": "EtherChannel",
+    "difficulty": "Medium",
+    "questionText": "How does STP normally treat a successfully bundled Layer 2 EtherChannel?",
+    "options": [ "As one logical port", "As an independent VLAN per member", "As a routed loopback interface", "As multiple unrelated root bridges" ],
+    "correctAnswerIndex": 0,
+    "explanation": "STP operates on the logical port-channel rather than treating each successfully bundled member as a separate topology path."
+  },
+  {
+    "id": 344,
+    "domain": "Network Access",
+    "subtopic": "EtherChannel",
+    "difficulty": "Medium",
+    "questionText": "How is traffic typically distributed across member links within an EtherChannel?",
+    "options": [ "Every Ethernet frame is duplicated on all links", "A hashing algorithm selects a member using configured packet fields", "Traffic always uses only the first cable", "Frames are distributed only through DNS" ],
+    "correctAnswerIndex": 1,
+    "explanation": "EtherChannel load balancing generally uses a hash based on selected fields such as MAC or IP addresses to choose a member link."
+  },
+  {
+    "id": 345,
+    "domain": "Network Access",
+    "subtopic": "EtherChannel",
+    "difficulty": "Hard",
+    "questionText": "Four 1-Gbps links form an EtherChannel. What is the most accurate statement about a single ordinary traffic flow?",
+    "options": [ "It always reaches 4 Gbps", "It is normally mapped to one member link by the load-balancing hash", "It always uses all four links simultaneously", "It cannot exceed 100 Mbps" ],
+    "correctAnswerIndex": 1,
+    "explanation": "A single flow is typically placed on one member link to preserve ordering. Aggregate bandwidth benefits multiple flows but does not make one flow automatically use every link."
+  },
+  {
+    "id": 346,
+    "domain": "Network Access",
+    "subtopic": "EtherChannel",
+    "difficulty": "Medium",
+    "questionText": "What is an availability benefit of having multiple active member links in a correctly configured EtherChannel?",
+    "options": [ "One member can fail while remaining members continue forwarding", "The switch never needs STP", "All physical cables become immune to damage", "The bundle removes all MAC learning" ],
+    "correctAnswerIndex": 0,
+    "explanation": "If an active member fails and enough members remain, the port-channel can continue forwarding traffic through the surviving links."
+  },
+  {
+    "id": 347,
+    "domain": "Network Access",
+    "subtopic": "EtherChannel",
+    "difficulty": "Hard",
+    "questionText": "One switch is configured to negotiate an EtherChannel using LACP, while its peer uses PAgP. What is the expected result?",
+    "options": [ "The protocols automatically convert to each other", "The bundle will not negotiate using these incompatible protocols", "Both devices automatically use static mode on", "A routed EtherChannel always forms" ],
+    "correctAnswerIndex": 1,
+    "explanation": "LACP and PAgP use different negotiation mechanisms and cannot negotiate a bundle with one another."
+  },
+  {
+    "id": 348,
+    "domain": "Network Access",
+    "subtopic": "EtherChannel",
+    "difficulty": "Hard",
+    "questionText": "An EtherChannel has two member ports operating at 1 Gbps and one port operating at 100 Mbps. What is the likely compatibility issue?",
+    "options": [ "All ports automatically become 10 Gbps", "EtherChannel normally requires compatible member speeds", "The 100-Mbps port becomes the STP root bridge", "Different speeds automatically enable PAgP" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Conventional EtherChannel bundling requires compatible member characteristics, including matching interface speed and duplex."
+  },
+  {
+    "id": 349,
+    "domain": "Network Access",
+    "subtopic": "EtherChannel",
+    "difficulty": "Medium",
+    "questionText": "Which command enters the configuration mode of logical EtherChannel interface Port-channel10?",
+    "options": [ "interface Port-channel10", "channel-group 10 mode passive", "interface vlan 10", "etherchannel interface 10" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The interface Port-channel10 command selects the logical port-channel interface for configuration."
+  },
+  {
+    "id": 350,
+    "domain": "Network Access",
+    "subtopic": "EtherChannel",
+    "difficulty": "Medium",
+    "questionText": "Which LACP combination normally establishes an EtherChannel with compatible interfaces?",
+    "options": [ "Passive and passive", "Active and passive", "PAgP auto and LACP passive", "DTP auto and LACP passive" ],
+    "correctAnswerIndex": 1,
+    "explanation": "LACP active initiates negotiation, so an active/passive pair can form an aggregate when the settings are compatible."
+  },
+  {
+    "id": 351,
+    "domain": "Network Access",
+    "subtopic": "EtherChannel",
+    "difficulty": "Hard",
+    "questionText": "Which PAgP combination normally establishes a bundle on compatible Cisco switch interfaces?",
+    "options": [ "Auto and auto", "Desirable and auto", "Passive and passive", "LACP active and PAgP auto" ],
+    "correctAnswerIndex": 1,
+    "explanation": "PAgP desirable initiates negotiation, and PAgP auto can respond, allowing a desirable/auto pair to form an EtherChannel."
+  },
+  {
+    "id": 352,
+    "domain": "Network Access",
+    "subtopic": "EtherChannel",
+    "difficulty": "Hard",
+    "questionText": "In show etherchannel summary output on Cisco IOS, what does the flag P next to a physical interface commonly indicate?",
+    "options": [ "The port is bundled in the port-channel", "The port is administratively shut down", "The port is the STP root bridge", "The port is configured with PortFast only" ],
+    "correctAnswerIndex": 0,
+    "explanation": "In common Cisco IOS EtherChannel summary output, P indicates that the physical port is bundled in the port-channel."
+  },
+  {
+    "id": 353,
+    "domain": "Network Access",
+    "subtopic": "EtherChannel",
+    "difficulty": "Hard",
+    "questionText": "An administrator needs an EtherChannel between Cisco and non-Cisco switches that both support standards-based link aggregation. Which method is the best choice?",
+    "options": [ "PAgP desirable", "DTP dynamic desirable", "LACP active", "CDP negotiation" ],
+    "correctAnswerIndex": 2,
+    "explanation": "LACP is an open standards-based aggregation protocol and is the appropriate choice for interoperable link aggregation when supported by both vendors."
+  },
+  {
+    "id": 354,
+    "domain": "Network Access",
+    "subtopic": "Cisco Discovery Protocol & LLDP",
+    "difficulty": "Easy",
+    "questionText": "What is the primary purpose of Cisco Discovery Protocol (CDP)?",
+    "options": [ "Discover directly connected neighboring Cisco devices and their information", "Assign IP addresses automatically", "Encrypt application traffic", "Calculate OSPF shortest paths" ],
+    "correctAnswerIndex": 0,
+    "explanation": "CDP is a Cisco proprietary Layer 2 discovery protocol used to identify directly connected neighbors and relevant device details."
+  },
+  {
+    "id": 355,
+    "domain": "Network Access",
+    "subtopic": "Cisco Discovery Protocol & LLDP",
+    "difficulty": "Easy",
+    "questionText": "Which neighbor discovery protocol is defined by an IEEE standard and supports multi-vendor environments?",
+    "options": [ "CDP", "LLDP", "PAgP", "EIGRP" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Link Layer Discovery Protocol (LLDP) is defined by IEEE 802.1AB and is designed for multi-vendor Layer 2 neighbor discovery."
+  },
+  {
+    "id": 356,
+    "domain": "Network Access",
+    "subtopic": "Cisco Discovery Protocol & LLDP",
+    "difficulty": "Easy",
+    "questionText": "At which layer do CDP and LLDP primarily operate?",
+    "options": [ "Application layer", "Transport layer", "Data link layer", "Network layer" ],
+    "correctAnswerIndex": 2,
+    "explanation": "CDP and LLDP are Layer 2 neighbor discovery protocols that operate over local network links."
+  },
+  {
+    "id": 357,
+    "domain": "Network Access",
+    "subtopic": "Cisco Discovery Protocol & LLDP",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS command displays a short list of neighbors learned through CDP?",
+    "options": [ "show cdp neighbors", "show ip route", "show vlan brief", "show interfaces trunk" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The show cdp neighbors command lists directly discovered CDP neighbors and their associated local and remote ports."
+  },
+  {
+    "id": 358,
+    "domain": "Network Access",
+    "subtopic": "Cisco Discovery Protocol & LLDP",
+    "difficulty": "Medium",
+    "questionText": "Which command commonly displays additional CDP neighbor details, including management IP addresses when advertised?",
+    "options": [ "show cdp neighbors detail", "show spanning-tree root", "show interfaces switchport", "show etherchannel summary" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The show cdp neighbors detail command shows expanded neighbor information, such as advertised addresses, platform and capabilities."
+  },
+  {
+    "id": 359,
+    "domain": "Network Access",
+    "subtopic": "Cisco Discovery Protocol & LLDP",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS global configuration command normally enables CDP on a supported device?",
+    "options": [ "cdp run", "lldp run", "cdp enable", "ip routing" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The global cdp run command enables the CDP process. The cdp enable command controls CDP on supported interfaces."
+  },
+  {
+    "id": 360,
+    "domain": "Network Access",
+    "subtopic": "Cisco Discovery Protocol & LLDP",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS global configuration command disables CDP throughout the device?",
+    "options": [ "no lldp run", "no cdp run", "no ip routing", "no switchport" ],
+    "correctAnswerIndex": 1,
+    "explanation": "The no cdp run global command disables CDP operation across the device."
+  },
+  {
+    "id": 361,
+    "domain": "Network Access",
+    "subtopic": "Cisco Discovery Protocol & LLDP",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS interface command disables CDP on one supported interface without disabling it globally?",
+    "options": [ "no cdp enable", "no cdp run", "lldp receive", "switchport nonegotiate" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The interface command no cdp enable disables CDP for that specific interface while leaving the global CDP process unchanged."
+  },
+  {
+    "id": 362,
+    "domain": "Network Access",
+    "subtopic": "Cisco Discovery Protocol & LLDP",
+    "difficulty": "Medium",
+    "questionText": "Which global configuration command enables LLDP on a supported Cisco IOS switch?",
+    "options": [ "lldp enable", "lldp run", "cdp run", "switchport lldp" ],
+    "correctAnswerIndex": 1,
+    "explanation": "The global lldp run command enables LLDP on supported Cisco IOS devices."
+  },
+  {
+    "id": 363,
+    "domain": "Network Access",
+    "subtopic": "Cisco Discovery Protocol & LLDP",
+    "difficulty": "Medium",
+    "questionText": "Which command lists directly connected neighbors discovered using LLDP?",
+    "options": [ "show ip arp", "show lldp neighbors", "show cdp traffic", "show ip protocols" ],
+    "correctAnswerIndex": 1,
+    "explanation": "The show lldp neighbors command summarizes devices found using LLDP."
+  },
+  {
+    "id": 364,
+    "domain": "Network Access",
+    "subtopic": "Cisco Discovery Protocol & LLDP",
+    "difficulty": "Hard",
+    "questionText": "An administrator wants an interface to receive LLDP advertisements but not transmit them. Which interface commands are appropriate?",
+    "options": [ "lldp receive and no lldp transmit", "no lldp receive and lldp transmit", "no lldp run and cdp run", "switchport mode access and no cdp run" ],
+    "correctAnswerIndex": 0,
+    "explanation": "On supported IOS devices, lldp receive enables receipt of LLDP advertisements, while no lldp transmit disables LLDP transmission on the interface."
+  },
+  {
+    "id": 365,
+    "domain": "Network Access",
+    "subtopic": "Cisco Discovery Protocol & LLDP",
+    "difficulty": "Hard",
+    "questionText": "A Cisco switch connects directly to a non-Cisco switch that supports LLDP but not CDP. Which protocol should the Cisco administrator enable to discover that neighbor?",
+    "options": [ "PAgP", "CDP only", "LLDP", "DTP" ],
+    "correctAnswerIndex": 2,
+    "explanation": "LLDP is an IEEE-standard protocol supported by many vendors, making it suitable for discovering a compatible non-Cisco neighbor."
+  },
+  {
+    "id": 366,
+    "domain": "Network Access",
+    "subtopic": "Cisco Discovery Protocol & LLDP",
+    "difficulty": "Hard",
+    "questionText": "Why might an organization disable CDP on interfaces connected to untrusted external networks?",
+    "options": [ "CDP encrypts all data by default", "CDP can reveal device and interface information to directly connected neighbors", "CDP is required to assign IPv4 addresses", "CDP disables spanning tree" ],
+    "correctAnswerIndex": 1,
+    "explanation": "CDP advertisements can disclose platform, device identity, network addresses and interface information, so disabling it on untrusted links can reduce information exposure."
+  },
+  {
+    "id": 367,
+    "domain": "Network Access",
+    "subtopic": "Cisco Discovery Protocol & LLDP",
+    "difficulty": "Hard",
+    "questionText": "A switch's CDP output identifies a neighboring switch and its remote port. What troubleshooting task does this information directly help with?",
+    "options": [ "Mapping physical network connections", "Calculating TCP receive windows", "Assigning DNS resource records", "Decrypting HTTPS sessions" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Neighbor device identifiers and interface information help administrators document physical topology and locate cabling or connectivity problems."
+  },
+  {
+    "id": 368,
+    "domain": "Network Access",
+    "subtopic": "Cisco Discovery Protocol & LLDP",
+    "difficulty": "Hard",
+    "questionText": "Which statement correctly describes the scope of ordinary CDP and LLDP advertisements?",
+    "options": [ "They are normally routed across the Internet", "They identify directly connected neighbors and are not ordinarily forwarded by routers", "They require a working TCP connection", "They replace the ARP table on all hosts" ],
+    "correctAnswerIndex": 1,
+    "explanation": "CDP and LLDP exchange Layer 2 discovery information with directly connected devices; their advertisements are not normally routed between networks."
+  },
+  {
+    "id": 369,
+    "domain": "Network Access",
+    "subtopic": "Wireless Architectures",
+    "difficulty": "Easy",
+    "questionText": "What is the primary role of an autonomous wireless access point?",
+    "options": [ "It operates with its own local wireless configuration and control functions", "It requires a controller for every management decision", "It can only forward fiber-optic traffic", "It replaces all Layer 3 routers" ],
+    "correctAnswerIndex": 0,
+    "explanation": "An autonomous access point manages its wireless functions locally rather than relying on a centralized wireless LAN controller for normal configuration and control."
+  },
+  {
+    "id": 370,
+    "domain": "Network Access",
+    "subtopic": "Wireless Architectures",
+    "difficulty": "Easy",
+    "questionText": "In a controller-based wireless architecture, which component commonly centralizes access point management?",
+    "options": [ "Wireless LAN controller", "Passive Ethernet hub", "DNS caching resolver", "Unmanaged copper repeater" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A wireless LAN controller manages supported lightweight access points and centralizes relevant wireless network configuration and policies."
+  },
+  {
+    "id": 371,
+    "domain": "Network Access",
+    "subtopic": "Wireless Architectures",
+    "difficulty": "Easy",
+    "questionText": "Which protocol commonly connects a lightweight Cisco access point to a wireless LAN controller?",
+    "options": [ "PAgP", "CAPWAP", "VTP", "ARP" ],
+    "correctAnswerIndex": 1,
+    "explanation": "CAPWAP, Control and Provisioning of Wireless Access Points, supports communication between lightweight access points and their controllers."
+  },
+  {
+    "id": 372,
+    "domain": "Network Access",
+    "subtopic": "Wireless Architectures",
+    "difficulty": "Medium",
+    "questionText": "Which UDP ports are normally associated with CAPWAP control and data traffic respectively?",
+    "options": [ "67 and 68", "161 and 162", "5246 and 5247", "1812 and 1813" ],
+    "correctAnswerIndex": 2,
+    "explanation": "CAPWAP uses UDP 5246 for control traffic and UDP 5247 for data traffic in standard deployments."
+  },
+  {
+    "id": 373,
+    "domain": "Network Access",
+    "subtopic": "Wireless Architectures",
+    "difficulty": "Medium",
+    "questionText": "What is a key difference between centralized and distributed wireless architectures?",
+    "options": [ "Centralized architectures use controllers to coordinate management, while distributed designs place more control locally", "Distributed designs cannot use Ethernet", "Centralized designs prohibit wireless encryption", "Distributed designs require all clients to share one MAC address" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Centralized wireless deployments move major control and management functions toward controllers, while distributed designs rely more heavily on individual access points."
+  },
+  {
+    "id": 374,
+    "domain": "Network Access",
+    "subtopic": "Wireless Architectures",
+    "difficulty": "Medium",
+    "questionText": "What is the role of the control plane in a controller-managed wireless network?",
+    "options": [ "Carry only user web browsing data", "Provide wireless management and coordination functions", "Replace radio-frequency signaling", "Supply power to every wireless client" ],
+    "correctAnswerIndex": 1,
+    "explanation": "The control plane supports coordination and management functions such as access point configuration, monitoring and wireless control signaling."
+  },
+  {
+    "id": 375,
+    "domain": "Network Access",
+    "subtopic": "Wireless Architectures",
+    "difficulty": "Medium",
+    "questionText": "In a centralized wireless forwarding architecture, where may ordinary client data be tunneled for forwarding?",
+    "options": [ "To the wireless LAN controller", "To the switch console port", "To the DNS root servers", "To the nearest Bluetooth headset" ],
+    "correctAnswerIndex": 0,
+    "explanation": "In centralized forwarding designs, supported access points can tunnel client data to a wireless LAN controller using CAPWAP."
+  },
+  {
+    "id": 376,
+    "domain": "Network Access",
+    "subtopic": "Wireless Architectures",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco access point operating mode is commonly used to provide normal client Wi-Fi access through controller-based management?",
+    "options": [ "Local mode", "Sniffer mode", "Monitor-only mode", "Rogue detector mode" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Cisco lightweight access points in local mode normally provide client wireless service while being managed by a controller."
+  },
+  {
+    "id": 377,
+    "domain": "Network Access",
+    "subtopic": "Wireless Architectures",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco lightweight access point mode supports local switching of wireless user traffic at branch locations?",
+    "options": [ "Monitor mode", "FlexConnect mode", "Sniffer mode", "Rogue detector mode" ],
+    "correctAnswerIndex": 1,
+    "explanation": "FlexConnect access points can locally switch client traffic at a remote site while retaining centralized controller management, subject to configuration."
+  },
+  {
+    "id": 378,
+    "domain": "Network Access",
+    "subtopic": "Wireless Architectures",
+    "difficulty": "Hard",
+    "questionText": "A branch office uses FlexConnect local switching. What advantage can this provide for traffic destined to local branch resources?",
+    "options": [ "Traffic can be switched locally rather than always traversing a WAN tunnel to the controller", "All client encryption becomes unnecessary", "The access point no longer needs an IP address", "Every wireless frame is converted to IPv6" ],
+    "correctAnswerIndex": 0,
+    "explanation": "With local switching enabled, FlexConnect can keep appropriate client traffic within the branch network instead of tunneling it to a remote controller."
+  },
+  {
+    "id": 379,
+    "domain": "Network Access",
+    "subtopic": "Wireless Architectures",
+    "difficulty": "Medium",
+    "questionText": "What is one characteristic of a cloud-managed wireless deployment?",
+    "options": [ "Access points can be managed through a remote cloud-based management platform", "Clients can connect only through satellite links", "Cloud management removes the need for radio frequencies", "Every AP requires a dedicated physical controller on-site" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Cloud-managed architectures allow wireless configuration, monitoring and policy management through a cloud-hosted management service."
+  },
+  {
+    "id": 380,
+    "domain": "Network Access",
+    "subtopic": "Wireless Architectures",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco wireless product family is associated with cloud-managed wireless networks?",
+    "options": [ "Cisco Meraki MR", "Cisco Catalyst fiber patch panels", "Cisco console rollover cables", "Cisco serial DCE adapters" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Cisco Meraki MR access points are examples of cloud-managed enterprise wireless equipment."
+  },
+  {
+    "id": 381,
+    "domain": "Network Access",
+    "subtopic": "Wireless Architectures",
+    "difficulty": "Hard",
+    "questionText": "A lightweight access point cannot discover a reachable wireless LAN controller. Which result is most likely during initial controller-based provisioning?",
+    "options": [ "The AP can fail to join the controller and provide its intended configured service", "The AP automatically becomes a DNS server", "The AP always converts into an Ethernet router", "The AP disables all other network switches" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Controller-based access points generally need controller discovery and registration before delivering their centrally managed WLAN service."
+  },
+  {
+    "id": 382,
+    "domain": "Network Access",
+    "subtopic": "Wireless Architectures",
+    "difficulty": "Medium",
+    "questionText": "Which mechanism can be used by a Cisco lightweight access point to discover a wireless LAN controller?",
+    "options": [ "DHCP option 43 when correctly configured", "Ethernet CRC errors", "STP root-port elections", "TCP port 25 mail relay" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Controller discovery methods can include DHCP option 43, DNS-based discovery and other platform-supported mechanisms."
+  },
+  {
+    "id": 383,
+    "domain": "Network Access",
+    "subtopic": "Wireless Architectures",
+    "difficulty": "Hard",
+    "questionText": "Which statement best describes the CAPWAP control channel between an AP and its controller?",
+    "options": [ "It carries management and control exchanges, with security mechanisms protecting control messages", "It is only an analog radio signal", "It is the same as the Ethernet FCS field", "It requires PAgP aggregation" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The CAPWAP control channel carries AP-controller control information and supports DTLS protection in the standard protocol architecture."
+  },
+  {
+    "id": 384,
+    "domain": "Network Access",
+    "subtopic": "Wireless Architectures",
+    "difficulty": "Medium",
+    "questionText": "In a WLAN deployment, what is the main purpose of mapping an SSID to a VLAN?",
+    "options": [ "Place wireless client traffic into an intended Layer 2 network segment", "Change all client MAC addresses", "Disable IP routing automatically", "Guarantee the strongest possible radio signal" ],
+    "correctAnswerIndex": 0,
+    "explanation": "SSID-to-VLAN mapping associates wireless user traffic with a specific VLAN for segmentation and network policy."
+  },
+  {
+    "id": 385,
+    "domain": "Network Access",
+    "subtopic": "Wireless Architectures",
+    "difficulty": "Hard",
+    "questionText": "A wireless network provides separate Corporate and Guest SSIDs. What design feature is most appropriate for separating their wired network access?",
+    "options": [ "Map them to distinct VLANs with appropriate routing and security policies", "Use the same unprotected broadcast domain for both", "Disable all access point authentication", "Configure identical static IP addresses on every client" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Separate VLANs and appropriately enforced network policies allow corporate and guest traffic to remain logically segmented."
+  },
+  {
+    "id": 386,
+    "domain": "Network Access",
+    "subtopic": "Wireless Architectures",
+    "difficulty": "Hard",
+    "questionText": "Which Cisco AP mode is intended primarily for wireless scanning and monitoring rather than normal client service?",
+    "options": [ "Monitor mode", "Local mode", "FlexConnect local-switching mode", "Bridge client mode" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Cisco monitor-mode access points focus on scanning the radio environment for interference, rogue devices and related monitoring tasks."
+  },
+  {
+    "id": 387,
+    "domain": "Network Access",
+    "subtopic": "Wireless Architectures",
+    "difficulty": "Hard",
+    "questionText": "An access point is configured for central switching through a remote controller. What WAN-related drawback should the network designer consider?",
+    "options": [ "Client data can consume WAN bandwidth traveling to and from the controller", "The AP cannot use 802.11 radio channels", "Every client must share the controller's MAC address", "The architecture prevents VLAN assignment" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Central forwarding can send user traffic across the WAN toward the controller, affecting WAN utilization and potentially latency."
+  },
+  {
+    "id": 388,
+    "domain": "Network Access",
+    "subtopic": "Wireless Architectures",
+    "difficulty": "Hard",
+    "questionText": "An organization has hundreds of access points across multiple buildings and wants consistent WLAN policies and centralized monitoring. Which architecture is most appropriate?",
+    "options": [ "Controller-based enterprise wireless architecture", "A collection of unrelated unmanaged autonomous APs", "A pure Layer 1 Ethernet hub network", "A network without wireless management" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A controller-based wireless architecture supports coordinated configuration, monitoring and policy enforcement across large groups of supported access points."
+  }
+]

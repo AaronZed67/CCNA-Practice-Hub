@@ -1,0 +1,752 @@
+[
+  {
+    "id": 409,
+    "domain": "IP Connectivity",
+    "subtopic": "Routing Tables",
+    "difficulty": "Easy",
+    "questionText": "Which Cisco IOS command displays the IPv4 routing table?",
+    "options": [ "show ip route", "show ip interface brief", "show arp", "show running-config" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The show ip route command displays installed IPv4 routes and their next-hop or outgoing-interface information."
+  },
+  {
+    "id": 410,
+    "domain": "IP Connectivity",
+    "subtopic": "Routing Tables",
+    "difficulty": "Easy",
+    "questionText": "What does the code C identify in Cisco IOS IPv4 routing table output?",
+    "options": [ "A candidate default route", "A connected network", "A manually configured static route", "An OSPF interarea route" ],
+    "correctAnswerIndex": 1,
+    "explanation": "C identifies a directly connected network whose associated interface is operational."
+  },
+  {
+    "id": 411,
+    "domain": "IP Connectivity",
+    "subtopic": "Routing Tables",
+    "difficulty": "Easy",
+    "questionText": "What does the code L identify in a Cisco IOS routing table?",
+    "options": [ "A local route to an interface's own IP address", "A learned BGP route", "A Layer 2 trunk", "A load-balanced default route" ],
+    "correctAnswerIndex": 0,
+    "explanation": "L indicates a local host route, normally a /32 IPv4 route for an address configured on the router itself."
+  },
+  {
+    "id": 412,
+    "domain": "IP Connectivity",
+    "subtopic": "Routing Tables",
+    "difficulty": "Easy",
+    "questionText": "Which routing table code identifies a static route on Cisco IOS?",
+    "options": [ "C", "O", "S", "L" ],
+    "correctAnswerIndex": 2,
+    "explanation": "S identifies a static route installed from manual routing configuration."
+  },
+  {
+    "id": 413,
+    "domain": "IP Connectivity",
+    "subtopic": "Routing Tables",
+    "difficulty": "Easy",
+    "questionText": "Which Cisco routing table code identifies an OSPF intra-area route?",
+    "options": [ "O", "S", "C", "R" ],
+    "correctAnswerIndex": 0,
+    "explanation": "O represents a route learned through OSPF within an area."
+  },
+  {
+    "id": 414,
+    "domain": "IP Connectivity",
+    "subtopic": "Routing Tables",
+    "difficulty": "Medium",
+    "questionText": "What does the Cisco IOS route code O IA indicate?",
+    "options": [ "An OSPF interarea route", "An OSPF external type 1 route", "An interface address", "An automatically installed static route" ],
+    "correctAnswerIndex": 0,
+    "explanation": "O IA identifies an OSPF interarea route learned through an area border router."
+  },
+  {
+    "id": 415,
+    "domain": "IP Connectivity",
+    "subtopic": "Routing Tables",
+    "difficulty": "Medium",
+    "questionText": "What does the asterisk in the routing table code S* normally indicate?",
+    "options": [ "The static route is invalid", "The route is a candidate default route", "The route uses multicast forwarding", "The route has no next hop" ],
+    "correctAnswerIndex": 1,
+    "explanation": "An asterisk marks a candidate default route. S* commonly appears beside an installed static default route."
+  },
+  {
+    "id": 416,
+    "domain": "IP Connectivity",
+    "subtopic": "Routing Tables",
+    "difficulty": "Easy",
+    "questionText": "Which IPv4 prefix represents the default route?",
+    "options": [ "127.0.0.0/8", "255.255.255.255/32", "0.0.0.0/0", "224.0.0.0/4" ],
+    "correctAnswerIndex": 2,
+    "explanation": "The prefix 0.0.0.0/0 matches any IPv4 destination and is commonly used when no more specific route applies."
+  },
+  {
+    "id": 417,
+    "domain": "IP Connectivity",
+    "subtopic": "Routing Tables",
+    "difficulty": "Easy",
+    "questionText": "What does a routing table network prefix such as 192.168.10.0/24 identify?",
+    "options": [ "A destination network and its prefix length", "A source TCP port", "An Ethernet frame checksum", "A wireless radio channel" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The network address and prefix length describe the range of destination IP addresses matched by the route."
+  },
+  {
+    "id": 418,
+    "domain": "IP Connectivity",
+    "subtopic": "Routing Tables",
+    "difficulty": "Medium",
+    "questionText": "In a Cisco IOS route entry showing [110/20], what does 110 represent?",
+    "options": [ "Prefix length", "Administrative distance", "Interface bandwidth in Mbps", "OSPF area number" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Cisco route entries display [administrative distance/metric]. The first value, 110, is the administrative distance."
+  },
+  {
+    "id": 419,
+    "domain": "IP Connectivity",
+    "subtopic": "Routing Tables",
+    "difficulty": "Medium",
+    "questionText": "In an OSPF route entry showing [110/30], what does 30 represent?",
+    "options": [ "The routing protocol number", "The destination subnet mask", "The route metric", "The interface VLAN ID" ],
+    "correctAnswerIndex": 2,
+    "explanation": "In [110/30], 110 is the administrative distance and 30 is the route metric, which for OSPF is the calculated path cost."
+  },
+  {
+    "id": 420,
+    "domain": "IP Connectivity",
+    "subtopic": "Routing Tables",
+    "difficulty": "Easy",
+    "questionText": "What is the purpose of administrative distance?",
+    "options": [ "Rank route sources when multiple sources provide routes to the same destination prefix", "Calculate Ethernet CRC values", "Choose wireless channels", "Assign host addresses through DHCP" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Administrative distance indicates the relative preference for a route source. A lower administrative distance is preferred when competing routes have the same destination prefix."
+  },
+  {
+    "id": 421,
+    "domain": "IP Connectivity",
+    "subtopic": "Routing Tables",
+    "difficulty": "Medium",
+    "questionText": "What is the default administrative distance of a directly connected route on Cisco IOS?",
+    "options": [ "0", "1", "90", "110" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Directly connected routes have a default administrative distance of 0 on Cisco IOS."
+  },
+  {
+    "id": 422,
+    "domain": "IP Connectivity",
+    "subtopic": "Routing Tables",
+    "difficulty": "Medium",
+    "questionText": "What is the default administrative distance of a standard static route on Cisco IOS?",
+    "options": [ "0", "1", "90", "110" ],
+    "correctAnswerIndex": 1,
+    "explanation": "The default administrative distance of a static route is 1 unless another value is explicitly configured."
+  },
+  {
+    "id": 423,
+    "domain": "IP Connectivity",
+    "subtopic": "Routing Tables",
+    "difficulty": "Medium",
+    "questionText": "What is the default administrative distance of an OSPF route on Cisco IOS?",
+    "options": [ "1", "90", "110", "120" ],
+    "correctAnswerIndex": 2,
+    "explanation": "OSPF routes have a default administrative distance of 110 on Cisco IOS."
+  },
+  {
+    "id": 424,
+    "domain": "IP Connectivity",
+    "subtopic": "Routing Tables",
+    "difficulty": "Hard",
+    "questionText": "A router learns the same /24 destination prefix through a static route with administrative distance 1 and OSPF with administrative distance 110. Which route is normally installed?",
+    "options": [ "The static route", "The OSPF route", "Both routes because their metrics differ", "Neither route until DNS is configured" ],
+    "correctAnswerIndex": 0,
+    "explanation": "For the same prefix, the route with the lower administrative distance is preferred. The static route's distance of 1 beats OSPF's 110."
+  },
+  {
+    "id": 425,
+    "domain": "IP Connectivity",
+    "subtopic": "Routing Tables",
+    "difficulty": "Medium",
+    "questionText": "What does a route's next-hop IP address identify?",
+    "options": [ "The final application server in every case", "The adjacent router toward which matching packets should be forwarded", "The source host's DNS server", "The switch's VLAN database" ],
+    "correctAnswerIndex": 1,
+    "explanation": "A next-hop IP address normally identifies the neighboring router used to reach destinations covered by the route."
+  },
+  {
+    "id": 426,
+    "domain": "IP Connectivity",
+    "subtopic": "Routing Tables",
+    "difficulty": "Medium",
+    "questionText": "What does an outgoing interface in an installed routing table entry indicate?",
+    "options": [ "The interface used to send matching packets toward their destination", "The interface that originally received every packet", "The interface reserved for console management", "The interface storing the startup configuration" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The outgoing or exit interface identifies the router interface used to forward traffic toward the route's destination."
+  },
+  {
+    "id": 427,
+    "domain": "IP Connectivity",
+    "subtopic": "Routing Tables",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS command displays detailed routing information for destination 192.168.50.0/24?",
+    "options": [ "show ip route 192.168.50.0 255.255.255.0", "show vlan 192.168.50.0", "show mac address-table 192.168.50.0", "show interfaces trunk 192.168.50.0" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The show ip route command can be supplied with a destination network and mask to inspect the corresponding routing entry."
+  },
+  {
+    "id": 428,
+    "domain": "IP Connectivity",
+    "subtopic": "Routing Tables",
+    "difficulty": "Medium",
+    "questionText": "What does the phrase 'Gateway of last resort is not set' indicate in show ip route output?",
+    "options": [ "The router has no installed default route", "The router has no physical interfaces", "All connected routes have failed", "OSPF must be disabled" ],
+    "correctAnswerIndex": 0,
+    "explanation": "This message indicates that a default gateway of last resort has not been established in the IPv4 routing table."
+  },
+  {
+    "id": 429,
+    "domain": "IP Connectivity",
+    "subtopic": "Routing Tables",
+    "difficulty": "Medium",
+    "questionText": "A router has an installed route to 10.20.30.0/24. Which address is matched by this prefix?",
+    "options": [ "10.20.29.200", "10.20.30.150", "10.20.31.1", "10.21.30.150" ],
+    "correctAnswerIndex": 1,
+    "explanation": "A /24 prefix fixes the first three octets, so 10.20.30.150 belongs to 10.20.30.0/24."
+  },
+  {
+    "id": 430,
+    "domain": "IP Connectivity",
+    "subtopic": "Routing Tables",
+    "difficulty": "Medium",
+    "questionText": "Which prefix represents a single IPv4 host route?",
+    "options": [ "/8", "/16", "/24", "/32" ],
+    "correctAnswerIndex": 3,
+    "explanation": "A /32 mask fixes all 32 IPv4 address bits and matches exactly one address."
+  },
+  {
+    "id": 431,
+    "domain": "IP Connectivity",
+    "subtopic": "Routing Tables",
+    "difficulty": "Hard",
+    "questionText": "A router has 10.0.0.0/8 and 10.5.0.0/16 installed. Which route is the more specific destination match for 10.5.20.1?",
+    "options": [ "10.0.0.0/8", "10.5.0.0/16", "Both have equal specificity", "Neither prefix matches" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Both prefixes include the destination, but /16 has more matching network bits than /8 and is therefore more specific."
+  },
+  {
+    "id": 432,
+    "domain": "IP Connectivity",
+    "subtopic": "Routing Tables",
+    "difficulty": "Hard",
+    "questionText": "A router has routes for 192.168.0.0/16, 192.168.8.0/24 and 192.168.8.128/25. Which route is the longest-prefix match for 192.168.8.200?",
+    "options": [ "192.168.0.0/16", "192.168.8.0/24", "192.168.8.128/25", "No matching route" ],
+    "correctAnswerIndex": 2,
+    "explanation": "The address .200 belongs to the /25 range .128–.255. The /25 prefix is longer than /24 or /16."
+  },
+  {
+    "id": 433,
+    "domain": "IP Connectivity",
+    "subtopic": "Routing Tables",
+    "difficulty": "Hard",
+    "questionText": "Which route matches destination 172.16.25.70 when the table contains 172.16.0.0/16 and 172.16.24.0/23?",
+    "options": [ "Only 172.16.0.0/16", "Only 172.16.24.0/23", "Both prefixes match, with /23 preferred", "Neither prefix matches" ],
+    "correctAnswerIndex": 2,
+    "explanation": "172.16.24.0/23 covers third octets 24 and 25. Both installed routes match, but the /23 route is more specific."
+  },
+  {
+    "id": 434,
+    "domain": "IP Connectivity",
+    "subtopic": "Routing Tables",
+    "difficulty": "Medium",
+    "questionText": "What typically causes a directly connected IPv4 route to be removed from the routing table?",
+    "options": [ "The associated interface loses its operational up state", "The router's hostname changes", "A DNS query times out", "An unrelated VLAN is renamed" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A connected route normally requires an operational interface with the relevant IP address. Losing that interface's operational state can remove the route."
+  },
+  {
+    "id": 435,
+    "domain": "IP Connectivity",
+    "subtopic": "Routing Tables",
+    "difficulty": "Medium",
+    "questionText": "Which routing table code identifies a route learned through RIP on Cisco IOS?",
+    "options": [ "R", "S", "L", "C" ],
+    "correctAnswerIndex": 0,
+    "explanation": "R is the route code for Routing Information Protocol. Its default Cisco IOS administrative distance is 120."
+  },
+  {
+    "id": 436,
+    "domain": "IP Connectivity",
+    "subtopic": "Routing Tables",
+    "difficulty": "Medium",
+    "questionText": "Which route source normally has administrative distance 20 on Cisco IOS?",
+    "options": [ "OSPF", "External BGP", "RIP", "Connected routes" ],
+    "correctAnswerIndex": 1,
+    "explanation": "External BGP routes normally use an administrative distance of 20 on Cisco IOS."
+  },
+  {
+    "id": 437,
+    "domain": "IP Connectivity",
+    "subtopic": "Routing Tables",
+    "difficulty": "Hard",
+    "questionText": "A router receives two OSPF routes to the same prefix from the same OSPF route type, one with cost 15 and the other with cost 30. Which is normally preferred?",
+    "options": [ "The cost 15 route", "The cost 30 route", "The route with the largest destination IP", "Both must always be installed regardless of cost" ],
+    "correctAnswerIndex": 0,
+    "explanation": "When comparing otherwise equivalent OSPF paths to the same prefix, OSPF prefers the lower accumulated cost."
+  },
+  {
+    "id": 438,
+    "domain": "IP Connectivity",
+    "subtopic": "Routing Tables",
+    "difficulty": "Medium",
+    "questionText": "What is a floating static route?",
+    "options": [ "A static route with an administrative distance higher than the primary route source", "A connected host route", "A route that never needs a next hop", "An OSPF route learned from another area" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A floating static route uses a deliberately higher administrative distance so it can act as a backup when the preferred route is removed."
+  },
+  {
+    "id": 439,
+    "domain": "IP Connectivity",
+    "subtopic": "Routing Tables",
+    "difficulty": "Hard",
+    "questionText": "An OSPF route to 10.40.0.0/16 has administrative distance 110. A static route to that same prefix is configured with distance 200. Which route is preferred while both are valid?",
+    "options": [ "The static route", "The OSPF route", "The two routes automatically form an EtherChannel", "Neither route can be used" ],
+    "correctAnswerIndex": 1,
+    "explanation": "The OSPF route's administrative distance of 110 is lower than the static route's 200, so OSPF is preferred."
+  },
+  {
+    "id": 440,
+    "domain": "IP Connectivity",
+    "subtopic": "Routing Tables",
+    "difficulty": "Medium",
+    "questionText": "Which command displays the IPv6 unicast routing table on Cisco IOS?",
+    "options": [ "show ip route", "show ipv6 route", "show interfaces trunk", "show vlan brief" ],
+    "correctAnswerIndex": 1,
+    "explanation": "The show ipv6 route command displays installed IPv6 unicast routes."
+  },
+  {
+    "id": 441,
+    "domain": "IP Connectivity",
+    "subtopic": "Routing Tables",
+    "difficulty": "Medium",
+    "questionText": "What is the IPv6 default route prefix?",
+    "options": [ "FE80::/10", "FF00::/8", "::/0", "::1/128" ],
+    "correctAnswerIndex": 2,
+    "explanation": "The IPv6 prefix ::/0 matches every IPv6 destination and is used as the default route."
+  },
+  {
+    "id": 442,
+    "domain": "IP Connectivity",
+    "subtopic": "Routing Tables",
+    "difficulty": "Medium",
+    "questionText": "In an IPv6 routing table, what does a route to 2001:DB8:10::/64 represent?",
+    "options": [ "Only one individual IPv6 host", "The IPv6 network prefix with the first 64 bits fixed", "All IPv6 multicast groups", "Only IPv6 loopback traffic" ],
+    "correctAnswerIndex": 1,
+    "explanation": "The /64 prefix matches IPv6 addresses sharing the first 64 bits represented by 2001:DB8:10::/64."
+  },
+  {
+    "id": 443,
+    "domain": "IP Connectivity",
+    "subtopic": "Routing Tables",
+    "difficulty": "Hard",
+    "questionText": "A route shows 'via 192.0.2.2' but does not directly specify an outgoing interface. How can the router determine where to send the packet?",
+    "options": [ "Perform a routing lookup to resolve the next-hop address", "Broadcast the packet on every VLAN", "Select the interface with the lowest MAC address", "Ask a DNS server for the physical port" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Recursive next-hop resolution uses routing information for the next-hop IP to identify a usable outgoing interface."
+  },
+  {
+    "id": 444,
+    "domain": "IP Connectivity",
+    "subtopic": "Routing Tables",
+    "difficulty": "Hard",
+    "questionText": "A router has equal-cost OSPF paths to the same subnet through two different next hops. What can the routing table support?",
+    "options": [ "Equal-cost multipath forwarding", "Only static routing", "Automatic VLAN merging", "A different destination prefix for each packet" ],
+    "correctAnswerIndex": 0,
+    "explanation": "With supported equal-cost routes, a router can install multiple next hops for the same prefix and distribute traffic using equal-cost multipath forwarding."
+  },
+  {
+    "id": 445,
+    "domain": "IP Connectivity",
+    "subtopic": "Routing Tables",
+    "difficulty": "Medium",
+    "questionText": "Which statement correctly distinguishes a routing table from an ARP table?",
+    "options": [ "The routing table selects network paths, while ARP maps IPv4 neighbors to link-layer addresses", "Both tables contain only DNS names", "ARP chooses OSPF costs, while the routing table assigns MAC addresses", "Neither is used for IPv4 forwarding" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The routing table determines reachable destination networks and next hops. ARP resolves IPv4 addresses of on-link neighbors to their Ethernet MAC addresses."
+  },
+  {
+    "id": 446,
+    "domain": "IP Connectivity",
+    "subtopic": "Routing Tables",
+    "difficulty": "Hard",
+    "questionText": "A router has a static default route with distance 1 and an OSPF-learned default route with distance 110. Assuming both next hops are valid, which default route is preferred?",
+    "options": [ "The OSPF default route", "The static default route", "Whichever route has the shorter hostname", "Neither, because default routes cannot compete" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Both routes describe 0.0.0.0/0, so the static route with administrative distance 1 is normally preferred."
+  },
+  {
+    "id": 447,
+    "domain": "IP Connectivity",
+    "subtopic": "Routing Tables",
+    "difficulty": "Hard",
+    "questionText": "Which installed route is most specific for host 10.10.10.10 when routes 10.0.0.0/8, 10.10.0.0/16 and 10.10.10.10/32 all exist?",
+    "options": [ "10.0.0.0/8", "10.10.0.0/16", "10.10.10.10/32", "All are equally specific" ],
+    "correctAnswerIndex": 2,
+    "explanation": "A /32 host route matches one specific IPv4 address and is the longest matching prefix."
+  },
+  {
+    "id": 448,
+    "domain": "IP Connectivity",
+    "subtopic": "Routing Tables",
+    "difficulty": "Hard",
+    "questionText": "A Cisco route entry reads 'O 10.30.0.0/16 [110/25] via 192.168.1.2, GigabitEthernet0/1'. Which interpretation is correct?",
+    "options": [ "A static route with metric 110", "An OSPF route with distance 110, metric 25 and next hop 192.168.1.2", "A connected route through VLAN 25", "An OSPF route with administrative distance 25 and metric 110" ],
+    "correctAnswerIndex": 1,
+    "explanation": "O identifies OSPF; [110/25] gives administrative distance and metric; 192.168.1.2 is the next hop and GigabitEthernet0/1 is the outgoing interface."
+  },
+  {
+    "id": 449,
+    "domain": "IP Connectivity",
+    "subtopic": "Router Forwarding Decisions",
+    "difficulty": "Easy",
+    "questionText": "Which field in an IPv4 packet is primarily examined by a router to choose a destination route?",
+    "options": [ "Destination IP address", "Source TCP port", "Ethernet FCS", "DNS search suffix" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Normal destination-based routing examines the destination IP address and finds the most specific matching route."
+  },
+  {
+    "id": 450,
+    "domain": "IP Connectivity",
+    "subtopic": "Router Forwarding Decisions",
+    "difficulty": "Easy",
+    "questionText": "What is the longest-prefix-match rule?",
+    "options": [ "Choose the route with the highest administrative distance", "Choose the matching destination route with the greatest number of prefix bits", "Always use the default route", "Select the oldest route entry" ],
+    "correctAnswerIndex": 1,
+    "explanation": "A router selects the most specific installed destination prefix that matches the packet, indicated by the greatest prefix length."
+  },
+  {
+    "id": 451,
+    "domain": "IP Connectivity",
+    "subtopic": "Router Forwarding Decisions",
+    "difficulty": "Medium",
+    "questionText": "A router has installed routes 10.0.0.0/8 via R1 and 10.20.0.0/16 via R2. Which next hop is selected for 10.20.5.8?",
+    "options": [ "R1", "R2", "Both in every case", "Neither" ],
+    "correctAnswerIndex": 1,
+    "explanation": "10.20.5.8 matches both routes, but 10.20.0.0/16 is the longer prefix, so R2 is chosen."
+  },
+  {
+    "id": 452,
+    "domain": "IP Connectivity",
+    "subtopic": "Router Forwarding Decisions",
+    "difficulty": "Medium",
+    "questionText": "A router has 172.16.0.0/16 via R1 and 172.16.64.0/18 via R2. Which next hop handles 172.16.100.25?",
+    "options": [ "R1", "R2", "No route", "The interface with the lower MAC address" ],
+    "correctAnswerIndex": 1,
+    "explanation": "A /18 starting at 172.16.64.0 covers third octets 64–127, including 100. The /18 match through R2 is more specific."
+  },
+  {
+    "id": 453,
+    "domain": "IP Connectivity",
+    "subtopic": "Router Forwarding Decisions",
+    "difficulty": "Medium",
+    "questionText": "A router has 192.168.1.0/24 via R1 and 192.168.1.128/25 via R2. Which next hop is selected for 192.168.1.75?",
+    "options": [ "R1", "R2", "Both", "No matching route" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Address .75 matches 192.168.1.0/24 but not 192.168.1.128/25, which covers .128–.255."
+  },
+  {
+    "id": 454,
+    "domain": "IP Connectivity",
+    "subtopic": "Router Forwarding Decisions",
+    "difficulty": "Medium",
+    "questionText": "A router has 192.168.1.0/24 via R1 and 192.168.1.128/25 via R2. Which next hop is selected for 192.168.1.200?",
+    "options": [ "R1", "R2", "Neither", "The default gateway regardless of both routes" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Address .200 matches both entries, and the more specific /25 via R2 wins."
+  },
+  {
+    "id": 455,
+    "domain": "IP Connectivity",
+    "subtopic": "Router Forwarding Decisions",
+    "difficulty": "Hard",
+    "questionText": "Installed routes include 10.1.0.0/16 via A, 10.1.32.0/19 via B and 10.1.40.0/21 via C. Which next hop is selected for 10.1.47.200?",
+    "options": [ "A", "B", "C", "No matching route" ],
+    "correctAnswerIndex": 2,
+    "explanation": "The /21 prefix 10.1.40.0 covers third octets 40–47. It is the most specific route matching the destination."
+  },
+  {
+    "id": 456,
+    "domain": "IP Connectivity",
+    "subtopic": "Router Forwarding Decisions",
+    "difficulty": "Hard",
+    "questionText": "Installed routes include 10.1.0.0/16 via A, 10.1.32.0/19 via B and 10.1.40.0/21 via C. Which next hop is selected for 10.1.50.5?",
+    "options": [ "A", "B", "C", "No matching route" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Third octet 50 falls within the /19 range 32–63 but outside the /21 range 40–47, so route B is preferred."
+  },
+  {
+    "id": 457,
+    "domain": "IP Connectivity",
+    "subtopic": "Router Forwarding Decisions",
+    "difficulty": "Medium",
+    "questionText": "A router has an installed default route and no other route matching destination 203.0.113.50. What happens?",
+    "options": [ "The router normally uses the default route", "The router always drops the packet", "The router broadcasts the packet on every interface", "The router replaces the destination address with its hostname" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A default route with prefix 0.0.0.0/0 is used when no more specific installed destination route matches."
+  },
+  {
+    "id": 458,
+    "domain": "IP Connectivity",
+    "subtopic": "Router Forwarding Decisions",
+    "difficulty": "Medium",
+    "questionText": "What normally happens when no installed route matches the destination and there is no default route?",
+    "options": [ "The router drops the packet and may return an ICMP destination-unreachable message", "The router creates a static route automatically", "The router forwards the packet to DNS", "The router sends the packet over every physical port" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Without a usable route, the router cannot forward the IP packet and normally discards it, potentially generating an ICMP unreachable response."
+  },
+  {
+    "id": 459,
+    "domain": "IP Connectivity",
+    "subtopic": "Router Forwarding Decisions",
+    "difficulty": "Medium",
+    "questionText": "If a router forwards an IPv4 packet, what normally happens to its Time to Live (TTL) value?",
+    "options": [ "It increases by one", "It decreases by one", "It always becomes 255", "It is converted into the TCP window" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Each IPv4 routing hop normally decrements the packet's TTL by one, preventing indefinitely circulating packets."
+  },
+  {
+    "id": 460,
+    "domain": "IP Connectivity",
+    "subtopic": "Router Forwarding Decisions",
+    "difficulty": "Medium",
+    "questionText": "A router receives an ordinary IPv4 packet with TTL 1 that would need another routing hop. What normally occurs?",
+    "options": [ "It forwards the packet with TTL 0", "It discards the packet and may send ICMP Time Exceeded", "It resets TTL to 64", "It changes the destination IP to the default gateway" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Forwarding would reduce TTL to zero, so the router discards the packet and normally sends an ICMP Time Exceeded message."
+  },
+  {
+    "id": 461,
+    "domain": "IP Connectivity",
+    "subtopic": "Router Forwarding Decisions",
+    "difficulty": "Medium",
+    "questionText": "Which IPv6 header field provides the loop-limiting function equivalent to IPv4 TTL?",
+    "options": [ "Flow Label", "Hop Limit", "Traffic Class", "Payload Length" ],
+    "correctAnswerIndex": 1,
+    "explanation": "IPv6 uses the Hop Limit field, which routers decrement when forwarding packets."
+  },
+  {
+    "id": 462,
+    "domain": "IP Connectivity",
+    "subtopic": "Router Forwarding Decisions",
+    "difficulty": "Medium",
+    "questionText": "What normally happens to the source and destination IP addresses when a standard router forwards a packet without NAT?",
+    "options": [ "Both addresses change to the router's IP address", "The addresses remain unchanged", "The source becomes the outgoing MAC address", "Both addresses are deleted" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Ordinary IP forwarding preserves source and destination IP addresses. Separate features such as NAT may modify them."
+  },
+  {
+    "id": 463,
+    "domain": "IP Connectivity",
+    "subtopic": "Router Forwarding Decisions",
+    "difficulty": "Medium",
+    "questionText": "What happens to an Ethernet frame's source and destination MAC addresses when an IP packet is routed between Ethernet networks?",
+    "options": [ "They remain unchanged across all routers", "A new outgoing Ethernet header is created using next-hop Layer 2 addressing", "They are replaced by DNS hostnames", "Both MAC addresses become broadcast addresses" ],
+    "correctAnswerIndex": 1,
+    "explanation": "The router removes the incoming Layer 2 frame header and constructs a new header appropriate for the outgoing link."
+  },
+  {
+    "id": 464,
+    "domain": "IP Connectivity",
+    "subtopic": "Router Forwarding Decisions",
+    "difficulty": "Easy",
+    "questionText": "Which IPv4 protocol maps the next-hop IPv4 address to a MAC address on a directly connected Ethernet network?",
+    "options": [ "ARP", "DNS", "NTP", "OSPF" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Address Resolution Protocol resolves an on-link IPv4 neighbor's address to its Ethernet MAC address."
+  },
+  {
+    "id": 465,
+    "domain": "IP Connectivity",
+    "subtopic": "Router Forwarding Decisions",
+    "difficulty": "Medium",
+    "questionText": "A router forwards a packet over Ethernet to next hop 192.168.1.2, which is directly connected. Which IP address does it resolve through ARP?",
+    "options": [ "The original source IP", "192.168.1.2", "The destination network address in every case", "The public DNS server" ],
+    "correctAnswerIndex": 1,
+    "explanation": "The router resolves the MAC address of its on-link next hop, 192.168.1.2, for the outgoing Ethernet frame."
+  },
+  {
+    "id": 466,
+    "domain": "IP Connectivity",
+    "subtopic": "Router Forwarding Decisions",
+    "difficulty": "Medium",
+    "questionText": "A router is forwarding to a destination on its directly connected Ethernet subnet. Whose MAC address does it normally need?",
+    "options": [ "The final destination host's MAC address", "A remote Internet router's MAC address", "The source host's default gateway MAC address", "The DNS server's MAC address" ],
+    "correctAnswerIndex": 0,
+    "explanation": "For a destination on the outgoing directly connected Ethernet network, the router resolves the destination host's MAC address."
+  },
+  {
+    "id": 467,
+    "domain": "IP Connectivity",
+    "subtopic": "Router Forwarding Decisions",
+    "difficulty": "Medium",
+    "questionText": "What does an IPv6 router use instead of ARP to resolve a neighbor's link-layer address?",
+    "options": [ "ICMPv6 Neighbor Discovery", "RIPng only", "DNS zone transfers", "TCP acknowledgments" ],
+    "correctAnswerIndex": 0,
+    "explanation": "IPv6 Neighbor Discovery uses ICMPv6 Neighbor Solicitation and Neighbor Advertisement messages to resolve local neighbors."
+  },
+  {
+    "id": 468,
+    "domain": "IP Connectivity",
+    "subtopic": "Router Forwarding Decisions",
+    "difficulty": "Hard",
+    "questionText": "Route A is 10.0.0.0/8 with administrative distance 1, and Route B is 10.10.0.0/16 with distance 110. Both are installed. Which route forwards traffic to 10.10.2.3?",
+    "options": [ "Route A because distance 1 is lower", "Route B because /16 is a longer match", "Both routes because the distances differ", "Neither route" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Longest-prefix match is applied to the installed forwarding routes. The /16 entry is more specific than /8, even though its administrative distance is higher."
+  },
+  {
+    "id": 469,
+    "domain": "IP Connectivity",
+    "subtopic": "Router Forwarding Decisions",
+    "difficulty": "Hard",
+    "questionText": "A router has 192.168.0.0/16 via A and 192.168.50.0/24 via B. An IPv4 packet is addressed to 192.168.51.10. Which next hop is selected?",
+    "options": [ "A", "B", "Both", "Neither" ],
+    "correctAnswerIndex": 0,
+    "explanation": "192.168.51.10 is inside 192.168.0.0/16 but outside 192.168.50.0/24, so next hop A is selected."
+  },
+  {
+    "id": 470,
+    "domain": "IP Connectivity",
+    "subtopic": "Router Forwarding Decisions",
+    "difficulty": "Hard",
+    "questionText": "A router has 172.20.0.0/16 via A, 172.20.8.0/21 via B and 172.20.12.0/22 via C. Which next hop is selected for 172.20.15.250?",
+    "options": [ "A", "B", "C", "No match" ],
+    "correctAnswerIndex": 2,
+    "explanation": "The /22 network 172.20.12.0 covers third octets 12–15. It matches and is more specific than the /21 or /16."
+  },
+  {
+    "id": 471,
+    "domain": "IP Connectivity",
+    "subtopic": "Router Forwarding Decisions",
+    "difficulty": "Hard",
+    "questionText": "A router has 10.0.0.0/8 via A, 10.64.0.0/10 via B and 10.128.0.0/9 via C. Which next hop is selected for 10.100.1.1?",
+    "options": [ "A", "B", "C", "No match" ],
+    "correctAnswerIndex": 1,
+    "explanation": "10.64.0.0/10 covers second-octet values 64–127, including 100. The /10 route through B is the longest match."
+  },
+  {
+    "id": 472,
+    "domain": "IP Connectivity",
+    "subtopic": "Router Forwarding Decisions",
+    "difficulty": "Hard",
+    "questionText": "A router has 10.0.0.0/8 via A, 10.64.0.0/10 via B and 10.128.0.0/9 via C. Which next hop is selected for 10.200.1.1?",
+    "options": [ "A", "B", "C", "No match" ],
+    "correctAnswerIndex": 2,
+    "explanation": "10.128.0.0/9 covers second-octet values 128–255, including 200. It is the longest matching route."
+  },
+  {
+    "id": 473,
+    "domain": "IP Connectivity",
+    "subtopic": "Router Forwarding Decisions",
+    "difficulty": "Medium",
+    "questionText": "Which routing process chooses among candidate routes to the same prefix before they become installed forwarding entries?",
+    "options": [ "Route source and metric selection, including administrative distance where relevant", "Ethernet cable pinout selection", "Wireless SSID broadcasting", "DNS resource record sorting" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Routing protocols and the routing table selection process determine preferred routes. The forwarding lookup then uses the installed entries and longest-prefix matching."
+  },
+  {
+    "id": 474,
+    "domain": "IP Connectivity",
+    "subtopic": "Router Forwarding Decisions",
+    "difficulty": "Medium",
+    "questionText": "What is a primary benefit of Cisco Express Forwarding (CEF)?",
+    "options": [ "Efficient packet forwarding using precomputed forwarding and adjacency information", "Replacing the need for any routing table", "Encrypting every Ethernet frame automatically", "Converting TCP applications to UDP" ],
+    "correctAnswerIndex": 0,
+    "explanation": "CEF uses a forwarding information base and adjacency information to forward packets efficiently."
+  },
+  {
+    "id": 475,
+    "domain": "IP Connectivity",
+    "subtopic": "Router Forwarding Decisions",
+    "difficulty": "Medium",
+    "questionText": "What does FIB stand for in Cisco packet forwarding?",
+    "options": [ "Forwarding Information Base", "Fiber Interface Bridge", "Frame Inspection Buffer", "Fast Internet Broadcast" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The Forwarding Information Base is used to hold destination-prefix forwarding information for efficient packet lookup."
+  },
+  {
+    "id": 476,
+    "domain": "IP Connectivity",
+    "subtopic": "Router Forwarding Decisions",
+    "difficulty": "Hard",
+    "questionText": "What is the purpose of an adjacency table in CEF?",
+    "options": [ "Store next-hop Layer 2 rewrite information for forwarding", "Assign administrative distances to OSPF areas", "Store all user passwords", "Manage wireless channel widths" ],
+    "correctAnswerIndex": 0,
+    "explanation": "CEF adjacency information supports outgoing encapsulation and next-hop Layer 2 forwarding actions."
+  },
+  {
+    "id": 477,
+    "domain": "IP Connectivity",
+    "subtopic": "Router Forwarding Decisions",
+    "difficulty": "Medium",
+    "questionText": "Which command is commonly used on Cisco IOS to display the IPv4 CEF forwarding information base?",
+    "options": [ "show ip cef", "show vlan brief", "show cdp traffic", "show ip dhcp binding" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The show ip cef command displays IPv4 CEF forwarding information on supported Cisco platforms."
+  },
+  {
+    "id": 478,
+    "domain": "IP Connectivity",
+    "subtopic": "Router Forwarding Decisions",
+    "difficulty": "Hard",
+    "questionText": "A router has two equal-cost installed next hops for a destination. Which forwarding behavior is commonly used to avoid reordering packets in a single flow?",
+    "options": [ "Per-flow hashing to a next hop", "Duplicating every packet to both next hops", "Alternating every byte between links", "Ignoring the route table entirely" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Per-flow load balancing generally keeps packets belonging to the same flow on one chosen path while distributing different flows across equal-cost paths."
+  },
+  {
+    "id": 479,
+    "domain": "IP Connectivity",
+    "subtopic": "Router Forwarding Decisions",
+    "difficulty": "Hard",
+    "questionText": "A router has a route through GigabitEthernet0/1, but that interface becomes operationally down and no alternate route exists. What happens to matching forwarding traffic?",
+    "options": [ "Traffic is always forwarded through the failed port", "The unusable route is removed or becomes ineligible, and packets without another match are dropped", "The router invents a new next-hop IP address", "The router automatically changes the destination subnet" ],
+    "correctAnswerIndex": 1,
+    "explanation": "When the route is no longer usable and no alternative path exists, the router cannot forward matching traffic and drops it."
+  },
+  {
+    "id": 480,
+    "domain": "IP Connectivity",
+    "subtopic": "Router Forwarding Decisions",
+    "difficulty": "Hard",
+    "questionText": "A router receives a packet addressed to its own configured interface IP. What is the expected handling?",
+    "options": [ "Forward it to the default route", "Process it locally rather than forwarding it as transit traffic", "Broadcast it to every LAN", "Replace it with an ARP request in every case" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Packets destined for the router's own local interface addresses are handled by the local receive path, subject to protocol and security processing."
+  },
+  {
+    "id": 481,
+    "domain": "IP Connectivity",
+    "subtopic": "Router Forwarding Decisions",
+    "difficulty": "Hard",
+    "questionText": "A router receives an IPv4 packet larger than the outgoing interface MTU, with the Don't Fragment bit set. What normally happens?",
+    "options": [ "The router fragments it anyway", "The router drops it and can send an ICMP Fragmentation Needed message", "The router increases the outgoing MTU automatically", "The router strips the destination IP address" ],
+    "correctAnswerIndex": 1,
+    "explanation": "When an IPv4 packet is too large for the outgoing MTU and fragmentation is prohibited, the router drops it and normally reports that fragmentation is needed."
+  },
+  {
+    "id": 482,
+    "domain": "IP Connectivity",
+    "subtopic": "Router Forwarding Decisions",
+    "difficulty": "Hard",
+    "questionText": "A router must forward an oversized IPv6 packet over a link with a smaller MTU. Which action is consistent with IPv6 forwarding?",
+    "options": [ "The router fragments the packet in transit", "The router drops it and normally returns ICMPv6 Packet Too Big", "The router converts the packet to IPv4 automatically", "The router raises every link's MTU" ],
+    "correctAnswerIndex": 1,
+    "explanation": "IPv6 routers do not fragment packets in transit. An oversized packet is dropped and a Packet Too Big message is normally returned so the sender can adjust."
+  },
+  {
+    "id": 483,
+    "domain": "IP Connectivity",
+    "subtopic": "Router Forwarding Decisions",
+    "difficulty": "Hard",
+    "questionText": "An installed route points toward an outgoing interface, but an outbound ACL denies the packet. What is the correct interpretation?",
+    "options": [ "The packet must still be forwarded because the route exists", "The router may drop the packet because policy checks also affect forwarding", "The route's administrative distance becomes zero", "The packet automatically bypasses the ACL through DNS" ],
+    "correctAnswerIndex": 1,
+    "explanation": "A valid route identifies a forwarding path, but access control and other policies can still deny a packet before transmission."
+  }
+]

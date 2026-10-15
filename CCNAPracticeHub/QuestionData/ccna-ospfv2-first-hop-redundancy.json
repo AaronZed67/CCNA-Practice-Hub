@@ -1,0 +1,702 @@
+[
+  {
+    "id": 589,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Easy",
+    "questionText": "What type of routing protocol is OSPFv2?",
+    "options": [ "Distance-vector", "Link-state", "Path-vector", "Static" ],
+    "correctAnswerIndex": 1,
+    "explanation": "OSPF is a link-state interior gateway protocol that builds a topology database and calculates shortest paths."
+  },
+  {
+    "id": 590,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Easy",
+    "questionText": "Which IP version does OSPFv2 normally route?",
+    "options": [ "IPv4", "IPv6 only", "Both IPv4 and IPv6 using the same address family", "Neither IPv4 nor IPv6" ],
+    "correctAnswerIndex": 0,
+    "explanation": "OSPFv2 is used for IPv4 unicast routing. OSPFv3 was developed to support IPv6 and has subsequently gained additional address-family capabilities."
+  },
+  {
+    "id": 591,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Easy",
+    "questionText": "Which algorithm does OSPF use to calculate shortest paths?",
+    "options": [ "Bellman-Ford", "Dijkstra shortest-path-first", "Spanning-tree root election", "EtherChannel hashing" ],
+    "correctAnswerIndex": 1,
+    "explanation": "OSPF uses Dijkstra's shortest-path-first algorithm to calculate paths from its link-state database."
+  },
+  {
+    "id": 592,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Easy",
+    "questionText": "What is the default administrative distance of OSPF on Cisco IOS?",
+    "options": [ "1", "90", "110", "120" ],
+    "correctAnswerIndex": 2,
+    "explanation": "OSPF routes have a default administrative distance of 110 on Cisco IOS."
+  },
+  {
+    "id": 593,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Easy",
+    "questionText": "Which IP protocol number does OSPF use?",
+    "options": [ "6", "17", "89", "179" ],
+    "correctAnswerIndex": 2,
+    "explanation": "OSPF runs directly over IP using protocol number 89 rather than TCP or UDP."
+  },
+  {
+    "id": 594,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Easy",
+    "questionText": "Which OSPF area is the backbone area?",
+    "options": [ "Area 0", "Area 1", "Area 100", "Area 65535" ],
+    "correctAnswerIndex": 0,
+    "explanation": "OSPF area 0 is the backbone area. A single-area OSPF deployment commonly places all participating interfaces in area 0."
+  },
+  {
+    "id": 595,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Easy",
+    "questionText": "Which Cisco IOS global configuration command starts OSPF process 10?",
+    "options": [ "ip ospf 10", "router ospf 10", "ospf process 10", "network ospf 10" ],
+    "correctAnswerIndex": 1,
+    "explanation": "The router ospf 10 command creates or enters OSPF routing process 10."
+  },
+  {
+    "id": 596,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Medium",
+    "questionText": "Two neighboring Cisco routers use OSPF process IDs 10 and 20 respectively. Can they form an adjacency if their other settings are compatible?",
+    "options": [ "Yes, process IDs are locally significant", "No, process IDs must always match", "Only if both routers use BGP", "Only when both have the same router ID" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The OSPF process ID is locally significant on Cisco IOS. Neighboring routers can use different process IDs."
+  },
+  {
+    "id": 597,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Medium",
+    "questionText": "Which command explicitly assigns OSPF router ID 1.1.1.1 in router OSPF configuration mode?",
+    "options": [ "ip address 1.1.1.1", "router-id 1.1.1.1", "ospf-id 1.1.1.1", "network 1.1.1.1 area 0" ],
+    "correctAnswerIndex": 1,
+    "explanation": "The router-id 1.1.1.1 command explicitly configures the OSPF router identifier."
+  },
+  {
+    "id": 598,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Medium",
+    "questionText": "If no OSPF router ID is manually configured, which address is preferred by Cisco IOS when loopback interfaces exist?",
+    "options": [ "The lowest loopback IPv4 address", "The highest loopback IPv4 address", "The highest neighbor IPv4 address", "The IPv4 default gateway" ],
+    "correctAnswerIndex": 1,
+    "explanation": "When automatically selecting a router ID, Cisco IOS generally prefers the highest IPv4 address on an available loopback interface."
+  },
+  {
+    "id": 599,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Medium",
+    "questionText": "A router has no loopback interfaces and no manually assigned OSPF router ID. How does Cisco IOS normally choose the router ID?",
+    "options": [ "From the lowest VLAN number", "From the highest IPv4 address on an eligible active physical interface", "From the router hostname", "From the lowest OSPF interface cost" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Without a manual ID or loopback, Cisco IOS normally selects the highest IPv4 address on an eligible active physical interface."
+  },
+  {
+    "id": 600,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Medium",
+    "questionText": "Why must OSPF routers in the same routing domain use unique router IDs?",
+    "options": [ "Router IDs identify devices within OSPF topology information", "Router IDs are Ethernet MAC addresses", "Router IDs determine cable speed", "Router IDs replace IP subnet masks" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Router IDs uniquely identify OSPF routers in protocol exchanges and link-state information. Duplicate IDs can disrupt neighbor and topology operations."
+  },
+  {
+    "id": 601,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Easy",
+    "questionText": "Which OSPF packet type is used to discover and maintain neighbors?",
+    "options": [ "Hello", "Link-State Update", "Database Description", "Link-State Acknowledgment" ],
+    "correctAnswerIndex": 0,
+    "explanation": "OSPF Hello packets discover neighboring routers and help maintain neighbor relationships."
+  },
+  {
+    "id": 602,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Medium",
+    "questionText": "What is the default OSPF Hello interval on a typical Cisco broadcast Ethernet network?",
+    "options": [ "1 second", "10 seconds", "30 seconds", "40 seconds" ],
+    "correctAnswerIndex": 1,
+    "explanation": "The default OSPF Hello interval on broadcast Ethernet is 10 seconds."
+  },
+  {
+    "id": 603,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Medium",
+    "questionText": "What is the default OSPF Dead interval on a typical Cisco broadcast Ethernet network?",
+    "options": [ "10 seconds", "20 seconds", "30 seconds", "40 seconds" ],
+    "correctAnswerIndex": 3,
+    "explanation": "The default OSPF Dead interval on broadcast Ethernet is 40 seconds, normally four times the Hello interval."
+  },
+  {
+    "id": 604,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Medium",
+    "questionText": "What may prevent two connected OSPFv2 routers from becoming neighbors?",
+    "options": [ "Mismatched Hello and Dead timers", "Different local OSPF process IDs", "Different interface descriptions", "Different hostnames" ],
+    "correctAnswerIndex": 0,
+    "explanation": "OSPF neighbors on the same link must have compatible Hello and Dead timer settings."
+  },
+  {
+    "id": 605,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Medium",
+    "questionText": "Two OSPF-enabled Ethernet interfaces are configured in different OSPF areas. What normally happens?",
+    "options": [ "They automatically choose area 0", "They do not establish the expected OSPF neighbor relationship", "They form a BGP session", "They become an EtherChannel" ],
+    "correctAnswerIndex": 1,
+    "explanation": "OSPF area IDs must agree across an adjacency. An area mismatch prevents normal neighbor formation."
+  },
+  {
+    "id": 606,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Medium",
+    "questionText": "Which multicast IPv4 address is used by OSPF for the AllSPFRouters group?",
+    "options": [ "224.0.0.1", "224.0.0.5", "224.0.0.6", "239.255.255.250" ],
+    "correctAnswerIndex": 1,
+    "explanation": "224.0.0.5 is the AllSPFRouters multicast address used for OSPF messages."
+  },
+  {
+    "id": 607,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Medium",
+    "questionText": "Which IPv4 multicast address is associated with OSPF designated and backup designated routers?",
+    "options": [ "224.0.0.2", "224.0.0.5", "224.0.0.6", "224.0.0.9" ],
+    "correctAnswerIndex": 2,
+    "explanation": "224.0.0.6 is the AllDRouters multicast group used on appropriate OSPF multiaccess networks."
+  },
+  {
+    "id": 608,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Easy",
+    "questionText": "What is the main purpose of an OSPF designated router (DR) on a broadcast multiaccess segment?",
+    "options": [ "Reduce the number of full adjacencies and coordinate link-state exchange", "Provide DHCP addresses", "Replace all default gateways", "Encrypt Ethernet frames" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A designated router helps reduce adjacency overhead and coordinates link-state information exchange on multiaccess networks."
+  },
+  {
+    "id": 609,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Easy",
+    "questionText": "What does BDR stand for in OSPF?",
+    "options": [ "Backup Designated Router", "Bridge Discovery Relay", "Broadcast Default Route", "Backbone Dynamic Router" ],
+    "correctAnswerIndex": 0,
+    "explanation": "BDR means Backup Designated Router, which can take over when the DR fails."
+  },
+  {
+    "id": 610,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Medium",
+    "questionText": "Which OSPF interface setting is examined first when selecting a DR among eligible routers on a broadcast network?",
+    "options": [ "Router hostname", "OSPF interface priority", "Interface description", "TCP port number" ],
+    "correctAnswerIndex": 1,
+    "explanation": "OSPF DR and BDR elections prefer routers with higher interface priority, among eligible candidates."
+  },
+  {
+    "id": 611,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Medium",
+    "questionText": "What is the default OSPF interface priority on a typical Cisco IOS Ethernet interface?",
+    "options": [ "0", "1", "100", "255" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Cisco IOS typically uses OSPF interface priority 1 by default."
+  },
+  {
+    "id": 612,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Medium",
+    "questionText": "What is the effect of setting OSPF interface priority to 0 on a broadcast segment?",
+    "options": [ "The interface cannot be elected DR or BDR", "The interface must become the DR", "The router stops forwarding IP packets", "The interface changes into a trunk" ],
+    "correctAnswerIndex": 0,
+    "explanation": "OSPF priority 0 makes the interface ineligible for DR and BDR election, although it can still form OSPF neighbor relationships."
+  },
+  {
+    "id": 613,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Hard",
+    "questionText": "Three OSPF routers start together on one broadcast network. Their interface priorities are R1=1, R2=100 and R3=50. Assuming all are eligible and no prior election, which is preferred as DR?",
+    "options": [ "R1", "R2", "R3", "The router with the lowest IP address" ],
+    "correctAnswerIndex": 1,
+    "explanation": "With a fresh election, the eligible router having the highest OSPF interface priority is preferred. R2 has priority 100."
+  },
+  {
+    "id": 614,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Hard",
+    "questionText": "Two eligible OSPF routers have equal interface priority on a fresh broadcast network. R1's router ID is 1.1.1.1 and R2's is 2.2.2.2. Which is preferred as DR?",
+    "options": [ "R1", "R2", "The one with the lowest MAC address", "Neither can be elected" ],
+    "correctAnswerIndex": 1,
+    "explanation": "When OSPF DR election priorities tie, the higher OSPF router ID wins the tie. R2 has the higher router ID."
+  },
+  {
+    "id": 615,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Hard",
+    "questionText": "A new OSPF router joins a broadcast segment with a higher priority than the existing DR. What normally happens immediately?",
+    "options": [ "It always replaces the existing DR", "The existing DR stays in place because normal DR elections are non-preemptive", "OSPF disables the Ethernet link", "Both routers become the DR" ],
+    "correctAnswerIndex": 1,
+    "explanation": "OSPF DR and BDR elections are non-preemptive. A higher-priority newcomer does not automatically replace an established DR."
+  },
+  {
+    "id": 616,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Medium",
+    "questionText": "Does OSPF normally elect a DR and BDR on a point-to-point link?",
+    "options": [ "Yes, both are always required", "No, point-to-point OSPF does not use DR/BDR election", "Only if the routers use identical process IDs", "Only if both interfaces have priority 255" ],
+    "correctAnswerIndex": 1,
+    "explanation": "OSPF point-to-point network types do not elect a designated or backup designated router."
+  },
+  {
+    "id": 617,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS EXEC command displays OSPF neighbor states and neighbor router IDs?",
+    "options": [ "show ip ospf neighbor", "show ip route static", "show interfaces trunk", "show etherchannel summary" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The show ip ospf neighbor command displays discovered OSPF neighbors, their states and related interface details."
+  },
+  {
+    "id": 618,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Medium",
+    "questionText": "Which neighbor state generally indicates that an OSPF adjacency has been fully established?",
+    "options": [ "Down", "Init", "ExStart", "Full" ],
+    "correctAnswerIndex": 3,
+    "explanation": "The Full state means neighboring OSPF routers have completed the required database synchronization."
+  },
+  {
+    "id": 619,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Medium",
+    "questionText": "Why can two OSPF DROTHER routers on the same broadcast Ethernet network remain in the 2-Way state?",
+    "options": [ "They are necessarily misconfigured", "They normally do not form a full adjacency directly with one another", "They must have identical router IDs", "They are using TCP instead of IP protocol 89" ],
+    "correctAnswerIndex": 1,
+    "explanation": "DROTHER routers can remain at 2-Way with each other because they normally form full adjacencies with the DR and BDR instead."
+  },
+  {
+    "id": 620,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Hard",
+    "questionText": "Two OSPF neighbors remain in ExStart or Exchange and fail to reach Full. Which issue is a plausible cause?",
+    "options": [ "An interface MTU mismatch", "Different router hostnames", "Different OSPF process IDs alone", "Different interface descriptions" ],
+    "correctAnswerIndex": 0,
+    "explanation": "An MTU mismatch can prevent OSPF database-description negotiation from completing, leaving neighbors stuck during adjacency formation."
+  },
+  {
+    "id": 621,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Medium",
+    "questionText": "Which OSPF packet type provides summaries of link-state database contents during adjacency establishment?",
+    "options": [ "Hello", "Database Description", "Link-State Acknowledgment", "ARP Request" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Database Description packets summarize the link-state database as neighbors synchronize their topology information."
+  },
+  {
+    "id": 622,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Medium",
+    "questionText": "Which OSPF packet type requests particular link-state information from a neighbor?",
+    "options": [ "Link-State Request", "Hello", "Link-State Acknowledgment", "ICMP Echo" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A Link-State Request asks a neighbor to provide specified link-state advertisements."
+  },
+  {
+    "id": 623,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Medium",
+    "questionText": "Which OSPF packet type transports link-state advertisements between routers?",
+    "options": [ "Hello", "Database Description", "Link-State Update", "Router Advertisement" ],
+    "correctAnswerIndex": 2,
+    "explanation": "OSPF Link-State Update packets carry one or more link-state advertisements."
+  },
+  {
+    "id": 624,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Medium",
+    "questionText": "Which OSPF packet type confirms receipt of link-state advertisements?",
+    "options": [ "Link-State Acknowledgment", "Database Description", "Hello", "DHCP ACK" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Link-State Acknowledgment packets acknowledge received OSPF link-state advertisements."
+  },
+  {
+    "id": 625,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Easy",
+    "questionText": "What does OSPF use as its principal path metric?",
+    "options": [ "Hop count", "Cost", "TCP window", "Router hostname length" ],
+    "correctAnswerIndex": 1,
+    "explanation": "OSPF selects paths using accumulated interface costs rather than RIP-style hop counts."
+  },
+  {
+    "id": 626,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Medium",
+    "questionText": "How does OSPF normally prefer two otherwise comparable paths when their total costs differ?",
+    "options": [ "Higher cost wins", "Lower cost wins", "The newest path always wins", "The route with the highest VLAN ID wins" ],
+    "correctAnswerIndex": 1,
+    "explanation": "For comparable OSPF routes to the same prefix, the path with the lower accumulated OSPF cost is preferred."
+  },
+  {
+    "id": 627,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Medium",
+    "questionText": "What default reference bandwidth is commonly used for Cisco IOS OSPF cost calculation?",
+    "options": [ "10 Mbps", "100 Mbps", "1 Gbps", "10 Gbps" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Traditional Cisco IOS OSPF uses a default reference bandwidth of 100 Mbps unless it is changed."
+  },
+  {
+    "id": 628,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Hard",
+    "questionText": "With the traditional 100-Mbps OSPF reference bandwidth, what is the calculated integer cost of a 10-Mbps interface?",
+    "options": [ "1", "10", "100", "1000" ],
+    "correctAnswerIndex": 1,
+    "explanation": "OSPF interface cost is traditionally calculated as reference bandwidth divided by interface bandwidth: 100 Mbps / 10 Mbps = 10."
+  },
+  {
+    "id": 629,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Hard",
+    "questionText": "Why is it useful to increase OSPF reference bandwidth in a network using both 1-Gbps and 10-Gbps links?",
+    "options": [ "To allow bandwidth-based costs to distinguish these faster links", "To disable OSPF Hellos", "To force every link to use cost 1", "To change OSPF into a distance-vector protocol" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The default 100-Mbps reference can give both 1-Gbps and 10-Gbps links cost 1. A higher consistent reference allows different calculated costs."
+  },
+  {
+    "id": 630,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS interface command explicitly sets OSPF cost to 25?",
+    "options": [ "ip ospf cost 25", "ospf bandwidth 25", "ip route cost 25", "network cost 25" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The ip ospf cost 25 command sets the OSPF interface cost directly."
+  },
+  {
+    "id": 631,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Medium",
+    "questionText": "Which interface command enables OSPF process 1 in area 0 on a supported Cisco IOS interface?",
+    "options": [ "ip ospf 1 area 0", "router ospf 1 area 0", "network ospf area 0", "switchport ospf 1" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The interface command ip ospf 1 area 0 enables OSPF process 1 on that interface in area 0."
+  },
+  {
+    "id": 632,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Medium",
+    "questionText": "Under router ospf 1, which network statement matches all IPv4 interfaces in 192.168.10.0/24 and enables OSPF in area 0?",
+    "options": [ "network 192.168.10.0 0.0.0.255 area 0", "network 192.168.10.0 255.255.255.0 area 0", "network 192.168.10.0 0.0.0.0 area 0", "network 192.168.10.0 0.0.255.255 area 1" ],
+    "correctAnswerIndex": 0,
+    "explanation": "OSPF network statements use wildcard masks. Wildcard 0.0.0.255 matches addresses within 192.168.10.0/24."
+  },
+  {
+    "id": 633,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Hard",
+    "questionText": "Which wildcard mask corresponds to a /27 network prefix in an OSPF network statement?",
+    "options": [ "0.0.0.31", "0.0.0.63", "0.0.0.224", "0.0.0.255" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A /27 subnet mask is 255.255.255.224. Its inverse wildcard mask is 0.0.0.31."
+  },
+  {
+    "id": 634,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Hard",
+    "questionText": "Which OSPF network statement matches only the interface address 10.1.1.5 for OSPF area 0?",
+    "options": [ "network 10.1.1.5 0.0.0.0 area 0", "network 10.1.1.0 0.0.0.255 area 0", "network 10.1.1.5 255.255.255.255 area 0", "network 0.0.0.0 255.255.255.255 area 0" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Wildcard mask 0.0.0.0 requires an exact match for the interface IP address 10.1.1.5."
+  },
+  {
+    "id": 635,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Medium",
+    "questionText": "What does configuring an OSPF interface as passive normally accomplish?",
+    "options": [ "Advertises its connected network without forming OSPF neighbors on that interface", "Deletes the connected network", "Elects the interface as DR", "Disables all IP traffic on the interface" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A passive OSPF interface does not send Hello packets or form neighbors but its connected network can still be advertised."
+  },
+  {
+    "id": 636,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Hard",
+    "questionText": "Router R1 has two equal-cost OSPF paths of cost 20 to the same IPv4 destination, both eligible for installation. What can the router use?",
+    "options": [ "Equal-cost multipath forwarding", "Only the numerically lowest VLAN", "A new OSPF area for each packet", "PAgP negotiation" ],
+    "correctAnswerIndex": 0,
+    "explanation": "OSPF supports equal-cost paths. Supported routers can install multiple next hops for the same destination prefix."
+  },
+  {
+    "id": 637,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Hard",
+    "questionText": "Two OSPF routers have matching areas and timers but still cannot form an adjacency. Their OSPF authentication settings differ. What is the likely cause?",
+    "options": [ "The authentication mismatch prevents acceptance of OSPF packets", "OSPF automatically ignores authentication mismatches", "Their process IDs must be identical", "Their interface descriptions must match" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Mismatched OSPF authentication configuration or keys can prevent routers from accepting each other's OSPF messages."
+  },
+  {
+    "id": 638,
+    "domain": "IP Connectivity",
+    "subtopic": "OSPFv2",
+    "difficulty": "Hard",
+    "questionText": "Which pair of commands is most useful for diagnosing missing OSPF neighbors and verifying whether interfaces are participating in OSPF?",
+    "options": [ "show ip ospf neighbor and show ip ospf interface brief", "show vlan brief and show etherchannel summary", "show ip dhcp binding and show clock", "show cdp traffic and show ntp status" ],
+    "correctAnswerIndex": 0,
+    "explanation": "OSPF neighbor output shows adjacency status, while OSPF interface information shows which interfaces participate and in which areas."
+  },
+  {
+    "id": 639,
+    "domain": "IP Connectivity",
+    "subtopic": "First Hop Redundancy",
+    "difficulty": "Easy",
+    "questionText": "What is the primary purpose of a first-hop redundancy protocol?",
+    "options": [ "Provide a resilient default gateway for hosts", "Replace all DNS servers", "Assign VLAN tags", "Select wireless channels" ],
+    "correctAnswerIndex": 0,
+    "explanation": "First-hop redundancy protocols allow multiple routers or Layer 3 devices to provide a shared gateway service for hosts."
+  },
+  {
+    "id": 640,
+    "domain": "IP Connectivity",
+    "subtopic": "First Hop Redundancy",
+    "difficulty": "Easy",
+    "questionText": "Which protocol is Cisco-proprietary and provides first-hop gateway redundancy?",
+    "options": [ "HSRP", "VRRP", "OSPF", "LLDP" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Hot Standby Router Protocol (HSRP) is a Cisco-proprietary first-hop redundancy protocol."
+  },
+  {
+    "id": 641,
+    "domain": "IP Connectivity",
+    "subtopic": "First Hop Redundancy",
+    "difficulty": "Easy",
+    "questionText": "Which first-hop redundancy protocol is standardized and commonly supported across multiple vendors?",
+    "options": [ "PAgP", "DTP", "VRRP", "CDP" ],
+    "correctAnswerIndex": 2,
+    "explanation": "Virtual Router Redundancy Protocol (VRRP) is a standards-based protocol for redundant default-gateway operation."
+  },
+  {
+    "id": 642,
+    "domain": "IP Connectivity",
+    "subtopic": "First Hop Redundancy",
+    "difficulty": "Easy",
+    "questionText": "In HSRP, what is the name of the router currently forwarding traffic on behalf of the virtual gateway?",
+    "options": [ "Passive router", "Active router", "Designated bridge", "Area border router" ],
+    "correctAnswerIndex": 1,
+    "explanation": "The HSRP active router forwards traffic sent to the group's virtual gateway."
+  },
+  {
+    "id": 643,
+    "domain": "IP Connectivity",
+    "subtopic": "First Hop Redundancy",
+    "difficulty": "Easy",
+    "questionText": "What is the normal role of the HSRP standby router?",
+    "options": [ "Serve as a candidate to take over if the active router fails", "Provide DHCP relay only", "Disable the virtual gateway", "Become the STP root bridge automatically" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The standby router is prepared to take over the HSRP active role when necessary."
+  },
+  {
+    "id": 644,
+    "domain": "IP Connectivity",
+    "subtopic": "First Hop Redundancy",
+    "difficulty": "Medium",
+    "questionText": "Which IP address should hosts normally configure as their default gateway in an HSRP-protected subnet?",
+    "options": [ "The HSRP virtual IP address", "The physical IP address of both routers at once", "The subnet broadcast address", "The OSPF router ID" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Hosts use the HSRP virtual IP address so a change in the active physical router does not require a gateway change on each host."
+  },
+  {
+    "id": 645,
+    "domain": "IP Connectivity",
+    "subtopic": "First Hop Redundancy",
+    "difficulty": "Medium",
+    "questionText": "What is the purpose of a virtual MAC address in HSRP?",
+    "options": [ "Represent the shared gateway at Layer 2 across active-router changes", "Identify the switch console", "Replace every host MAC address", "Advertise OSPF network costs" ],
+    "correctAnswerIndex": 0,
+    "explanation": "HSRP uses a virtual MAC address for the gateway so hosts can send traffic to a consistent Layer 2 destination."
+  },
+  {
+    "id": 646,
+    "domain": "IP Connectivity",
+    "subtopic": "First Hop Redundancy",
+    "difficulty": "Medium",
+    "questionText": "What is the default HSRP priority on typical Cisco IOS implementations?",
+    "options": [ "0", "1", "100", "255" ],
+    "correctAnswerIndex": 2,
+    "explanation": "The default HSRP priority is 100."
+  },
+  {
+    "id": 647,
+    "domain": "IP Connectivity",
+    "subtopic": "First Hop Redundancy",
+    "difficulty": "Medium",
+    "questionText": "During an HSRP active-router election, which eligible router is generally preferred?",
+    "options": [ "The router with the higher HSRP priority", "The router with the lower OSPF metric", "The router with the lower HSRP priority", "The router with the shortest hostname" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Higher HSRP priority is preferred for the active role, subject to current state and preemption behavior."
+  },
+  {
+    "id": 648,
+    "domain": "IP Connectivity",
+    "subtopic": "First Hop Redundancy",
+    "difficulty": "Hard",
+    "questionText": "Two HSRP routers have equal priorities during an initial active-router election. Which router is preferred under normal HSRP tie-breaking?",
+    "options": [ "The router with the higher interface IP address", "The router with the lower interface IP address", "The router with the lower STP bridge ID", "The router with the higher OSPF process ID" ],
+    "correctAnswerIndex": 0,
+    "explanation": "For otherwise equal HSRP priorities, the router with the higher applicable interface IP address wins the normal tie-break."
+  },
+  {
+    "id": 649,
+    "domain": "IP Connectivity",
+    "subtopic": "First Hop Redundancy",
+    "difficulty": "Medium",
+    "questionText": "What does the HSRP preempt feature permit?",
+    "options": [ "A higher-priority router to take the active role when it becomes available", "The standby router to disable IP routing", "The router to ignore all gateway failures", "The switch to disable STP" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Preemption allows a router with higher HSRP priority to take over the active role when appropriate."
+  },
+  {
+    "id": 650,
+    "domain": "IP Connectivity",
+    "subtopic": "First Hop Redundancy",
+    "difficulty": "Medium",
+    "questionText": "Is HSRP preemption normally enabled by default on traditional Cisco IOS?",
+    "options": [ "Yes, on every interface", "No, it normally requires explicit configuration", "Only when OSPF is disabled", "Only when VLAN 1 is the native VLAN" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Traditional Cisco IOS HSRP does not enable preemption by default; it must be configured when desired."
+  },
+  {
+    "id": 651,
+    "domain": "IP Connectivity",
+    "subtopic": "First Hop Redundancy",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS interface command enables HSRP preemption for group 10?",
+    "options": [ "standby 10 preempt", "standby 10 passive", "router ospf 10", "vrrp 10 shutdown" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The standby 10 preempt interface command enables preemption for HSRP group 10."
+  },
+  {
+    "id": 652,
+    "domain": "IP Connectivity",
+    "subtopic": "First Hop Redundancy",
+    "difficulty": "Medium",
+    "questionText": "What are the common default HSRP version 1 Hello and Hold timers?",
+    "options": [ "1 second and 3 seconds", "3 seconds and 10 seconds", "10 seconds and 40 seconds", "30 seconds and 120 seconds" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Traditional HSRP defaults are a 3-second Hello interval and a 10-second Hold time."
+  },
+  {
+    "id": 653,
+    "domain": "IP Connectivity",
+    "subtopic": "First Hop Redundancy",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS command summarizes HSRP group state, virtual IP and active/standby status?",
+    "options": [ "show standby brief", "show ip ospf neighbor", "show interfaces trunk", "show etherchannel summary" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The show standby brief command summarizes HSRP states and group information."
+  },
+  {
+    "id": 654,
+    "domain": "IP Connectivity",
+    "subtopic": "First Hop Redundancy",
+    "difficulty": "Hard",
+    "questionText": "What is the purpose of HSRP interface tracking?",
+    "options": [ "Adjust a router's HSRP priority when a monitored interface or object changes state", "Assign VLAN IDs to hosts", "Synchronize DNS databases", "Negotiate EtherChannel links" ],
+    "correctAnswerIndex": 0,
+    "explanation": "HSRP tracking can reduce priority following a monitored failure, allowing a healthy peer to become preferred when failover conditions are met."
+  },
+  {
+    "id": 655,
+    "domain": "IP Connectivity",
+    "subtopic": "First Hop Redundancy",
+    "difficulty": "Hard",
+    "questionText": "Router A has HSRP priority 120 and Router B has priority 110. A tracking event decreases A's priority by 20. With appropriate preemption, which router becomes preferred?",
+    "options": [ "Router A, because its original priority was 120", "Router B, because 110 is now higher than A's 100", "Both routers become active permanently", "Neither can use HSRP" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Router A falls to priority 100 after tracking, below Router B's 110. With appropriate preemption and operation, B becomes preferred."
+  },
+  {
+    "id": 656,
+    "domain": "IP Connectivity",
+    "subtopic": "First Hop Redundancy",
+    "difficulty": "Medium",
+    "questionText": "What are the primary gateway roles in VRRP?",
+    "options": [ "Master and Backup", "Active and Listen-only", "DR and BDR", "Root and Designated" ],
+    "correctAnswerIndex": 0,
+    "explanation": "VRRP uses a Master router that forwards on behalf of the virtual router and Backup routers that can take over."
+  },
+  {
+    "id": 657,
+    "domain": "IP Connectivity",
+    "subtopic": "First Hop Redundancy",
+    "difficulty": "Medium",
+    "questionText": "Which first-hop redundancy protocol supports a virtual gateway with load balancing across multiple participating routers as a defining feature?",
+    "options": [ "HSRP", "VRRP", "GLBP", "OSPF" ],
+    "correctAnswerIndex": 2,
+    "explanation": "Cisco Gateway Load Balancing Protocol (GLBP) can distribute host default-gateway forwarding across multiple routers using virtual MAC assignments."
+  },
+  {
+    "id": 658,
+    "domain": "IP Connectivity",
+    "subtopic": "First Hop Redundancy",
+    "difficulty": "Hard",
+    "questionText": "A subnet has two routers but every PC uses Router A's physical interface IP as its default gateway. Router A fails. What design change would best provide transparent default-gateway failover?",
+    "options": [ "Configure a first-hop redundancy group and make hosts use its virtual IP", "Change every host to use the subnet broadcast address", "Disable Layer 3 routing on Router B", "Give both routers the same physical interface IP without a redundancy protocol" ],
+    "correctAnswerIndex": 0,
+    "explanation": "An FHRP virtual gateway address allows a surviving router to take over gateway service without manually changing every host's configured default gateway."
+  }
+]

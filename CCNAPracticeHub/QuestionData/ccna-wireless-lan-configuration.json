@@ -1,0 +1,302 @@
+[
+  {
+    "id": 389,
+    "domain": "Network Access",
+    "subtopic": "Wireless LAN Configuration",
+    "difficulty": "Easy",
+    "questionText": "What is the primary purpose of creating a WLAN profile on a wireless LAN controller?",
+    "options": [
+      "Define a wireless network and its associated configuration",
+      "Assign a new MAC address to every wireless client",
+      "Replace all wired switch interfaces",
+      "Convert wireless signals into optical signals"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "A WLAN profile defines a wireless service and its settings, such as the SSID, security configuration, client policies and associated network interfaces."
+  },
+  {
+    "id": 390,
+    "domain": "Network Access",
+    "subtopic": "Wireless LAN Configuration",
+    "difficulty": "Easy",
+    "questionText": "Which setting determines the wireless network name displayed to users when they search for available Wi-Fi networks?",
+    "options": [
+      "Default gateway",
+      "SSID",
+      "Subnet mask",
+      "RADIUS accounting port"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "The Service Set Identifier (SSID) is the wireless network name used by clients to identify and select a Wi-Fi network."
+  },
+  {
+    "id": 391,
+    "domain": "Network Access",
+    "subtopic": "Wireless LAN Configuration",
+    "difficulty": "Easy",
+    "questionText": "A small office needs a password-protected wireless network without a centralized authentication server. Which security method is an appropriate choice?",
+    "options": [
+      "Open authentication with no encryption",
+      "WEP shared-key authentication",
+      "WPA2-Personal using AES-CCMP",
+      "Telnet authentication"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "WPA2-Personal with AES-CCMP supports a shared wireless password and provides stronger protection than legacy WEP. WPA3-Personal is preferable when supported by all required devices."
+  },
+  {
+    "id": 392,
+    "domain": "Network Access",
+    "subtopic": "Wireless LAN Configuration",
+    "difficulty": "Medium",
+    "questionText": "An enterprise wants employees to authenticate to Wi-Fi using individual credentials managed by a central server. Which configuration is most appropriate?",
+    "options": [
+      "WPA2-Enterprise with 802.1X and RADIUS",
+      "An open WLAN without authentication",
+      "WEP with one shared key",
+      "WPA2-Personal with a single shared password"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "WPA2-Enterprise uses 802.1X authentication, commonly with a RADIUS server, to support centralized authentication using individual user or device credentials."
+  },
+  {
+    "id": 393,
+    "domain": "Network Access",
+    "subtopic": "Wireless LAN Configuration",
+    "difficulty": "Medium",
+    "questionText": "Which setting normally associates a wireless client's traffic with a specific wired Layer 2 broadcast domain?",
+    "options": [
+      "Beacon interval",
+      "SSID-to-VLAN mapping",
+      "Radio transmit power",
+      "RADIUS shared secret"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "SSID-to-VLAN mapping connects wireless client traffic to the intended VLAN, supporting network segmentation and routing policies."
+  },
+  {
+    "id": 394,
+    "domain": "Network Access",
+    "subtopic": "Wireless LAN Configuration",
+    "difficulty": "Medium",
+    "questionText": "A company creates separate Corporate and Guest SSIDs. Which configuration best helps keep guest traffic isolated from internal employee resources?",
+    "options": [
+      "Assign both SSIDs to the same unrestricted VLAN",
+      "Disable wireless encryption on both SSIDs",
+      "Map the SSIDs to separate VLANs and enforce appropriate access policies",
+      "Configure the same static IP address on every client"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "Separate VLAN mappings combined with routing or firewall policies can restrict guest access to internal resources while allowing approved services such as Internet connectivity."
+  },
+  {
+    "id": 395,
+    "domain": "Network Access",
+    "subtopic": "Wireless LAN Configuration",
+    "difficulty": "Medium",
+    "questionText": "What is the main purpose of configuring a RADIUS server on a wireless LAN controller for an enterprise WLAN?",
+    "options": [
+      "Assign radio channels to neighboring access points",
+      "Provide centralized client authentication and authorization",
+      "Change Ethernet cable pinouts",
+      "Increase the number of available SSID characters"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A RADIUS server provides centralized AAA services used by enterprise WLANs, commonly as part of 802.1X authentication."
+  },
+  {
+    "id": 396,
+    "domain": "Network Access",
+    "subtopic": "Wireless LAN Configuration",
+    "difficulty": "Medium",
+    "questionText": "Which UDP destination port is normally used for RADIUS authentication requests?",
+    "options": [
+      "1812",
+      "1813",
+      "164",
+      "5246"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "Modern RADIUS authentication commonly uses UDP port 1812. UDP port 1813 is commonly used for RADIUS accounting."
+  },
+  {
+    "id": 397,
+    "domain": "Network Access",
+    "subtopic": "Wireless LAN Configuration",
+    "difficulty": "Medium",
+    "questionText": "A WLAN controller has a configured wireless network that is administratively disabled. What is normally required before clients can use that WLAN?",
+    "options": [
+      "Disable every access point's Ethernet connection",
+      "Change every client's MAC address",
+      "Enable the WLAN and ensure it is applied to the appropriate access points",
+      "Remove all VLANs from the connected switches"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "A WLAN must be enabled and correctly associated with the relevant wireless policy or access point configuration before it can normally serve clients."
+  },
+  {
+    "id": 398,
+    "domain": "Network Access",
+    "subtopic": "Wireless LAN Configuration",
+    "difficulty": "Hard",
+    "questionText": "A client successfully joins an SSID and completes authentication but receives no valid IPv4 address. What should the administrator investigate first?",
+    "options": [
+      "The client's DHCP service reachability and WLAN-to-VLAN mapping",
+      "The switch's console terminal font",
+      "The access point's device hostname only",
+      "The client's browser homepage"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "Successful wireless authentication does not guarantee DHCP connectivity. Incorrect VLAN assignment, blocked DHCP traffic or unavailable DHCP services can prevent an address from being assigned."
+  },
+  {
+    "id": 399,
+    "domain": "Network Access",
+    "subtopic": "Wireless LAN Configuration",
+    "difficulty": "Hard",
+    "questionText": "A corporate WLAN is configured for WPA2-Enterprise, but users consistently fail during 802.1X authentication. Which controller configuration should be checked?",
+    "options": [
+      "The Ethernet cable category at every desktop",
+      "The configured RADIUS server address, shared secret and reachability",
+      "The public website's DNS MX records",
+      "The STP bridge priority of an unrelated switch"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "WPA2-Enterprise authentication relies on communication with its authentication infrastructure. An incorrect RADIUS server address, shared secret or network path can prevent authentication."
+  },
+  {
+    "id": 400,
+    "domain": "Network Access",
+    "subtopic": "Wireless LAN Configuration",
+    "difficulty": "Medium",
+    "questionText": "What happens when an administrator configures a WLAN to stop broadcasting its SSID in ordinary beacon advertisements?",
+    "options": [
+      "The wireless network automatically becomes fully encrypted",
+      "The WLAN no longer needs client authentication",
+      "The network name is omitted from ordinary beacon advertisements, but this is not a strong security control",
+      "Every wireless client is automatically disconnected permanently"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "Disabling SSID broadcast hides the name from ordinary beacon advertisements but does not provide meaningful security, because the SSID can still be discovered through other management exchanges."
+  },
+  {
+    "id": 401,
+    "domain": "Network Access",
+    "subtopic": "Wireless LAN Configuration",
+    "difficulty": "Hard",
+    "questionText": "A WLAN is configured for WPA3-Personal only. A legacy client supports only WPA2-Personal. What is the most likely reason it cannot connect?",
+    "options": [
+      "The client does not support the configured WPA3 authentication method",
+      "The client must use an IPv6 global unicast address",
+      "The client requires a wired 802.1Q trunk",
+      "The client must connect through TCP port 22"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "A WPA2-only client cannot authenticate to a WPA3-only Personal WLAN. Compatibility may require a supported transition mode or a separate appropriately secured WLAN."
+  },
+  {
+    "id": 402,
+    "domain": "Network Access",
+    "subtopic": "Wireless LAN Configuration",
+    "difficulty": "Medium",
+    "questionText": "Which wireless security feature protects certain IEEE 802.11 management frames against spoofing or tampering?",
+    "options": [
+      "DHCP snooping",
+      "Protected Management Frames (PMF)",
+      "EtherChannel",
+      "Port mirroring"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Protected Management Frames, based on IEEE 802.11w mechanisms, protect specified management frames, including certain deauthentication and disassociation frames."
+  },
+  {
+    "id": 403,
+    "domain": "Network Access",
+    "subtopic": "Wireless LAN Configuration",
+    "difficulty": "Medium",
+    "questionText": "Which QoS consideration is most relevant when configuring a WLAN for voice-over-Wi-Fi handsets?",
+    "options": [
+      "Prioritize delay-sensitive voice traffic using appropriate wireless QoS policies",
+      "Disable every access point's QoS capabilities",
+      "Force all clients to use HTTP port 80",
+      "Replace all UDP traffic with DNS queries"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "Voice traffic is sensitive to delay, jitter and packet loss. Appropriate wireless QoS policies, such as WMM voice prioritization, can improve handling of voice traffic."
+  },
+  {
+    "id": 404,
+    "domain": "Network Access",
+    "subtopic": "Wireless LAN Configuration",
+    "difficulty": "Hard",
+    "questionText": "A WLAN supports legacy 2.4 GHz clients but suffers heavy interference. Which configuration approach is generally appropriate when supported by the network design?",
+    "options": [
+      "Force all nearby access points to use the same overlapping channel",
+      "Set every radio to maximum transmit power without a site survey",
+      "Plan nonoverlapping channels and prefer 5 GHz for capable clients",
+      "Disable all wireless authentication"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "Careful channel planning reduces adjacent-channel interference. Steering capable clients toward 5 GHz can also reduce pressure on crowded 2.4 GHz channels."
+  },
+  {
+    "id": 405,
+    "domain": "Network Access",
+    "subtopic": "Wireless LAN Configuration",
+    "difficulty": "Hard",
+    "questionText": "An access point serves a WLAN mapped to VLAN 30 using local switching. Wireless clients authenticate successfully but cannot reach their VLAN 30 default gateway. Which wired-side configuration should be checked?",
+    "options": [
+      "Whether the access point's wired uplink carries VLAN 30 as required",
+      "Whether all clients share one MAC address",
+      "Whether the SSID contains fewer than five characters",
+      "Whether the switch console uses a rollover cable"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "For locally switched wireless traffic, the access point uplink must carry the appropriate client VLAN. Missing VLAN permissions or mismatched tagging can break gateway connectivity."
+  },
+  {
+    "id": 406,
+    "domain": "Network Access",
+    "subtopic": "Wireless LAN Configuration",
+    "difficulty": "Medium",
+    "questionText": "Which interface is commonly used to configure WLAN profiles, security settings and policy mappings on a Cisco wireless LAN controller?",
+    "options": [
+      "A Layer 1 cable tester",
+      "The controller's web-based management GUI",
+      "The client PC's BIOS setup",
+      "An Ethernet patch panel"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Cisco wireless LAN controllers commonly provide a web-based management interface for configuring WLAN profiles, security settings and relevant wireless policies."
+  },
+  {
+    "id": 407,
+    "domain": "Network Access",
+    "subtopic": "Wireless LAN Configuration",
+    "difficulty": "Hard",
+    "questionText": "A user can authenticate to a guest WLAN and reach the Internet but cannot reach an internal corporate file server. The WLAN is intended to provide Internet-only access. What is the most likely explanation?",
+    "options": [
+      "The access point has failed to send any beacons",
+      "The user must change the Wi-Fi radio to half duplex",
+      "Guest network access policies are intentionally restricting internal resources",
+      "The corporate server must be using an invalid MAC address"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "An Internet-only guest WLAN commonly uses segmentation and access policies to prevent guest devices from reaching internal corporate resources."
+  },
+  {
+    "id": 408,
+    "domain": "Network Access",
+    "subtopic": "Wireless LAN Configuration",
+    "difficulty": "Hard",
+    "questionText": "A network administrator configures a new enterprise WLAN but clients cannot discover it. The access points are online and other WLANs are working. Which check is the most appropriate first step?",
+    "options": [
+      "Verify that the WLAN is enabled, advertised as intended and assigned to the correct access point policies",
+      "Replace every switch in the network",
+      "Disable the entire DHCP infrastructure",
+      "Change the IP addresses of all wired servers"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "If access points and other WLANs operate correctly, the new WLAN's enabled state, SSID broadcast configuration and association with access point or policy profiles are appropriate initial checks."
+  }
+]

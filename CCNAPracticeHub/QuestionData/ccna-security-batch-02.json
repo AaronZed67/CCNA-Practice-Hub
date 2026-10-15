@@ -1,0 +1,752 @@
+[
+  {
+    "id": 834,
+    "domain": "Security Fundamentals",
+    "subtopic": "AAA",
+    "difficulty": "Easy",
+    "questionText": "What does AAA stand for in network security?",
+    "options": [ "Authentication, Authorization, Accounting", "Access, Addressing, Availability", "Authentication, Automation, Auditing", "Addressing, Authorization, Aggregation" ],
+    "correctAnswerIndex": 0,
+    "explanation": "AAA stands for Authentication, Authorization and Accounting, three complementary functions used to control and record access."
+  },
+  {
+    "id": 835,
+    "domain": "Security Fundamentals",
+    "subtopic": "AAA",
+    "difficulty": "Easy",
+    "questionText": "Which AAA function verifies that a user or device is who it claims to be?",
+    "options": [ "Accounting", "Authorization", "Authentication", "Availability" ],
+    "correctAnswerIndex": 2,
+    "explanation": "Authentication verifies identity using credentials such as passwords, certificates or other authentication factors."
+  },
+  {
+    "id": 836,
+    "domain": "Security Fundamentals",
+    "subtopic": "AAA",
+    "difficulty": "Easy",
+    "questionText": "Which AAA function determines what an authenticated user is permitted to do?",
+    "options": [ "Authentication", "Authorization", "Accounting", "Encryption" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Authorization determines which services, commands or resources a user may access after identity verification."
+  },
+  {
+    "id": 837,
+    "domain": "Security Fundamentals",
+    "subtopic": "AAA",
+    "difficulty": "Easy",
+    "questionText": "Which AAA function records information about user access and activity?",
+    "options": [ "Accounting", "Authentication", "Authorization", "Packet fragmentation" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Accounting records information such as session start and stop times, resource usage and supported administrative activities."
+  },
+  {
+    "id": 838,
+    "domain": "Security Fundamentals",
+    "subtopic": "AAA",
+    "difficulty": "Medium",
+    "questionText": "What is a common benefit of centralized AAA compared with independently managed local accounts on every router?",
+    "options": [ "It removes the need for all authentication", "It provides consistent account management and access policies", "It makes network links immune to failure", "It automatically encrypts all data packets" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Centralized AAA can improve consistency, account lifecycle management and auditing across many network devices."
+  },
+  {
+    "id": 839,
+    "domain": "Security Fundamentals",
+    "subtopic": "AAA",
+    "difficulty": "Medium",
+    "questionText": "Which two protocols are commonly associated with centralized AAA for network access and device administration?",
+    "options": [ "RADIUS and TACACS+", "DHCP and ARP", "NTP and DNS", "STP and LACP" ],
+    "correctAnswerIndex": 0,
+    "explanation": "RADIUS and TACACS+ are widely used for centralized authentication, authorization and accounting services."
+  },
+  {
+    "id": 840,
+    "domain": "Security Fundamentals",
+    "subtopic": "AAA",
+    "difficulty": "Medium",
+    "questionText": "Which transport protocol is used by conventional RADIUS authentication?",
+    "options": [ "ICMP", "UDP", "OSPF protocol 89", "GRE only" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Traditional RADIUS uses UDP, commonly port 1812 for authentication and port 1813 for accounting."
+  },
+  {
+    "id": 841,
+    "domain": "Security Fundamentals",
+    "subtopic": "AAA",
+    "difficulty": "Medium",
+    "questionText": "Which TCP port is used by TACACS+?",
+    "options": [ "22", "49", "1812", "1813" ],
+    "correctAnswerIndex": 1,
+    "explanation": "TACACS+ uses TCP port 49 for communication between network devices and TACACS+ servers."
+  },
+  {
+    "id": 842,
+    "domain": "Security Fundamentals",
+    "subtopic": "AAA",
+    "difficulty": "Medium",
+    "questionText": "Which protocol is particularly associated with granular authorization of administrative commands on Cisco network devices?",
+    "options": [ "TACACS+", "TFTP", "ARP", "LLDP" ],
+    "correctAnswerIndex": 0,
+    "explanation": "TACACS+ supports separation of AAA functions and granular authorization, including command authorization on supported network equipment."
+  },
+  {
+    "id": 843,
+    "domain": "Security Fundamentals",
+    "subtopic": "AAA",
+    "difficulty": "Medium",
+    "questionText": "Which AAA protocol is commonly used as the backend for 802.1X enterprise wireless authentication?",
+    "options": [ "RADIUS", "CDP", "PAgP", "TFTP" ],
+    "correctAnswerIndex": 0,
+    "explanation": "RADIUS commonly connects an 802.1X authenticator, such as an access point or switch, to a centralized authentication server."
+  },
+  {
+    "id": 844,
+    "domain": "Security Fundamentals",
+    "subtopic": "AAA",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS global configuration command enables the AAA framework?",
+    "options": [ "aaa new-model", "aaa start", "enable aaa server", "login aaa enable" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The aaa new-model command enables the Cisco IOS AAA configuration framework."
+  },
+  {
+    "id": 845,
+    "domain": "Security Fundamentals",
+    "subtopic": "AAA",
+    "difficulty": "Hard",
+    "questionText": "What does the Cisco IOS command 'aaa authentication login default group radius local' configure?",
+    "options": [ "RADIUS authentication with local fallback when the server method is unavailable", "Local authentication followed by RADIUS regardless of results", "Unauthenticated login for every user", "TACACS+ command authorization only" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The method list tries RADIUS first and can use the local username database when RADIUS returns an error or is unavailable. A normal authentication rejection is not automatically treated as a fallback condition."
+  },
+  {
+    "id": 846,
+    "domain": "Security Fundamentals",
+    "subtopic": "AAA",
+    "difficulty": "Hard",
+    "questionText": "A centralized AAA server explicitly rejects a validly received user authentication request. Will a typical Cisco method list automatically try the next method as if the server were unreachable?",
+    "options": [ "Yes, every rejection forces fallback", "No, a rejection normally ends the authentication attempt", "Yes, but only for SSH version 2", "No, because method lists never support fallback" ],
+    "correctAnswerIndex": 1,
+    "explanation": "AAA fallback normally occurs for an error or unavailable method, not when the server responds with an explicit authentication failure."
+  },
+  {
+    "id": 847,
+    "domain": "Security Fundamentals",
+    "subtopic": "AAA",
+    "difficulty": "Medium",
+    "questionText": "Which statement describes local AAA authentication?",
+    "options": [ "Credentials are checked against a username database on the network device", "Every login is forwarded to a remote DNS server", "Users never enter authentication information", "An OSPF neighbor verifies the password" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Local authentication verifies credentials using accounts configured on the router or switch."
+  },
+  {
+    "id": 848,
+    "domain": "Security Fundamentals",
+    "subtopic": "AAA",
+    "difficulty": "Hard",
+    "questionText": "An organization wants to know when administrators start and end remote management sessions. Which AAA function directly supports this requirement?",
+    "options": [ "Accounting", "Authentication only", "IP fragmentation", "DNS recursion" ],
+    "correctAnswerIndex": 0,
+    "explanation": "AAA accounting can record management session starts, stops and other supported activities for auditing."
+  },
+  {
+    "id": 849,
+    "domain": "Security Fundamentals",
+    "subtopic": "AAA",
+    "difficulty": "Medium",
+    "questionText": "In an IEEE 802.1X deployment, what is the supplicant?",
+    "options": [ "The client requesting network access", "The RADIUS database itself", "The switch's default route", "The wireless access point acting as a DHCP server" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The supplicant is the endpoint software or device requesting authentication and network access."
+  },
+  {
+    "id": 850,
+    "domain": "Security Fundamentals",
+    "subtopic": "AAA",
+    "difficulty": "Medium",
+    "questionText": "In a wired 802.1X deployment, which component commonly acts as the authenticator?",
+    "options": [ "The Ethernet switch", "The DNS resolver", "The client browser", "The NTP server" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The access switch commonly acts as the 802.1X authenticator and relays authentication exchanges to a backend server."
+  },
+  {
+    "id": 851,
+    "domain": "Security Fundamentals",
+    "subtopic": "AAA",
+    "difficulty": "Hard",
+    "questionText": "A company requires each network administrator to receive only the CLI commands necessary for their job. Which AAA service is most directly involved?",
+    "options": [ "Command authorization", "NTP synchronization", "DHCP relay", "Dynamic NAT" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Command authorization can enforce administrative permissions based on user roles or centralized authorization decisions."
+  },
+  {
+    "id": 852,
+    "domain": "Security Fundamentals",
+    "subtopic": "AAA",
+    "difficulty": "Hard",
+    "questionText": "Which statement correctly compares typical TACACS+ and traditional RADIUS packet protection?",
+    "options": [ "TACACS+ protects more of the packet body, while traditional RADIUS does not encrypt the entire packet", "Neither protocol supports authentication", "Traditional RADIUS always encrypts the full packet with AES", "TACACS+ transmits administrative passwords as unprotected Telnet text" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Traditional TACACS+ encrypts the packet body, while conventional RADIUS protects selected fields but not the entire message. Additional protections or secure transports may still be necessary."
+  },
+  {
+    "id": 853,
+    "domain": "Security Fundamentals",
+    "subtopic": "AAA",
+    "difficulty": "Hard",
+    "questionText": "An administrator configures centralized AAA for router SSH login. Which additional safeguard is important before disconnecting the existing management session?",
+    "options": [ "Verify a working authorized recovery or fallback access method", "Disable all console access immediately without testing", "Remove the router's startup configuration", "Turn off all interface logging" ],
+    "correctAnswerIndex": 0,
+    "explanation": "AAA changes can cause management lockouts. Administrators should test the new method and maintain an approved recovery path before ending the existing session."
+  },
+  {
+    "id": 854,
+    "domain": "Security Fundamentals",
+    "subtopic": "Layer 2 Security",
+    "difficulty": "Easy",
+    "questionText": "What is the primary purpose of switch port security?",
+    "options": [ "Restrict the source MAC addresses permitted on an access port", "Encrypt every Ethernet frame", "Replace VLAN tagging", "Assign IPv4 addresses" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Port security can restrict the number and identity of source MAC addresses learned or permitted on supported switch ports."
+  },
+  {
+    "id": 855,
+    "domain": "Security Fundamentals",
+    "subtopic": "Layer 2 Security",
+    "difficulty": "Easy",
+    "questionText": "Which attack attempts to fill a switch's MAC address table with many forged source addresses?",
+    "options": [ "MAC flooding", "DNS caching", "NTP replay", "OSPF summarization" ],
+    "correctAnswerIndex": 0,
+    "explanation": "MAC flooding attempts to exhaust a switch's address table, potentially causing abnormal unknown-unicast flooding."
+  },
+  {
+    "id": 856,
+    "domain": "Security Fundamentals",
+    "subtopic": "Layer 2 Security",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS interface command enables port security on a supported switchport?",
+    "options": [ "switchport port-security", "ip port-security enable", "switchport dhcp snooping", "spanning-tree port-security" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The switchport port-security command enables port security on eligible Layer 2 switch interfaces."
+  },
+  {
+    "id": 857,
+    "domain": "Security Fundamentals",
+    "subtopic": "Layer 2 Security",
+    "difficulty": "Medium",
+    "questionText": "Which command limits the number of secure MAC addresses on a port to two?",
+    "options": [ "switchport port-security maximum 2", "switchport mac-address limit 2", "mac-address-table maximum 2", "ip access-group 2 in" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The switchport port-security maximum 2 command sets the maximum number of secure MAC addresses on the interface."
+  },
+  {
+    "id": 858,
+    "domain": "Security Fundamentals",
+    "subtopic": "Layer 2 Security",
+    "difficulty": "Medium",
+    "questionText": "Which port security feature learns secure MAC addresses and can add them to the running configuration?",
+    "options": [ "Sticky MAC learning", "DTP desirable", "OSPF passive interface", "DHCP relay" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Sticky learning dynamically learns secure MAC addresses and records them in the running configuration on supported Cisco switches."
+  },
+  {
+    "id": 859,
+    "domain": "Security Fundamentals",
+    "subtopic": "Layer 2 Security",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS interface command enables sticky MAC learning for port security?",
+    "options": [ "switchport port-security mac-address sticky", "switchport sticky enable", "mac-address-table sticky all", "switchport mode sticky" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The switchport port-security mac-address sticky command enables sticky secure MAC address learning."
+  },
+  {
+    "id": 860,
+    "domain": "Security Fundamentals",
+    "subtopic": "Layer 2 Security",
+    "difficulty": "Medium",
+    "questionText": "What is the typical default port-security violation mode on Cisco Catalyst switches?",
+    "options": [ "Shutdown", "Protect", "Restrict", "Forward" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The default violation action is commonly shutdown, placing a port into the error-disabled state after a security violation."
+  },
+  {
+    "id": 861,
+    "domain": "Security Fundamentals",
+    "subtopic": "Layer 2 Security",
+    "difficulty": "Medium",
+    "questionText": "What normally happens in port-security protect violation mode?",
+    "options": [ "Frames from unauthorized MAC addresses are dropped without the usual violation counter or notification behavior", "The interface always becomes error-disabled", "Every unknown MAC address is permanently allowed", "The switch changes the access VLAN automatically" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Protect mode drops violating traffic while avoiding the notification and violation-count behavior associated with restrict mode."
+  },
+  {
+    "id": 862,
+    "domain": "Security Fundamentals",
+    "subtopic": "Layer 2 Security",
+    "difficulty": "Medium",
+    "questionText": "How does port-security restrict mode differ from protect mode on typical Cisco Catalyst switches?",
+    "options": [ "Restrict drops violating traffic and records or reports violations", "Restrict disables the whole switch permanently", "Restrict allows unlimited MAC addresses", "Restrict removes all VLAN configuration" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Restrict mode drops violating frames while typically incrementing violation counters and generating configured notifications."
+  },
+  {
+    "id": 863,
+    "domain": "Security Fundamentals",
+    "subtopic": "Layer 2 Security",
+    "difficulty": "Hard",
+    "questionText": "A port-security violation places an access port into an error-disabled state. Which recovery procedure is commonly available after fixing the cause?",
+    "options": [ "Administratively shut down and re-enable the port", "Change the switch hostname", "Delete every VLAN", "Disable the routing table" ],
+    "correctAnswerIndex": 0,
+    "explanation": "After correcting the issue, an administrator can often recover an error-disabled interface using shutdown followed by no shutdown, or configured recovery mechanisms."
+  },
+  {
+    "id": 864,
+    "domain": "Security Fundamentals",
+    "subtopic": "Layer 2 Security",
+    "difficulty": "Medium",
+    "questionText": "Which command displays port-security information for interface GigabitEthernet0/1 on supported Cisco IOS switches?",
+    "options": [ "show port-security interface GigabitEthernet0/1", "show ip route GigabitEthernet0/1", "show spanning-tree root", "show ip dhcp binding" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The show port-security interface command displays secure MAC counts, violation mode and interface security status."
+  },
+  {
+    "id": 865,
+    "domain": "Security Fundamentals",
+    "subtopic": "Layer 2 Security",
+    "difficulty": "Easy",
+    "questionText": "Which Layer 2 security feature helps prevent unauthorized DHCP servers from providing addresses to clients?",
+    "options": [ "DHCP snooping", "OSPF cost tuning", "LACP active mode", "Syslog filtering" ],
+    "correctAnswerIndex": 0,
+    "explanation": "DHCP snooping distinguishes trusted and untrusted ports and can block DHCP server messages arriving on untrusted interfaces."
+  },
+  {
+    "id": 866,
+    "domain": "Security Fundamentals",
+    "subtopic": "Layer 2 Security",
+    "difficulty": "Medium",
+    "questionText": "In a DHCP snooping deployment, which switch port should normally be marked trusted?",
+    "options": [ "The uplink toward the authorized DHCP server or relay", "Every ordinary user access port", "An unknown public guest port", "Every unused switch port" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Trusted ports are those through which legitimate DHCP server or relay messages are expected to arrive."
+  },
+  {
+    "id": 867,
+    "domain": "Security Fundamentals",
+    "subtopic": "Layer 2 Security",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS global command enables DHCP snooping on supported switches?",
+    "options": [ "ip dhcp snooping", "dhcp snooping start", "switchport dhcp guard", "ip helper-address snooping" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The global ip dhcp snooping command enables DHCP snooping, with VLAN-specific configuration also required on many platforms."
+  },
+  {
+    "id": 868,
+    "domain": "Security Fundamentals",
+    "subtopic": "Layer 2 Security",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS command enables DHCP snooping for VLANs 10 and 20?",
+    "options": [ "ip dhcp snooping vlan 10,20", "switchport access vlan 10,20", "ip helper-address vlan 10,20", "dhcp pool vlan 10,20" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The ip dhcp snooping vlan command specifies VLANs protected by the DHCP snooping feature."
+  },
+  {
+    "id": 869,
+    "domain": "Security Fundamentals",
+    "subtopic": "Layer 2 Security",
+    "difficulty": "Hard",
+    "questionText": "An attacker connects a rogue DHCP server to an untrusted switch access port. Which DHCP snooping action helps stop the attack?",
+    "options": [ "Discard DHCP server replies arriving on the untrusted port", "Trust all DHCP offers automatically", "Turn every port into a trunk", "Disable legitimate DHCP clients" ],
+    "correctAnswerIndex": 0,
+    "explanation": "DHCP snooping blocks inappropriate DHCP server messages on untrusted interfaces, helping prevent rogue servers from assigning network settings."
+  },
+  {
+    "id": 870,
+    "domain": "Security Fundamentals",
+    "subtopic": "Layer 2 Security",
+    "difficulty": "Medium",
+    "questionText": "What information is commonly recorded in the DHCP snooping binding database?",
+    "options": [ "Client MAC and IP addresses, VLAN and interface information", "Only OSPF router IDs", "Only DNS TXT records", "Every user's SSH private key" ],
+    "correctAnswerIndex": 0,
+    "explanation": "DHCP snooping bindings associate legitimate clients with addresses, VLANs, ports and lease details."
+  },
+  {
+    "id": 871,
+    "domain": "Security Fundamentals",
+    "subtopic": "Layer 2 Security",
+    "difficulty": "Easy",
+    "questionText": "What is the main purpose of Dynamic ARP Inspection (DAI)?",
+    "options": [ "Validate ARP messages to reduce ARP spoofing attacks", "Change IPv4 subnet masks", "Distribute OSPF routes", "Negotiate EtherChannel ports" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Dynamic ARP Inspection checks ARP messages using trusted information, helping defend against ARP poisoning."
+  },
+  {
+    "id": 872,
+    "domain": "Security Fundamentals",
+    "subtopic": "Layer 2 Security",
+    "difficulty": "Medium",
+    "questionText": "Which existing feature commonly supplies IP-to-MAC binding information used by Dynamic ARP Inspection?",
+    "options": [ "DHCP snooping", "NTP", "CDP", "Spanning-tree bridge priority" ],
+    "correctAnswerIndex": 0,
+    "explanation": "DAI commonly uses the DHCP snooping binding database to validate ARP messages, although static ARP ACLs can be used in supported designs."
+  },
+  {
+    "id": 873,
+    "domain": "Security Fundamentals",
+    "subtopic": "Layer 2 Security",
+    "difficulty": "Hard",
+    "questionText": "A host with a manually assigned static IPv4 address fails ARP validation after Dynamic ARP Inspection is enabled. What should the administrator consider?",
+    "options": [ "Configure appropriate trusted validation information such as a static ARP ACL", "Disable all IP addressing on the host", "Change the switch's management hostname", "Increase the OSPF reference bandwidth" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Static-addressed hosts may lack DHCP snooping bindings. Appropriate static validation or trusted interface design can be necessary."
+  },
+  {
+    "id": 874,
+    "domain": "Security Fundamentals",
+    "subtopic": "Layer 2 Security",
+    "difficulty": "Medium",
+    "questionText": "What attack is BPDU Guard primarily intended to help prevent on an edge port?",
+    "options": [ "Unexpected switch connections that alter the Layer 2 spanning-tree topology", "DNS cache expiration", "TCP window exhaustion", "NTP clock drift" ],
+    "correctAnswerIndex": 0,
+    "explanation": "BPDU Guard can disable an edge port receiving a BPDU, protecting against unintended switch connections."
+  },
+  {
+    "id": 875,
+    "domain": "Security Fundamentals",
+    "subtopic": "Layer 2 Security",
+    "difficulty": "Medium",
+    "questionText": "What is the primary purpose of Root Guard?",
+    "options": [ "Prevent a downstream switch from becoming the STP root through a protected port", "Assign IPv4 addresses to access ports", "Encrypt switch-to-switch frames", "Disable DHCP broadcasts" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Root Guard places a port into a root-inconsistent state when superior BPDUs are received, protecting the intended root topology."
+  },
+  {
+    "id": 876,
+    "domain": "Security Fundamentals",
+    "subtopic": "Layer 2 Security",
+    "difficulty": "Hard",
+    "questionText": "What configuration choice helps reduce unauthorized trunk negotiation on a user-facing switch port?",
+    "options": [ "Explicitly configure switchport mode access", "Use dynamic desirable mode", "Enable every VLAN on the port", "Set the native VLAN to 1 on all ports" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Explicitly configuring an end-user switchport as an access port helps prevent it from negotiating a trunk with a connected device."
+  },
+  {
+    "id": 877,
+    "domain": "Security Fundamentals",
+    "subtopic": "Layer 2 Security",
+    "difficulty": "Hard",
+    "questionText": "Which configuration combination provides useful protection against rogue DHCP servers and ARP spoofing on a user VLAN?",
+    "options": [ "DHCP snooping plus Dynamic ARP Inspection", "Disabling all routing plus Telnet", "Only increasing interface bandwidth", "Changing VLAN names without filtering" ],
+    "correctAnswerIndex": 0,
+    "explanation": "DHCP snooping helps validate address assignments and provides bindings that DAI can use to verify ARP messages."
+  },
+  {
+    "id": 878,
+    "domain": "Security Fundamentals",
+    "subtopic": "Layer 2 Security",
+    "difficulty": "Hard",
+    "questionText": "A switch access port serves one IP phone and a PC connected through the phone. What port-security setting should be reviewed before setting the maximum secure MAC count to one?",
+    "options": [ "Whether multiple legitimate source MAC addresses will appear on the port", "Whether the phone uses the same hostname as the switch", "Whether NTP runs on UDP 123", "Whether OSPF area 0 exists" ],
+    "correctAnswerIndex": 0,
+    "explanation": "An IP phone and downstream PC commonly present different source MAC addresses, so a maximum of one may block legitimate traffic."
+  },
+  {
+    "id": 879,
+    "domain": "Security Fundamentals",
+    "subtopic": "VPN Concepts",
+    "difficulty": "Easy",
+    "questionText": "What does VPN stand for?",
+    "options": [ "Virtual Private Network", "Verified Packet Number", "Virtual Port Namespace", "Variable Protocol Negotiation" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A Virtual Private Network provides logical private connectivity across another network, often using secure tunnels."
+  },
+  {
+    "id": 880,
+    "domain": "Security Fundamentals",
+    "subtopic": "VPN Concepts",
+    "difficulty": "Easy",
+    "questionText": "Which VPN deployment type commonly connects two office networks across the Internet?",
+    "options": [ "Site-to-site VPN", "Console rollover connection", "Access VLAN", "DNS forwarding" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Site-to-site VPNs commonly establish secure connectivity between office or data-center networks."
+  },
+  {
+    "id": 881,
+    "domain": "Security Fundamentals",
+    "subtopic": "VPN Concepts",
+    "difficulty": "Easy",
+    "questionText": "Which VPN type commonly allows an individual employee to securely access company resources while working remotely?",
+    "options": [ "Remote-access VPN", "EtherChannel", "Spanning Tree Protocol", "DHCP snooping" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Remote-access VPNs provide individual users with authenticated connectivity to organizational resources."
+  },
+  {
+    "id": 882,
+    "domain": "Security Fundamentals",
+    "subtopic": "VPN Concepts",
+    "difficulty": "Easy",
+    "questionText": "Which protocol suite is widely used to provide cryptographic protection for IP packets in VPNs?",
+    "options": [ "IPsec", "ARP", "CDP", "TFTP" ],
+    "correctAnswerIndex": 0,
+    "explanation": "IPsec provides security services for IP communications, including confidentiality and integrity when appropriate mechanisms are configured."
+  },
+  {
+    "id": 883,
+    "domain": "Security Fundamentals",
+    "subtopic": "VPN Concepts",
+    "difficulty": "Medium",
+    "questionText": "Which IPsec protocol provides encryption and integrity protection for encapsulated traffic in common VPN deployments?",
+    "options": [ "ESP", "ARP", "DHCP", "STP" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Encapsulating Security Payload (ESP) can provide encryption, integrity and data-origin authentication for IPsec traffic."
+  },
+  {
+    "id": 884,
+    "domain": "Security Fundamentals",
+    "subtopic": "VPN Concepts",
+    "difficulty": "Medium",
+    "questionText": "What is the main purpose of Internet Key Exchange (IKE) in an IPsec VPN?",
+    "options": [ "Negotiate security associations and cryptographic keying material", "Assign Ethernet VLAN numbers", "Replace DNS resource records", "Provide switch port security" ],
+    "correctAnswerIndex": 0,
+    "explanation": "IKE negotiates cryptographic parameters and security associations used to establish and maintain IPsec protection."
+  },
+  {
+    "id": 885,
+    "domain": "Security Fundamentals",
+    "subtopic": "VPN Concepts",
+    "difficulty": "Medium",
+    "questionText": "Which UDP port is conventionally associated with IKE negotiations?",
+    "options": [ "53", "500", "161", "514" ],
+    "correctAnswerIndex": 1,
+    "explanation": "IKE commonly uses UDP port 500. NAT traversal commonly uses UDP port 4500 when applicable."
+  },
+  {
+    "id": 886,
+    "domain": "Security Fundamentals",
+    "subtopic": "VPN Concepts",
+    "difficulty": "Medium",
+    "questionText": "Which UDP port is commonly used for IPsec NAT traversal?",
+    "options": [ "69", "123", "4500", "5246" ],
+    "correctAnswerIndex": 2,
+    "explanation": "IPsec NAT traversal commonly encapsulates traffic using UDP port 4500 to allow passage through NAT devices."
+  },
+  {
+    "id": 887,
+    "domain": "Security Fundamentals",
+    "subtopic": "VPN Concepts",
+    "difficulty": "Medium",
+    "questionText": "What is a key difference between IPsec tunnel mode and transport mode?",
+    "options": [ "Tunnel mode encapsulates the original IP packet inside a new outer IP packet", "Transport mode always uses a wireless SSID", "Tunnel mode cannot provide encryption", "Transport mode creates an additional Ethernet header for every routed hop" ],
+    "correctAnswerIndex": 0,
+    "explanation": "IPsec tunnel mode protects an entire inner IP packet and adds an outer IP header, while transport mode normally protects the IP payload."
+  },
+  {
+    "id": 888,
+    "domain": "Security Fundamentals",
+    "subtopic": "VPN Concepts",
+    "difficulty": "Hard",
+    "questionText": "Why might a VPN tunnel fail to establish when the peers have incompatible encryption proposals?",
+    "options": [ "They cannot agree on the required security association parameters", "The routers must have identical hostnames", "VPNs require every device to use the same private IP address", "A DNS MX record is missing" ],
+    "correctAnswerIndex": 0,
+    "explanation": "VPN peers need compatible cryptographic suites and negotiation settings to agree on security associations."
+  },
+  {
+    "id": 889,
+    "domain": "Security Fundamentals",
+    "subtopic": "VPN Concepts",
+    "difficulty": "Medium",
+    "questionText": "What does split tunneling allow in a remote-access VPN?",
+    "options": [ "Some traffic uses the VPN while other traffic uses the user's ordinary local network path", "Every packet is duplicated across two VPNs", "The VPN disables all client authentication", "Each client must use two Ethernet cables" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Split tunneling sends designated traffic through the VPN while allowing other traffic to take a direct non-VPN route, subject to organizational policy."
+  },
+  {
+    "id": 890,
+    "domain": "Security Fundamentals",
+    "subtopic": "VPN Concepts",
+    "difficulty": "Medium",
+    "questionText": "What is commonly meant by full-tunnel remote-access VPN routing?",
+    "options": [ "Most or all client traffic is routed through the VPN gateway", "Only DNS requests enter the VPN", "The VPN carries only Ethernet broadcast traffic", "The VPN operates without any routes" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A full-tunnel design normally sends the remote user's general network traffic through the VPN infrastructure for centralized handling."
+  },
+  {
+    "id": 891,
+    "domain": "Security Fundamentals",
+    "subtopic": "VPN Concepts",
+    "difficulty": "Hard",
+    "questionText": "An IPsec VPN authenticates peers successfully but hosts in the remote networks cannot communicate. Which issue should be checked?",
+    "options": [ "Routes, protected traffic selectors and firewall policies on both ends", "Only the routers' console banner text", "Only the Ethernet cable colors", "The number of DNS MX records" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A working security association does not guarantee reachability. Routing, traffic selectors and filtering must permit the required traffic."
+  },
+  {
+    "id": 892,
+    "domain": "Security Fundamentals",
+    "subtopic": "VPN Concepts",
+    "difficulty": "Medium",
+    "questionText": "Does GRE tunneling by itself provide encryption?",
+    "options": [ "No, GRE encapsulates traffic but does not inherently encrypt it", "Yes, GRE always uses AES-256", "Yes, but only for IPv6", "No, because GRE cannot transport IP packets" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Generic Routing Encapsulation creates tunnels for supported protocols but does not inherently provide confidentiality. GRE may be combined with IPsec for security."
+  },
+  {
+    "id": 893,
+    "domain": "Security Fundamentals",
+    "subtopic": "VPN Concepts",
+    "difficulty": "Hard",
+    "questionText": "A company wants to connect two branches securely over an untrusted public network without exposing internal application payloads. Which approach best meets this requirement?",
+    "options": [ "An authenticated site-to-site IPsec VPN using an appropriate encrypted ESP configuration", "An unencrypted GRE tunnel only", "A public Telnet connection", "An unmanaged Layer 2 hub" ],
+    "correctAnswerIndex": 0,
+    "explanation": "An appropriately configured IPsec tunnel can authenticate peers and protect application traffic crossing an untrusted network."
+  },
+  {
+    "id": 894,
+    "domain": "Security Fundamentals",
+    "subtopic": "Wireless Security",
+    "difficulty": "Easy",
+    "questionText": "Which modern wireless security family includes WPA2 and WPA3?",
+    "options": [ "Wi-Fi Protected Access", "Wired Port Addressing", "Wireless Packet Aggregation", "Wideband Port Authentication" ],
+    "correctAnswerIndex": 0,
+    "explanation": "WPA refers to Wi-Fi Protected Access, a family of Wi-Fi security certification programs."
+  },
+  {
+    "id": 895,
+    "domain": "Security Fundamentals",
+    "subtopic": "Wireless Security",
+    "difficulty": "Easy",
+    "questionText": "Which wireless security technology is considered obsolete and insecure?",
+    "options": [ "WEP", "WPA3-Personal", "WPA2 with AES-CCMP", "802.1X with appropriately configured EAP" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Wired Equivalent Privacy has serious security weaknesses and should not be used to protect modern wireless networks."
+  },
+  {
+    "id": 896,
+    "domain": "Security Fundamentals",
+    "subtopic": "Wireless Security",
+    "difficulty": "Medium",
+    "questionText": "Which security mechanism is associated with WPA2 data protection using AES?",
+    "options": [ "CCMP", "WEP shared key", "Telnet", "PAgP" ],
+    "correctAnswerIndex": 0,
+    "explanation": "WPA2 commonly uses AES-based CCMP to protect wireless data confidentiality and integrity."
+  },
+  {
+    "id": 897,
+    "domain": "Security Fundamentals",
+    "subtopic": "Wireless Security",
+    "difficulty": "Medium",
+    "questionText": "Which authentication method is used by WPA3-Personal?",
+    "options": [ "SAE", "PAP over Telnet", "WEP Open System only", "SNMP community strings" ],
+    "correctAnswerIndex": 0,
+    "explanation": "WPA3-Personal uses Simultaneous Authentication of Equals to strengthen password-based authentication."
+  },
+  {
+    "id": 898,
+    "domain": "Security Fundamentals",
+    "subtopic": "Wireless Security",
+    "difficulty": "Medium",
+    "questionText": "What is a principal difference between Personal and Enterprise Wi-Fi security modes?",
+    "options": [ "Enterprise modes commonly use 802.1X authentication with individual identities rather than one shared network password", "Enterprise mode never encrypts data", "Personal mode requires a RADIUS server for every home", "Enterprise mode only operates at 2.4 GHz" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Enterprise security normally uses 802.1X and EAP-based identity authentication, commonly supported by a RADIUS server."
+  },
+  {
+    "id": 899,
+    "domain": "Security Fundamentals",
+    "subtopic": "Wireless Security",
+    "difficulty": "Medium",
+    "questionText": "Which protocol is commonly used between an enterprise wireless authenticator and a centralized authentication server?",
+    "options": [ "RADIUS", "ARP", "TFTP", "STP" ],
+    "correctAnswerIndex": 0,
+    "explanation": "RADIUS commonly carries authentication exchanges between wireless infrastructure and centralized identity services."
+  },
+  {
+    "id": 900,
+    "domain": "Security Fundamentals",
+    "subtopic": "Wireless Security",
+    "difficulty": "Medium",
+    "questionText": "What is the primary purpose of Protected Management Frames (PMF) in Wi-Fi?",
+    "options": [ "Protect specified management frames against spoofing and tampering", "Assign IPv4 subnets automatically", "Convert 2.4 GHz into 5 GHz", "Create a trunk between access points" ],
+    "correctAnswerIndex": 0,
+    "explanation": "PMF protects certain management frames, including relevant deauthentication and disassociation exchanges."
+  },
+  {
+    "id": 901,
+    "domain": "Security Fundamentals",
+    "subtopic": "Wireless Security",
+    "difficulty": "Hard",
+    "questionText": "Why is hiding an SSID not an effective substitute for wireless encryption?",
+    "options": [ "The network name can be learned from other management exchanges and data protection is still needed", "A hidden SSID automatically enables WPA3", "Hidden SSIDs eliminate rogue access points", "The SSID controls IPsec keys" ],
+    "correctAnswerIndex": 0,
+    "explanation": "SSID suppression does not encrypt traffic and the network name can still be observed in other management exchanges."
+  },
+  {
+    "id": 902,
+    "domain": "Security Fundamentals",
+    "subtopic": "Wireless Security",
+    "difficulty": "Medium",
+    "questionText": "What is an evil twin attack?",
+    "options": [ "A malicious wireless network impersonates a legitimate one to attract clients", "Two legitimate access points share a controller", "An OSPF router loses its adjacency", "A switch receives two BPDUs" ],
+    "correctAnswerIndex": 0,
+    "explanation": "An evil twin uses a fraudulent wireless access point or network identity to trick clients into associating with it."
+  },
+  {
+    "id": 903,
+    "domain": "Security Fundamentals",
+    "subtopic": "Wireless Security",
+    "difficulty": "Hard",
+    "questionText": "What is the strongest general defense against connecting to a fraudulent enterprise Wi-Fi access point using 802.1X?",
+    "options": [ "Correctly validate the authentication server certificate and trusted identity", "Accept any authentication server certificate", "Disable EAP server identity checking", "Use an SSID hidden from beacons" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Proper validation of the EAP authentication server certificate and identity helps protect clients from credential theft through rogue enterprise networks."
+  },
+  {
+    "id": 904,
+    "domain": "Security Fundamentals",
+    "subtopic": "Wireless Security",
+    "difficulty": "Medium",
+    "questionText": "What is the purpose of wireless client isolation on a guest WLAN?",
+    "options": [ "Restrict direct communication between clients using the same guest wireless service", "Disable Internet access automatically", "Assign the same IP address to every guest", "Create a wireless OSPF area" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Client isolation can block direct peer-to-peer communication among wireless guests, reducing exposure between unrelated client devices."
+  },
+  {
+    "id": 905,
+    "domain": "Security Fundamentals",
+    "subtopic": "Wireless Security",
+    "difficulty": "Hard",
+    "questionText": "A company wants to retire WPA2-Personal but has legacy clients that do not support WPA3. What should the administrator consider?",
+    "options": [ "A carefully evaluated transition strategy or separate secured WLAN for legacy clients", "Disabling all encryption for every device", "Giving all users the controller administrator password", "Using WEP to support both WPA2 and WPA3" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A transition strategy can balance compatibility and security, while older client support should be isolated and phased out where possible."
+  },
+  {
+    "id": 906,
+    "domain": "Security Fundamentals",
+    "subtopic": "Wireless Security",
+    "difficulty": "Medium",
+    "questionText": "Which wireless threat involves an unauthorized access point connected to the corporate network?",
+    "options": [ "Rogue access point", "Configured HSRP standby router", "NTP stratum 1 server", "OSPF designated router" ],
+    "correctAnswerIndex": 0,
+    "explanation": "An unauthorized access point can bypass wireless security policy and expose internal network connectivity."
+  },
+  {
+    "id": 907,
+    "domain": "Security Fundamentals",
+    "subtopic": "Wireless Security",
+    "difficulty": "Hard",
+    "questionText": "Why is a short, predictable WPA2-Personal passphrase risky?",
+    "options": [ "Captured authentication exchanges may allow offline password guessing", "It automatically disables AES encryption", "It forces the AP to use an invalid channel", "It guarantees all clients use the same IP address" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Attackers may use captured WPA2-Personal handshake material for offline guessing attempts against weak shared passphrases."
+  },
+  {
+    "id": 908,
+    "domain": "Security Fundamentals",
+    "subtopic": "Wireless Security",
+    "difficulty": "Hard",
+    "questionText": "An organization requires per-user wireless access revocation and centralized access policies. Which WLAN authentication design is most appropriate?",
+    "options": [ "WPA2-Enterprise or WPA3-Enterprise with 802.1X and centralized identity services", "A single permanent WPA2-Personal password for every employee", "WEP with shared-key authentication", "An open SSID with no access controls" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Enterprise 802.1X authentication supports individual identities and centralized control, enabling more precise access management and revocation."
+  }
+]

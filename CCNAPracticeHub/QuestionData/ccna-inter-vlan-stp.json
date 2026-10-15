@@ -1,0 +1,602 @@
+[
+  {
+    "id": 269,
+    "domain": "Network Access",
+    "subtopic": "Inter-VLAN Routing",
+    "difficulty": "Easy",
+    "questionText": "What is the primary purpose of inter-VLAN routing?",
+    "options": [ "Forward traffic between different IP networks associated with VLANs", "Assign MAC addresses to switch ports", "Replace all Ethernet trunks", "Remove VLAN separation at Layer 2" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Inter-VLAN routing provides Layer 3 communication between IP subnets associated with separate VLANs."
+  },
+  {
+    "id": 270,
+    "domain": "Network Access",
+    "subtopic": "Inter-VLAN Routing",
+    "difficulty": "Easy",
+    "questionText": "Which device can perform inter-VLAN routing?",
+    "options": [ "Unmanaged Ethernet hub", "Passive patch panel", "Layer 3 switch", "Layer 1 repeater" ],
+    "correctAnswerIndex": 2,
+    "explanation": "A Layer 3 switch supports IP routing and can route between VLANs using switched virtual interfaces."
+  },
+  {
+    "id": 271,
+    "domain": "Network Access",
+    "subtopic": "Inter-VLAN Routing",
+    "difficulty": "Easy",
+    "questionText": "What does router-on-a-stick use to route traffic between VLANs?",
+    "options": [ "One physical router interface with multiple 802.1Q subinterfaces", "A separate physical router for every VLAN", "Only Layer 2 access ports", "A wireless controller without IP routing" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Router-on-a-stick uses router subinterfaces with 802.1Q encapsulation over a trunk link to route among VLANs."
+  },
+  {
+    "id": 272,
+    "domain": "Network Access",
+    "subtopic": "Inter-VLAN Routing",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS subinterface command identifies VLAN 20 for an 802.1Q router-on-a-stick connection?",
+    "options": [ "switchport access vlan 20", "encapsulation dot1Q 20", "switchport mode trunk", "ip default-gateway 20" ],
+    "correctAnswerIndex": 1,
+    "explanation": "The encapsulation dot1Q 20 command on a router subinterface associates that subinterface with tagged traffic from VLAN 20."
+  },
+  {
+    "id": 273,
+    "domain": "Network Access",
+    "subtopic": "Inter-VLAN Routing",
+    "difficulty": "Medium",
+    "questionText": "Which command enters configuration mode for router subinterface GigabitEthernet0/0.10?",
+    "options": [ "vlan 10", "interface vlan 10", "interface GigabitEthernet0/0.10", "switchport access vlan 10" ],
+    "correctAnswerIndex": 2,
+    "explanation": "The interface GigabitEthernet0/0.10 command selects a logical subinterface on the physical router interface."
+  },
+  {
+    "id": 274,
+    "domain": "Network Access",
+    "subtopic": "Inter-VLAN Routing",
+    "difficulty": "Medium",
+    "questionText": "A router-on-a-stick implementation serves VLANs 10 and 20. What mode should the connected switch port normally use?",
+    "options": [ "Access mode in VLAN 1", "Routed port mode", "802.1Q trunk mode", "SPAN destination mode" ],
+    "correctAnswerIndex": 2,
+    "explanation": "The switch interface connecting to a router-on-a-stick router normally operates as an 802.1Q trunk to carry the VLANs."
+  },
+  {
+    "id": 275,
+    "domain": "Network Access",
+    "subtopic": "Inter-VLAN Routing",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS global configuration command enables IPv4 routing on a supported multilayer switch?",
+    "options": [ "ip routing", "ip default-gateway", "ipv6 enable", "switchport mode access" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The ip routing command enables IPv4 packet routing on supported Layer 3 switches."
+  },
+  {
+    "id": 276,
+    "domain": "Network Access",
+    "subtopic": "Inter-VLAN Routing",
+    "difficulty": "Medium",
+    "questionText": "A Layer 3 switch uses VLAN 10 with subnet 192.168.10.0/24. Which logical interface is commonly assigned the gateway address 192.168.10.1?",
+    "options": [ "interface vlan 10", "interface console 0", "interface loopback 0", "interface vlan 20" ],
+    "correctAnswerIndex": 0,
+    "explanation": "An SVI configured as interface vlan 10 can serve as the default gateway for hosts on the VLAN 10 subnet."
+  },
+  {
+    "id": 277,
+    "domain": "Network Access",
+    "subtopic": "Inter-VLAN Routing",
+    "difficulty": "Hard",
+    "questionText": "Host A is 192.168.10.50/24 in VLAN 10, and Host B is 192.168.20.50/24 in VLAN 20. Which gateway settings are appropriate if a Layer 3 switch has SVI addresses .1 in each subnet?",
+    "options": [ "Both hosts use 192.168.10.1", "Host A uses 192.168.10.1 and Host B uses 192.168.20.1", "Both hosts use 192.168.20.1", "Neither host requires a gateway for inter-VLAN traffic" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Each host must normally use a reachable gateway in its own local subnet: 192.168.10.1 for VLAN 10 and 192.168.20.1 for VLAN 20."
+  },
+  {
+    "id": 278,
+    "domain": "Network Access",
+    "subtopic": "Inter-VLAN Routing",
+    "difficulty": "Medium",
+    "questionText": "Which command displays the IPv4 routing table on a Cisco router or Layer 3 switch?",
+    "options": [ "show vlan brief", "show interfaces trunk", "show ip route", "show mac address-table" ],
+    "correctAnswerIndex": 2,
+    "explanation": "The show ip route command displays the IPv4 routing table, including connected and learned routes."
+  },
+  {
+    "id": 279,
+    "domain": "Network Access",
+    "subtopic": "Inter-VLAN Routing",
+    "difficulty": "Medium",
+    "questionText": "What type of route normally appears when an operational Layer 3 SVI is configured with an IP address and prefix?",
+    "options": [ "A directly connected route for the SVI subnet", "A BGP route to every VLAN", "A default route to the Internet", "A multicast-only route" ],
+    "correctAnswerIndex": 0,
+    "explanation": "An operational SVI with an IP address normally creates a connected route for that subnet in the routing table."
+  },
+  {
+    "id": 280,
+    "domain": "Network Access",
+    "subtopic": "Inter-VLAN Routing",
+    "difficulty": "Hard",
+    "questionText": "A switch SVI for VLAN 30 is configured with an IP address and no shutdown, but its line protocol remains down. What should be checked?",
+    "options": [ "Whether VLAN 30 exists and has an eligible active forwarding Layer 2 port", "Whether DNS can resolve the switch hostname", "Whether the console cable is connected", "Whether a remote website uses HTTPS" ],
+    "correctAnswerIndex": 0,
+    "explanation": "An SVI commonly requires an active VLAN and a qualifying Layer 2 port in a forwarding state to bring its line protocol up."
+  },
+  {
+    "id": 281,
+    "domain": "Network Access",
+    "subtopic": "Inter-VLAN Routing",
+    "difficulty": "Hard",
+    "questionText": "A router-on-a-stick setup has working VLAN 10 connectivity, but VLAN 20 hosts cannot reach their gateway. The router has a VLAN 20 subinterface. Which trunk issue is most relevant?",
+    "options": [ "VLAN 20 is missing from the switch trunk's allowed VLAN list", "The router hostname differs from the switch hostname", "The console speed is set to 9600 baud", "The switch uses a different management DNS server" ],
+    "correctAnswerIndex": 0,
+    "explanation": "If VLAN 20 is excluded from the trunk, tagged frames for VLAN 20 cannot reach the corresponding router subinterface."
+  },
+  {
+    "id": 282,
+    "domain": "Network Access",
+    "subtopic": "Inter-VLAN Routing",
+    "difficulty": "Medium",
+    "questionText": "Which statement about a Layer 3 switch SVI and a router subinterface is correct?",
+    "options": [ "Both are always physical Ethernet ports", "Both can provide Layer 3 gateway services for VLAN-associated subnets", "Neither can have an IP address", "Both require DTP negotiation with clients" ],
+    "correctAnswerIndex": 1,
+    "explanation": "SVIs and router subinterfaces are logical Layer 3 interfaces that can provide default-gateway connectivity for VLAN subnets."
+  },
+  {
+    "id": 283,
+    "domain": "Network Access",
+    "subtopic": "Inter-VLAN Routing",
+    "difficulty": "Hard",
+    "questionText": "A router-on-a-stick trunk uses native VLAN 99. Which Cisco IOS subinterface encapsulation command marks VLAN 99 as native?",
+    "options": [ "encapsulation dot1Q 99 native", "switchport trunk native vlan 99", "encapsulation isl 99", "switchport access vlan 99" ],
+    "correctAnswerIndex": 0,
+    "explanation": "On supported router subinterfaces, encapsulation dot1Q 99 native associates untagged native-VLAN traffic with VLAN 99."
+  },
+  {
+    "id": 284,
+    "domain": "Network Access",
+    "subtopic": "Inter-VLAN Routing",
+    "difficulty": "Medium",
+    "questionText": "When a router forwards an IPv4 packet from VLAN 10 to VLAN 20, what normally happens to the packet's Ethernet header?",
+    "options": [ "It is retained unchanged end to end", "It is removed and a new outgoing Layer 2 header is created", "It is copied into the DNS query", "It is permanently converted into a TCP header" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Routing removes the incoming Layer 2 encapsulation and creates an appropriate new Layer 2 header for the outgoing interface or VLAN."
+  },
+  {
+    "id": 285,
+    "domain": "Network Access",
+    "subtopic": "Inter-VLAN Routing",
+    "difficulty": "Medium",
+    "questionText": "A PC needs to send an IP packet to a host on another VLAN and subnet. Which destination MAC address does it normally put in the outgoing Ethernet frame?",
+    "options": [ "The remote host's MAC address", "The local default gateway's MAC address", "The switch console port's MAC address", "The broadcast address in every case" ],
+    "correctAnswerIndex": 1,
+    "explanation": "For an off-subnet destination, the PC sends the frame to the MAC address of its local next-hop gateway."
+  },
+  {
+    "id": 286,
+    "domain": "Network Access",
+    "subtopic": "Inter-VLAN Routing",
+    "difficulty": "Hard",
+    "questionText": "A multilayer switch has SVIs for VLAN 10 and VLAN 20, both up, with correct IP addresses. Hosts can ping their own gateways but not hosts in the other VLAN. Which setting should be verified first?",
+    "options": [ "Whether ip routing is enabled", "Whether the switch's console password is encrypted", "Whether the hostnames are identical", "Whether all ports use the same native VLAN" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Without IPv4 routing enabled on a multilayer switch, operational SVIs alone may provide local gateway reachability without forwarding traffic between subnets."
+  },
+  {
+    "id": 287,
+    "domain": "Network Access",
+    "subtopic": "Inter-VLAN Routing",
+    "difficulty": "Hard",
+    "questionText": "A router uses GigabitEthernet0/0.10 for VLAN 10 and GigabitEthernet0/0.20 for VLAN 20. The parent GigabitEthernet0/0 interface is administratively shut down. What is the likely result?",
+    "options": [ "Both subinterfaces continue forwarding normally", "Both subinterfaces are unable to pass traffic through the shut-down parent interface", "Traffic automatically moves to the console port", "VLAN 10 traffic becomes untagged on every switch" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Router subinterfaces depend on their parent physical interface. An administratively down parent prevents normal data forwarding."
+  },
+  {
+    "id": 288,
+    "domain": "Network Access",
+    "subtopic": "Inter-VLAN Routing",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS interface command changes a supported Layer 3 switch Ethernet port from a Layer 2 switchport to a routed port?",
+    "options": [ "switchport mode access", "no switchport", "switchport voice vlan 10", "switchport trunk native vlan 1" ],
+    "correctAnswerIndex": 1,
+    "explanation": "The no switchport interface command turns a supported multilayer switch interface into a Layer 3 routed port."
+  },
+  {
+    "id": 289,
+    "domain": "Network Access",
+    "subtopic": "Inter-VLAN Routing",
+    "difficulty": "Hard",
+    "questionText": "Two VLANs use subnets 192.168.10.0/24 and 192.168.20.0/24. A Layer 3 switch has active SVIs for both and IP routing enabled. What additional routing protocol is required solely to route between these connected networks?",
+    "options": [ "OSPFv2", "EIGRP", "BGP", "No dynamic routing protocol is required" ],
+    "correctAnswerIndex": 3,
+    "explanation": "The switch can route directly between its connected SVI subnets without requiring a dynamic routing protocol."
+  },
+  {
+    "id": 290,
+    "domain": "Network Access",
+    "subtopic": "Inter-VLAN Routing",
+    "difficulty": "Hard",
+    "questionText": "A router subinterface uses encapsulation dot1Q 40, while the connected switch sends the intended user traffic tagged as VLAN 50. What is the problem?",
+    "options": [ "The VLAN tags do not match the router subinterface encapsulation", "The router needs a different hostname", "802.1Q does not support VLAN IDs above 30", "The IP addresses must be public" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Traffic tagged for VLAN 50 will not be processed as VLAN 40 traffic by a subinterface configured for dot1Q VLAN 40."
+  },
+  {
+    "id": 291,
+    "domain": "Network Access",
+    "subtopic": "Inter-VLAN Routing",
+    "difficulty": "Medium",
+    "questionText": "What is one important advantage of inter-VLAN routing on a capable Layer 3 switch compared with a router-on-a-stick design?",
+    "options": [ "It eliminates the need for VLAN IDs", "It can route between SVIs without sending every inter-VLAN packet over one external router trunk", "It disables all Layer 2 broadcasts", "It requires separate physical routers for each subnet" ],
+    "correctAnswerIndex": 1,
+    "explanation": "A multilayer switch can route between local VLAN interfaces internally, avoiding the single external router trunk used by router-on-a-stick."
+  },
+  {
+    "id": 292,
+    "domain": "Network Access",
+    "subtopic": "Inter-VLAN Routing",
+    "difficulty": "Hard",
+    "questionText": "VLAN 10 uses 10.10.10.0/24 with gateway 10.10.10.1. A host is configured as 10.10.10.50/24 with gateway 10.10.20.1. What is the most direct problem?",
+    "options": [ "Its default gateway is outside the host's local subnet", "Its host address is a broadcast address", "Its subnet mask is invalid", "Its VLAN number must match the last IP octet" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The configured gateway 10.10.20.1 is outside 10.10.10.0/24, so the host normally cannot reach it as an on-link next hop."
+  },
+  {
+    "id": 293,
+    "domain": "Network Access",
+    "subtopic": "Inter-VLAN Routing",
+    "difficulty": "Hard",
+    "questionText": "A Layer 3 switch successfully routes between VLANs 10 and 20, but policy requires VLAN 10 hosts to reach a server in VLAN 20 only on TCP port 443. What additional feature can enforce this restriction?",
+    "options": [ "A Layer 3/4 access control list applied appropriately", "A larger VLAN ID", "A different SVI description", "Disabling all Ethernet frame checksums" ],
+    "correctAnswerIndex": 0,
+    "explanation": "An appropriately placed extended ACL can filter inter-VLAN traffic by IP addresses, transport protocol and port number."
+  },
+  {
+    "id": 294,
+    "domain": "Network Access",
+    "subtopic": "Spanning Tree Protocol",
+    "difficulty": "Easy",
+    "questionText": "What is the primary purpose of Spanning Tree Protocol in an Ethernet switched network?",
+    "options": [ "Prevent Layer 2 forwarding loops", "Assign IPv4 addresses to clients", "Encrypt switch management traffic", "Increase the number of VLAN IDs" ],
+    "correctAnswerIndex": 0,
+    "explanation": "STP prevents Layer 2 switching loops by placing selected redundant paths into nonforwarding states while retaining backup connectivity."
+  },
+  {
+    "id": 295,
+    "domain": "Network Access",
+    "subtopic": "Spanning Tree Protocol",
+    "difficulty": "Easy",
+    "questionText": "Which IEEE standard originally defined Spanning Tree Protocol?",
+    "options": [ "802.11", "802.3af", "802.1D", "802.1X" ],
+    "correctAnswerIndex": 2,
+    "explanation": "IEEE 802.1D originally defined STP for bridged Ethernet networks."
+  },
+  {
+    "id": 296,
+    "domain": "Network Access",
+    "subtopic": "Spanning Tree Protocol",
+    "difficulty": "Easy",
+    "questionText": "Which device is elected as the central reference point of an STP topology?",
+    "options": [ "Default gateway", "Root bridge", "DHCP server", "Wireless LAN controller" ],
+    "correctAnswerIndex": 1,
+    "explanation": "STP elects a root bridge, and the other participating switches calculate their best paths toward that root."
+  },
+  {
+    "id": 297,
+    "domain": "Network Access",
+    "subtopic": "Spanning Tree Protocol",
+    "difficulty": "Medium",
+    "questionText": "How is the root bridge selected in STP?",
+    "options": [ "Highest bridge ID", "Lowest bridge ID", "Highest management IP", "Lowest Ethernet port speed" ],
+    "correctAnswerIndex": 1,
+    "explanation": "The switch with the lowest bridge ID becomes the STP root bridge."
+  },
+  {
+    "id": 298,
+    "domain": "Network Access",
+    "subtopic": "Spanning Tree Protocol",
+    "difficulty": "Medium",
+    "questionText": "Which components determine the ordering of STP bridge IDs?",
+    "options": [ "Bridge priority information and MAC address", "IPv4 address and subnet mask", "DNS hostname and TCP port", "Number of VLANs and optical power" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Bridge ID comparison is based on priority information, including the extended system ID where applicable, followed by the bridge MAC address."
+  },
+  {
+    "id": 299,
+    "domain": "Network Access",
+    "subtopic": "Spanning Tree Protocol",
+    "difficulty": "Hard",
+    "questionText": "Two switches compete to be root bridge. Both have the same effective bridge priority, but Switch A has bridge MAC 0011.2233.4455 and Switch B has 0011.2233.4466. Which becomes root?",
+    "options": [ "Switch A", "Switch B", "The switch with more ports", "The switch with the higher IP address" ],
+    "correctAnswerIndex": 0,
+    "explanation": "With equal priority components, the lower bridge MAC address wins. 0011.2233.4455 is lower than 0011.2233.4466."
+  },
+  {
+    "id": 300,
+    "domain": "Network Access",
+    "subtopic": "Spanning Tree Protocol",
+    "difficulty": "Medium",
+    "questionText": "What is the root port on a nonroot STP switch?",
+    "options": [ "The port with the best path toward the root bridge", "Every access port in VLAN 1", "The port with the largest MAC address", "A port that always remains disabled" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A nonroot switch selects a root port providing its best STP path toward the root bridge."
+  },
+  {
+    "id": 301,
+    "domain": "Network Access",
+    "subtopic": "Spanning Tree Protocol",
+    "difficulty": "Medium",
+    "questionText": "How many root ports does a nonroot switch normally have per spanning-tree instance?",
+    "options": [ "Exactly one", "One per physical interface", "Two on every switch", "None, because only roots have root ports" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A nonroot bridge normally selects one root port for a given spanning-tree instance."
+  },
+  {
+    "id": 302,
+    "domain": "Network Access",
+    "subtopic": "Spanning Tree Protocol",
+    "difficulty": "Medium",
+    "questionText": "Which statement about ports on the STP root bridge is correct?",
+    "options": [ "The root bridge always has one root port", "The root bridge has no root port", "Every root bridge port is automatically blocked", "The root bridge has no designated ports" ],
+    "correctAnswerIndex": 1,
+    "explanation": "The root bridge is the reference point for the spanning tree and does not select a root port."
+  },
+  {
+    "id": 303,
+    "domain": "Network Access",
+    "subtopic": "Spanning Tree Protocol",
+    "difficulty": "Medium",
+    "questionText": "Which port role represents the port selected to forward traffic from a shared network segment toward the root?",
+    "options": [ "Disabled port", "Designated port", "Console port", "Loopback port" ],
+    "correctAnswerIndex": 1,
+    "explanation": "A designated port is the selected forwarding port for its segment and advertises the best path to the root on that segment."
+  },
+  {
+    "id": 304,
+    "domain": "Network Access",
+    "subtopic": "Spanning Tree Protocol",
+    "difficulty": "Easy",
+    "questionText": "What does BPDU stand for?",
+    "options": [ "Bridge Protocol Data Unit", "Broadcast Packet Distribution Utility", "Basic Port Duplex Unit", "Bridge Priority Default Update" ],
+    "correctAnswerIndex": 0,
+    "explanation": "BPDUs are Bridge Protocol Data Units exchanged by bridges and switches for spanning-tree operation."
+  },
+  {
+    "id": 305,
+    "domain": "Network Access",
+    "subtopic": "Spanning Tree Protocol",
+    "difficulty": "Medium",
+    "questionText": "What information do STP switches use BPDUs to exchange?",
+    "options": [ "Root and path information used to establish the loop-free topology", "Application passwords for all users", "DHCP leases for wireless clients", "DNS zone transfers" ],
+    "correctAnswerIndex": 0,
+    "explanation": "BPDUs convey spanning-tree information including root identity and path information to support elections and topology decisions."
+  },
+  {
+    "id": 306,
+    "domain": "Network Access",
+    "subtopic": "Spanning Tree Protocol",
+    "difficulty": "Medium",
+    "questionText": "Which classic 802.1D STP port state forwards ordinary user data?",
+    "options": [ "Blocking", "Listening", "Learning", "Forwarding" ],
+    "correctAnswerIndex": 3,
+    "explanation": "The forwarding state allows normal user frames to be sent and received through the switch port."
+  },
+  {
+    "id": 307,
+    "domain": "Network Access",
+    "subtopic": "Spanning Tree Protocol",
+    "difficulty": "Medium",
+    "questionText": "Which classic STP state learns source MAC addresses but does not yet forward ordinary user frames?",
+    "options": [ "Blocking", "Listening", "Learning", "Disabled" ],
+    "correctAnswerIndex": 2,
+    "explanation": "In the learning state, a switch builds its MAC address table but does not yet forward normal user traffic."
+  },
+  {
+    "id": 308,
+    "domain": "Network Access",
+    "subtopic": "Spanning Tree Protocol",
+    "difficulty": "Medium",
+    "questionText": "What is the default hello time for classic IEEE 802.1D STP?",
+    "options": [ "1 second", "2 seconds", "10 seconds", "20 seconds" ],
+    "correctAnswerIndex": 1,
+    "explanation": "The default STP hello timer is two seconds."
+  },
+  {
+    "id": 309,
+    "domain": "Network Access",
+    "subtopic": "Spanning Tree Protocol",
+    "difficulty": "Medium",
+    "questionText": "What is the default forward-delay timer used by classic 802.1D STP?",
+    "options": [ "2 seconds", "10 seconds", "15 seconds", "30 seconds" ],
+    "correctAnswerIndex": 2,
+    "explanation": "The default forward-delay timer is 15 seconds, used for the listening and learning intervals during classic STP convergence."
+  },
+  {
+    "id": 310,
+    "domain": "Network Access",
+    "subtopic": "Spanning Tree Protocol",
+    "difficulty": "Medium",
+    "questionText": "What is the default max-age value in classic STP?",
+    "options": [ "2 seconds", "10 seconds", "20 seconds", "30 seconds" ],
+    "correctAnswerIndex": 2,
+    "explanation": "The default STP max-age timer is 20 seconds."
+  },
+  {
+    "id": 311,
+    "domain": "Network Access",
+    "subtopic": "Spanning Tree Protocol",
+    "difficulty": "Medium",
+    "questionText": "Which IEEE standard introduced Rapid Spanning Tree Protocol (RSTP)?",
+    "options": [ "802.1w", "802.1Q", "802.11ac", "802.3ad" ],
+    "correctAnswerIndex": 0,
+    "explanation": "IEEE 802.1w introduced Rapid Spanning Tree Protocol, which provides faster convergence than classic 802.1D STP in many scenarios."
+  },
+  {
+    "id": 312,
+    "domain": "Network Access",
+    "subtopic": "Spanning Tree Protocol",
+    "difficulty": "Easy",
+    "questionText": "What is a major benefit of RSTP compared with classic STP?",
+    "options": [ "Faster convergence after many topology changes", "Automatic replacement of IP routing", "Elimination of VLAN tagging", "Guaranteed removal of all physical link failures" ],
+    "correctAnswerIndex": 0,
+    "explanation": "RSTP can respond more quickly to topology changes through improved port roles and convergence procedures."
+  },
+  {
+    "id": 313,
+    "domain": "Network Access",
+    "subtopic": "Spanning Tree Protocol",
+    "difficulty": "Medium",
+    "questionText": "Which three port states are used by RSTP?",
+    "options": [ "Blocking, listening, learning", "Discarding, learning, forwarding", "Listening, forwarding, disabled", "Root, alternate, designated" ],
+    "correctAnswerIndex": 1,
+    "explanation": "RSTP uses three operational states: discarding, learning and forwarding."
+  },
+  {
+    "id": 314,
+    "domain": "Network Access",
+    "subtopic": "Spanning Tree Protocol",
+    "difficulty": "Medium",
+    "questionText": "What is the purpose of an RSTP alternate port?",
+    "options": [ "Provide an alternate path toward the root bridge", "Act as the switch console", "Provide DHCP services", "Replace a router's default gateway" ],
+    "correctAnswerIndex": 0,
+    "explanation": "An alternate port offers a backup path toward the root bridge and normally remains in discarding state until needed."
+  },
+  {
+    "id": 315,
+    "domain": "Network Access",
+    "subtopic": "Spanning Tree Protocol",
+    "difficulty": "Medium",
+    "questionText": "What is the purpose of an RSTP backup port?",
+    "options": [ "Provide a backup for a designated port on the same shared segment", "Replace the root bridge's MAC address", "Store router configuration files", "Automatically create new VLAN IDs" ],
+    "correctAnswerIndex": 0,
+    "explanation": "An RSTP backup port provides a redundant connection to a segment for which the same switch already has a designated port."
+  },
+  {
+    "id": 316,
+    "domain": "Network Access",
+    "subtopic": "Spanning Tree Protocol",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS command displays spanning-tree status and the current root bridge information?",
+    "options": [ "show spanning-tree", "show ip dhcp binding", "show interfaces trunk", "show version" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The show spanning-tree command displays information such as root identification, port roles, costs and states."
+  },
+  {
+    "id": 317,
+    "domain": "Network Access",
+    "subtopic": "Spanning Tree Protocol",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS command configures a switch as the preferred root for VLAN 10 using Cisco's root-primary macro?",
+    "options": [ "spanning-tree vlan 10 root primary", "spanning-tree vlan 10 portfast", "switchport trunk native vlan 10", "spanning-tree vlan 10 bpduguard enable" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The spanning-tree vlan 10 root primary command adjusts bridge priority to make the switch a preferred root for VLAN 10, subject to topology and platform behavior."
+  },
+  {
+    "id": 318,
+    "domain": "Network Access",
+    "subtopic": "Spanning Tree Protocol",
+    "difficulty": "Hard",
+    "questionText": "With the extended system ID used on a typical Cisco Catalyst switch, which is a valid configurable STP bridge-priority value?",
+    "options": [ "100", "2048", "4096", "5000" ],
+    "correctAnswerIndex": 2,
+    "explanation": "Cisco bridge priorities using the extended system ID are configured in increments of 4096. The value 4096 is valid."
+  },
+  {
+    "id": 319,
+    "domain": "Network Access",
+    "subtopic": "Spanning Tree Protocol",
+    "difficulty": "Hard",
+    "questionText": "Switch A has STP priority 4096 and Switch B has priority 8192 in the same spanning-tree instance. Assuming no lower-ID bridge participates, which switch is elected root?",
+    "options": [ "Switch A", "Switch B", "The switch with more access ports", "The switch with the higher interface speed" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Lower effective bridge priority wins before MAC address comparison, so Switch A becomes root."
+  },
+  {
+    "id": 320,
+    "domain": "Network Access",
+    "subtopic": "Spanning Tree Protocol",
+    "difficulty": "Medium",
+    "questionText": "What is the intended use of PortFast on a Cisco switch?",
+    "options": [ "Allow suitable host-facing ports to transition quickly to forwarding", "Disable all trunk links", "Make the switch root for every VLAN", "Increase the VLAN ID range" ],
+    "correctAnswerIndex": 0,
+    "explanation": "PortFast allows eligible edge ports to transition rapidly to forwarding rather than waiting through classic STP delays. It should be used on appropriate edge connections."
+  },
+  {
+    "id": 321,
+    "domain": "Network Access",
+    "subtopic": "Spanning Tree Protocol",
+    "difficulty": "Medium",
+    "questionText": "Which interface command traditionally enables PortFast on a suitable Cisco access port?",
+    "options": [ "spanning-tree portfast", "spanning-tree vlan 1 root primary", "switchport mode trunk", "spanning-tree bpdufilter default" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The spanning-tree portfast interface command enables PortFast on supported Cisco switch ports."
+  },
+  {
+    "id": 322,
+    "domain": "Network Access",
+    "subtopic": "Spanning Tree Protocol",
+    "difficulty": "Medium",
+    "questionText": "What is the primary purpose of BPDU Guard on a PortFast-enabled edge port?",
+    "options": [ "Protect against an unexpected switch connection by disabling the port when a BPDU is received", "Provide DHCP relay", "Change the trunk native VLAN", "Encrypt received BPDUs" ],
+    "correctAnswerIndex": 0,
+    "explanation": "BPDU Guard can place a protected edge port into an error-disabled state if it receives a BPDU, helping prevent unintended Layer 2 topology connections."
+  },
+  {
+    "id": 323,
+    "domain": "Network Access",
+    "subtopic": "Spanning Tree Protocol",
+    "difficulty": "Hard",
+    "questionText": "An access port with PortFast and BPDU Guard enabled receives a BPDU from an accidentally connected switch. What normally happens?",
+    "options": [ "The port becomes the root port immediately", "The port enters an error-disabled state", "The port becomes a trunk automatically", "The switch disables its management SVI" ],
+    "correctAnswerIndex": 1,
+    "explanation": "On typical Cisco Catalyst behavior, BPDU Guard detects the unexpected BPDU and error-disables the protected interface."
+  },
+  {
+    "id": 324,
+    "domain": "Network Access",
+    "subtopic": "Spanning Tree Protocol",
+    "difficulty": "Hard",
+    "questionText": "What is the purpose of Root Guard on a Cisco switch port?",
+    "options": [ "Prevent a downstream device from becoming root through that port", "Allow any superior BPDU to replace the root immediately", "Disable IPv4 routing on the switch", "Change every port to access mode" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Root Guard prevents an unexpected downstream bridge from taking over as root by placing the affected port into a root-inconsistent state when superior BPDUs arrive."
+  },
+  {
+    "id": 325,
+    "domain": "Network Access",
+    "subtopic": "Spanning Tree Protocol",
+    "difficulty": "Hard",
+    "questionText": "What is the purpose of Loop Guard in a Cisco spanning-tree deployment?",
+    "options": [ "Prevent selected non-designated ports from incorrectly transitioning to forwarding after BPDUs stop arriving", "Turn a trunk into a DHCP server", "Elect the switch with the highest MAC address", "Allow Layer 2 loops to improve redundancy" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Loop Guard helps prevent alternate or root ports from becoming designated and forwarding incorrectly when expected BPDUs are lost."
+  },
+  {
+    "id": 326,
+    "domain": "Network Access",
+    "subtopic": "Spanning Tree Protocol",
+    "difficulty": "Hard",
+    "questionText": "A nonroot switch has two paths toward the same STP root bridge. Path A has total root path cost 8 and Path B has total root path cost 19. Which path is preferred, assuming both are valid?",
+    "options": [ "Path A", "Path B", "Both paths always forward simultaneously", "Neither path can become a root path" ],
+    "correctAnswerIndex": 0,
+    "explanation": "STP prefers the lower total root path cost, so Path A with cost 8 is preferred over Path B with cost 19."
+  },
+  {
+    "id": 327,
+    "domain": "Network Access",
+    "subtopic": "Spanning Tree Protocol",
+    "difficulty": "Hard",
+    "questionText": "A nonroot switch receives two otherwise equivalent BPDUs advertising the same root and equal total root path cost, but the sending bridge IDs differ. Which BPDU is preferred for root-port selection?",
+    "options": [ "The one with the lower sender bridge ID", "The one with the higher sender bridge ID", "The one arriving on the port with the highest VLAN ID", "The one with the larger Ethernet frame length" ],
+    "correctAnswerIndex": 0,
+    "explanation": "When root ID and total path cost tie, STP compares the sending bridge ID and prefers the lower value before further tie-breakers."
+  },
+  {
+    "id": 328,
+    "domain": "Network Access",
+    "subtopic": "Spanning Tree Protocol",
+    "difficulty": "Hard",
+    "questionText": "A redundant switch-to-switch link fails while RSTP is running. What can RSTP do when a suitable alternate path already exists?",
+    "options": [ "Rapidly transition an alternate port toward forwarding after the appropriate convergence process", "Require every switch to reboot", "Disable all remaining VLANs permanently", "Convert the remaining links to half duplex" ],
+    "correctAnswerIndex": 0,
+    "explanation": "RSTP can activate an eligible alternate path more quickly than classic STP when topology conditions permit rapid convergence."
+  }
+]

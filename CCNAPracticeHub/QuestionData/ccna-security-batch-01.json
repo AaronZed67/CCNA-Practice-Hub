@@ -1,0 +1,752 @@
+[
+  {
+    "id": 759,
+    "domain": "Security Fundamentals",
+    "subtopic": "Security Concepts & Threats",
+    "difficulty": "Easy",
+    "questionText": "Which three principles make up the CIA triad of information security?",
+    "options": [ "Confidentiality, Integrity, Availability", "Control, Inspection, Authorization", "Connectivity, Identification, Accounting", "Confidentiality, Internet, Authentication" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The CIA triad identifies confidentiality, integrity and availability as foundational information security objectives."
+  },
+  {
+    "id": 760,
+    "domain": "Security Fundamentals",
+    "subtopic": "Security Concepts & Threats",
+    "difficulty": "Easy",
+    "questionText": "Which security principle aims to prevent unauthorized disclosure of sensitive information?",
+    "options": [ "Availability", "Confidentiality", "Redundancy", "Load balancing" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Confidentiality protects information against access or disclosure by unauthorized parties."
+  },
+  {
+    "id": 761,
+    "domain": "Security Fundamentals",
+    "subtopic": "Security Concepts & Threats",
+    "difficulty": "Easy",
+    "questionText": "Which security principle focuses on detecting or preventing unauthorized modification of information?",
+    "options": [ "Integrity", "Availability", "Scalability", "Routing convergence" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Integrity concerns the accuracy and trustworthiness of data and helps identify unauthorized changes."
+  },
+  {
+    "id": 762,
+    "domain": "Security Fundamentals",
+    "subtopic": "Security Concepts & Threats",
+    "difficulty": "Easy",
+    "questionText": "Which security principle is most directly affected when a critical server becomes unreachable because of a denial-of-service attack?",
+    "options": [ "Confidentiality", "Availability", "Nonrepudiation", "Data classification" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Availability means systems and information remain accessible to authorized users when needed."
+  },
+  {
+    "id": 763,
+    "domain": "Security Fundamentals",
+    "subtopic": "Security Concepts & Threats",
+    "difficulty": "Easy",
+    "questionText": "What is a security vulnerability?",
+    "options": [ "A weakness that could be exploited", "A confirmed successful attack", "A network device's hostname", "An approved security update" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A vulnerability is a weakness in software, configuration, processes or physical controls that a threat actor could exploit."
+  },
+  {
+    "id": 764,
+    "domain": "Security Fundamentals",
+    "subtopic": "Security Concepts & Threats",
+    "difficulty": "Easy",
+    "questionText": "Which statement best defines a security threat?",
+    "options": [ "A guaranteed successful compromise", "A potential source or event that could cause harm", "A router's routing table", "A completed backup verification" ],
+    "correctAnswerIndex": 1,
+    "explanation": "A threat is a potential cause of an unwanted security incident, such as an attacker, malicious software or environmental event."
+  },
+  {
+    "id": 765,
+    "domain": "Security Fundamentals",
+    "subtopic": "Security Concepts & Threats",
+    "difficulty": "Medium",
+    "questionText": "What is an exploit in cybersecurity?",
+    "options": [ "A security awareness course", "A technique or code that takes advantage of a vulnerability", "A verified offline backup", "An approved encryption algorithm" ],
+    "correctAnswerIndex": 1,
+    "explanation": "An exploit uses a vulnerability to produce unintended behavior, potentially compromising a system."
+  },
+  {
+    "id": 766,
+    "domain": "Security Fundamentals",
+    "subtopic": "Security Concepts & Threats",
+    "difficulty": "Medium",
+    "questionText": "A network administrator installs a vendor patch that fixes a known remote-code-execution flaw. Which risk treatment is being applied?",
+    "options": [ "Mitigation", "Privilege escalation", "Credential harvesting", "Packet flooding" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Applying a security patch mitigates risk by correcting or reducing the impact of a known vulnerability."
+  },
+  {
+    "id": 767,
+    "domain": "Security Fundamentals",
+    "subtopic": "Security Concepts & Threats",
+    "difficulty": "Easy",
+    "questionText": "What is phishing?",
+    "options": [ "Sending deceptive messages to trick users into revealing information or taking unsafe actions", "Encrypting routing updates", "Synchronizing router clocks", "Balancing traffic across switch ports" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Phishing uses fraudulent communications to manipulate recipients, often to steal credentials or deliver malware."
+  },
+  {
+    "id": 768,
+    "domain": "Security Fundamentals",
+    "subtopic": "Security Concepts & Threats",
+    "difficulty": "Medium",
+    "questionText": "What distinguishes spear phishing from broad phishing campaigns?",
+    "options": [ "It targets a specific person or organization using tailored content", "It can only use physical letters", "It requires a wireless access point", "It automatically encrypts email" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Spear phishing is targeted social engineering that commonly uses details about the intended victim to appear credible."
+  },
+  {
+    "id": 769,
+    "domain": "Security Fundamentals",
+    "subtopic": "Security Concepts & Threats",
+    "difficulty": "Easy",
+    "questionText": "Which malware commonly encrypts a victim's files and demands payment?",
+    "options": [ "Ransomware", "NTP", "Spanning Tree Protocol", "DHCP relay" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Ransomware commonly encrypts data or otherwise disrupts access and demands payment, although payment does not guarantee recovery."
+  },
+  {
+    "id": 770,
+    "domain": "Security Fundamentals",
+    "subtopic": "Security Concepts & Threats",
+    "difficulty": "Medium",
+    "questionText": "What is the primary objective of a distributed denial-of-service attack?",
+    "options": [ "Overwhelm a service using traffic or requests from multiple sources", "Improve routing redundancy", "Authenticate devices using certificates", "Reduce network congestion" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A DDoS attack uses multiple sources to exhaust service or network capacity, undermining availability."
+  },
+  {
+    "id": 771,
+    "domain": "Security Fundamentals",
+    "subtopic": "Security Concepts & Threats",
+    "difficulty": "Medium",
+    "questionText": "Which attack attempts to impersonate another device by using a forged source IP address?",
+    "options": [ "IP spoofing", "NTP synchronization", "Route summarization", "Port aggregation" ],
+    "correctAnswerIndex": 0,
+    "explanation": "IP spoofing involves falsifying a packet's source IP address, often to conceal origin or support other attacks."
+  },
+  {
+    "id": 772,
+    "domain": "Security Fundamentals",
+    "subtopic": "Security Concepts & Threats",
+    "difficulty": "Medium",
+    "questionText": "What is a man-in-the-middle attack?",
+    "options": [ "An attacker intercepts or manipulates communication between parties", "A user changes a password regularly", "A router installs a connected route", "A switch forwards a known unicast frame" ],
+    "correctAnswerIndex": 0,
+    "explanation": "In a man-in-the-middle attack, a malicious intermediary can observe or alter traffic between communicating systems."
+  },
+  {
+    "id": 773,
+    "domain": "Security Fundamentals",
+    "subtopic": "Security Concepts & Threats",
+    "difficulty": "Medium",
+    "questionText": "Which security control best reduces the risk of an unauthorized person entering a secured server room?",
+    "options": [ "Badge-controlled physical access and visitor procedures", "A longer DNS TTL", "An OSPF cost change", "A larger VLAN number" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Physical access controls such as badges, locks, monitored entrances and visitor procedures reduce unauthorized access to sensitive equipment."
+  },
+  {
+    "id": 774,
+    "domain": "Security Fundamentals",
+    "subtopic": "Security Concepts & Threats",
+    "difficulty": "Medium",
+    "questionText": "What is the principle of least privilege?",
+    "options": [ "Grant only permissions required to perform assigned tasks", "Give every administrator unrestricted access", "Disable all authentication", "Allow every device onto every VLAN" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Least privilege limits access rights to what users and services require, reducing the impact of mistakes and compromise."
+  },
+  {
+    "id": 775,
+    "domain": "Security Fundamentals",
+    "subtopic": "Security Concepts & Threats",
+    "difficulty": "Medium",
+    "questionText": "Why should employees receive regular security awareness training?",
+    "options": [ "To recognize suspicious activity and follow safe reporting procedures", "To eliminate all technical security controls", "To replace firewall policies", "To make passwords unnecessary" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Awareness training helps staff identify social engineering, unsafe links, unusual requests and appropriate incident reporting actions."
+  },
+  {
+    "id": 776,
+    "domain": "Security Fundamentals",
+    "subtopic": "Security Concepts & Threats",
+    "difficulty": "Hard",
+    "questionText": "A caller claims to be from IT support and asks an employee to disclose a one-time authentication code. Which technique is being used?",
+    "options": [ "Voice-based social engineering", "OSPF authentication", "DNS caching", "EtherChannel negotiation" ],
+    "correctAnswerIndex": 0,
+    "explanation": "An attacker pretending to be a trusted support representative to obtain an authentication code is conducting social engineering, often called vishing when performed by voice."
+  },
+  {
+    "id": 777,
+    "domain": "Security Fundamentals",
+    "subtopic": "Security Concepts & Threats",
+    "difficulty": "Medium",
+    "questionText": "What is defense in depth?",
+    "options": [ "Using multiple complementary security controls rather than relying on one", "Installing only one perimeter firewall", "Disabling security logs", "Giving all users administrative access" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Defense in depth uses layered controls such as identity protection, segmentation, endpoint security, monitoring and physical safeguards."
+  },
+  {
+    "id": 778,
+    "domain": "Security Fundamentals",
+    "subtopic": "Security Concepts & Threats",
+    "difficulty": "Medium",
+    "questionText": "Why should unused network switch ports be administratively disabled?",
+    "options": [ "To reduce opportunities for unauthorized physical network access", "To increase the IPv4 address size", "To remove the need for DHCP", "To make trunk negotiation mandatory" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Disabling unused ports reduces the number of convenient physical entry points into the network."
+  },
+  {
+    "id": 779,
+    "domain": "Security Fundamentals",
+    "subtopic": "Security Concepts & Threats",
+    "difficulty": "Hard",
+    "questionText": "A company has network backups but stores them on the same writable file share used by employees. Which change best improves resilience against ransomware?",
+    "options": [ "Maintain protected offline or immutable backups and test restoration", "Grant everyone write access to the backups", "Disable all backup verification", "Use the same password for all backup systems" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Protected backups that attackers cannot easily modify, combined with regular restoration tests, improve recovery capabilities."
+  },
+  {
+    "id": 780,
+    "domain": "Security Fundamentals",
+    "subtopic": "Security Concepts & Threats",
+    "difficulty": "Medium",
+    "questionText": "Which security program activity helps identify outdated or vulnerable software on managed devices?",
+    "options": [ "Regular vulnerability assessment and asset inventory", "Disabling all logs", "Changing switch hostnames daily", "Using only static IPv4 routes" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Inventory, vulnerability assessment and patch management help organizations recognize and address exposed devices and software."
+  },
+  {
+    "id": 781,
+    "domain": "Security Fundamentals",
+    "subtopic": "Security Concepts & Threats",
+    "difficulty": "Hard",
+    "questionText": "A network service must remain usable even if one physical router fails. Which control best supports this security objective?",
+    "options": [ "Redundant routing or gateway infrastructure", "A single unprotected router", "Disabling monitoring", "Removing all access controls" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Redundant network devices and paths improve availability when a component fails."
+  },
+  {
+    "id": 782,
+    "domain": "Security Fundamentals",
+    "subtopic": "Security Concepts & Threats",
+    "difficulty": "Medium",
+    "questionText": "What is the main security benefit of network segmentation?",
+    "options": [ "Limit communication paths and reduce the potential spread of an incident", "Guarantee every device is free of malware", "Replace all authentication systems", "Prevent all equipment failures" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Segmentation separates systems and permits controlled access between them, helping limit lateral movement."
+  },
+  {
+    "id": 783,
+    "domain": "Security Fundamentals",
+    "subtopic": "Security Concepts & Threats",
+    "difficulty": "Hard",
+    "questionText": "An organization identifies a publicly exposed management interface protected only by a default password. Which mitigation should receive immediate attention?",
+    "options": [ "Restrict management exposure and replace the default credentials", "Increase the switch's STP priority", "Change the DNS search suffix", "Disable time synchronization" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Default credentials and exposed management access create significant risk. Restricting access and setting strong unique credentials address both weaknesses."
+  },
+  {
+    "id": 784,
+    "domain": "Security Fundamentals",
+    "subtopic": "Device Security",
+    "difficulty": "Easy",
+    "questionText": "Which Cisco IOS command configures an encrypted-form privileged EXEC password using the recommended secret mechanism?",
+    "options": [ "enable secret", "enable password", "line console 0", "hostname" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The enable secret command configures a hashed privileged EXEC password, preferable to the legacy enable password mechanism."
+  },
+  {
+    "id": 785,
+    "domain": "Security Fundamentals",
+    "subtopic": "Device Security",
+    "difficulty": "Easy",
+    "questionText": "Which Cisco IOS command enters console line configuration mode?",
+    "options": [ "line console 0", "line vty 0 4", "interface console 0", "console access enable" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The line console 0 command selects the local console line for configuration."
+  },
+  {
+    "id": 786,
+    "domain": "Security Fundamentals",
+    "subtopic": "Device Security",
+    "difficulty": "Medium",
+    "questionText": "After configuring a console line password, which command is needed to require that line password for login?",
+    "options": [ "login", "no login", "ip routing", "enable secret" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The login command enables password checking for a line when a line password is configured and local or AAA authentication is not being used."
+  },
+  {
+    "id": 787,
+    "domain": "Security Fundamentals",
+    "subtopic": "Device Security",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS global command obscures many plain-text passwords in the saved configuration using legacy reversible encoding?",
+    "options": [ "service password-encryption", "enable password-encryption rsa", "crypto key generate rsa", "logging buffered" ],
+    "correctAnswerIndex": 0,
+    "explanation": "service password-encryption applies weak reversible encoding to supported plaintext passwords. It does not provide strong cryptographic protection."
+  },
+  {
+    "id": 788,
+    "domain": "Security Fundamentals",
+    "subtopic": "Device Security",
+    "difficulty": "Medium",
+    "questionText": "Why is the Cisco IOS enable secret command generally preferable to enable password?",
+    "options": [ "It stores password verification data as a hash rather than using the legacy cleartext-style method", "It disables all remote management", "It replaces every local username", "It forces every interface to use SSH" ],
+    "correctAnswerIndex": 0,
+    "explanation": "enable secret uses a password hash, making it preferable to the legacy enable password method. Strong algorithms and passwords remain important."
+  },
+  {
+    "id": 789,
+    "domain": "Security Fundamentals",
+    "subtopic": "Device Security",
+    "difficulty": "Easy",
+    "questionText": "Which remote management protocol should normally be preferred over Telnet?",
+    "options": [ "SSH", "TFTP", "HTTP without TLS", "CDP" ],
+    "correctAnswerIndex": 0,
+    "explanation": "SSH encrypts remote authentication and management sessions, unlike Telnet."
+  },
+  {
+    "id": 790,
+    "domain": "Security Fundamentals",
+    "subtopic": "Device Security",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS VTY line command allows inbound SSH connections while excluding Telnet?",
+    "options": [ "transport input ssh", "transport input telnet", "transport input all", "no login" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The transport input ssh command restricts permitted inbound remote management protocols to SSH."
+  },
+  {
+    "id": 791,
+    "domain": "Security Fundamentals",
+    "subtopic": "Device Security",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS command configures a local account named netadmin with privilege level 15 using a secret password?",
+    "options": [ "username netadmin privilege 15 secret StrongPass123", "enable password netadmin StrongPass123", "line console netadmin", "ip user netadmin level 15" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The username command with privilege 15 and secret creates a local account with privileged access. The example password is illustrative only and should not be reused."
+  },
+  {
+    "id": 792,
+    "domain": "Security Fundamentals",
+    "subtopic": "Device Security",
+    "difficulty": "Medium",
+    "questionText": "Which VTY configuration command authenticates SSH users against the router's local username database?",
+    "options": [ "login local", "login disabled", "no login", "transport input none" ],
+    "correctAnswerIndex": 0,
+    "explanation": "login local instructs the selected lines to use locally configured usernames and passwords for login."
+  },
+  {
+    "id": 793,
+    "domain": "Security Fundamentals",
+    "subtopic": "Device Security",
+    "difficulty": "Medium",
+    "questionText": "What is the purpose of an executive session inactivity timeout on a network device?",
+    "options": [ "Disconnect idle management sessions after a configured period", "Remove all static routes", "Disable syslog messages", "Reset every Ethernet MAC address" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Session timeouts reduce exposure from unattended authenticated management terminals."
+  },
+  {
+    "id": 794,
+    "domain": "Security Fundamentals",
+    "subtopic": "Device Security",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS line configuration command sets an idle timeout of 5 minutes and 0 seconds?",
+    "options": [ "exec-timeout 5 0", "session-limit 5", "login timeout 5 hours", "ip ssh timeout 3000" ],
+    "correctAnswerIndex": 0,
+    "explanation": "exec-timeout uses minutes and seconds to specify the idle EXEC session timeout on the selected line."
+  },
+  {
+    "id": 795,
+    "domain": "Security Fundamentals",
+    "subtopic": "Device Security",
+    "difficulty": "Medium",
+    "questionText": "What is the purpose of a login warning banner on a managed network device?",
+    "options": [ "Display an authorized-use notice before access", "Encrypt the router's routing table", "Assign DHCP leases", "Automatically create a new administrator account" ],
+    "correctAnswerIndex": 0,
+    "explanation": "An appropriate warning banner communicates authorization and monitoring notices before users access the device."
+  },
+  {
+    "id": 796,
+    "domain": "Security Fundamentals",
+    "subtopic": "Device Security",
+    "difficulty": "Hard",
+    "questionText": "Which Cisco IOS command configures an access-class on VTY lines to restrict management connections by source IPv4 address?",
+    "options": [ "access-class 10 in", "ip access-group 10 out", "switchport access vlan 10", "ip nat inside source list 10" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The VTY line command access-class 10 in uses the specified ACL to restrict inbound remote-management connections."
+  },
+  {
+    "id": 797,
+    "domain": "Security Fundamentals",
+    "subtopic": "Device Security",
+    "difficulty": "Medium",
+    "questionText": "Which security practice best protects accounts that access network devices?",
+    "options": [ "Use unique strong credentials and restrict access based on role", "Share one administrator password among all users", "Disable authentication logs", "Publish credentials in network diagrams" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Strong unique credentials, appropriate privileges and auditing reduce the risk and impact of account compromise."
+  },
+  {
+    "id": 798,
+    "domain": "Security Fundamentals",
+    "subtopic": "Device Security",
+    "difficulty": "Medium",
+    "questionText": "What is multifactor authentication?",
+    "options": [ "Authentication using independent factors such as a password and a hardware security key", "Using two different usernames", "Typing the same password twice", "Configuring two default gateways" ],
+    "correctAnswerIndex": 0,
+    "explanation": "MFA combines distinct authentication factors, such as something known and something possessed, to strengthen account security."
+  },
+  {
+    "id": 799,
+    "domain": "Security Fundamentals",
+    "subtopic": "Device Security",
+    "difficulty": "Medium",
+    "questionText": "Which authentication factor is represented by a fingerprint?",
+    "options": [ "Something you know", "Something you have", "Something you are", "Somewhere packets are routed" ],
+    "correctAnswerIndex": 2,
+    "explanation": "Biometric traits are inherence factors, often described as something you are."
+  },
+  {
+    "id": 800,
+    "domain": "Security Fundamentals",
+    "subtopic": "Device Security",
+    "difficulty": "Hard",
+    "questionText": "Why can certificate-based authentication offer advantages over shared passwords?",
+    "options": [ "It can use cryptographic keys and trusted identity validation without exposing reusable passwords", "It removes every requirement to validate identities", "It guarantees that no device can be compromised", "It requires Telnet instead of SSH" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Certificate-based systems use public-key cryptography and trusted certificate validation, reducing dependence on reusable shared secrets."
+  },
+  {
+    "id": 801,
+    "domain": "Security Fundamentals",
+    "subtopic": "Device Security",
+    "difficulty": "Hard",
+    "questionText": "An administrator discovers that Telnet and SSH are both allowed on a router's VTY lines. Which change best reduces the risk of credentials being intercepted?",
+    "options": [ "Restrict inbound access to SSH and use secure authentication", "Change the router hostname", "Enable Telnet on additional ports", "Disable router logging" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Restricting access to encrypted SSH sessions avoids Telnet's plaintext authentication and session traffic."
+  },
+  {
+    "id": 802,
+    "domain": "Security Fundamentals",
+    "subtopic": "Device Security",
+    "difficulty": "Hard",
+    "questionText": "Which approach best reduces the security risk of a network device running unsupported firmware?",
+    "options": [ "Upgrade to a supported version following appropriate change management", "Hide the device hostname", "Disable all NTP servers", "Increase the OSPF reference bandwidth" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Maintained firmware receives relevant security fixes. Updates should be planned, tested and applied through an approved process."
+  },
+  {
+    "id": 803,
+    "domain": "Security Fundamentals",
+    "subtopic": "Device Security",
+    "difficulty": "Hard",
+    "questionText": "A switch administrator needs remote management only from 192.168.100.0/24. Which combined design is most appropriate?",
+    "options": [ "SSH, local or centralized authentication and a management-source ACL", "Telnet from any address with no login password", "A public unmanaged wireless SSID", "An ACL that permits every source to reach every management port" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Encrypted management, strong authentication and restricted management sources form complementary security controls."
+  },
+  {
+    "id": 804,
+    "domain": "Security Fundamentals",
+    "subtopic": "Access Control Lists",
+    "difficulty": "Easy",
+    "questionText": "What is the primary purpose of an IPv4 access control list on a Cisco router?",
+    "options": [ "Permit or deny selected traffic according to matching rules", "Assign static IP addresses", "Generate RSA keys", "Negotiate STP root ports" ],
+    "correctAnswerIndex": 0,
+    "explanation": "ACLs consist of ordered entries that can filter packets based on fields supported by the ACL type."
+  },
+  {
+    "id": 805,
+    "domain": "Security Fundamentals",
+    "subtopic": "Access Control Lists",
+    "difficulty": "Easy",
+    "questionText": "Which IPv4 ACL type can match source IPv4 addresses but not destination TCP port numbers?",
+    "options": [ "Standard IPv4 ACL", "Extended IPv4 ACL", "802.1Q VLAN tag", "OSPF route map" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A standard IPv4 ACL filters by source IPv4 address. Extended ACLs support additional fields including destination addresses and Layer 4 ports."
+  },
+  {
+    "id": 806,
+    "domain": "Security Fundamentals",
+    "subtopic": "Access Control Lists",
+    "difficulty": "Easy",
+    "questionText": "Which ACL type can match IPv4 source and destination addresses, protocol and TCP or UDP ports?",
+    "options": [ "Standard IPv4 ACL", "Extended IPv4 ACL", "VLAN database", "CDP neighbor table" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Extended IPv4 ACLs can inspect source and destination addresses, protocol numbers and supported transport ports."
+  },
+  {
+    "id": 807,
+    "domain": "Security Fundamentals",
+    "subtopic": "Access Control Lists",
+    "difficulty": "Medium",
+    "questionText": "How does a traditional Cisco IOS IPv4 ACL evaluate its entries?",
+    "options": [ "From top to bottom, stopping at the first matching entry", "By choosing the entry with the highest sequence number", "Randomly for every packet", "By evaluating deny entries only" ],
+    "correctAnswerIndex": 0,
+    "explanation": "ACL entries are processed in order. The first match determines the configured permit or deny action."
+  },
+  {
+    "id": 808,
+    "domain": "Security Fundamentals",
+    "subtopic": "Access Control Lists",
+    "difficulty": "Easy",
+    "questionText": "What happens to a packet that matches no entry in a traditional Cisco IPv4 filtering ACL?",
+    "options": [ "It is implicitly denied", "It is automatically permitted", "It creates a new ACL entry", "It is sent to the default DNS server" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Cisco ACLs normally have an implicit deny at the end, so unmatched traffic is denied."
+  },
+  {
+    "id": 809,
+    "domain": "Security Fundamentals",
+    "subtopic": "Access Control Lists",
+    "difficulty": "Medium",
+    "questionText": "What does wildcard mask 0.0.0.255 match when paired with address 192.168.10.0?",
+    "options": [ "Exactly 192.168.10.0", "Any IPv4 address", "Addresses in 192.168.10.0/24", "Only 192.168.10.255" ],
+    "correctAnswerIndex": 2,
+    "explanation": "Wildcard zero bits must match, while one bits may vary. Mask 0.0.0.255 permits variation in the final octet."
+  },
+  {
+    "id": 810,
+    "domain": "Security Fundamentals",
+    "subtopic": "Access Control Lists",
+    "difficulty": "Medium",
+    "questionText": "Which wildcard mask corresponds to an IPv4 /26 subnet mask?",
+    "options": [ "0.0.0.31", "0.0.0.63", "0.0.0.127", "0.0.0.255" ],
+    "correctAnswerIndex": 1,
+    "explanation": "A /26 mask is 255.255.255.192. Inverting it gives wildcard 0.0.0.63."
+  },
+  {
+    "id": 811,
+    "domain": "Security Fundamentals",
+    "subtopic": "Access Control Lists",
+    "difficulty": "Medium",
+    "questionText": "Which ACL wildcard mask matches exactly one IPv4 address?",
+    "options": [ "255.255.255.255", "0.0.0.255", "0.0.0.0", "0.0.255.255" ],
+    "correctAnswerIndex": 2,
+    "explanation": "Wildcard 0.0.0.0 requires every address bit to match exactly."
+  },
+  {
+    "id": 812,
+    "domain": "Security Fundamentals",
+    "subtopic": "Access Control Lists",
+    "difficulty": "Medium",
+    "questionText": "What does the Cisco IOS ACL keyword 'any' represent for IPv4 addresses?",
+    "options": [ "0.0.0.0 255.255.255.255", "255.255.255.255 0.0.0.0", "127.0.0.1 0.0.0.0", "Only RFC 1918 addresses" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The any keyword matches every IPv4 address and is equivalent to address 0.0.0.0 with wildcard 255.255.255.255."
+  },
+  {
+    "id": 813,
+    "domain": "Security Fundamentals",
+    "subtopic": "Access Control Lists",
+    "difficulty": "Medium",
+    "questionText": "What does the Cisco IOS ACL keyword 'host' accomplish?",
+    "options": [ "Matches one specific IP address", "Matches every destination on the Internet", "Creates a DHCP reservation", "Selects only broadcast addresses" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The host keyword specifies a single IP address and is equivalent to using wildcard mask 0.0.0.0."
+  },
+  {
+    "id": 814,
+    "domain": "Security Fundamentals",
+    "subtopic": "Access Control Lists",
+    "difficulty": "Medium",
+    "questionText": "Which standard numbered IPv4 ACL command permits source network 192.168.20.0/24?",
+    "options": [ "access-list 10 permit 192.168.20.0 0.0.0.255", "access-list 10 permit 192.168.20.0 255.255.255.0", "access-list 110 permit tcp 192.168.20.0", "ip route 192.168.20.0 0.0.0.255" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Standard ACL 10 uses the source network and inverse wildcard mask 0.0.0.255."
+  },
+  {
+    "id": 815,
+    "domain": "Security Fundamentals",
+    "subtopic": "Access Control Lists",
+    "difficulty": "Medium",
+    "questionText": "Which numbered ACL range is traditionally associated with standard IPv4 ACLs?",
+    "options": [ "1–99", "100–199 only", "2000–2699", "4096–8191" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Traditional standard IPv4 numbered ACLs use 1–99; the expanded standard range 1300–1999 is also supported."
+  },
+  {
+    "id": 816,
+    "domain": "Security Fundamentals",
+    "subtopic": "Access Control Lists",
+    "difficulty": "Medium",
+    "questionText": "Which numbered ACL range is traditionally associated with extended IPv4 ACLs?",
+    "options": [ "1–99", "100–199", "1300–1999", "1–4094" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Traditional extended IPv4 numbered ACLs use 100–199, with an additional expanded range of 2000–2699."
+  },
+  {
+    "id": 817,
+    "domain": "Security Fundamentals",
+    "subtopic": "Access Control Lists",
+    "difficulty": "Medium",
+    "questionText": "Which command creates or enters a named standard IPv4 ACL called OFFICE?",
+    "options": [ "ip access-list standard OFFICE", "access-list OFFICE standard", "ip route OFFICE", "interface access-list OFFICE" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The global command ip access-list standard OFFICE enters named standard IPv4 ACL configuration mode."
+  },
+  {
+    "id": 818,
+    "domain": "Security Fundamentals",
+    "subtopic": "Access Control Lists",
+    "difficulty": "Medium",
+    "questionText": "Which command creates or enters a named extended IPv4 ACL called WEB-FILTER?",
+    "options": [ "ip access-list extended WEB-FILTER", "ip access-list standard WEB-FILTER", "access-group WEB-FILTER global", "ip route extended WEB-FILTER" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The ip access-list extended command creates or selects a named extended IPv4 ACL."
+  },
+  {
+    "id": 819,
+    "domain": "Security Fundamentals",
+    "subtopic": "Access Control Lists",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS interface command applies IPv4 ACL 110 to packets entering an interface?",
+    "options": [ "ip access-group 110 in", "ip access-group 110 out", "access-class 110 out", "ip route 110 in" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The ip access-group 110 in command applies the ACL to inbound IPv4 traffic on the selected interface."
+  },
+  {
+    "id": 820,
+    "domain": "Security Fundamentals",
+    "subtopic": "Access Control Lists",
+    "difficulty": "Medium",
+    "questionText": "Which command applies named IPv4 ACL OFFICE-FILTER to packets leaving an interface?",
+    "options": [ "ip access-group OFFICE-FILTER out", "ip access-group OFFICE-FILTER in", "access-class OFFICE-FILTER out on the interface", "ip route OFFICE-FILTER out" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The out direction applies the IPv4 ACL as packets exit the configured routed interface."
+  },
+  {
+    "id": 821,
+    "domain": "Security Fundamentals",
+    "subtopic": "Access Control Lists",
+    "difficulty": "Hard",
+    "questionText": "An extended ACL must permit TCP traffic from host 192.168.10.5 to web server 192.168.20.10 on destination port 443. Which entry is correct?",
+    "options": [ "permit tcp host 192.168.10.5 host 192.168.20.10 eq 443", "permit udp host 192.168.10.5 host 192.168.20.10 eq 53", "permit tcp host 192.168.20.10 host 192.168.10.5 eq 80", "permit ip host 192.168.10.5 any eq 443" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The entry identifies TCP, the correct source and destination hosts, and destination TCP port 443."
+  },
+  {
+    "id": 822,
+    "domain": "Security Fundamentals",
+    "subtopic": "Access Control Lists",
+    "difficulty": "Hard",
+    "questionText": "An extended ACL contains 'deny tcp 192.168.10.0 0.0.0.255 host 192.168.20.20 eq 22'. What traffic does it deny?",
+    "options": [ "TCP connections from 192.168.10.0/24 to 192.168.20.20 destination port 22", "All IP traffic from 192.168.20.20 to the Internet", "UDP DNS queries to 192.168.20.20", "TCP traffic to source port 22 on every host" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The entry denies matching TCP packets from the source /24 toward the specified destination host and destination port 22."
+  },
+  {
+    "id": 823,
+    "domain": "Security Fundamentals",
+    "subtopic": "Access Control Lists",
+    "difficulty": "Hard",
+    "questionText": "An ACL contains 'permit ip any any' followed by 'deny ip host 192.168.1.10 any'. What happens to ordinary IPv4 traffic from 192.168.1.10?",
+    "options": [ "It is permitted by the first matching entry", "It is denied by the second entry", "It is rejected because the ACL has two entries", "The router automatically reverses the ACL order" ],
+    "correctAnswerIndex": 0,
+    "explanation": "ACL processing stops at the first matching rule. The initial permit ip any any shadows the later deny entry."
+  },
+  {
+    "id": 824,
+    "domain": "Security Fundamentals",
+    "subtopic": "Access Control Lists",
+    "difficulty": "Hard",
+    "questionText": "A standard ACL permits only source 192.168.10.0/24 and is applied inbound to a routed interface. What happens to other sources that reach the ACL?",
+    "options": [ "They are denied by the implicit deny", "They are automatically NAT-translated", "They match the permit entry", "They are forwarded without evaluation" ],
+    "correctAnswerIndex": 0,
+    "explanation": "With only that permit rule, sources outside 192.168.10.0/24 do not match and are denied implicitly."
+  },
+  {
+    "id": 825,
+    "domain": "Security Fundamentals",
+    "subtopic": "Access Control Lists",
+    "difficulty": "Medium",
+    "questionText": "Where is a standard IPv4 ACL traditionally placed to minimize unintended filtering of traffic toward other destinations?",
+    "options": [ "Close to the destination", "Always closest to the source", "Only on switch console lines", "Only on Internet-facing interfaces" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Because standard ACLs match only source addresses, placing them near the destination helps avoid blocking that source from unrelated destinations."
+  },
+  {
+    "id": 826,
+    "domain": "Security Fundamentals",
+    "subtopic": "Access Control Lists",
+    "difficulty": "Medium",
+    "questionText": "Where is an extended IPv4 ACL often placed to stop unwanted traffic early?",
+    "options": [ "Close to the source", "Only near the destination", "Only on a console line", "Inside the DNS cache" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Extended ACLs can precisely match source, destination and protocol, so placing them close to the source can prevent unnecessary transit traffic."
+  },
+  {
+    "id": 827,
+    "domain": "Security Fundamentals",
+    "subtopic": "Access Control Lists",
+    "difficulty": "Hard",
+    "questionText": "An extended ACL permits TCP destination port 80 to a server but does not permit port 443. An implicit deny remains at the end. Which service is allowed by the specified rule?",
+    "options": [ "Traditional HTTP over TCP 80", "Traditional HTTPS over TCP 443", "SSH over TCP 22", "DNS over UDP 53" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The specified permit matches traditional HTTP traffic on TCP destination port 80. Other unmatched traffic reaches the implicit deny."
+  },
+  {
+    "id": 828,
+    "domain": "Security Fundamentals",
+    "subtopic": "Access Control Lists",
+    "difficulty": "Hard",
+    "questionText": "What does the wildcard pattern '192.168.16.0 0.0.3.255' match?",
+    "options": [ "192.168.16.0 through 192.168.19.255", "Only 192.168.16.0", "192.168.16.0 through 192.168.16.3", "192.168.0.0 through 192.168.255.255" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The wildcard permits the last two bits of the third octet and all bits of the fourth octet to vary, matching four contiguous /24 networks."
+  },
+  {
+    "id": 829,
+    "domain": "Security Fundamentals",
+    "subtopic": "Access Control Lists",
+    "difficulty": "Hard",
+    "questionText": "Which wildcard mask matches the IPv4 prefix 10.20.32.0/20?",
+    "options": [ "0.0.15.255", "0.0.31.255", "0.0.7.255", "0.0.0.255" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A /20 subnet mask is 255.255.240.0. Its inverse wildcard mask is 0.0.15.255."
+  },
+  {
+    "id": 830,
+    "domain": "Security Fundamentals",
+    "subtopic": "Access Control Lists",
+    "difficulty": "Medium",
+    "questionText": "Which command displays configured IPv4 and IPv6 ACL entries and, where supported, match counters on Cisco IOS?",
+    "options": [ "show access-lists", "show ip route", "show ntp status", "show vlan brief" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The show access-lists command displays configured ACL entries and available match-count information."
+  },
+  {
+    "id": 831,
+    "domain": "Security Fundamentals",
+    "subtopic": "Access Control Lists",
+    "difficulty": "Hard",
+    "questionText": "An administrator inserts an ACL sequence 15 between existing sequence numbers 10 and 20. Why is sequencing useful?",
+    "options": [ "It allows rules to be added at a specific evaluation position", "It changes the destination subnet mask", "It automatically creates a new VLAN", "It disables the implicit deny" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Sequence numbers help administrators insert or remove ACL entries without rebuilding the entire ordered list."
+  },
+  {
+    "id": 832,
+    "domain": "Security Fundamentals",
+    "subtopic": "Access Control Lists",
+    "difficulty": "Hard",
+    "questionText": "A router has an inbound ACL on GigabitEthernet0/0. At what stage is this ACL normally evaluated?",
+    "options": [ "As packets arrive on GigabitEthernet0/0 before normal onward forwarding", "Only after packets leave the final destination host", "Only during DNS name resolution", "Only for packets generated by the router console" ],
+    "correctAnswerIndex": 0,
+    "explanation": "An inbound interface ACL evaluates eligible incoming packets before they are forwarded toward an outgoing interface."
+  },
+  {
+    "id": 833,
+    "domain": "Security Fundamentals",
+    "subtopic": "Access Control Lists",
+    "difficulty": "Hard",
+    "questionText": "An ACL applied inbound to a LAN interface must block traffic from 192.168.10.0/24 to server 192.168.20.5 on TCP port 23, while allowing other IP traffic. Which ordered pair of entries is appropriate?",
+    "options": [ "deny tcp 192.168.10.0 0.0.0.255 host 192.168.20.5 eq 23; permit ip any any", "permit ip any any; deny tcp 192.168.10.0 0.0.0.255 host 192.168.20.5 eq 23", "deny ip any any; permit tcp any any eq 23", "permit tcp any any eq 23; deny ip any any" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The specific Telnet deny must precede a general permit ip any any so that the denied traffic is matched and blocked first."
+  }
+]

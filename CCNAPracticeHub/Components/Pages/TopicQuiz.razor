@@ -127,6 +127,8 @@
                 @CurrentQuestion.QuestionText
             </h2>
 
+            <!-- SHUFFLED ANSWER OPTIONS -->
+
             <div class="topic-options">
 
                 @for (int i = 0;
@@ -153,6 +155,7 @@
 
             </div>
 
+            <!-- ANSWER FEEDBACK -->
             @if (AnswerSubmitted)
             {
                 <div class="topic-feedback">
@@ -469,6 +472,7 @@
 
 @code {
 
+    // Each topic quiz contains up to 10 questions.
     private const int QuestionsPerSession = 10;
 
     [SupplyParameterFromQuery(Name = "domain")]
@@ -509,6 +513,7 @@
                 (double)Score
                 / Questions.Count * 100);
 
+    // Load whenever the requested domain or subtopic changes.
     protected override async Task OnParametersSetAsync()
     {
         await LoadQuestionsAsync();
@@ -534,6 +539,8 @@
             await using var db =
                 await DbFactory.CreateDbContextAsync();
 
+            // Retrieve up to 10 random questions
+            // for the selected domain and subtopic.
             Questions = await db.Questions
                 .AsNoTracking()
                 .Where(q =>
@@ -542,6 +549,16 @@
                 .OrderBy(q => EF.Functions.Random())
                 .Take(QuestionsPerSession)
                 .ToListAsync();
+
+            // NEW: Shuffle the answer options for each
+            // question after loading it from SQLite.
+            //
+            // AsNoTracking ensures these question objects
+            // are not tracked for database updates.
+            foreach (var question in Questions)
+            {
+                ShuffleAnswerOptions(question);
+            }
 
             ResetQuizState();
         }
@@ -557,6 +574,58 @@
         {
             IsLoading = false;
         }
+    }
+
+    // NEW: Fisher-Yates answer shuffling.
+    //
+    // This method moves answer strings into random positions
+    // and updates the correct-answer index to match.
+    //
+    // Example:
+    // Before: SSH is answer B (index 1).
+    // After:  SSH might become answer D (index 3).
+    //
+    // The stored database question is not changed.
+    private static void ShuffleAnswerOptions(Question question)
+    {
+        if (question.Options is null ||
+            question.Options.Count < 2)
+        {
+            return;
+        }
+
+        // Create a separate list of the answer choices.
+        var shuffledOptions = question.Options.ToList();
+
+        // Remember where the correct answer currently is.
+        int correctIndex = question.CorrectAnswerIndex;
+
+        // Shuffle the options using Fisher-Yates.
+        for (int i = shuffledOptions.Count - 1; i > 0; i--)
+        {
+            int randomIndex = Random.Shared.Next(i + 1);
+
+            // Swap the two options.
+            (shuffledOptions[i], shuffledOptions[randomIndex]) =
+                (shuffledOptions[randomIndex], shuffledOptions[i]);
+
+            // Update the correct-answer index if it was
+            // involved in the swap.
+            if (correctIndex == i)
+            {
+                correctIndex = randomIndex;
+            }
+            else if (correctIndex == randomIndex)
+            {
+                correctIndex = i;
+            }
+        }
+
+        // Store the shuffled choices for this quiz session.
+        question.Options = shuffledOptions;
+
+        // Point scoring to the correct new answer position.
+        question.CorrectAnswerIndex = correctIndex;
     }
 
     private void ResetQuizState()
@@ -589,6 +658,8 @@
             AnswerSubmitted)
             return;
 
+        // CorrectAnswerIndex has already been updated
+        // to reflect the shuffled answer positions.
         AnswerCorrect =
             SelectedAnswerIndex.Value ==
             CurrentQuestion.CorrectAnswerIndex;
@@ -624,9 +695,11 @@
         if (AnswerSubmitted &&
             CurrentQuestion is not null)
         {
+            // Highlight the correct shuffled option green.
             if (index == CurrentQuestion.CorrectAnswerIndex)
                 return baseClass + " topic-option-correct";
 
+            // Highlight an incorrect selection red.
             if (index == SelectedAnswerIndex)
                 return baseClass + " topic-option-incorrect";
         }
@@ -637,4 +710,3 @@
         return baseClass;
     }
 }
-

@@ -1,0 +1,1002 @@
+[
+  {
+    "id": 659,
+    "domain": "IP Services",
+    "subtopic": "NAT & PAT",
+    "difficulty": "Easy",
+    "questionText": "What is the primary purpose of Network Address Translation (NAT)?",
+    "options": [ "Translate IP addresses between address spaces", "Encrypt Ethernet frames", "Assign wireless channels", "Elect an OSPF root bridge" ],
+    "correctAnswerIndex": 0,
+    "explanation": "NAT translates IP addresses, commonly allowing private internal addresses to communicate through publicly routable addresses."
+  },
+  {
+    "id": 660,
+    "domain": "IP Services",
+    "subtopic": "NAT & PAT",
+    "difficulty": "Easy",
+    "questionText": "What does PAT stand for?",
+    "options": [ "Packet Address Transfer", "Port Address Translation", "Protocol Access Table", "Private Application Tunnel" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Port Address Translation distinguishes multiple translated sessions using transport-layer port numbers, allowing many internal hosts to share a public IP address."
+  },
+  {
+    "id": 661,
+    "domain": "IP Services",
+    "subtopic": "NAT & PAT",
+    "difficulty": "Easy",
+    "questionText": "Which NAT type creates a fixed mapping between one inside local address and one inside global address?",
+    "options": [ "Dynamic NAT", "PAT overload", "Static NAT", "NAT64 only" ],
+    "correctAnswerIndex": 2,
+    "explanation": "Static NAT creates a predefined one-to-one mapping between internal and translated addresses."
+  },
+  {
+    "id": 662,
+    "domain": "IP Services",
+    "subtopic": "NAT & PAT",
+    "difficulty": "Medium",
+    "questionText": "What is a characteristic of dynamic NAT without overload?",
+    "options": [ "It chooses a translated address from a configured pool", "It always uses one public IP for unlimited users", "It requires no inside or outside interfaces", "It changes every host into an IPv6 host" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Dynamic NAT allocates available translated addresses from a configured pool, typically creating temporary one-to-one address mappings."
+  },
+  {
+    "id": 663,
+    "domain": "IP Services",
+    "subtopic": "NAT & PAT",
+    "difficulty": "Medium",
+    "questionText": "In Cisco NAT terminology, what is an inside local address?",
+    "options": [ "An outside server address after translation", "The address assigned to an inside host in the internal network", "The NAT router's public DNS address", "The MAC address of the outside interface" ],
+    "correctAnswerIndex": 1,
+    "explanation": "An inside local address identifies an internal device as represented inside the local network, often using private IPv4 space."
+  },
+  {
+    "id": 664,
+    "domain": "IP Services",
+    "subtopic": "NAT & PAT",
+    "difficulty": "Medium",
+    "questionText": "In Cisco NAT terminology, what is an inside global address?",
+    "options": [ "The translated address representing an inside host to an outside network", "The unmodified private address of the host", "The subnet broadcast address", "An Ethernet source MAC address" ],
+    "correctAnswerIndex": 0,
+    "explanation": "An inside global address represents an inside device from the outside network's perspective."
+  },
+  {
+    "id": 665,
+    "domain": "IP Services",
+    "subtopic": "NAT & PAT",
+    "difficulty": "Easy",
+    "questionText": "Which address is part of an RFC 1918 private IPv4 address range?",
+    "options": [ "203.0.113.5", "172.20.5.10", "198.51.100.20", "8.8.8.8" ],
+    "correctAnswerIndex": 1,
+    "explanation": "172.16.0.0/12 is private address space, covering 172.16.0.0 through 172.31.255.255."
+  },
+  {
+    "id": 666,
+    "domain": "IP Services",
+    "subtopic": "NAT & PAT",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS interface command marks an interface as facing the internal side of NAT?",
+    "options": [ "ip nat outside", "ip nat enable global", "ip nat inside", "ip route nat" ],
+    "correctAnswerIndex": 2,
+    "explanation": "The ip nat inside command identifies an interface as an inside NAT interface in traditional Cisco IOS NAT configuration."
+  },
+  {
+    "id": 667,
+    "domain": "IP Services",
+    "subtopic": "NAT & PAT",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS interface command marks an interface as facing the outside NAT network?",
+    "options": [ "ip nat outside", "switchport mode trunk", "ip nat pool outside", "router nat outside" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The ip nat outside command identifies an outside NAT interface."
+  },
+  {
+    "id": 668,
+    "domain": "IP Services",
+    "subtopic": "NAT & PAT",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS command displays active NAT translation entries?",
+    "options": [ "show ip nat translations", "show vlan brief", "show ip ospf neighbor", "show interfaces trunk" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The show ip nat translations command displays NAT entries and translated addresses or ports."
+  },
+  {
+    "id": 669,
+    "domain": "IP Services",
+    "subtopic": "NAT & PAT",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS command displays NAT statistics and translation activity?",
+    "options": [ "show ip nat statistics", "show mac address-table", "show cdp traffic", "show ip route summary" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The show ip nat statistics command reports NAT-related statistics such as translations and hits."
+  },
+  {
+    "id": 670,
+    "domain": "IP Services",
+    "subtopic": "NAT & PAT",
+    "difficulty": "Hard",
+    "questionText": "Which Cisco IOS command creates static NAT mapping inside local address 192.168.10.10 to inside global address 203.0.113.10?",
+    "options": [ "ip nat inside source static 192.168.10.10 203.0.113.10", "ip nat outside source static 192.168.10.10 203.0.113.10", "ip route 192.168.10.10 203.0.113.10", "ip nat pool 192.168.10.10 203.0.113.10" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The ip nat inside source static command establishes a fixed inside-local to inside-global mapping."
+  },
+  {
+    "id": 671,
+    "domain": "IP Services",
+    "subtopic": "NAT & PAT",
+    "difficulty": "Hard",
+    "questionText": "What does the overload keyword indicate in a Cisco IOS dynamic inside source NAT configuration?",
+    "options": [ "The router must stop translating TCP sessions", "Multiple inside sessions may share translated IP addresses using port differentiation", "All traffic is converted to multicast", "The NAT pool must contain 256 addresses" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Overload enables PAT behavior, using port or related session identifiers to distinguish multiple translations."
+  },
+  {
+    "id": 672,
+    "domain": "IP Services",
+    "subtopic": "NAT & PAT",
+    "difficulty": "Hard",
+    "questionText": "Which configuration enables PAT using the address of outside interface GigabitEthernet0/1 for addresses matched by ACL 1?",
+    "options": [ "ip nat inside source list 1 interface GigabitEthernet0/1 overload", "ip nat inside source static 1 GigabitEthernet0/1", "ip nat outside list 1 overload", "interface GigabitEthernet0/1 ip pat 1" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The inside source list command matches internal addresses with ACL 1 and overloads them using the outside interface address."
+  },
+  {
+    "id": 673,
+    "domain": "IP Services",
+    "subtopic": "NAT & PAT",
+    "difficulty": "Medium",
+    "questionText": "Why is PAT widely used for residential Internet connections?",
+    "options": [ "It allows multiple private-addressed devices to share one public IPv4 address", "It eliminates the need for IP routing", "It guarantees complete application security", "It automatically provides DNS hosting" ],
+    "correctAnswerIndex": 0,
+    "explanation": "PAT conserves public IPv4 addresses by distinguishing many simultaneous internal sessions through translated ports."
+  },
+  {
+    "id": 674,
+    "domain": "IP Services",
+    "subtopic": "NAT & PAT",
+    "difficulty": "Hard",
+    "questionText": "Two internal hosts use source TCP port 50000 to connect to the same Internet server. How can PAT distinguish the connections when sharing one public IPv4 address?",
+    "options": [ "By translating sessions to distinct available public-side source ports", "By giving both hosts identical private addresses", "By turning TCP into ICMP", "By changing the destination network mask" ],
+    "correctAnswerIndex": 0,
+    "explanation": "PAT can allocate distinct translated source ports so sessions remain distinguishable even when original source ports match."
+  },
+  {
+    "id": 675,
+    "domain": "IP Services",
+    "subtopic": "NAT & PAT",
+    "difficulty": "Hard",
+    "questionText": "A dynamic NAT pool contains three public IPv4 addresses and overload is not enabled. How many simultaneous unique inside local address mappings can normally be allocated from that pool?",
+    "options": [ "One", "Three", "Thirty", "Unlimited" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Without PAT overload, dynamic NAT typically requires one available translated address per active inside address mapping."
+  },
+  {
+    "id": 676,
+    "domain": "IP Services",
+    "subtopic": "NAT & PAT",
+    "difficulty": "Medium",
+    "questionText": "Does ordinary IPv4 NAT automatically encrypt application traffic?",
+    "options": [ "Yes, using AES by default", "Only when the translated port is 443", "No, NAT and encryption are separate functions", "Yes, but only with private IPv4 addresses" ],
+    "correctAnswerIndex": 2,
+    "explanation": "NAT changes addressing information; it does not inherently provide encryption or substitute for a security policy."
+  },
+  {
+    "id": 677,
+    "domain": "IP Services",
+    "subtopic": "NAT & PAT",
+    "difficulty": "Hard",
+    "questionText": "A NAT router can reach an Internet host itself, but inside clients cannot establish translated connections. Which issue should be investigated?",
+    "options": [ "Missing or incorrect inside and outside NAT designations and translation rule", "The router's hostname capitalization", "The Ethernet cable jacket color", "The clients' monitor resolution" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Correct interface designations, translation rules, matching ACLs, and routing are needed for inside-to-outside NAT to function."
+  },
+  {
+    "id": 678,
+    "domain": "IP Services",
+    "subtopic": "NAT & PAT",
+    "difficulty": "Hard",
+    "questionText": "A public server must reach an internal web server using a known translated address. Which NAT method most directly provides a consistent one-to-one address mapping?",
+    "options": [ "Static NAT", "Dynamic NAT using an arbitrary free pool address", "PAT without a specific inbound translation", "OSPF route summarization" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Static NAT establishes a predictable address mapping. Appropriate routing and security permissions are also necessary."
+  },
+  {
+    "id": 679,
+    "domain": "IP Services",
+    "subtopic": "DHCP",
+    "difficulty": "Easy",
+    "questionText": "What is the primary purpose of DHCPv4?",
+    "options": [ "Automatically provide IPv4 configuration to clients", "Encrypt all IPv4 packets", "Calculate OSPF routes", "Map hostnames to MAC addresses" ],
+    "correctAnswerIndex": 0,
+    "explanation": "DHCP can supply IPv4 addresses, subnet masks, default gateways, DNS servers and other client settings."
+  },
+  {
+    "id": 680,
+    "domain": "IP Services",
+    "subtopic": "DHCP",
+    "difficulty": "Easy",
+    "questionText": "Which sequence correctly represents the basic DHCPv4 DORA process?",
+    "options": [ "Discover, Offer, Request, Acknowledgment", "Discover, Open, Route, Accept", "Download, Offer, Relay, Assign", "Discover, Request, Offer, Release" ],
+    "correctAnswerIndex": 0,
+    "explanation": "DHCPv4 commonly uses Discover, Offer, Request and Acknowledgment to obtain a lease."
+  },
+  {
+    "id": 681,
+    "domain": "IP Services",
+    "subtopic": "DHCP",
+    "difficulty": "Easy",
+    "questionText": "Which UDP ports are normally used by a DHCPv4 server and client, respectively?",
+    "options": [ "53 and 54", "67 and 68", "68 and 67", "161 and 162" ],
+    "correctAnswerIndex": 1,
+    "explanation": "DHCPv4 servers commonly use UDP 67 and clients use UDP 68."
+  },
+  {
+    "id": 682,
+    "domain": "IP Services",
+    "subtopic": "DHCP",
+    "difficulty": "Medium",
+    "questionText": "Why is a DHCP relay agent often needed when clients and the DHCP server are in different IPv4 subnets?",
+    "options": [ "Routers do not normally forward the client's initial local broadcasts", "DHCP can only use public IPv4 addresses", "All clients must use static IP addresses", "DNS must be disabled" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A relay agent forwards DHCP messages between client subnets and a DHCP server beyond the local broadcast domain."
+  },
+  {
+    "id": 683,
+    "domain": "IP Services",
+    "subtopic": "DHCP",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS interface command configures a DHCPv4 relay destination of 192.0.2.10?",
+    "options": [ "ip helper-address 192.0.2.10", "ip dhcp relay 192.0.2.10 only", "ip route dhcp 192.0.2.10", "dhcp server address 192.0.2.10" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The ip helper-address command on the client-facing routed interface forwards DHCP and other specified UDP broadcasts to the helper destination."
+  },
+  {
+    "id": 684,
+    "domain": "IP Services",
+    "subtopic": "DHCP",
+    "difficulty": "Medium",
+    "questionText": "On which router interface should a DHCPv4 relay helper normally be configured?",
+    "options": [ "The interface receiving DHCP client broadcasts", "Every router console interface", "The DHCP server's Ethernet NIC only", "Any unrelated loopback interface" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The relay helper belongs on the Layer 3 interface receiving client DHCP broadcasts, often an SVI or router subinterface."
+  },
+  {
+    "id": 685,
+    "domain": "IP Services",
+    "subtopic": "DHCP",
+    "difficulty": "Medium",
+    "questionText": "Which command starts configuration of a Cisco IOS DHCP address pool named USERS?",
+    "options": [ "ip dhcp pool USERS", "dhcp enable USERS", "interface dhcp USERS", "ip address pool USERS" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The ip dhcp pool USERS global configuration command creates or selects a DHCP pool."
+  },
+  {
+    "id": 686,
+    "domain": "IP Services",
+    "subtopic": "DHCP",
+    "difficulty": "Medium",
+    "questionText": "Which DHCP pool command identifies the IPv4 subnet to allocate from?",
+    "options": [ "network 192.168.50.0 255.255.255.0", "switchport access vlan 50", "router ospf 50", "ip nat inside" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The network command in DHCP pool configuration defines the address subnet and mask for the pool."
+  },
+  {
+    "id": 687,
+    "domain": "IP Services",
+    "subtopic": "DHCP",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS DHCP pool command supplies clients with default gateway 192.168.50.1?",
+    "options": [ "default-router 192.168.50.1", "ip default-gateway 192.168.50.1", "router-id 192.168.50.1", "dns-server 192.168.50.1" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The default-router command configures the gateway information provided to DHCP clients."
+  },
+  {
+    "id": 688,
+    "domain": "IP Services",
+    "subtopic": "DHCP",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS DHCP pool command supplies DNS server address 8.8.8.8 to clients?",
+    "options": [ "dns-server 8.8.8.8", "ip name-server 8.8.8.8 within the pool", "default-router 8.8.8.8", "ip helper-address 8.8.8.8 within the pool" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The dns-server command within a DHCP pool specifies DNS server addresses included in DHCP configuration."
+  },
+  {
+    "id": 689,
+    "domain": "IP Services",
+    "subtopic": "DHCP",
+    "difficulty": "Hard",
+    "questionText": "A Cisco router should never lease 192.168.10.1 through 192.168.10.20. Which command is appropriate?",
+    "options": [ "ip dhcp excluded-address 192.168.10.1 192.168.10.20", "ip dhcp pool exclude 192.168.10.1 192.168.10.20", "no ip route 192.168.10.0", "switchport access vlan 20" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The global ip dhcp excluded-address command prevents those addresses from being allocated by the IOS DHCP server."
+  },
+  {
+    "id": 690,
+    "domain": "IP Services",
+    "subtopic": "DHCP",
+    "difficulty": "Medium",
+    "questionText": "Which command displays DHCPv4 address leases assigned by a Cisco IOS DHCP server?",
+    "options": [ "show ip dhcp binding", "show ip nat translations", "show vlan brief", "show ntp status" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The show ip dhcp binding command displays active DHCP address bindings."
+  },
+  {
+    "id": 691,
+    "domain": "IP Services",
+    "subtopic": "DHCP",
+    "difficulty": "Hard",
+    "questionText": "A DHCP relay forwards a request to a server. What is a main use of the DHCP giaddr field?",
+    "options": [ "Identify the relay-side client subnet for correct pool selection and reply handling", "Carry the Ethernet FCS", "Encrypt the client password", "Choose the wireless SSID" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The gateway IP address field allows a DHCP server to identify the subnet associated with the relay and return replies appropriately."
+  },
+  {
+    "id": 692,
+    "domain": "IP Services",
+    "subtopic": "DHCP",
+    "difficulty": "Medium",
+    "questionText": "What does the DHCPv4 ACK message normally confirm?",
+    "options": [ "The server accepts the requested lease and supplies configuration", "The client discovered an OSPF neighbor", "The server revoked all IP addresses", "The switch accepted a trunk negotiation" ],
+    "correctAnswerIndex": 0,
+    "explanation": "DHCPACK confirms an address lease or renewal and carries configuration parameters."
+  },
+  {
+    "id": 693,
+    "domain": "IP Services",
+    "subtopic": "DHCP",
+    "difficulty": "Hard",
+    "questionText": "Clients in VLAN 20 receive DHCP addresses from the wrong pool. What should an administrator verify first?",
+    "options": [ "The VLAN 20 relay interface, helper configuration and matching server pool", "The access point LED color", "The local console hostname", "The spanning-tree root priority only" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Relay source information and DHCP server pool definitions must correctly correspond to the client VLAN subnet."
+  },
+  {
+    "id": 694,
+    "domain": "IP Services",
+    "subtopic": "DNS",
+    "difficulty": "Easy",
+    "questionText": "What is the primary purpose of DNS?",
+    "options": [ "Resolve domain names and other DNS records", "Allocate Ethernet MAC addresses", "Provide STP loop prevention", "Translate every IP packet through NAT" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The Domain Name System stores and resolves records including name-to-address mappings."
+  },
+  {
+    "id": 695,
+    "domain": "IP Services",
+    "subtopic": "DNS",
+    "difficulty": "Easy",
+    "questionText": "Which DNS record type maps a hostname to an IPv4 address?",
+    "options": [ "AAAA", "MX", "A", "PTR" ],
+    "correctAnswerIndex": 2,
+    "explanation": "An A record contains an IPv4 address associated with a DNS name."
+  },
+  {
+    "id": 696,
+    "domain": "IP Services",
+    "subtopic": "DNS",
+    "difficulty": "Easy",
+    "questionText": "Which DNS record type maps a hostname to an IPv6 address?",
+    "options": [ "AAAA", "A", "TXT", "NS" ],
+    "correctAnswerIndex": 0,
+    "explanation": "An AAAA record stores an IPv6 address associated with a DNS name."
+  },
+  {
+    "id": 697,
+    "domain": "IP Services",
+    "subtopic": "DNS",
+    "difficulty": "Medium",
+    "questionText": "Which DNS record type is primarily used to identify mail exchangers for a domain?",
+    "options": [ "PTR", "CNAME", "MX", "AAAA" ],
+    "correctAnswerIndex": 2,
+    "explanation": "MX records identify mail exchange hosts associated with receiving email for a domain."
+  },
+  {
+    "id": 698,
+    "domain": "IP Services",
+    "subtopic": "DNS",
+    "difficulty": "Medium",
+    "questionText": "Which DNS record type creates an alias from one domain name to another canonical name?",
+    "options": [ "CNAME", "MX", "PTR", "SOA" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A CNAME record makes one DNS name an alias of another canonical name."
+  },
+  {
+    "id": 699,
+    "domain": "IP Services",
+    "subtopic": "DNS",
+    "difficulty": "Medium",
+    "questionText": "Which record type is used in reverse DNS lookups?",
+    "options": [ "A", "TXT", "PTR", "SRV only" ],
+    "correctAnswerIndex": 2,
+    "explanation": "PTR records support reverse lookup from a reversed address representation to a DNS name."
+  },
+  {
+    "id": 700,
+    "domain": "IP Services",
+    "subtopic": "DNS",
+    "difficulty": "Medium",
+    "questionText": "Which destination port is conventionally used for standard DNS queries over UDP?",
+    "options": [ "53", "67", "123", "161" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Conventional DNS queries often use UDP port 53; DNS can also use TCP port 53."
+  },
+  {
+    "id": 701,
+    "domain": "IP Services",
+    "subtopic": "DNS",
+    "difficulty": "Hard",
+    "questionText": "Why can DNS require TCP port 53 in addition to UDP port 53?",
+    "options": [ "For operations such as zone transfers and DNS responses using TCP", "Because UDP cannot carry any DNS messages", "Because TCP 53 is used for DHCP", "Because TCP 53 is exclusively a wireless management protocol" ],
+    "correctAnswerIndex": 0,
+    "explanation": "DNS uses TCP for certain operations such as zone transfers, and TCP is also supported for normal DNS queries and responses."
+  },
+  {
+    "id": 702,
+    "domain": "IP Services",
+    "subtopic": "DNS",
+    "difficulty": "Medium",
+    "questionText": "What does a DNS record's TTL control?",
+    "options": [ "How long the record can normally be cached", "The number of Ethernet hops available", "The router's OSPF cost", "The maximum TCP port number" ],
+    "correctAnswerIndex": 0,
+    "explanation": "DNS TTL is the time-to-live for cached DNS data, normally measured in seconds."
+  },
+  {
+    "id": 703,
+    "domain": "IP Services",
+    "subtopic": "DNS",
+    "difficulty": "Hard",
+    "questionText": "Users can reach a server by IPv4 address but not by its hostname. Which service should be investigated first?",
+    "options": [ "DNS resolution and client DNS configuration", "STP root bridge election", "EtherChannel load balancing", "NTP stratum selection" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Working address-based connectivity but failing name-based connectivity suggests a possible DNS resolution or name configuration problem."
+  },
+  {
+    "id": 704,
+    "domain": "IP Services",
+    "subtopic": "NTP",
+    "difficulty": "Easy",
+    "questionText": "What is the purpose of Network Time Protocol?",
+    "options": [ "Synchronize clocks among network devices", "Assign VLAN IDs", "Translate private IPv4 addresses", "Provide DNS aliases" ],
+    "correctAnswerIndex": 0,
+    "explanation": "NTP helps networked systems synchronize time using a hierarchy of time sources."
+  },
+  {
+    "id": 705,
+    "domain": "IP Services",
+    "subtopic": "NTP",
+    "difficulty": "Easy",
+    "questionText": "Which UDP port is normally used by NTP?",
+    "options": [ "53", "69", "123", "514" ],
+    "correctAnswerIndex": 2,
+    "explanation": "NTP typically uses UDP destination port 123."
+  },
+  {
+    "id": 706,
+    "domain": "IP Services",
+    "subtopic": "NTP",
+    "difficulty": "Medium",
+    "questionText": "What does NTP stratum indicate?",
+    "options": [ "A time source's level within the synchronization hierarchy", "A router's Ethernet frame size", "The number of DNS servers installed", "The default administrative distance" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Stratum represents the number of levels away from a reference clock in the NTP timing hierarchy."
+  },
+  {
+    "id": 707,
+    "domain": "IP Services",
+    "subtopic": "NTP",
+    "difficulty": "Medium",
+    "questionText": "What is an NTP stratum 1 server?",
+    "options": [ "A server directly synchronized to a reference time source", "A server that has no clock", "A server using RIP version 1", "A switch with one physical Ethernet port" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A stratum 1 time server is directly connected or synchronized to a reference clock such as a GNSS receiver."
+  },
+  {
+    "id": 708,
+    "domain": "IP Services",
+    "subtopic": "NTP",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS global command configures NTP server 192.0.2.10?",
+    "options": [ "ntp server 192.0.2.10", "time server 192.0.2.10", "clock relay 192.0.2.10", "ip helper-address 192.0.2.10" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The ntp server command specifies a remote NTP time server."
+  },
+  {
+    "id": 709,
+    "domain": "IP Services",
+    "subtopic": "NTP",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS command displays whether the device's NTP clock is synchronized?",
+    "options": [ "show ntp status", "show ip route", "show interfaces trunk", "show vlan brief" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The show ntp status command provides synchronization state and timing information."
+  },
+  {
+    "id": 710,
+    "domain": "IP Services",
+    "subtopic": "NTP",
+    "difficulty": "Medium",
+    "questionText": "Which command displays configured or discovered NTP associations on Cisco IOS?",
+    "options": [ "show ntp associations", "show spanning-tree", "show ip nat translations", "show arp" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The show ntp associations command displays information about NTP peers and server associations."
+  },
+  {
+    "id": 711,
+    "domain": "IP Services",
+    "subtopic": "NTP",
+    "difficulty": "Hard",
+    "questionText": "Why is accurate time synchronization useful for network security investigations?",
+    "options": [ "It allows logs from multiple devices to be correlated by timestamp", "It replaces the need for access controls", "It encrypts log messages automatically", "It makes OSPF cost always equal to one" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Consistent timestamps help administrators reconstruct events across firewalls, switches, routers and servers."
+  },
+  {
+    "id": 712,
+    "domain": "IP Services",
+    "subtopic": "NTP",
+    "difficulty": "Hard",
+    "questionText": "A router is configured with an NTP server but remains unsynchronized. Which check is most relevant?",
+    "options": [ "Reachability and UDP 123 filtering between router and server", "Trunk native VLAN on an unrelated port", "The number of Ethernet MAC addresses learned", "Whether DNS MX records exist" ],
+    "correctAnswerIndex": 0,
+    "explanation": "NTP requires a reachable time source and permitted protocol traffic, along with compatible configuration."
+  },
+  {
+    "id": 713,
+    "domain": "IP Services",
+    "subtopic": "NTP",
+    "difficulty": "Medium",
+    "questionText": "A stratum 2 NTP server is normally synchronized to what type of source?",
+    "options": [ "A stratum 1 time server", "An Ethernet collision detector", "A DHCP relay only", "A VLAN trunk native address" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A stratum 2 server normally synchronizes to a stratum 1 server, adding another level in the NTP hierarchy."
+  },
+  {
+    "id": 714,
+    "domain": "IP Services",
+    "subtopic": "SNMP",
+    "difficulty": "Easy",
+    "questionText": "What is the primary purpose of SNMP?",
+    "options": [ "Monitor and manage network devices using structured management information", "Assign default gateways to DHCP clients", "Establish an 802.1Q trunk", "Replace IP addressing" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Simple Network Management Protocol is used by management systems to retrieve and sometimes modify device management information."
+  },
+  {
+    "id": 715,
+    "domain": "IP Services",
+    "subtopic": "SNMP",
+    "difficulty": "Easy",
+    "questionText": "Which UDP port is normally used for SNMP polling requests?",
+    "options": [ "123", "161", "162", "514" ],
+    "correctAnswerIndex": 1,
+    "explanation": "SNMP agents commonly listen for requests on UDP port 161."
+  },
+  {
+    "id": 716,
+    "domain": "IP Services",
+    "subtopic": "SNMP",
+    "difficulty": "Easy",
+    "questionText": "Which UDP port is normally used as the destination for SNMP traps?",
+    "options": [ "53", "161", "162", "443" ],
+    "correctAnswerIndex": 2,
+    "explanation": "SNMP traps are commonly sent to a management station on UDP port 162."
+  },
+  {
+    "id": 717,
+    "domain": "IP Services",
+    "subtopic": "SNMP",
+    "difficulty": "Medium",
+    "questionText": "In SNMP terminology, which component normally runs on the managed router or switch?",
+    "options": [ "SNMP agent", "DNS root server", "NTP stratum clock", "DHCP client relay" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The SNMP agent on a managed device exposes management data and responds to management requests."
+  },
+  {
+    "id": 718,
+    "domain": "IP Services",
+    "subtopic": "SNMP",
+    "difficulty": "Medium",
+    "questionText": "What does MIB stand for in SNMP?",
+    "options": [ "Management Information Base", "Multicast Interface Bridge", "Managed Internet Broadcast", "Maximum Interface Bandwidth" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A Management Information Base describes organized management objects that can be queried or managed through SNMP."
+  },
+  {
+    "id": 719,
+    "domain": "IP Services",
+    "subtopic": "SNMP",
+    "difficulty": "Medium",
+    "questionText": "What does an OID identify in SNMP?",
+    "options": [ "A management object", "A VLAN native tag", "An OSPF area border router", "A DHCP server's UDP port" ],
+    "correctAnswerIndex": 0,
+    "explanation": "An Object Identifier uniquely identifies a managed object within the SNMP object hierarchy."
+  },
+  {
+    "id": 720,
+    "domain": "IP Services",
+    "subtopic": "SNMP",
+    "difficulty": "Medium",
+    "questionText": "Which SNMP message can notify a manager about an event without waiting for a polling request?",
+    "options": [ "Trap", "DHCP Offer", "OSPF Hello", "DNS CNAME" ],
+    "correctAnswerIndex": 0,
+    "explanation": "An SNMP trap is an unsolicited notification sent by an agent to a management station."
+  },
+  {
+    "id": 721,
+    "domain": "IP Services",
+    "subtopic": "SNMP",
+    "difficulty": "Medium",
+    "questionText": "What distinguishes an SNMP inform from a traditional trap?",
+    "options": [ "An inform expects acknowledgment from the receiver", "An inform can only use TCP 22", "An inform is an OSPF packet", "An inform never identifies an event" ],
+    "correctAnswerIndex": 0,
+    "explanation": "SNMP informs include acknowledgment handling, unlike ordinary unacknowledged traps."
+  },
+  {
+    "id": 722,
+    "domain": "IP Services",
+    "subtopic": "SNMP",
+    "difficulty": "Hard",
+    "questionText": "Which SNMP version supports authentication and encryption-based privacy mechanisms?",
+    "options": [ "SNMPv1 only", "SNMPv2c only", "SNMPv3", "All versions provide identical cryptographic protection" ],
+    "correctAnswerIndex": 2,
+    "explanation": "SNMPv3 provides user-based security capabilities including authentication and optional privacy encryption."
+  },
+  {
+    "id": 723,
+    "domain": "IP Services",
+    "subtopic": "SNMP",
+    "difficulty": "Hard",
+    "questionText": "Why should SNMPv2c community strings not be treated as strong security protection?",
+    "options": [ "They are transmitted without cryptographic confidentiality", "They are always 256-bit AES keys", "They automatically rotate after each packet", "They can only be used on optical interfaces" ],
+    "correctAnswerIndex": 0,
+    "explanation": "SNMPv1 and SNMPv2c community strings are not protected by built-in encryption, unlike appropriately configured SNMPv3 security."
+  },
+  {
+    "id": 724,
+    "domain": "IP Services",
+    "subtopic": "Syslog",
+    "difficulty": "Easy",
+    "questionText": "What is the main purpose of syslog?",
+    "options": [ "Collect and communicate log messages about system events", "Distribute IPv4 DHCP leases", "Negotiate EtherChannel links", "Calculate IPv6 subnet prefixes" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Syslog provides a standardized approach for devices to record or send operational and security-related event messages."
+  },
+  {
+    "id": 725,
+    "domain": "IP Services",
+    "subtopic": "Syslog",
+    "difficulty": "Easy",
+    "questionText": "Which UDP port is traditionally used by syslog?",
+    "options": [ "69", "123", "161", "514" ],
+    "correctAnswerIndex": 3,
+    "explanation": "Traditional syslog messages commonly use UDP destination port 514."
+  },
+  {
+    "id": 726,
+    "domain": "IP Services",
+    "subtopic": "Syslog",
+    "difficulty": "Medium",
+    "questionText": "What is the most severe standard syslog severity level?",
+    "options": [ "0 - Emergency", "3 - Error", "5 - Notice", "7 - Debugging" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Syslog severity 0, Emergency, is the highest severity level."
+  },
+  {
+    "id": 727,
+    "domain": "IP Services",
+    "subtopic": "Syslog",
+    "difficulty": "Medium",
+    "questionText": "Which standard syslog severity level represents warnings?",
+    "options": [ "2", "4", "6", "7" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Syslog severity 4 is Warning."
+  },
+  {
+    "id": 728,
+    "domain": "IP Services",
+    "subtopic": "Syslog",
+    "difficulty": "Medium",
+    "questionText": "Which standard syslog severity corresponds to Informational messages?",
+    "options": [ "1", "3", "5", "6" ],
+    "correctAnswerIndex": 3,
+    "explanation": "Syslog severity 6 is Informational, while severity 7 is Debugging."
+  },
+  {
+    "id": 729,
+    "domain": "IP Services",
+    "subtopic": "Syslog",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS global command specifies remote syslog server 192.0.2.50?",
+    "options": [ "logging host 192.0.2.50", "syslog route 192.0.2.50", "ntp server 192.0.2.50", "ip helper-address 192.0.2.50" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The logging host command configures a remote syslog destination on supported Cisco IOS devices."
+  },
+  {
+    "id": 730,
+    "domain": "IP Services",
+    "subtopic": "Syslog",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS command configures the severity threshold of messages sent to remote logging hosts?",
+    "options": [ "logging trap warnings", "logging console speed", "logging vlan warnings", "logging router-id warnings" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The logging trap command controls the severity threshold for messages sent to configured remote syslog servers."
+  },
+  {
+    "id": 731,
+    "domain": "IP Services",
+    "subtopic": "Syslog",
+    "difficulty": "Hard",
+    "questionText": "If a Cisco device is configured with logging trap warnings, which syslog severity values are normally eligible for remote logging?",
+    "options": [ "0 through 4", "4 through 7", "Only 4", "Only 6 and 7" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Syslog levels with lower numbers are more severe. A warnings threshold includes levels 0, 1, 2, 3 and 4."
+  },
+  {
+    "id": 732,
+    "domain": "IP Services",
+    "subtopic": "Syslog",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS command displays locally buffered log messages?",
+    "options": [ "show logging", "show vlan brief", "show ip route", "show spanning-tree" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The show logging command displays logging configuration and available local log messages."
+  },
+  {
+    "id": 733,
+    "domain": "IP Services",
+    "subtopic": "Syslog",
+    "difficulty": "Hard",
+    "questionText": "Why are synchronized NTP clocks important when logs from several network devices are analyzed together?",
+    "options": [ "Consistent timestamps support accurate event correlation", "NTP automatically encrypts syslog packets", "NTP replaces the logging server", "All devices must use the same VLAN ID" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Accurate synchronized timestamps allow administrators to determine event order across multiple systems."
+  },
+  {
+    "id": 734,
+    "domain": "IP Services",
+    "subtopic": "QoS",
+    "difficulty": "Easy",
+    "questionText": "What does QoS stand for in networking?",
+    "options": [ "Quality of Service", "Query over Switching", "Queue of Subnets", "Quick Optical Signal" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Quality of Service refers to mechanisms used to classify and manage traffic according to network performance requirements."
+  },
+  {
+    "id": 735,
+    "domain": "IP Services",
+    "subtopic": "QoS",
+    "difficulty": "Easy",
+    "questionText": "Which traffic type is commonly sensitive to delay and jitter?",
+    "options": [ "Real-time voice traffic", "An offline backup file", "A static text document", "A completed software installation" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Real-time voice applications require timely delivery and can be affected by latency variation and packet loss."
+  },
+  {
+    "id": 736,
+    "domain": "IP Services",
+    "subtopic": "QoS",
+    "difficulty": "Medium",
+    "questionText": "What is network jitter?",
+    "options": [ "Variation in packet delay", "The total IPv4 address space", "The number of OSPF routers", "A fixed Ethernet frame length" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Jitter describes variation in delay between packet arrivals, an important consideration for real-time media."
+  },
+  {
+    "id": 737,
+    "domain": "IP Services",
+    "subtopic": "QoS",
+    "difficulty": "Medium",
+    "questionText": "What is a traffic classification function in QoS?",
+    "options": [ "Identify traffic according to defined characteristics or policies", "Assign an IP address using DHCP", "Translate MAC addresses into IPv6 addresses", "Disable all routing" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Classification places traffic into classes using criteria such as protocol, addresses, ports or other packet properties."
+  },
+  {
+    "id": 738,
+    "domain": "IP Services",
+    "subtopic": "QoS",
+    "difficulty": "Medium",
+    "questionText": "What does traffic marking accomplish in a QoS design?",
+    "options": [ "Set packet priority-related fields for later treatment", "Replace the entire source IP with a DNS name", "Assign every frame to VLAN 1", "Guarantee unlimited interface bandwidth" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Marking sets fields such as DSCP so devices can apply appropriate forwarding and queueing behaviors."
+  },
+  {
+    "id": 739,
+    "domain": "IP Services",
+    "subtopic": "QoS",
+    "difficulty": "Medium",
+    "questionText": "Which IPv4 header field includes the DSCP value?",
+    "options": [ "Differentiated Services field", "Destination MAC address", "TCP acknowledgment field", "Ethernet Frame Check Sequence" ],
+    "correctAnswerIndex": 0,
+    "explanation": "DSCP uses six bits in the IP Differentiated Services field, part of the former Type of Service octet."
+  },
+  {
+    "id": 740,
+    "domain": "IP Services",
+    "subtopic": "QoS",
+    "difficulty": "Medium",
+    "questionText": "How many bits are used for the DSCP code point?",
+    "options": [ "3", "6", "8", "12" ],
+    "correctAnswerIndex": 1,
+    "explanation": "The Differentiated Services Code Point is six bits long."
+  },
+  {
+    "id": 741,
+    "domain": "IP Services",
+    "subtopic": "QoS",
+    "difficulty": "Medium",
+    "questionText": "Which DSCP value is conventionally associated with Expedited Forwarding (EF) for voice traffic?",
+    "options": [ "CS0 (0)", "AF11 (10)", "EF (46)", "CS7 (56)" ],
+    "correctAnswerIndex": 2,
+    "explanation": "EF is the DSCP value 46 and is commonly recommended for latency-sensitive voice bearer traffic."
+  },
+  {
+    "id": 742,
+    "domain": "IP Services",
+    "subtopic": "QoS",
+    "difficulty": "Medium",
+    "questionText": "Which Layer 2 field provides 802.1p priority information in an IEEE 802.1Q tag?",
+    "options": [ "Priority Code Point", "VLAN Identifier", "Frame Check Sequence", "Destination MAC address" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The three-bit PCP field carries Layer 2 priority values in the 802.1Q tag."
+  },
+  {
+    "id": 743,
+    "domain": "IP Services",
+    "subtopic": "QoS",
+    "difficulty": "Medium",
+    "questionText": "What is a trust boundary in a QoS design?",
+    "options": [ "The point where the network begins trusting or remarking traffic classifications", "The edge of a VLAN number range", "The maximum physical cable length", "The location of the OSPF DR" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A QoS trust boundary defines where markings are accepted from a device or reassigned according to policy."
+  },
+  {
+    "id": 744,
+    "domain": "IP Services",
+    "subtopic": "QoS",
+    "difficulty": "Hard",
+    "questionText": "What is the main difference between traffic policing and traffic shaping?",
+    "options": [ "Policing can drop or remark excess traffic, while shaping buffers traffic to smooth its rate", "Policing always increases bandwidth, while shaping disables queues", "Policing applies only to DNS, while shaping applies only to OSPF", "Both actions always produce identical packet timing" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Policing enforces a rate by acting on out-of-profile traffic, whereas shaping generally queues excess packets for later transmission."
+  },
+  {
+    "id": 745,
+    "domain": "IP Services",
+    "subtopic": "QoS",
+    "difficulty": "Medium",
+    "questionText": "What is the purpose of an output queue on a network interface?",
+    "options": [ "Hold packets awaiting transmission when the outgoing link is busy", "Store the switch startup configuration", "Resolve hostnames into IPv4 addresses", "Select the NTP clock source" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Output queues buffer traffic waiting for access to a constrained transmission interface."
+  },
+  {
+    "id": 746,
+    "domain": "IP Services",
+    "subtopic": "QoS",
+    "difficulty": "Hard",
+    "questionText": "What does a strict priority queue provide to a selected traffic class?",
+    "options": [ "Preferential service ahead of lower-priority queues, subject to configured limits", "Unlimited physical bandwidth", "Guaranteed zero packet loss on every link", "Removal of all IP headers" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Strict priority scheduling serves priority traffic first. Appropriate policing or limits help prevent starvation of other traffic."
+  },
+  {
+    "id": 747,
+    "domain": "IP Services",
+    "subtopic": "QoS",
+    "difficulty": "Hard",
+    "questionText": "What is the purpose of Weighted Random Early Detection (WRED)?",
+    "options": [ "Manage congestion through early probabilistic dropping based on queue conditions", "Allocate DHCP addresses", "Negotiate switch trunks", "Synchronize NTP clocks" ],
+    "correctAnswerIndex": 0,
+    "explanation": "WRED is an active queue management method that can drop packets before a queue becomes full to help manage congestion."
+  },
+  {
+    "id": 748,
+    "domain": "IP Services",
+    "subtopic": "QoS",
+    "difficulty": "Hard",
+    "questionText": "A WAN link is congested and voice calls experience jitter while bulk file transfers continue. Which approach is most appropriate?",
+    "options": [ "Classify voice traffic and apply appropriate priority scheduling with bandwidth controls", "Disable IP routing for every user", "Increase the DNS TTL", "Give all traffic identical strict-priority treatment" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A properly designed QoS policy can prioritize latency-sensitive voice while controlling bulk traffic and avoiding starvation."
+  },
+  {
+    "id": 749,
+    "domain": "IP Services",
+    "subtopic": "SSH & TFTP",
+    "difficulty": "Easy",
+    "questionText": "What is the primary benefit of SSH compared with Telnet?",
+    "options": [ "SSH encrypts remote management communications", "SSH requires no IP connectivity", "SSH uses Ethernet broadcast only", "SSH automatically replaces every router password" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Secure Shell provides encrypted remote access and protects authentication and session traffic."
+  },
+  {
+    "id": 750,
+    "domain": "IP Services",
+    "subtopic": "SSH & TFTP",
+    "difficulty": "Easy",
+    "questionText": "Which TCP port is normally used by SSH servers?",
+    "options": [ "21", "22", "23", "69" ],
+    "correctAnswerIndex": 1,
+    "explanation": "SSH normally listens on TCP port 22."
+  },
+  {
+    "id": 751,
+    "domain": "IP Services",
+    "subtopic": "SSH & TFTP",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS VTY configuration command permits SSH but not Telnet?",
+    "options": [ "transport input ssh", "transport input telnet", "transport output all", "login disable" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The transport input ssh command restricts inbound remote terminal sessions on the selected VTY lines to SSH."
+  },
+  {
+    "id": 752,
+    "domain": "IP Services",
+    "subtopic": "SSH & TFTP",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS global command generates RSA keys used by SSH on supported devices?",
+    "options": [ "crypto key generate rsa", "ip ssh enable rsa only", "ssh key install automatic", "service password-encryption rsa" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The crypto key generate rsa command creates an RSA key pair for supported cryptographic services including SSH."
+  },
+  {
+    "id": 753,
+    "domain": "IP Services",
+    "subtopic": "SSH & TFTP",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS command requests SSH protocol version 2?",
+    "options": [ "ip ssh version 2", "ssh version 2 under VTY", "transport input version 2", "crypto key version 2" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The ip ssh version 2 global command configures the SSH server to use SSH version 2 on supported IOS devices."
+  },
+  {
+    "id": 754,
+    "domain": "IP Services",
+    "subtopic": "SSH & TFTP",
+    "difficulty": "Medium",
+    "questionText": "Which VTY command enables authentication against locally configured usernames and passwords?",
+    "options": [ "login local", "transport input telnet", "no login", "ip name-server local" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The login local line configuration command authenticates remote logins against the local username database."
+  },
+  {
+    "id": 755,
+    "domain": "IP Services",
+    "subtopic": "SSH & TFTP",
+    "difficulty": "Easy",
+    "questionText": "Which transport protocol and well-known port does TFTP use for initial file requests?",
+    "options": [ "TCP 21", "UDP 69", "TCP 22", "UDP 514" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Trivial File Transfer Protocol uses UDP port 69 for initial read or write requests."
+  },
+  {
+    "id": 756,
+    "domain": "IP Services",
+    "subtopic": "SSH & TFTP",
+    "difficulty": "Medium",
+    "questionText": "Which statement correctly describes TFTP security?",
+    "options": [ "TFTP normally provides no built-in user authentication or encryption", "TFTP always encrypts files using TLS", "TFTP requires a RADIUS server for every read", "TFTP uses SSH as its transport protocol" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Basic TFTP is a simple file-transfer protocol without built-in authentication or encryption, so it should be used only in appropriately secured environments."
+  },
+  {
+    "id": 757,
+    "domain": "IP Services",
+    "subtopic": "SSH & TFTP",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS command can copy the running configuration to a reachable TFTP server?",
+    "options": [ "copy running-config tftp:", "show running-config tftp", "ip route tftp", "write erase tftp" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The copy running-config tftp: command starts copying the current running configuration to a TFTP server."
+  },
+  {
+    "id": 758,
+    "domain": "IP Services",
+    "subtopic": "SSH & TFTP",
+    "difficulty": "Hard",
+    "questionText": "An administrator can ping a TFTP server, but configuration file transfers fail. What should be checked first?",
+    "options": [ "UDP 69 request reachability, subsequent TFTP data ports and server file permissions", "The STP root MAC address only", "Whether DNS has an MX record", "The WAN interface's NTP stratum" ],
+    "correctAnswerIndex": 0,
+    "explanation": "TFTP starts requests on UDP 69, then uses negotiated UDP transfer identifiers. Firewall rules, server permissions and TFTP service configuration can affect transfers."
+  }
+]

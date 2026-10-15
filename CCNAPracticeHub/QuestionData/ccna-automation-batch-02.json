@@ -1,0 +1,827 @@
+[
+  {
+    "id": 954,
+    "domain": "Automation and Programmability",
+    "subtopic": "REST APIs",
+    "difficulty": "Easy",
+    "questionText": "What does API stand for?",
+    "options": [
+      "Automated Packet Inspection",
+      "Application Programming Interface",
+      "Advanced Port Installation",
+      "Address Protocol Identifier"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "An Application Programming Interface defines how software systems can communicate and exchange requests or information."
+  },
+  {
+    "id": 955,
+    "domain": "Automation and Programmability",
+    "subtopic": "REST APIs",
+    "difficulty": "Easy",
+    "questionText": "What does REST stand for?",
+    "options": [
+      "Remote Execution Service Tunnel",
+      "Routing Ethernet Security Transport",
+      "Representational State Transfer",
+      "Reliable Endpoint Switching Technology"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "Representational State Transfer is an architectural style commonly used to design web APIs."
+  },
+  {
+    "id": 956,
+    "domain": "Automation and Programmability",
+    "subtopic": "REST APIs",
+    "difficulty": "Easy",
+    "questionText": "Which application-layer protocol is most commonly used by REST APIs?",
+    "options": [
+      "HTTP",
+      "STP",
+      "ARP",
+      "LACP"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "REST APIs commonly use HTTP request methods, resource URLs, headers and response status codes."
+  },
+  {
+    "id": 957,
+    "domain": "Automation and Programmability",
+    "subtopic": "REST APIs",
+    "difficulty": "Easy",
+    "questionText": "Which HTTP method is used to retrieve information from a REST API?",
+    "options": [
+      "DELETE",
+      "POST",
+      "PATCH",
+      "GET"
+    ],
+    "correctAnswerIndex": 3,
+    "explanation": "GET retrieves a representation of a resource without requesting that the server modify it."
+  },
+  {
+    "id": 958,
+    "domain": "Automation and Programmability",
+    "subtopic": "REST APIs",
+    "difficulty": "Easy",
+    "questionText": "Which HTTP method is commonly used to submit data to create a new resource?",
+    "options": [
+      "HEAD",
+      "POST",
+      "OPTIONS",
+      "GET"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "POST submits data for processing and is commonly used by APIs to create resources."
+  },
+  {
+    "id": 959,
+    "domain": "Automation and Programmability",
+    "subtopic": "REST APIs",
+    "difficulty": "Medium",
+    "questionText": "Which HTTP method is commonly used to replace the representation of a specified resource?",
+    "options": [
+      "TRACE",
+      "CONNECT",
+      "PUT",
+      "HEAD"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "PUT is used to create or replace the state of the target resource according to the API's documented behavior."
+  },
+  {
+    "id": 960,
+    "domain": "Automation and Programmability",
+    "subtopic": "REST APIs",
+    "difficulty": "Medium",
+    "questionText": "Which HTTP method is associated with applying partial modifications to an existing resource?",
+    "options": [
+      "PATCH",
+      "HEAD",
+      "GET",
+      "OPTIONS"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "PATCH applies a partial change to a resource rather than necessarily replacing its entire representation."
+  },
+  {
+    "id": 961,
+    "domain": "Automation and Programmability",
+    "subtopic": "REST APIs",
+    "difficulty": "Easy",
+    "questionText": "Which HTTP method requests deletion of a resource identified by its URL?",
+    "options": [
+      "PUT",
+      "POST",
+      "GET",
+      "DELETE"
+    ],
+    "correctAnswerIndex": 3,
+    "explanation": "DELETE requests that the server remove the target resource or its association, as defined by the API."
+  },
+  {
+    "id": 962,
+    "domain": "Automation and Programmability",
+    "subtopic": "REST APIs",
+    "difficulty": "Easy",
+    "questionText": "What does HTTP status code 200 normally indicate?",
+    "options": [
+      "Authentication is required",
+      "The request succeeded",
+      "The requested resource was not found",
+      "An internal server error occurred"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "HTTP 200 OK indicates that the request was successfully processed."
+  },
+  {
+    "id": 963,
+    "domain": "Automation and Programmability",
+    "subtopic": "REST APIs",
+    "difficulty": "Medium",
+    "questionText": "A REST API responds to a successful resource creation request with HTTP 201. What does this code mean?",
+    "options": [
+      "The client is forbidden from accessing the resource",
+      "The request contained invalid syntax",
+      "A resource was created successfully",
+      "The server is temporarily unavailable"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "HTTP 201 Created indicates successful processing that resulted in creation of a resource."
+  },
+  {
+    "id": 964,
+    "domain": "Automation and Programmability",
+    "subtopic": "REST APIs",
+    "difficulty": "Medium",
+    "questionText": "What does HTTP status code 204 No Content indicate?",
+    "options": [
+      "The request succeeded and no response content is returned",
+      "The API rejected the user's credentials",
+      "The requested URL moved permanently",
+      "The server could not locate the resource"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "HTTP 204 indicates success with no response body, commonly after certain update or deletion operations."
+  },
+  {
+    "id": 965,
+    "domain": "Automation and Programmability",
+    "subtopic": "REST APIs",
+    "difficulty": "Medium",
+    "questionText": "Which HTTP status code commonly indicates that a request cannot be processed because of malformed client syntax?",
+    "options": [
+      "200 OK",
+      "201 Created",
+      "503 Service Unavailable",
+      "400 Bad Request"
+    ],
+    "correctAnswerIndex": 3,
+    "explanation": "HTTP 400 Bad Request generally indicates a client-side request problem such as invalid syntax."
+  },
+  {
+    "id": 966,
+    "domain": "Automation and Programmability",
+    "subtopic": "REST APIs",
+    "difficulty": "Medium",
+    "questionText": "A REST API returns HTTP 401 Unauthorized. What is the most likely issue?",
+    "options": [
+      "A new resource was created",
+      "The request lacks valid authentication credentials",
+      "The requested operation completed successfully",
+      "The server has no network cable"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "HTTP 401 indicates that valid authentication credentials are missing or have not been accepted."
+  },
+  {
+    "id": 967,
+    "domain": "Automation and Programmability",
+    "subtopic": "REST APIs",
+    "difficulty": "Medium",
+    "questionText": "Which HTTP response code usually indicates that a server understands a request but refuses to authorize the requested action?",
+    "options": [
+      "202 Accepted",
+      "301 Moved Permanently",
+      "403 Forbidden",
+      "204 No Content"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "HTTP 403 Forbidden indicates that access to the requested operation or resource is refused."
+  },
+  {
+    "id": 968,
+    "domain": "Automation and Programmability",
+    "subtopic": "REST APIs",
+    "difficulty": "Easy",
+    "questionText": "What does HTTP status code 404 Not Found commonly mean?",
+    "options": [
+      "The requested resource could not be found",
+      "The request succeeded",
+      "The server created a new object",
+      "Authentication completed successfully"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "HTTP 404 indicates the server has not found a current representation of the requested resource."
+  },
+  {
+    "id": 969,
+    "domain": "Automation and Programmability",
+    "subtopic": "REST APIs",
+    "difficulty": "Medium",
+    "questionText": "Which HTTP status code indicates a general internal server error?",
+    "options": [
+      "301",
+      "400",
+      "204",
+      "500"
+    ],
+    "correctAnswerIndex": 3,
+    "explanation": "HTTP 500 Internal Server Error indicates that the server encountered an unexpected condition."
+  },
+  {
+    "id": 970,
+    "domain": "Automation and Programmability",
+    "subtopic": "REST APIs",
+    "difficulty": "Medium",
+    "questionText": "Which HTTP header identifies a request body as JSON?",
+    "options": [
+      "Host: application/json",
+      "Content-Type: application/json",
+      "Authorization: application/json",
+      "Accept-Encoding: application/json"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Content-Type identifies the media type of a request or response body. JSON commonly uses application/json."
+  },
+  {
+    "id": 971,
+    "domain": "Automation and Programmability",
+    "subtopic": "REST APIs",
+    "difficulty": "Medium",
+    "questionText": "What is the purpose of the HTTP Accept header in a REST API request?",
+    "options": [
+      "Specify the Ethernet source MAC address",
+      "Determine the router's OSPF priority",
+      "Identify which response media types the client can accept",
+      "Set the client computer's default gateway"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "The Accept header informs the server which response representations, such as application/json, the client can process."
+  },
+  {
+    "id": 972,
+    "domain": "Automation and Programmability",
+    "subtopic": "REST APIs",
+    "difficulty": "Hard",
+    "questionText": "What does statelessness mean in a REST architecture?",
+    "options": [
+      "Each request contains the information required for processing without depending on stored client session context",
+      "The server cannot store network device records",
+      "API requests cannot contain authentication information",
+      "All requests must use the DELETE method"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "REST statelessness means each request provides its necessary context. The server may still store application resources."
+  },
+  {
+    "id": 973,
+    "domain": "Automation and Programmability",
+    "subtopic": "REST APIs",
+    "difficulty": "Hard",
+    "questionText": "A network controller API returns HTTP 429 Too Many Requests. What should an automation client do?",
+    "options": [
+      "Immediately repeat the request as rapidly as possible",
+      "Disable all authentication checks",
+      "Assume the router's MAC address is invalid",
+      "Reduce its request rate and follow any documented retry guidance"
+    ],
+    "correctAnswerIndex": 3,
+    "explanation": "HTTP 429 signals rate limiting. Clients should back off and respect any Retry-After header or API-specific guidance."
+  },
+  {
+    "id": 974,
+    "domain": "Automation and Programmability",
+    "subtopic": "JSON Data Formats",
+    "difficulty": "Easy",
+    "questionText": "What does JSON stand for?",
+    "options": [
+      "Java Standard Output Network",
+      "JavaScript Object Notation",
+      "Joined System Object Naming",
+      "Java Security Operations Node"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "JSON stands for JavaScript Object Notation, a lightweight format for exchanging structured data."
+  },
+  {
+    "id": 975,
+    "domain": "Automation and Programmability",
+    "subtopic": "JSON Data Formats",
+    "difficulty": "Easy",
+    "questionText": "Which pair of symbols encloses a JSON object?",
+    "options": [
+      "Square brackets",
+      "Parentheses",
+      "Curly braces",
+      "Angle brackets"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "JSON objects use curly braces and contain name-value pairs."
+  },
+  {
+    "id": 976,
+    "domain": "Automation and Programmability",
+    "subtopic": "JSON Data Formats",
+    "difficulty": "Easy",
+    "questionText": "Which symbols enclose a JSON array?",
+    "options": [
+      "Square brackets",
+      "Curly braces",
+      "Parentheses",
+      "Backticks"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "JSON arrays use square brackets to contain ordered values."
+  },
+  {
+    "id": 977,
+    "domain": "Automation and Programmability",
+    "subtopic": "JSON Data Formats",
+    "difficulty": "Easy",
+    "questionText": "Which symbol separates a JSON property name from its value?",
+    "options": [
+      "Semicolon",
+      "Equals sign",
+      "Vertical bar",
+      "Colon"
+    ],
+    "correctAnswerIndex": 3,
+    "explanation": "JSON object properties use a colon between the property name and the value."
+  },
+  {
+    "id": 978,
+    "domain": "Automation and Programmability",
+    "subtopic": "JSON Data Formats",
+    "difficulty": "Medium",
+    "questionText": "Which of the following is valid JSON?",
+    "options": [
+      "{hostname:'SW1'}",
+      "{\"hostname\":\"SW1\",\"enabled\":true}",
+      "{'hostname':'SW1'}",
+      "{\"hostname\":\"SW1\",}"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Valid JSON uses double-quoted property names and strings, lowercase Boolean values, and no trailing commas."
+  },
+  {
+    "id": 979,
+    "domain": "Automation and Programmability",
+    "subtopic": "JSON Data Formats",
+    "difficulty": "Medium",
+    "questionText": "A network API returns the JSON object {\"interfaceEnabled\":true}. What data type is the value of interfaceEnabled?",
+    "options": [
+      "A quoted string",
+      "A numeric integer",
+      "A Boolean",
+      "An ordered array"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "The JSON value true is a Boolean literal. It is not enclosed in quotation marks."
+  },
+  {
+    "id": 980,
+    "domain": "Automation and Programmability",
+    "subtopic": "JSON Data Formats",
+    "difficulty": "Medium",
+    "questionText": "Which literal represents a null value in valid JSON?",
+    "options": [
+      "null",
+      "undefined",
+      "None",
+      "nil"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "JSON uses the lowercase literal null. The other listed terms are not valid JSON null literals."
+  },
+  {
+    "id": 981,
+    "domain": "Automation and Programmability",
+    "subtopic": "JSON Data Formats",
+    "difficulty": "Medium",
+    "questionText": "Consider the JSON object {\"ports\":[\"Gi0/1\",\"Gi0/2\"]}. What kind of value is assigned to ports?",
+    "options": [
+      "A single number",
+      "A Boolean",
+      "A null literal",
+      "An array containing two strings"
+    ],
+    "correctAnswerIndex": 3,
+    "explanation": "The ports property contains a JSON array with two string elements."
+  },
+  {
+    "id": 982,
+    "domain": "Automation and Programmability",
+    "subtopic": "JSON Data Formats",
+    "difficulty": "Medium",
+    "questionText": "Given {\"device\":{\"hostname\":\"SW1\",\"vlan\":10}}, what is the value of device.hostname?",
+    "options": [
+      "10",
+      "SW1",
+      "device",
+      "vlan"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "The nested device object has a hostname property with the string value SW1."
+  },
+  {
+    "id": 983,
+    "domain": "Automation and Programmability",
+    "subtopic": "JSON Data Formats",
+    "difficulty": "Easy",
+    "questionText": "How must JSON string values be enclosed?",
+    "options": [
+      "Only in parentheses",
+      "Only in single quotation marks",
+      "In double quotation marks",
+      "In angle brackets"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "JSON strings are enclosed in double quotation marks, with escaping where needed."
+  },
+  {
+    "id": 984,
+    "domain": "Automation and Programmability",
+    "subtopic": "JSON Data Formats",
+    "difficulty": "Medium",
+    "questionText": "Which of these values is a JSON number rather than a string?",
+    "options": [
+      "42",
+      "\"42\"",
+      "\"10.5\"",
+      "\"100\""
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "The unquoted value 42 is a JSON number. Quoted numeric characters represent strings."
+  },
+  {
+    "id": 985,
+    "domain": "Automation and Programmability",
+    "subtopic": "JSON Data Formats",
+    "difficulty": "Hard",
+    "questionText": "Why is the text {\"ports\":[\"Gi0/0\",]} invalid JSON?",
+    "options": [
+      "JSON does not support arrays",
+      "Property names must never be quoted",
+      "Interface names cannot appear in strings",
+      "JSON does not permit a trailing comma after the final array element"
+    ],
+    "correctAnswerIndex": 3,
+    "explanation": "A trailing comma after the final value is not permitted in standard JSON syntax."
+  },
+  {
+    "id": 986,
+    "domain": "Automation and Programmability",
+    "subtopic": "JSON Data Formats",
+    "difficulty": "Hard",
+    "questionText": "Given {\"interfaces\":[{\"name\":\"Gi0/0\",\"up\":true},{\"name\":\"Gi0/1\",\"up\":false}]}, which interface has up set to false?",
+    "options": [
+      "Both interfaces",
+      "Gi0/1",
+      "Gi0/0",
+      "Neither interface"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "The second interface object contains name Gi0/1 and the Boolean value false for its up property."
+  },
+  {
+    "id": 987,
+    "domain": "Automation and Programmability",
+    "subtopic": "JSON Data Formats",
+    "difficulty": "Hard",
+    "questionText": "A developer adds a // comment inside an API's JSON request body. Why can the request fail validation?",
+    "options": [
+      "IP addresses cannot be represented as JSON strings",
+      "JSON requires every property to be an array",
+      "Standard JSON syntax does not support comments",
+      "JSON never permits nested objects"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "Standard JSON does not permit comments. Explanations must be kept outside the JSON or represented as ordinary string values."
+  },
+  {
+    "id": 988,
+    "domain": "Automation and Programmability",
+    "subtopic": "JSON Data Formats",
+    "difficulty": "Hard",
+    "questionText": "A REST API returns {\"status\":\"ok\",\"count\":3,\"items\":[]}. Which interpretation is correct?",
+    "options": [
+      "status is a string, count is a number, and items is an empty array",
+      "status is a Boolean and count is a string",
+      "items is null and count is an array",
+      "All three property values are numeric"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "The value ok is a string, 3 is a number, and [] represents an empty array."
+  },
+  {
+    "id": 989,
+    "domain": "Automation and Programmability",
+    "subtopic": "Configuration Management",
+    "difficulty": "Easy",
+    "questionText": "What is the main purpose of network configuration management tools?",
+    "options": [
+      "Replace damaged network cables automatically",
+      "Eliminate the need for routing protocols",
+      "Change every switch's physical MAC address",
+      "Deploy and maintain desired configurations across managed systems"
+    ],
+    "correctAnswerIndex": 3,
+    "explanation": "Configuration management tools help apply consistent desired settings and identify differences between intended and actual configurations."
+  },
+  {
+    "id": 990,
+    "domain": "Automation and Programmability",
+    "subtopic": "Configuration Management",
+    "difficulty": "Easy",
+    "questionText": "Which automation tool commonly uses YAML playbooks?",
+    "options": [
+      "Wireshark",
+      "Ansible",
+      "TFTP",
+      "CDP"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Ansible uses YAML playbooks to define automation tasks and configuration workflows."
+  },
+  {
+    "id": 991,
+    "domain": "Automation and Programmability",
+    "subtopic": "Configuration Management",
+    "difficulty": "Medium",
+    "questionText": "Which statement describes how Ansible commonly manages network devices?",
+    "options": [
+      "It requires every router to run a permanent proprietary agent",
+      "It can only operate through Ethernet broadcast frames",
+      "It commonly operates without an installed device agent, using supported connections or APIs",
+      "It cannot automate any Cisco network device"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "Ansible is commonly agentless, connecting to network devices through SSH, supported APIs or other network management mechanisms."
+  },
+  {
+    "id": 992,
+    "domain": "Automation and Programmability",
+    "subtopic": "Configuration Management",
+    "difficulty": "Medium",
+    "questionText": "What is the purpose of an Ansible inventory?",
+    "options": [
+      "Identify managed devices and optionally organize them into groups",
+      "Store only DNS MX records",
+      "List only physical cable lengths",
+      "Replace every device's routing table"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "An Ansible inventory lists automation targets and can define groups and related variables."
+  },
+  {
+    "id": 993,
+    "domain": "Automation and Programmability",
+    "subtopic": "Configuration Management",
+    "difficulty": "Easy",
+    "questionText": "Which structured data format is commonly used to write Ansible playbooks?",
+    "options": [
+      "JPEG",
+      "MP3",
+      "PCAP",
+      "YAML"
+    ],
+    "correctAnswerIndex": 3,
+    "explanation": "Ansible playbooks are generally written in YAML, a human-readable structured data serialization format."
+  },
+  {
+    "id": 994,
+    "domain": "Automation and Programmability",
+    "subtopic": "Configuration Management",
+    "difficulty": "Medium",
+    "questionText": "Which tool is widely used for declarative infrastructure-as-code provisioning?",
+    "options": [
+      "LACP",
+      "Terraform",
+      "LLDP",
+      "Syslog"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Terraform is an infrastructure-as-code tool that describes and manages infrastructure resources using provider integrations."
+  },
+  {
+    "id": 995,
+    "domain": "Automation and Programmability",
+    "subtopic": "Configuration Management",
+    "difficulty": "Medium",
+    "questionText": "What is declarative configuration management?",
+    "options": [
+      "Manually entering each command without recording the desired result",
+      "Disabling network monitoring during every change",
+      "Describing the desired end state and allowing tooling to determine necessary actions",
+      "Configuring network devices only through console ports"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "Declarative configuration focuses on the desired state rather than requiring the user to specify every procedural step."
+  },
+  {
+    "id": 996,
+    "domain": "Automation and Programmability",
+    "subtopic": "Configuration Management",
+    "difficulty": "Hard",
+    "questionText": "An automation tool verifies that VLAN 20 already exists with the intended settings. What should an idempotent configuration task normally report?",
+    "options": [
+      "No change required",
+      "The entire configuration must be erased",
+      "VLAN 20 must be duplicated",
+      "The interface must become a router"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "Idempotent tasks avoid unnecessary modifications when the desired configuration already exists."
+  },
+  {
+    "id": 997,
+    "domain": "Automation and Programmability",
+    "subtopic": "Configuration Management",
+    "difficulty": "Hard",
+    "questionText": "Why is an infrastructure-as-code plan or check mode useful before production deployment?",
+    "options": [
+      "It guarantees no future hardware failure",
+      "It removes all access control requirements",
+      "It immediately applies every unreviewed change",
+      "It helps review proposed changes before they are applied"
+    ],
+    "correctAnswerIndex": 3,
+    "explanation": "A plan or check mode can reveal proposed changes and help identify unintended effects before deployment."
+  },
+  {
+    "id": 998,
+    "domain": "Automation and Programmability",
+    "subtopic": "Configuration Management",
+    "difficulty": "Hard",
+    "questionText": "An organization uses Git for intended network configurations, but engineers sometimes change devices directly through the CLI. What helps detect configuration drift?",
+    "options": [
+      "Ignoring the current device configurations",
+      "Comparing live device state with the version-controlled intended state",
+      "Disabling all configuration backups",
+      "Removing every configuration change record"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Periodic comparison of actual and intended configurations helps identify unauthorized or accidental deviations."
+  },
+  {
+    "id": 999,
+    "domain": "Automation and Programmability",
+    "subtopic": "AI & Machine Learning in Networking",
+    "difficulty": "Easy",
+    "questionText": "What is machine learning?",
+    "options": [
+      "A method of physically rewiring network switches",
+      "An Ethernet frame encapsulation format",
+      "A field in which models learn patterns from data to support predictions or decisions",
+      "A requirement to configure every route manually"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "Machine learning uses data and statistical methods to develop models for pattern recognition, predictions and decisions."
+  },
+  {
+    "id": 1000,
+    "domain": "Automation and Programmability",
+    "subtopic": "AI & Machine Learning in Networking",
+    "difficulty": "Easy",
+    "questionText": "Which is a practical application of machine learning in network operations?",
+    "options": [
+      "Detecting unusual interface traffic patterns",
+      "Replacing damaged fiber cables without hardware",
+      "Removing the requirement for IP addressing",
+      "Changing every Ethernet connector to a wireless antenna"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "Machine learning can analyze telemetry and identify unusual behavior that may indicate a network problem."
+  },
+  {
+    "id": 1001,
+    "domain": "Automation and Programmability",
+    "subtopic": "AI & Machine Learning in Networking",
+    "difficulty": "Medium",
+    "questionText": "What is anomaly detection in network monitoring?",
+    "options": [
+      "Assigning addresses through DHCP",
+      "Manually setting interface duplex modes",
+      "Changing OSPF router IDs",
+      "Identifying behavior that deviates from expected patterns"
+    ],
+    "correctAnswerIndex": 3,
+    "explanation": "Anomaly detection highlights unusual activity such as traffic spikes, error increases or unexpected performance changes."
+  },
+  {
+    "id": 1002,
+    "domain": "Automation and Programmability",
+    "subtopic": "AI & Machine Learning in Networking",
+    "difficulty": "Medium",
+    "questionText": "Which information is most useful when analyzing network performance with AI-assisted tools?",
+    "options": [
+      "The color of router chassis",
+      "Interface counters, telemetry, logs and latency measurements",
+      "The employee cafeteria menu",
+      "Only the names of network administrators"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Operational measurements and events provide data that analytics systems can examine for patterns and potential problems."
+  },
+  {
+    "id": 1003,
+    "domain": "Automation and Programmability",
+    "subtopic": "AI & Machine Learning in Networking",
+    "difficulty": "Medium",
+    "questionText": "How can AI-assisted analytics support network troubleshooting?",
+    "options": [
+      "By guaranteeing that every recommendation is correct",
+      "By eliminating all device maintenance",
+      "By correlating operational data and suggesting possible causes for investigation",
+      "By repairing faulty electrical connectors automatically"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "AI-assisted analytics can process large datasets and suggest potential causes, but engineers should verify the results."
+  },
+  {
+    "id": 1004,
+    "domain": "Automation and Programmability",
+    "subtopic": "AI & Machine Learning in Networking",
+    "difficulty": "Medium",
+    "questionText": "What is a false positive from a network anomaly detection system?",
+    "options": [
+      "Normal activity incorrectly flagged as suspicious",
+      "A genuine attack correctly detected",
+      "A harmful event that remains undetected",
+      "A router successfully installing a connected route"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "A false positive occurs when the system reports a problem even though the observed activity is benign."
+  },
+  {
+    "id": 1005,
+    "domain": "Automation and Programmability",
+    "subtopic": "AI & Machine Learning in Networking",
+    "difficulty": "Medium",
+    "questionText": "What is a false negative in network security monitoring?",
+    "options": [
+      "Normal traffic correctly recognized as normal",
+      "A harmless event wrongly flagged as dangerous",
+      "An accurately reported interface fault",
+      "A real harmful event that the detection system fails to identify"
+    ],
+    "correctAnswerIndex": 3,
+    "explanation": "A false negative means a genuine security or operational issue is missed by the detection system."
+  },
+  {
+    "id": 1006,
+    "domain": "Automation and Programmability",
+    "subtopic": "AI & Machine Learning in Networking",
+    "difficulty": "Hard",
+    "questionText": "Why is high-quality training data important for machine learning models used in network operations?",
+    "options": [
+      "Training data determines the physical Ethernet connector type",
+      "Incomplete or unrepresentative data can lead to unreliable predictions",
+      "Poor data automatically increases link bandwidth",
+      "Network monitoring models never use historical measurements"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Machine learning results depend partly on the relevance, accuracy and representativeness of the data used to develop models."
+  },
+  {
+    "id": 1007,
+    "domain": "Automation and Programmability",
+    "subtopic": "AI & Machine Learning in Networking",
+    "difficulty": "Hard",
+    "questionText": "What is a major risk of automatically applying unverified AI-generated network configuration changes?",
+    "options": [
+      "All AI-generated configurations are guaranteed correct",
+      "AI tools cannot produce router configuration commands",
+      "Incorrect recommendations may cause outages or security problems",
+      "Network policies become unnecessary"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "AI-generated changes may contain mistakes or assumptions, so testing, approval and recovery plans remain necessary."
+  },
+  {
+    "id": 1008,
+    "domain": "Automation and Programmability",
+    "subtopic": "AI & Machine Learning in Networking",
+    "difficulty": "Hard",
+    "questionText": "Which workflow best combines AI-assisted network operations with safe change management?",
+    "options": [
+      "Use AI to identify potential issues, validate proposed changes, and deploy through controlled procedures",
+      "Apply every AI suggestion immediately across production devices",
+      "Disable all security logs after generating a recommendation",
+      "Allow unauthenticated users to approve network changes"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "AI can support analysis, but reliable operations still require review, validation, controlled deployment and rollback planning."
+  }
+]

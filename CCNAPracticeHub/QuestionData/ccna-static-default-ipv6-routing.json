@@ -1,0 +1,1052 @@
+[
+  {
+    "id": 484,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Easy",
+    "questionText": "What is a static route?",
+    "options": [ "A route entered manually by an administrator", "A route learned only through OSPF", "A route assigned by a DNS server", "A route created by Ethernet auto-negotiation" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A static route is configured manually rather than learned through a dynamic routing protocol."
+  },
+  {
+    "id": 485,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Easy",
+    "questionText": "Which Cisco IOS command configures an IPv4 static route?",
+    "options": [ "ipv6 route", "ip route", "router ospf", "ip default-gateway" ],
+    "correctAnswerIndex": 1,
+    "explanation": "The ip route global configuration command creates an IPv4 static route."
+  },
+  {
+    "id": 486,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Easy",
+    "questionText": "What is the default administrative distance of a conventional IPv4 static route on Cisco IOS?",
+    "options": [ "0", "1", "90", "110" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Static routes have a default administrative distance of 1 unless explicitly configured otherwise."
+  },
+  {
+    "id": 487,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Medium",
+    "questionText": "Which command routes traffic to 192.168.40.0/24 through next hop 10.1.1.2?",
+    "options": [ "ip route 192.168.40.0 255.255.255.0 10.1.1.2", "ip route 10.1.1.2 255.255.255.0 192.168.40.0", "ipv6 route 192.168.40.0/24 10.1.1.2", "ip default-gateway 192.168.40.0" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The IPv4 static route syntax specifies the destination network, subnet mask and next-hop address."
+  },
+  {
+    "id": 488,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Medium",
+    "questionText": "In the command 'ip route 172.16.20.0 255.255.255.0 10.0.0.2', what does 10.0.0.2 represent?",
+    "options": [ "The destination network", "The subnet mask", "The next-hop router address", "The local DNS server" ],
+    "correctAnswerIndex": 2,
+    "explanation": "10.0.0.2 identifies the next-hop router to which packets matching 172.16.20.0/24 are forwarded."
+  },
+  {
+    "id": 489,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Medium",
+    "questionText": "Which static route directs packets for 10.50.0.0/16 through GigabitEthernet0/1?",
+    "options": [ "ip route 10.50.0.0 255.255.0.0 GigabitEthernet0/1", "ip route 10.50.0.0 255.0.0.0 GigabitEthernet0/1", "ip route GigabitEthernet0/1 10.50.0.0", "switchport access vlan 50" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The first command supplies the correct /16 mask and outgoing interface."
+  },
+  {
+    "id": 490,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Medium",
+    "questionText": "What is a fully specified IPv4 static route?",
+    "options": [ "A route containing only an administrative distance", "A route specifying both the exit interface and next-hop IP address", "A route learned from two routing protocols", "A route with no destination prefix" ],
+    "correctAnswerIndex": 1,
+    "explanation": "A fully specified static route names both the outgoing interface and next-hop IP address."
+  },
+  {
+    "id": 491,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Hard",
+    "questionText": "Which command creates a fully specified static route to 10.20.30.0/24 through next hop 192.0.2.2 on GigabitEthernet0/0?",
+    "options": [ "ip route 10.20.30.0 255.255.255.0 GigabitEthernet0/0 192.0.2.2", "ip route 10.20.30.0 255.255.0.0 192.0.2.2", "ip route 192.0.2.2 255.255.255.0 GigabitEthernet0/0", "ip route 10.20.30.0 GigabitEthernet0/0" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The command supplies destination 10.20.30.0/24, exit interface GigabitEthernet0/0 and next hop 192.0.2.2."
+  },
+  {
+    "id": 492,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Easy",
+    "questionText": "Which code normally identifies an installed IPv4 static route in 'show ip route'?",
+    "options": [ "C", "L", "S", "O" ],
+    "correctAnswerIndex": 2,
+    "explanation": "S identifies a static route in Cisco IOS routing table output."
+  },
+  {
+    "id": 493,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Medium",
+    "questionText": "What must be true for a next-hop-only static route to be usable?",
+    "options": [ "The router must have a valid way to resolve and reach the next hop", "The router must disable all connected routes", "The next hop must be a DNS name", "The destination must be in VLAN 1" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The router must resolve the configured next-hop IP address to a usable outgoing path."
+  },
+  {
+    "id": 494,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Medium",
+    "questionText": "What is recursive next-hop resolution?",
+    "options": [ "Looking up the next-hop address to determine a usable exit interface", "Sending each packet back to the source", "Learning a route using CDP", "Replacing the destination prefix with a MAC address" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Recursive resolution uses routing information for the next-hop IP address to determine how packets can be forwarded."
+  },
+  {
+    "id": 495,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Hard",
+    "questionText": "Why can an exit-interface-only IPv4 static route cause excessive ARP activity on a multipoint Ethernet network?",
+    "options": [ "The router may attempt to resolve destination addresses as if they are directly reachable", "ARP is disabled on all Ethernet interfaces", "Static routing automatically enables OSPF", "The router converts every packet to multicast" ],
+    "correctAnswerIndex": 0,
+    "explanation": "On multipoint Ethernet, an exit-interface-only static route can cause ARP requests for individual destination IP addresses. A next-hop or fully specified route is generally preferable."
+  },
+  {
+    "id": 496,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Medium",
+    "questionText": "Which command removes this static route: 'ip route 192.168.60.0 255.255.255.0 10.1.1.2'?",
+    "options": [ "delete ip route 192.168.60.0", "no ip route 192.168.60.0 255.255.255.0 10.1.1.2", "shutdown 192.168.60.0", "clear ip route all" ],
+    "correctAnswerIndex": 1,
+    "explanation": "The no form of the matching ip route command removes that configured static route."
+  },
+  {
+    "id": 497,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS command displays installed IPv4 static routes?",
+    "options": [ "show ip route static", "show interfaces trunk", "show vlan brief", "show cdp neighbors" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The show ip route static command filters the IPv4 routing table to installed static routes."
+  },
+  {
+    "id": 498,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Medium",
+    "questionText": "What is a floating static route commonly used for?",
+    "options": [ "Providing a backup path when a preferred route fails", "Assigning VLAN tags", "Replacing all IP subnet masks", "Broadcasting OSPF hello packets" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A floating static route uses an administrative distance higher than the primary route so it normally becomes active only when the preferred route disappears."
+  },
+  {
+    "id": 499,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Hard",
+    "questionText": "An OSPF route has administrative distance 110. Which configured static route distance would make a static route to the same prefix a backup?",
+    "options": [ "1", "50", "100", "200" ],
+    "correctAnswerIndex": 3,
+    "explanation": "A floating static route must have a higher administrative distance than the preferred OSPF route. Distance 200 is higher than 110."
+  },
+  {
+    "id": 500,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Hard",
+    "questionText": "Which command creates a floating static route to 192.168.80.0/24 through 10.0.0.2 with administrative distance 200?",
+    "options": [ "ip route 192.168.80.0 255.255.255.0 10.0.0.2 200", "ip route 192.168.80.0 255.255.255.0 200 10.0.0.2", "ip route 192.168.80.0 255.255.255.0 10.0.0.2 1", "router ospf 200" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The optional administrative distance appears after the next-hop address in this form of the ip route command."
+  },
+  {
+    "id": 501,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Hard",
+    "questionText": "A router has a static route to 10.40.0.0/16 with distance 1 and an OSPF route to the same prefix with distance 110. Both are valid. Which route is preferred?",
+    "options": [ "The static route", "The OSPF route", "The route with the larger metric regardless of protocol", "Both routes must be installed equally" ],
+    "correctAnswerIndex": 0,
+    "explanation": "For competing routes to the same prefix, the lower administrative distance normally wins, so distance 1 is preferred."
+  },
+  {
+    "id": 502,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Hard",
+    "questionText": "A static route to 10.10.0.0/16 uses distance 200, and an OSPF route to the same prefix uses distance 110. Both are usable. Which route is normally installed?",
+    "options": [ "The floating static route", "The OSPF route", "Neither route", "Only a default route" ],
+    "correctAnswerIndex": 1,
+    "explanation": "OSPF's distance of 110 is lower than 200, making it the preferred route."
+  },
+  {
+    "id": 503,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Medium",
+    "questionText": "Which static route prefix represents a single IPv4 destination host?",
+    "options": [ "/16", "/24", "/30", "/32" ],
+    "correctAnswerIndex": 3,
+    "explanation": "An IPv4 /32 prefix identifies exactly one IPv4 address."
+  },
+  {
+    "id": 504,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Hard",
+    "questionText": "Which command routes traffic for host 192.168.5.10 specifically through next hop 10.1.1.2?",
+    "options": [ "ip route 192.168.5.10 255.255.255.255 10.1.1.2", "ip route 192.168.5.0 255.255.255.0 10.1.1.2", "ip route 192.168.5.10 255.255.0.0 10.1.1.2", "ip route 0.0.0.0 0.0.0.0 10.1.1.2" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Mask 255.255.255.255 creates a /32 host route for 192.168.5.10 only."
+  },
+  {
+    "id": 505,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Medium",
+    "questionText": "What is a summary static route?",
+    "options": [ "A route representing multiple smaller destination networks using one aggregate prefix", "A route with no subnet mask", "A route learned exclusively through BGP", "A route used only for switch management" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A summary route aggregates multiple contiguous address ranges into a broader destination prefix."
+  },
+  {
+    "id": 506,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Hard",
+    "questionText": "Which single summary prefix exactly covers 192.168.8.0/24 and 192.168.9.0/24?",
+    "options": [ "192.168.8.0/23", "192.168.8.0/25", "192.168.9.0/23", "192.168.8.0/22" ],
+    "correctAnswerIndex": 0,
+    "explanation": "192.168.8.0/23 spans 192.168.8.0 through 192.168.9.255 and exactly combines the two /24 networks."
+  },
+  {
+    "id": 507,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Hard",
+    "questionText": "Which prefix exactly summarizes 10.4.0.0/16, 10.5.0.0/16, 10.6.0.0/16 and 10.7.0.0/16?",
+    "options": [ "10.4.0.0/14", "10.4.0.0/15", "10.0.0.0/14", "10.6.0.0/14" ],
+    "correctAnswerIndex": 0,
+    "explanation": "10.4.0.0/14 covers second-octet values 4–7, exactly encompassing the four contiguous /16 networks."
+  },
+  {
+    "id": 508,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Hard",
+    "questionText": "Which summary prefix exactly covers 172.16.32.0/24 through 172.16.35.0/24?",
+    "options": [ "172.16.32.0/22", "172.16.32.0/23", "172.16.32.0/21", "172.16.34.0/22" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A /22 beginning at third octet 32 covers third octets 32, 33, 34 and 35."
+  },
+  {
+    "id": 509,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Medium",
+    "questionText": "Why can route summarization be useful?",
+    "options": [ "It can reduce the number of routing table entries", "It guarantees every host receives DHCP", "It removes all physical network loops", "It assigns a different MAC address to every packet" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Summarization represents multiple networks with fewer routing entries when the topology and addressing allow it."
+  },
+  {
+    "id": 510,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Hard",
+    "questionText": "A router has static routes 192.168.10.0/24 via A and 192.168.10.128/25 via B. Which next hop is selected for 192.168.10.200?",
+    "options": [ "A", "B", "Both are always selected", "Neither route matches" ],
+    "correctAnswerIndex": 1,
+    "explanation": "The /25 route via B is the longest matching prefix for address .200."
+  },
+  {
+    "id": 511,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Hard",
+    "questionText": "A router has static routes 10.0.0.0/8 via A and 10.20.0.0/16 via B. Which next hop is used for 10.30.1.1?",
+    "options": [ "A", "B", "Both", "Neither" ],
+    "correctAnswerIndex": 0,
+    "explanation": "10.30.1.1 matches 10.0.0.0/8 but not 10.20.0.0/16, so A is selected."
+  },
+  {
+    "id": 512,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Medium",
+    "questionText": "Which command lists configured IPv4 static route statements in the running configuration?",
+    "options": [ "show running-config | include ^ip route", "show ip arp", "show interfaces switchport", "show vlan brief" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The pipe include expression filters the running configuration for lines beginning with 'ip route'."
+  },
+  {
+    "id": 513,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Hard",
+    "questionText": "A manually configured static route is present in the running configuration but absent from the routing table. What is a plausible explanation?",
+    "options": [ "Its next hop cannot be resolved or another route to the same prefix is preferred", "Static routes never appear in routing tables", "The console baud rate is wrong", "The router has too many DNS records" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A configured static route can remain uninstalled if its next hop is unresolved or a more preferred competing route exists."
+  },
+  {
+    "id": 514,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Medium",
+    "questionText": "What should an administrator verify after configuring a static route to a remote subnet?",
+    "options": [ "That the route is installed and the destination is reachable through the intended path", "That every client uses the same MAC address", "That all trunks use VLAN 1", "That the DNS server forwards Ethernet frames" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Routing table inspection and reachability testing help confirm the route and surrounding network configuration."
+  },
+  {
+    "id": 515,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Hard",
+    "questionText": "Router A has a static route to Router B's LAN, but replies from that LAN never return to Router A's LAN. What should be checked?",
+    "options": [ "A return route on Router B or the downstream routing path", "The router's console history size only", "The VLAN name spelling only", "The Ethernet cable jacket color" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Bidirectional communication requires a valid return routing path. A correct forward static route alone does not guarantee replies can return."
+  },
+  {
+    "id": 516,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Hard",
+    "questionText": "Router A connects to Router B over 192.0.2.0/30. Router A is 192.0.2.1 and Router B is 192.0.2.2. Which next hop should Router A use to reach a LAN behind B?",
+    "options": [ "192.0.2.0", "192.0.2.1", "192.0.2.2", "192.0.2.3" ],
+    "correctAnswerIndex": 2,
+    "explanation": "192.0.2.2 is Router B's directly connected interface address and is a usable next hop."
+  },
+  {
+    "id": 517,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Hard",
+    "questionText": "A static route uses next hop 192.0.2.6. Which /30 subnet contains this next hop?",
+    "options": [ "192.0.2.0/30", "192.0.2.4/30", "192.0.2.8/30", "192.0.2.12/30" ],
+    "correctAnswerIndex": 1,
+    "explanation": "A /30 uses four-address blocks. Address .6 is within the block .4–.7."
+  },
+  {
+    "id": 518,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Medium",
+    "questionText": "What does specifying an administrative distance of 150 on an IPv4 static route accomplish?",
+    "options": [ "Makes it less preferred than a valid OSPF route to the same prefix with distance 110", "Changes the destination to a /15", "Forces the link speed to 150 Mbps", "Enables OSPF area 150" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A static route with distance 150 is less preferred than a valid same-prefix OSPF route with administrative distance 110."
+  },
+  {
+    "id": 519,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Hard",
+    "questionText": "A floating static route remains installed after the primary WAN link fails, but traffic still cannot reach the remote network. Which issue is plausible?",
+    "options": [ "The backup next hop lacks a working return path", "The floating route must always use distance 0", "Static routing cannot use backup WAN links", "A VLAN name exceeds four characters" ],
+    "correctAnswerIndex": 0,
+    "explanation": "An installed backup route can still fail to provide connectivity if its next hop, downstream path or return route is not operational."
+  },
+  {
+    "id": 520,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Medium",
+    "questionText": "Which routing arrangement is most suitable for a small stub network with a single reachable upstream router and stable addressing?",
+    "options": [ "A manually configured static route", "A new wireless SSID", "A trunk native VLAN change", "An Ethernet crossover cable" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Static routes are often practical for small, stable networks with simple and predictable routing requirements."
+  },
+  {
+    "id": 521,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Medium",
+    "questionText": "What is a limitation of static routing in a large network with frequent topology changes?",
+    "options": [ "Changes generally require manual updates or an external automation system", "It cannot carry IPv4 packets", "It supports no next-hop addresses", "It automatically removes every VLAN" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Static routes do not dynamically discover arbitrary topology changes the way routing protocols do."
+  },
+  {
+    "id": 522,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Hard",
+    "questionText": "A static route for 192.168.64.0/18 is configured. Which destination falls within its range?",
+    "options": [ "192.168.63.255", "192.168.100.10", "192.168.128.1", "192.169.64.1" ],
+    "correctAnswerIndex": 1,
+    "explanation": "A /18 beginning at third octet 64 covers third octets 64–127, including 100."
+  },
+  {
+    "id": 523,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Hard",
+    "questionText": "Which mask should be supplied when creating a static route for destination network 10.24.0.0/13?",
+    "options": [ "255.248.0.0", "255.240.0.0", "255.252.0.0", "255.255.0.0" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A /13 prefix uses eight network bits in the first octet and five in the second, giving mask 255.248.0.0."
+  },
+  {
+    "id": 524,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Hard",
+    "questionText": "A static route to 10.64.0.0/10 is installed. Which destination matches it?",
+    "options": [ "10.63.255.255", "10.100.5.5", "10.128.1.1", "11.100.5.5" ],
+    "correctAnswerIndex": 1,
+    "explanation": "10.64.0.0/10 covers second-octet values 64 through 127, including 100."
+  },
+  {
+    "id": 525,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Medium",
+    "questionText": "Which command can help determine the sequence of router hops taken toward a remote IPv4 host?",
+    "options": [ "traceroute", "show vlan brief", "show lldp neighbors", "show interfaces switchport" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The traceroute command investigates the sequence of Layer 3 hops toward a destination."
+  },
+  {
+    "id": 526,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Hard",
+    "questionText": "A router has a static route to 172.16.0.0/16 through A and a static route to 172.16.20.0/24 through B. Which route forwards traffic to 172.16.20.50?",
+    "options": [ "The /16 route through A", "The /24 route through B", "Both routes always equally", "Neither route" ],
+    "correctAnswerIndex": 1,
+    "explanation": "The /24 is a more specific installed match for 172.16.20.50."
+  },
+  {
+    "id": 527,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Hard",
+    "questionText": "A network has two static routes to the same destination /24, both with distance 1 and usable equal-cost next hops. What can a supported Cisco router do?",
+    "options": [ "Install both as equal-cost paths", "Always remove both routes", "Automatically convert them to OSPF", "Merge their destination prefixes into /23" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A router may install multiple equal-cost static paths to the same destination, subject to its multipath limits and configuration."
+  },
+  {
+    "id": 528,
+    "domain": "IP Connectivity",
+    "subtopic": "Static Routing",
+    "difficulty": "Hard",
+    "questionText": "A new static route is correct and installed, but an outbound ACL blocks the matching packets. What is the outcome?",
+    "options": [ "The ACL can prevent forwarding despite the installed route", "The static route automatically deletes the ACL", "The router must forward traffic regardless of policy", "The packets automatically change to a different VLAN" ],
+    "correctAnswerIndex": 0,
+    "explanation": "An installed route identifies the forwarding path, but ACLs and other policy checks may still deny traffic."
+  },
+  {
+    "id": 529,
+    "domain": "IP Connectivity",
+    "subtopic": "Default Routing",
+    "difficulty": "Easy",
+    "questionText": "Which IPv4 prefix represents a default route?",
+    "options": [ "0.0.0.0/0", "127.0.0.0/8", "192.168.0.0/16", "255.255.255.255/32" ],
+    "correctAnswerIndex": 0,
+    "explanation": "0.0.0.0/0 matches all IPv4 destinations and is used when no more specific installed route applies."
+  },
+  {
+    "id": 530,
+    "domain": "IP Connectivity",
+    "subtopic": "Default Routing",
+    "difficulty": "Easy",
+    "questionText": "What is the primary purpose of a default route?",
+    "options": [ "Provide a forwarding path when no more specific route matches", "Assign the router's MAC address", "Create a VLAN", "Replace every connected route" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The default route is a gateway of last resort for destinations not covered by more specific routing entries."
+  },
+  {
+    "id": 531,
+    "domain": "IP Connectivity",
+    "subtopic": "Default Routing",
+    "difficulty": "Easy",
+    "questionText": "Which Cisco IOS command configures an IPv4 default route through 192.0.2.1?",
+    "options": [ "ip route 0.0.0.0 0.0.0.0 192.0.2.1", "ip route 255.255.255.255 255.255.255.255 192.0.2.1", "ip default-gateway 0.0.0.0", "ipv6 route ::/0 192.0.2.1" ],
+    "correctAnswerIndex": 0,
+    "explanation": "An IPv4 static default route uses destination 0.0.0.0 with mask 0.0.0.0 and a valid next hop."
+  },
+  {
+    "id": 532,
+    "domain": "IP Connectivity",
+    "subtopic": "Default Routing",
+    "difficulty": "Easy",
+    "questionText": "Which Cisco IPv4 routing table code commonly identifies a static candidate default route?",
+    "options": [ "S*", "L", "C", "O IA" ],
+    "correctAnswerIndex": 0,
+    "explanation": "S* identifies a static route that is a candidate default route."
+  },
+  {
+    "id": 533,
+    "domain": "IP Connectivity",
+    "subtopic": "Default Routing",
+    "difficulty": "Medium",
+    "questionText": "What does 'Gateway of last resort is not set' mean?",
+    "options": [ "No default route is currently established in the IPv4 routing table", "No switch ports are active", "DNS is disabled on the router", "The router has no MAC address" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The message means the router has no established gateway of last resort."
+  },
+  {
+    "id": 534,
+    "domain": "IP Connectivity",
+    "subtopic": "Default Routing",
+    "difficulty": "Medium",
+    "questionText": "A router has routes 10.0.0.0/8 via A and 0.0.0.0/0 via B. Which next hop is selected for 10.20.30.40?",
+    "options": [ "A", "B", "Both always", "Neither" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The /8 route matches 10.20.30.40 more specifically than the default /0 route."
+  },
+  {
+    "id": 535,
+    "domain": "IP Connectivity",
+    "subtopic": "Default Routing",
+    "difficulty": "Medium",
+    "questionText": "A router has 192.168.1.0/24 via A and 0.0.0.0/0 via B. Which next hop handles 203.0.113.10?",
+    "options": [ "A", "B", "Both must be used", "The local loopback interface" ],
+    "correctAnswerIndex": 1,
+    "explanation": "The destination does not match the /24, so the installed default route via B is selected."
+  },
+  {
+    "id": 536,
+    "domain": "IP Connectivity",
+    "subtopic": "Default Routing",
+    "difficulty": "Medium",
+    "questionText": "Which destination will use a default route when the only other installed route is 172.16.0.0/16?",
+    "options": [ "172.16.1.5", "172.16.200.1", "172.17.1.5", "172.16.255.1" ],
+    "correctAnswerIndex": 2,
+    "explanation": "172.17.1.5 is outside 172.16.0.0/16 and therefore uses the default route."
+  },
+  {
+    "id": 537,
+    "domain": "IP Connectivity",
+    "subtopic": "Default Routing",
+    "difficulty": "Medium",
+    "questionText": "Why is a default route useful for a small branch router with one Internet-facing upstream connection?",
+    "options": [ "It provides one general path for otherwise unknown destinations", "It removes the need for all local routes", "It replaces Ethernet addressing", "It guarantees Internet access even when the upstream link fails" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A default route can send unknown destinations toward the branch's upstream router without requiring a route to every remote network."
+  },
+  {
+    "id": 538,
+    "domain": "IP Connectivity",
+    "subtopic": "Default Routing",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS command shows the installed IPv4 default route along with other routing entries?",
+    "options": [ "show ip route", "show interfaces trunk", "show vlan brief", "show cdp traffic" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The show ip route output includes an installed default route and the gateway of last resort when one exists."
+  },
+  {
+    "id": 539,
+    "domain": "IP Connectivity",
+    "subtopic": "Default Routing",
+    "difficulty": "Hard",
+    "questionText": "A static default route has distance 1 and an OSPF-learned default route has distance 110. Both next hops are valid. Which is normally preferred?",
+    "options": [ "The static default route", "The OSPF default route", "Both must always forward equally", "Neither can be used" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Both routes match the same /0 prefix, so administrative distance determines preference; distance 1 wins."
+  },
+  {
+    "id": 540,
+    "domain": "IP Connectivity",
+    "subtopic": "Default Routing",
+    "difficulty": "Hard",
+    "questionText": "A backup static default route must be less preferred than an OSPF default route with distance 110. Which distance is suitable?",
+    "options": [ "1", "50", "100", "200" ],
+    "correctAnswerIndex": 3,
+    "explanation": "Administrative distance 200 makes the backup static default less preferred than OSPF's distance 110."
+  },
+  {
+    "id": 541,
+    "domain": "IP Connectivity",
+    "subtopic": "Default Routing",
+    "difficulty": "Hard",
+    "questionText": "Which command configures a floating IPv4 default route via 198.51.100.1 with administrative distance 200?",
+    "options": [ "ip route 0.0.0.0 0.0.0.0 198.51.100.1 200", "ip route 200.0.0.0 0.0.0.0 198.51.100.1", "ip route 0.0.0.0 255.255.255.255 198.51.100.1 200", "ip default-gateway 198.51.100.1 200" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The route uses the default destination and mask, followed by the next-hop address and optional administrative distance."
+  },
+  {
+    "id": 542,
+    "domain": "IP Connectivity",
+    "subtopic": "Default Routing",
+    "difficulty": "Medium",
+    "questionText": "What does an IPv4 router normally do if a packet matches neither a specific route nor a default route?",
+    "options": [ "Drop it and potentially send an ICMP unreachable message", "Send it to every VLAN", "Create a DNS entry", "Automatically install a new static route" ],
+    "correctAnswerIndex": 0,
+    "explanation": "With no usable routing entry, the router cannot forward the packet and normally discards it."
+  },
+  {
+    "id": 543,
+    "domain": "IP Connectivity",
+    "subtopic": "Default Routing",
+    "difficulty": "Hard",
+    "questionText": "A router has 0.0.0.0/0 via A and 203.0.113.0/24 via B. The packet destination is 203.0.113.200. Which next hop is selected?",
+    "options": [ "A", "B", "Both always", "Neither" ],
+    "correctAnswerIndex": 1,
+    "explanation": "The /24 route is more specific than /0 and is chosen for destinations within 203.0.113.0/24."
+  },
+  {
+    "id": 544,
+    "domain": "IP Connectivity",
+    "subtopic": "Default Routing",
+    "difficulty": "Hard",
+    "questionText": "A router has a default route through an upstream ISP router, but the ISP connection fails while the local Ethernet interface remains up. What limitation should be considered?",
+    "options": [ "A basic static route may remain installed without detecting remote upstream failure", "Static routes automatically test every Internet server", "The default route always changes into OSPF", "Ethernet interfaces cannot carry default-route traffic" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A simple static route can remain installed while a more distant failure makes its path unusable; tracking or other failover mechanisms may be needed."
+  },
+  {
+    "id": 545,
+    "domain": "IP Connectivity",
+    "subtopic": "Default Routing",
+    "difficulty": "Hard",
+    "questionText": "Which additional feature can help withdraw a static default route when a monitored remote target becomes unreachable?",
+    "options": [ "IP SLA with object tracking on supported Cisco platforms", "A longer console cable", "CDP device naming", "An additional SSID" ],
+    "correctAnswerIndex": 0,
+    "explanation": "IP SLA and tracking can monitor reachability and conditionally control installation of a static route."
+  },
+  {
+    "id": 546,
+    "domain": "IP Connectivity",
+    "subtopic": "Default Routing",
+    "difficulty": "Medium",
+    "questionText": "How does a default route differ from a host route?",
+    "options": [ "A default /0 matches any destination, whereas an IPv4 host /32 matches one address", "Both always match exactly one host", "A host route matches every Internet address", "The default route must have prefix /32" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A default /0 provides the broadest possible match; a /32 host route is maximally specific."
+  },
+  {
+    "id": 547,
+    "domain": "IP Connectivity",
+    "subtopic": "Default Routing",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS command removes a static default route previously configured through 192.0.2.254?",
+    "options": [ "no ip route 0.0.0.0 0.0.0.0 192.0.2.254", "delete gateway 192.0.2.254", "no ip routing 192.0.2.254", "clear default gateway all" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The no form of the exact static route statement removes that configured default route."
+  },
+  {
+    "id": 548,
+    "domain": "IP Connectivity",
+    "subtopic": "Default Routing",
+    "difficulty": "Medium",
+    "questionText": "Which configuration is typically used by a Layer 2 Cisco switch with IPv4 management enabled but IP routing disabled to reach remote management networks?",
+    "options": [ "ip default-gateway with a reachable next-hop address", "router ospf on every access port", "switchport trunk native vlan 1", "channel-group mode active" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A Layer 2 switch without IP routing commonly uses ip default-gateway to send its own management traffic toward remote subnets."
+  },
+  {
+    "id": 549,
+    "domain": "IP Connectivity",
+    "subtopic": "Default Routing",
+    "difficulty": "Hard",
+    "questionText": "A routed Cisco device has 'ip routing' enabled. Which configuration is normally used for its IPv4 gateway of last resort?",
+    "options": [ "An installed 0.0.0.0/0 route", "Only the ip default-gateway command", "An Ethernet access VLAN name", "The switch console's default baud rate" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A router or Layer 3 switch uses its IPv4 routing table, including an installed default route if needed."
+  },
+  {
+    "id": 550,
+    "domain": "IP Connectivity",
+    "subtopic": "Default Routing",
+    "difficulty": "Hard",
+    "questionText": "A router has default route 0.0.0.0/0 with administrative distance 200 and a learned OSPF default with distance 110. When OSPF withdraws its route, what can happen if the static next hop is valid?",
+    "options": [ "The floating static default can become active", "All connected routes must disappear", "The router stops supporting IPv4", "The default route is permanently deleted from configuration" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A valid backup default with higher administrative distance can become installed when the more preferred route is removed."
+  },
+  {
+    "id": 551,
+    "domain": "IP Connectivity",
+    "subtopic": "Default Routing",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS command can show a configured next-hop default route when it is installed?",
+    "options": [ "show ip route 0.0.0.0", "show vlan brief", "show mac address-table", "show interfaces switchport" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A lookup for 0.0.0.0 in the IPv4 routing table can display the installed default route."
+  },
+  {
+    "id": 552,
+    "domain": "IP Connectivity",
+    "subtopic": "Default Routing",
+    "difficulty": "Hard",
+    "questionText": "A router has 10.0.0.0/8 via A, 10.10.10.0/24 via B and 0.0.0.0/0 via C. Which next hop handles 10.10.20.1?",
+    "options": [ "A", "B", "C", "No route" ],
+    "correctAnswerIndex": 0,
+    "explanation": "10.10.20.1 matches 10.0.0.0/8 but not 10.10.10.0/24. The /8 beats the default /0."
+  },
+  {
+    "id": 553,
+    "domain": "IP Connectivity",
+    "subtopic": "Default Routing",
+    "difficulty": "Hard",
+    "questionText": "A router has 10.0.0.0/8 via A, 10.10.10.0/24 via B and 0.0.0.0/0 via C. Which next hop handles 172.16.1.1?",
+    "options": [ "A", "B", "C", "The local loopback" ],
+    "correctAnswerIndex": 2,
+    "explanation": "172.16.1.1 matches neither specific route and therefore uses the installed default via C."
+  },
+  {
+    "id": 554,
+    "domain": "IP Connectivity",
+    "subtopic": "Default Routing",
+    "difficulty": "Medium",
+    "questionText": "Why is the term 'gateway of last resort' used?",
+    "options": [ "It is the route selected when no more specific destination route applies", "It is the router with the highest MAC address", "It is a required OSPF neighbor", "It is the final Ethernet switch in every network" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The gateway of last resort is the path used for destinations not covered by a more specific installed route."
+  },
+  {
+    "id": 555,
+    "domain": "IP Connectivity",
+    "subtopic": "Default Routing",
+    "difficulty": "Hard",
+    "questionText": "A router has two valid static default routes with different administrative distances, 1 and 250. Which normally enters the routing table first?",
+    "options": [ "The route with distance 1", "The route with distance 250", "Both because larger values are preferred", "Neither because /0 routes cannot be static" ],
+    "correctAnswerIndex": 0,
+    "explanation": "With the same default /0 prefix, the lower administrative distance is preferred."
+  },
+  {
+    "id": 556,
+    "domain": "IP Connectivity",
+    "subtopic": "Default Routing",
+    "difficulty": "Medium",
+    "questionText": "What must normally be true about a default route's next hop?",
+    "options": [ "It must be reachable through a valid forwarding path", "It must be an IPv4 multicast address", "It must be identical to the router's loopback address", "It must belong to VLAN 1" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The router needs a usable path to the default next hop for the default route to forward traffic."
+  },
+  {
+    "id": 557,
+    "domain": "IP Connectivity",
+    "subtopic": "Default Routing",
+    "difficulty": "Hard",
+    "questionText": "Two edge routers exchange a route for 0.0.0.0/0 through a routing protocol. What is the significance of the advertised prefix?",
+    "options": [ "It offers a default path for destinations without more specific matches", "It advertises only the loopback network", "It means all routes are directly connected", "It disables the receiving router's routing table" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The /0 advertisement allows a receiving router to learn a default route, subject to protocol configuration and route selection."
+  },
+  {
+    "id": 558,
+    "domain": "IP Connectivity",
+    "subtopic": "Default Routing",
+    "difficulty": "Hard",
+    "questionText": "A default route is installed and the first upstream router responds to ping, but a remote application cannot be reached. What should be investigated next?",
+    "options": [ "The downstream forwarding path, return path and applicable filtering", "Only the switch's VLAN display name", "Only the hostname letter case", "The console cable's connector color" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A valid default route does not guarantee end-to-end connectivity. Remote routing, return paths and security policies can still affect traffic."
+  },
+  {
+    "id": 559,
+    "domain": "IP Connectivity",
+    "subtopic": "IPv6 Routing",
+    "difficulty": "Easy",
+    "questionText": "Which command displays the IPv6 routing table on Cisco IOS?",
+    "options": [ "show ipv6 route", "show ip route", "show arp", "show vlan brief" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The show ipv6 route command displays installed IPv6 routes."
+  },
+  {
+    "id": 560,
+    "domain": "IP Connectivity",
+    "subtopic": "IPv6 Routing",
+    "difficulty": "Easy",
+    "questionText": "Which Cisco IOS global command enables IPv6 unicast routing on a supported router?",
+    "options": [ "ipv6 unicast-routing", "ip default-gateway", "ipv6 enable", "ip helper-address" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The ipv6 unicast-routing command enables IPv6 unicast packet forwarding on supported Cisco IOS devices."
+  },
+  {
+    "id": 561,
+    "domain": "IP Connectivity",
+    "subtopic": "IPv6 Routing",
+    "difficulty": "Easy",
+    "questionText": "Which prefix represents the IPv6 default route?",
+    "options": [ "::/0", "::1/128", "FE80::/10", "FF00::/8" ],
+    "correctAnswerIndex": 0,
+    "explanation": "::/0 is the IPv6 default destination prefix."
+  },
+  {
+    "id": 562,
+    "domain": "IP Connectivity",
+    "subtopic": "IPv6 Routing",
+    "difficulty": "Easy",
+    "questionText": "Which Cisco IOS command configures an IPv6 static route?",
+    "options": [ "ip route", "ipv6 route", "router rip", "switchport access vlan" ],
+    "correctAnswerIndex": 1,
+    "explanation": "The ipv6 route command configures a static IPv6 route."
+  },
+  {
+    "id": 563,
+    "domain": "IP Connectivity",
+    "subtopic": "IPv6 Routing",
+    "difficulty": "Medium",
+    "questionText": "Which command creates a static IPv6 route to 2001:DB8:20::/64 through next hop 2001:DB8:1::2?",
+    "options": [ "ipv6 route 2001:DB8:20::/64 2001:DB8:1::2", "ip route 2001:DB8:20::/64 2001:DB8:1::2", "ipv6 route 2001:DB8:1::2 2001:DB8:20::/64", "ipv6 address 2001:DB8:20::/64 2001:DB8:1::2" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The IPv6 static route syntax supplies the destination IPv6 prefix followed by a next-hop IPv6 address or supported outgoing interface."
+  },
+  {
+    "id": 564,
+    "domain": "IP Connectivity",
+    "subtopic": "IPv6 Routing",
+    "difficulty": "Medium",
+    "questionText": "Which command creates an IPv6 default route through global unicast next hop 2001:DB8:1::1?",
+    "options": [ "ipv6 route ::/0 2001:DB8:1::1", "ip route 0.0.0.0 0.0.0.0 2001:DB8:1::1", "ipv6 route ::1/128 2001:DB8:1::1", "ipv6 enable 2001:DB8:1::1" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The IPv6 default destination is ::/0 and can be configured with a valid global unicast next-hop address."
+  },
+  {
+    "id": 565,
+    "domain": "IP Connectivity",
+    "subtopic": "IPv6 Routing",
+    "difficulty": "Medium",
+    "questionText": "Why must an outgoing interface normally be specified for a Cisco IPv6 static route whose next hop is a link-local address?",
+    "options": [ "Link-local addresses are only meaningful on a particular link", "Link-local addresses are globally unique and routed on the Internet", "IPv6 static routes cannot use link-local addresses", "The outgoing interface determines the DNS suffix" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A link-local next-hop address has link scope, so the router needs the exit interface to identify the correct link."
+  },
+  {
+    "id": 566,
+    "domain": "IP Connectivity",
+    "subtopic": "IPv6 Routing",
+    "difficulty": "Hard",
+    "questionText": "Which command creates a static route to 2001:DB8:50::/64 through link-local next hop FE80::2 on GigabitEthernet0/0?",
+    "options": [ "ipv6 route 2001:DB8:50::/64 GigabitEthernet0/0 FE80::2", "ipv6 route 2001:DB8:50::/64 FE80::2", "ip route 2001:DB8:50::/64 GigabitEthernet0/0 FE80::2", "ipv6 address 2001:DB8:50::/64 FE80::2" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The exit interface and link-local next-hop address identify the proper path for the IPv6 static route."
+  },
+  {
+    "id": 567,
+    "domain": "IP Connectivity",
+    "subtopic": "IPv6 Routing",
+    "difficulty": "Medium",
+    "questionText": "Which prefix identifies the IPv6 link-local address range commonly used for next-hop addresses?",
+    "options": [ "2000::/3", "FC00::/7", "FE80::/10", "FF00::/8" ],
+    "correctAnswerIndex": 2,
+    "explanation": "FE80::/10 identifies IPv6 link-local unicast addresses, which can serve as next hops on the local link."
+  },
+  {
+    "id": 568,
+    "domain": "IP Connectivity",
+    "subtopic": "IPv6 Routing",
+    "difficulty": "Medium",
+    "questionText": "Which field does an IPv6 router normally examine to select the destination forwarding route?",
+    "options": [ "Destination IPv6 address", "TCP source port only", "Ethernet FCS only", "DNS domain name" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Normal destination-based IPv6 routing examines the destination IPv6 address and selects the longest matching installed prefix."
+  },
+  {
+    "id": 569,
+    "domain": "IP Connectivity",
+    "subtopic": "IPv6 Routing",
+    "difficulty": "Medium",
+    "questionText": "Which IPv6 header field is decremented by routers as packets travel between networks?",
+    "options": [ "Flow Label", "Hop Limit", "Payload Length", "Source Address" ],
+    "correctAnswerIndex": 1,
+    "explanation": "The IPv6 Hop Limit limits the number of routing hops and is decremented at each router."
+  },
+  {
+    "id": 570,
+    "domain": "IP Connectivity",
+    "subtopic": "IPv6 Routing",
+    "difficulty": "Hard",
+    "questionText": "An IPv6 packet arrives at a router with Hop Limit 1 and requires another routing hop. What should the router normally do?",
+    "options": [ "Drop it and send ICMPv6 Time Exceeded when appropriate", "Forward it with Hop Limit 0", "Reset the Hop Limit to 255", "Replace the destination with FF02::1" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The Hop Limit would expire during forwarding, so the router discards the packet and normally reports Time Exceeded."
+  },
+  {
+    "id": 571,
+    "domain": "IP Connectivity",
+    "subtopic": "IPv6 Routing",
+    "difficulty": "Medium",
+    "questionText": "What does the code C represent in typical Cisco IOS IPv6 routing output?",
+    "options": [ "A directly connected IPv6 network", "An IPv6 multicast group", "An OSPF external route", "A floating static route only" ],
+    "correctAnswerIndex": 0,
+    "explanation": "C identifies an IPv6 network connected to an operational interface."
+  },
+  {
+    "id": 572,
+    "domain": "IP Connectivity",
+    "subtopic": "IPv6 Routing",
+    "difficulty": "Medium",
+    "questionText": "What does the code L represent in Cisco IOS IPv6 routing output?",
+    "options": [ "An IPv6 /128 route to an address configured locally", "A route learned from LLDP", "A default route only", "A VLAN trunk" ],
+    "correctAnswerIndex": 0,
+    "explanation": "L identifies a local IPv6 host route, typically /128 for an address owned by the router."
+  },
+  {
+    "id": 573,
+    "domain": "IP Connectivity",
+    "subtopic": "IPv6 Routing",
+    "difficulty": "Medium",
+    "questionText": "What is the usual prefix length of an IPv6 host route?",
+    "options": [ "/32", "/64", "/96", "/128" ],
+    "correctAnswerIndex": 3,
+    "explanation": "An IPv6 /128 matches exactly one 128-bit IPv6 address."
+  },
+  {
+    "id": 574,
+    "domain": "IP Connectivity",
+    "subtopic": "IPv6 Routing",
+    "difficulty": "Hard",
+    "questionText": "A router has installed IPv6 routes 2001:DB8::/32 via A and 2001:DB8:10::/48 via B. Which next hop is selected for 2001:DB8:10:5::1?",
+    "options": [ "A", "B", "Both must be used", "No route matches" ],
+    "correctAnswerIndex": 1,
+    "explanation": "The destination matches both prefixes, but the /48 via B is the longer and more specific match."
+  },
+  {
+    "id": 575,
+    "domain": "IP Connectivity",
+    "subtopic": "IPv6 Routing",
+    "difficulty": "Hard",
+    "questionText": "Installed IPv6 routes are 2001:DB8:AB::/48 via A and 2001:DB8:AB:10::/60 via B. Which next hop handles 2001:DB8:AB:1F::5?",
+    "options": [ "A", "B", "The default route only", "Neither" ],
+    "correctAnswerIndex": 1,
+    "explanation": "A /60 route beginning with fourth hextet 0010 covers 0010–001F. It is more specific than the /48."
+  },
+  {
+    "id": 576,
+    "domain": "IP Connectivity",
+    "subtopic": "IPv6 Routing",
+    "difficulty": "Hard",
+    "questionText": "Installed IPv6 routes are 2001:DB8:AB::/48 via A and 2001:DB8:AB:10::/60 via B. Which next hop handles 2001:DB8:AB:20::5?",
+    "options": [ "A", "B", "Both always", "Neither" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Fourth hextet 0020 lies outside the /60 range 0010–001F but remains inside 2001:DB8:AB::/48."
+  },
+  {
+    "id": 577,
+    "domain": "IP Connectivity",
+    "subtopic": "IPv6 Routing",
+    "difficulty": "Medium",
+    "questionText": "Which protocol replaces IPv4 ARP for resolving local IPv6 next-hop link-layer addresses?",
+    "options": [ "ICMPv6 Neighbor Discovery", "DNS only", "OSPFv2", "PAgP" ],
+    "correctAnswerIndex": 0,
+    "explanation": "IPv6 Neighbor Discovery uses ICMPv6 solicitation and advertisement messages to resolve local neighbor addresses."
+  },
+  {
+    "id": 578,
+    "domain": "IP Connectivity",
+    "subtopic": "IPv6 Routing",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco IOS command displays learned IPv6 neighbors and their link-layer addresses?",
+    "options": [ "show ipv6 neighbors", "show ip arp only", "show vlan brief", "show spanning-tree" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The show ipv6 neighbors command displays entries in the IPv6 neighbor cache."
+  },
+  {
+    "id": 579,
+    "domain": "IP Connectivity",
+    "subtopic": "IPv6 Routing",
+    "difficulty": "Medium",
+    "questionText": "What is the default administrative distance of a conventional IPv6 static route on Cisco IOS?",
+    "options": [ "0", "1", "110", "120" ],
+    "correctAnswerIndex": 1,
+    "explanation": "IPv6 static routes have a default administrative distance of 1 unless configured otherwise."
+  },
+  {
+    "id": 580,
+    "domain": "IP Connectivity",
+    "subtopic": "IPv6 Routing",
+    "difficulty": "Hard",
+    "questionText": "Which command creates an IPv6 floating static route to 2001:DB8:80::/64 through next hop 2001:DB8:1::2 with distance 200?",
+    "options": [ "ipv6 route 2001:DB8:80::/64 2001:DB8:1::2 200", "ipv6 route 2001:DB8:80::/64 200 2001:DB8:1::2", "ip route 2001:DB8:80::/64 2001:DB8:1::2 200", "ipv6 route ::/0 2001:DB8:80::/64" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The optional distance value follows the next hop; 200 makes this static route less preferred than many dynamic routes."
+  },
+  {
+    "id": 581,
+    "domain": "IP Connectivity",
+    "subtopic": "IPv6 Routing",
+    "difficulty": "Hard",
+    "questionText": "Which summary prefix exactly combines 2001:DB8:100:0::/64 and 2001:DB8:100:1::/64?",
+    "options": [ "2001:DB8:100::/63", "2001:DB8:100::/62", "2001:DB8:100:1::/63", "2001:DB8:100::/65" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A /63 beginning at fourth hextet 0000 includes exactly the two /64 networks whose fourth hextets are 0000 and 0001."
+  },
+  {
+    "id": 582,
+    "domain": "IP Connectivity",
+    "subtopic": "IPv6 Routing",
+    "difficulty": "Hard",
+    "questionText": "Which summary prefix exactly covers IPv6 /64 subnets with fourth-hextet values 0010, 0011, 0012 and 0013 under 2001:DB8:5::/48?",
+    "options": [ "2001:DB8:5:10::/62", "2001:DB8:5:10::/63", "2001:DB8:5:10::/60", "2001:DB8:5:12::/62" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A /62 beginning at fourth hextet 0010 covers exactly 0010–0013."
+  },
+  {
+    "id": 583,
+    "domain": "IP Connectivity",
+    "subtopic": "IPv6 Routing",
+    "difficulty": "Medium",
+    "questionText": "What is the main difference between IPv4 and IPv6 router fragmentation?",
+    "options": [ "IPv6 routers do not fragment transit packets", "IPv6 routers always fragment every packet", "IPv4 routers never fragment packets", "IPv6 requires ARP to fragment packets" ],
+    "correctAnswerIndex": 0,
+    "explanation": "IPv6 routers do not fragment packets in transit. IPv6 fragmentation, when used, is performed by sending nodes."
+  },
+  {
+    "id": 584,
+    "domain": "IP Connectivity",
+    "subtopic": "IPv6 Routing",
+    "difficulty": "Hard",
+    "questionText": "An IPv6 router receives a packet larger than the outgoing interface MTU. What does it normally do?",
+    "options": [ "Drop the packet and send ICMPv6 Packet Too Big", "Fragment the packet in transit", "Convert the packet to IPv4 automatically", "Change the destination to the link-local all-nodes group" ],
+    "correctAnswerIndex": 0,
+    "explanation": "IPv6 routers return an ICMPv6 Packet Too Big message when forwarding is prevented by the outgoing MTU."
+  },
+  {
+    "id": 585,
+    "domain": "IP Connectivity",
+    "subtopic": "IPv6 Routing",
+    "difficulty": "Hard",
+    "questionText": "A router has an installed route to 2001:DB8:10::/64, but no IPv6 default route. What normally happens to a packet for 2001:DB8:20::1 if no other route matches?",
+    "options": [ "The router drops the packet because no route matches", "The router uses the /64 route anyway", "The router forwards it to FF02::1", "The router creates a route automatically from DNS" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The destination is outside 2001:DB8:10::/64. Without another matching route or default, the router cannot forward the packet."
+  },
+  {
+    "id": 586,
+    "domain": "IP Connectivity",
+    "subtopic": "IPv6 Routing",
+    "difficulty": "Medium",
+    "questionText": "What must an IPv6 host normally know to reach off-link IPv6 destinations?",
+    "options": [ "An appropriate default router or matching route", "Only its Ethernet hostname", "The MAC address of every Internet host", "An IPv4 broadcast address" ],
+    "correctAnswerIndex": 0,
+    "explanation": "IPv6 hosts need a route, often a default router learned through Router Advertisements, to send traffic beyond their local link."
+  },
+  {
+    "id": 587,
+    "domain": "IP Connectivity",
+    "subtopic": "IPv6 Routing",
+    "difficulty": "Hard",
+    "questionText": "A Cisco router has an IPv6 static route using next hop FE80::2 but no exit interface specified. Why can this be insufficient?",
+    "options": [ "The router cannot uniquely identify the link-local next-hop scope without the interface", "FE80::2 is a global multicast address", "Link-local IPv6 addresses require DNS resolution", "IPv6 routes cannot point to neighboring routers" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Because link-local addresses are scoped to individual links, Cisco IPv6 static routes using them require the appropriate outgoing interface."
+  },
+  {
+    "id": 588,
+    "domain": "IP Connectivity",
+    "subtopic": "IPv6 Routing",
+    "difficulty": "Hard",
+    "questionText": "A Cisco router has IPv6 unicast routing enabled and connected networks 2001:DB8:10::/64 and 2001:DB8:20::/64 on two operational interfaces. Which statement is correct?",
+    "options": [ "It can route directly between the two connected IPv6 prefixes without a dynamic routing protocol", "It must configure OSPFv3 before forwarding between connected networks", "It must use IPv4 NAT to route between them", "It can forward traffic only if both networks use identical prefixes" ],
+    "correctAnswerIndex": 0,
+    "explanation": "With IPv6 routing enabled and both connected routes operational, the router can forward packets between these directly connected IPv6 networks."
+  }
+]

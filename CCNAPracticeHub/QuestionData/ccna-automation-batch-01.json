@@ -1,0 +1,677 @@
+[
+  {
+    "id": 909,
+    "domain": "Automation and Programmability",
+    "subtopic": "Network Automation",
+    "difficulty": "Easy",
+    "questionText": "What is a primary benefit of network automation?",
+    "options": [
+      "Increasing manual configuration tasks",
+      "Applying repeatable network changes consistently",
+      "Removing all network security requirements",
+      "Replacing all physical network devices"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Automation helps apply consistent, repeatable changes while reducing manual effort and configuration mistakes."
+  },
+  {
+    "id": 910,
+    "domain": "Automation and Programmability",
+    "subtopic": "Network Automation",
+    "difficulty": "Easy",
+    "questionText": "Which activity is a good candidate for network automation?",
+    "options": [
+      "Replacing a damaged fiber cable",
+      "Installing a switch into a rack",
+      "Cleaning equipment fans",
+      "Deploying the same approved configuration to 100 switches"
+    ],
+    "correctAnswerIndex": 3,
+    "explanation": "Deploying standard configurations across many devices is repetitive work that automation can perform efficiently."
+  },
+  {
+    "id": 911,
+    "domain": "Automation and Programmability",
+    "subtopic": "Network Automation",
+    "difficulty": "Easy",
+    "questionText": "What is a network automation script?",
+    "options": [
+      "A program that executes defined network-related tasks",
+      "A type of Ethernet connector",
+      "A hardware replacement for a router",
+      "A wireless encryption algorithm"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "An automation script runs instructions that can interact with network devices, controllers or APIs."
+  },
+  {
+    "id": 912,
+    "domain": "Automation and Programmability",
+    "subtopic": "Network Automation",
+    "difficulty": "Medium",
+    "questionText": "What is configuration drift?",
+    "options": [
+      "The normal movement of wireless clients",
+      "The expiration of a DHCP lease",
+      "A device configuration diverging from its approved baseline",
+      "An increase in Ethernet cable length"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "Configuration drift occurs when actual device settings differ from the intended configuration."
+  },
+  {
+    "id": 913,
+    "domain": "Automation and Programmability",
+    "subtopic": "Network Automation",
+    "difficulty": "Medium",
+    "questionText": "Which approach helps reduce risk when deploying an automated change across many routers?",
+    "options": [
+      "Disable logging before deployment",
+      "Test the change on a small group before wider rollout",
+      "Apply the change everywhere without verification",
+      "Remove all configuration backups"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Staged deployments and testing help reveal problems before changes affect the entire network."
+  },
+  {
+    "id": 914,
+    "domain": "Automation and Programmability",
+    "subtopic": "Network Automation",
+    "difficulty": "Medium",
+    "questionText": "What is the purpose of a configuration template?",
+    "options": [
+      "Make every device use the same management IP address",
+      "Prevent administrators from monitoring devices",
+      "Replace physical switching hardware",
+      "Reuse common configuration structures with device-specific variables"
+    ],
+    "correctAnswerIndex": 3,
+    "explanation": "Templates support consistent configuration while allowing variables such as hostnames and interface addresses to differ."
+  },
+  {
+    "id": 915,
+    "domain": "Automation and Programmability",
+    "subtopic": "Network Automation",
+    "difficulty": "Medium",
+    "questionText": "What does idempotent automation mean?",
+    "options": [
+      "Repeated execution reaches the intended state without unnecessary additional changes",
+      "Every execution creates duplicate VLANs",
+      "The script can never run more than once",
+      "The automation must use Telnet"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "An idempotent operation can be repeated without introducing extra changes once the desired state has been achieved."
+  },
+  {
+    "id": 916,
+    "domain": "Automation and Programmability",
+    "subtopic": "Network Automation",
+    "difficulty": "Hard",
+    "questionText": "An idempotent automation job checks whether NTP server 192.0.2.10 is configured. It finds that the correct setting already exists. What should it do?",
+    "options": [
+      "Erase the running configuration",
+      "Add the same NTP command repeatedly",
+      "Leave the correct setting unchanged",
+      "Disable the NTP service"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "Idempotent automation avoids changing configurations that already match the desired state."
+  },
+  {
+    "id": 917,
+    "domain": "Automation and Programmability",
+    "subtopic": "Network Automation",
+    "difficulty": "Medium",
+    "questionText": "Why is version control useful when managing network configuration files?",
+    "options": [
+      "It guarantees that network devices never fail",
+      "It records changes and supports collaboration and rollback",
+      "It removes the need for authentication",
+      "It automatically assigns IP addresses"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Version control provides change history and helps teams review or restore configuration versions."
+  },
+  {
+    "id": 918,
+    "domain": "Automation and Programmability",
+    "subtopic": "Network Automation",
+    "difficulty": "Medium",
+    "questionText": "Which technology allows automation software to request structured information from a network controller?",
+    "options": [
+      "An Ethernet patch panel",
+      "A console rollover cable",
+      "An optical power meter",
+      "An application programming interface"
+    ],
+    "correctAnswerIndex": 3,
+    "explanation": "An API defines how software systems communicate and exchange commands or structured data."
+  },
+  {
+    "id": 919,
+    "domain": "Automation and Programmability",
+    "subtopic": "Network Automation",
+    "difficulty": "Hard",
+    "questionText": "An administrator wants interface utilization statistics from 500 routers every five minutes. Which method is most scalable?",
+    "options": [
+      "Automated monitoring through telemetry or supported APIs",
+      "Logging in manually to every router",
+      "Asking each user for utilization estimates",
+      "Disabling interface counters"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "Automated monitoring can efficiently gather recurring operational measurements across many devices."
+  },
+  {
+    "id": 920,
+    "domain": "Automation and Programmability",
+    "subtopic": "Network Automation",
+    "difficulty": "Medium",
+    "questionText": "What is the purpose of validating an automated network change?",
+    "options": [
+      "Make every interface operate at the same speed",
+      "Delete the previous configuration immediately",
+      "Confirm that the intended configuration and operational behavior were achieved",
+      "Disable future configuration updates"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "Validation checks that a change produced the expected settings and network behavior."
+  },
+  {
+    "id": 921,
+    "domain": "Automation and Programmability",
+    "subtopic": "Network Automation",
+    "difficulty": "Hard",
+    "questionText": "Why should automation credentials not be embedded directly in scripts committed to a public repository?",
+    "options": [
+      "Passwords cannot be used by automation tools",
+      "Exposed credentials could allow unauthorized access",
+      "Git automatically encrypts all committed secrets",
+      "Controllers do not support authentication"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Hardcoded credentials can be disclosed through shared source code. Secure secret storage and appropriate access controls are preferred."
+  },
+  {
+    "id": 922,
+    "domain": "Automation and Programmability",
+    "subtopic": "Network Automation",
+    "difficulty": "Hard",
+    "questionText": "An automation job reports that commands were sent successfully, but several devices remain incorrectly configured. What should be added to the workflow?",
+    "options": [
+      "A requirement to ignore errors",
+      "A step to disable all monitoring",
+      "A rule to remove device backups",
+      "Post-change verification against the desired state"
+    ],
+    "correctAnswerIndex": 3,
+    "explanation": "Successful command submission does not guarantee correct device state. Automated verification can detect incomplete or unsuccessful changes."
+  },
+  {
+    "id": 923,
+    "domain": "Automation and Programmability",
+    "subtopic": "Network Automation",
+    "difficulty": "Medium",
+    "questionText": "Which statement best describes a rollback plan for network automation?",
+    "options": [
+      "A defined method to restore a previous working state if a change fails",
+      "A requirement to repeat failed commands indefinitely",
+      "A method of increasing physical link bandwidth",
+      "A replacement for all change approval procedures"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "A rollback plan allows administrators to restore a known working configuration if deployment causes problems."
+  },
+  {
+    "id": 924,
+    "domain": "Automation and Programmability",
+    "subtopic": "Controller-Based Networking",
+    "difficulty": "Easy",
+    "questionText": "What is a network controller?",
+    "options": [
+      "A device that only supplies electrical power",
+      "A replacement for all Ethernet cables",
+      "A system that coordinates management or control functions across network devices",
+      "A type of DHCP client"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "A controller centralizes selected network operations, policies or control capabilities."
+  },
+  {
+    "id": 925,
+    "domain": "Automation and Programmability",
+    "subtopic": "Controller-Based Networking",
+    "difficulty": "Easy",
+    "questionText": "Which network plane forwards user packets using installed forwarding information?",
+    "options": [
+      "Management plane",
+      "Data plane",
+      "Application plane",
+      "Power plane"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "The data plane is responsible for forwarding traffic based on installed forwarding information and applicable policies."
+  },
+  {
+    "id": 926,
+    "domain": "Automation and Programmability",
+    "subtopic": "Controller-Based Networking",
+    "difficulty": "Easy",
+    "questionText": "Which network plane is responsible for processes that determine routes and forwarding decisions?",
+    "options": [
+      "Control plane",
+      "Physical cabling plane",
+      "Power distribution plane",
+      "Application display plane"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "The control plane runs routing and other network control processes that help determine forwarding behavior."
+  },
+  {
+    "id": 927,
+    "domain": "Automation and Programmability",
+    "subtopic": "Controller-Based Networking",
+    "difficulty": "Medium",
+    "questionText": "Which plane handles administrative configuration and monitoring functions?",
+    "options": [
+      "Data plane only",
+      "Electrical plane",
+      "Wireless radio plane",
+      "Management plane"
+    ],
+    "correctAnswerIndex": 3,
+    "explanation": "The management plane supports administration, configuration, monitoring and operational access."
+  },
+  {
+    "id": 928,
+    "domain": "Automation and Programmability",
+    "subtopic": "Controller-Based Networking",
+    "difficulty": "Medium",
+    "questionText": "What is an important benefit of controller-based policy management?",
+    "options": [
+      "It requires every switch to have an identical IP address",
+      "It eliminates the need for network devices",
+      "It allows coordinated policy deployment across managed infrastructure",
+      "It prevents all hardware failures"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "Controllers can coordinate the deployment of consistent network policies across supported devices."
+  },
+  {
+    "id": 929,
+    "domain": "Automation and Programmability",
+    "subtopic": "Controller-Based Networking",
+    "difficulty": "Medium",
+    "questionText": "What is a northbound API in a controller-based architecture?",
+    "options": [
+      "An interface that applications use to communicate with the network controller",
+      "A connector between two Ethernet switches",
+      "A power distribution interface",
+      "A protocol used only for STP elections"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "Northbound APIs expose controller functions to applications, orchestration systems and automation tools."
+  },
+  {
+    "id": 930,
+    "domain": "Automation and Programmability",
+    "subtopic": "Controller-Based Networking",
+    "difficulty": "Medium",
+    "questionText": "What does a southbound interface commonly connect?",
+    "options": [
+      "A DNS server to an email client",
+      "A controller to managed network devices",
+      "An Ethernet patch cable to its protective jacket",
+      "A router to its electrical power source"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Southbound interfaces enable controller communication with switches, routers and other managed infrastructure."
+  },
+  {
+    "id": 931,
+    "domain": "Automation and Programmability",
+    "subtopic": "Controller-Based Networking",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco platform provides centralized enterprise network automation and assurance capabilities?",
+    "options": [
+      "Cisco Packet Tracer only",
+      "Cisco ROMMON",
+      "Cisco TFTP Client",
+      "Cisco Catalyst Center"
+    ],
+    "correctAnswerIndex": 3,
+    "explanation": "Cisco Catalyst Center provides centralized automation, network assurance and policy features for supported enterprise infrastructure."
+  },
+  {
+    "id": 932,
+    "domain": "Automation and Programmability",
+    "subtopic": "Controller-Based Networking",
+    "difficulty": "Medium",
+    "questionText": "Which controller capability helps administrators investigate performance problems across a network?",
+    "options": [
+      "Disabling all device logs",
+      "Removing every interface counter",
+      "Centralized assurance and monitoring",
+      "Turning all routed ports into access ports"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "Controller-based assurance can combine operational data across devices to help identify connectivity and performance issues."
+  },
+  {
+    "id": 933,
+    "domain": "Automation and Programmability",
+    "subtopic": "Controller-Based Networking",
+    "difficulty": "Hard",
+    "questionText": "What does logically centralized network control mean?",
+    "options": [
+      "Control appears coordinated through one logical system even when multiple controller nodes exist",
+      "Every network device must be installed in one room",
+      "All forwarding is performed by a single Ethernet port",
+      "Network devices cannot maintain forwarding entries"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "Logical centralization allows coordinated control functions without necessarily depending on one physical controller."
+  },
+  {
+    "id": 934,
+    "domain": "Automation and Programmability",
+    "subtopic": "Controller-Based Networking",
+    "difficulty": "Medium",
+    "questionText": "What is an underlay network?",
+    "options": [
+      "A list of administrator accounts",
+      "The physical or routed transport supporting higher-level network services",
+      "An encrypted application password",
+      "A browser interface used only for DNS configuration"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "The underlay provides transport connectivity used by overlay networks and fabric services."
+  },
+  {
+    "id": 935,
+    "domain": "Automation and Programmability",
+    "subtopic": "Controller-Based Networking",
+    "difficulty": "Medium",
+    "questionText": "What is an overlay network?",
+    "options": [
+      "A network that eliminates all physical links",
+      "A replacement for IP addressing",
+      "A dedicated console-only network",
+      "A logical network constructed over an underlying transport infrastructure"
+    ],
+    "correctAnswerIndex": 3,
+    "explanation": "An overlay provides logical connectivity or segmentation over an underlay, often using encapsulation."
+  },
+  {
+    "id": 936,
+    "domain": "Automation and Programmability",
+    "subtopic": "Controller-Based Networking",
+    "difficulty": "Hard",
+    "questionText": "How does controller-based management typically differ from configuring every router separately?",
+    "options": [
+      "Controllers make routing protocols invalid",
+      "Controllers prevent users from accessing the network",
+      "Controllers can coordinate configuration and policy across multiple devices",
+      "Controllers eliminate the need to monitor infrastructure"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "Controller-based management provides coordinated configuration, policy and operational visibility across supported devices."
+  },
+  {
+    "id": 937,
+    "domain": "Automation and Programmability",
+    "subtopic": "Controller-Based Networking",
+    "difficulty": "Hard",
+    "questionText": "Which design choice helps reduce the impact of a critical controller service failure?",
+    "options": [
+      "Deploy supported redundancy and resilient controller infrastructure",
+      "Disable controller backups",
+      "Use one controller without a recovery plan",
+      "Remove all monitoring capabilities"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "Redundancy and recovery planning improve controller service availability and operational resilience."
+  },
+  {
+    "id": 938,
+    "domain": "Automation and Programmability",
+    "subtopic": "Controller-Based Networking",
+    "difficulty": "Hard",
+    "questionText": "An application submits a network segmentation policy through a controller's northbound API. What can the controller do next?",
+    "options": [
+      "Automatically replace damaged Ethernet cables",
+      "Validate the policy and coordinate appropriate configuration changes on managed devices",
+      "Delete every network route",
+      "Disable all access control mechanisms"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A controller can translate high-level policy requests into configuration or control actions across managed infrastructure."
+  },
+  {
+    "id": 939,
+    "domain": "Automation and Programmability",
+    "subtopic": "Software-Defined Networking",
+    "difficulty": "Easy",
+    "questionText": "What does SDN stand for?",
+    "options": [
+      "Static Domain Numbering",
+      "Secure Device Naming",
+      "Switched Data Negotiation",
+      "Software-Defined Networking"
+    ],
+    "correctAnswerIndex": 3,
+    "explanation": "SDN stands for Software-Defined Networking."
+  },
+  {
+    "id": 940,
+    "domain": "Automation and Programmability",
+    "subtopic": "Software-Defined Networking",
+    "difficulty": "Easy",
+    "questionText": "Which concept is central to many SDN architectures?",
+    "options": [
+      "Replacing Ethernet with serial cables",
+      "Disabling all network policies",
+      "Separating or abstracting network control from packet forwarding",
+      "Removing all destination IP addresses"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "SDN emphasizes software-programmable control and frequently separates control functions from packet forwarding."
+  },
+  {
+    "id": 941,
+    "domain": "Automation and Programmability",
+    "subtopic": "Software-Defined Networking",
+    "difficulty": "Medium",
+    "questionText": "In a traditional distributed routing design, where do routing control processes normally run?",
+    "options": [
+      "On individual participating routers",
+      "Only on end-user laptops",
+      "Only on DNS servers",
+      "Only inside wireless clients"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "Traditional distributed routers commonly run local routing protocol processes and maintain their own control information."
+  },
+  {
+    "id": 942,
+    "domain": "Automation and Programmability",
+    "subtopic": "Software-Defined Networking",
+    "difficulty": "Medium",
+    "questionText": "Which capability is a common motivation for adopting SDN?",
+    "options": [
+      "Eliminating the need for physical infrastructure",
+      "Programmable management and consistent policy deployment",
+      "Removing the need for authentication",
+      "Requiring every device to use the same MAC address"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "SDN supports network programmability and consistent control or policy deployment."
+  },
+  {
+    "id": 943,
+    "domain": "Automation and Programmability",
+    "subtopic": "Software-Defined Networking",
+    "difficulty": "Medium",
+    "questionText": "Which protocol is historically associated with programming forwarding rules on SDN switches?",
+    "options": [
+      "TFTP",
+      "SMTP",
+      "OpenFlow",
+      "NTP"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "OpenFlow is an example of a southbound protocol designed for controller-based forwarding-rule management."
+  },
+  {
+    "id": 944,
+    "domain": "Automation and Programmability",
+    "subtopic": "Software-Defined Networking",
+    "difficulty": "Medium",
+    "questionText": "Must every SDN architecture use OpenFlow?",
+    "options": [
+      "Yes, regardless of vendor or deployment",
+      "Yes, but only for IPv6",
+      "Yes, if any virtual networks exist",
+      "No, different SDN implementations use different interfaces and protocols"
+    ],
+    "correctAnswerIndex": 3,
+    "explanation": "SDN is an architectural approach and is not limited to OpenFlow."
+  },
+  {
+    "id": 945,
+    "domain": "Automation and Programmability",
+    "subtopic": "Software-Defined Networking",
+    "difficulty": "Medium",
+    "questionText": "What is a programmable data plane?",
+    "options": [
+      "A forwarding system whose supported traffic-handling behavior can be configured through software",
+      "A switch that has no forwarding table",
+      "A router that accepts only console access",
+      "A network that uses no physical or virtual links"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "A programmable data plane can apply supported forwarding and traffic-handling rules supplied through software."
+  },
+  {
+    "id": 946,
+    "domain": "Automation and Programmability",
+    "subtopic": "Software-Defined Networking",
+    "difficulty": "Hard",
+    "questionText": "An SDN controller loses connectivity to a forwarding switch. What happens to existing traffic?",
+    "options": [
+      "Every packet must be dropped immediately",
+      "Behavior depends on installed forwarding rules and the device's failover design",
+      "The switch automatically becomes a DNS server",
+      "All interfaces automatically change to VLAN 1"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Some devices continue using installed rules during controller loss, while others depend on the configured control and failover behavior."
+  },
+  {
+    "id": 947,
+    "domain": "Automation and Programmability",
+    "subtopic": "Software-Defined Networking",
+    "difficulty": "Medium",
+    "questionText": "What is a network policy in SDN?",
+    "options": [
+      "The serial number of a network device",
+      "A physical cable manufacturing standard",
+      "A rule describing intended access or traffic behavior",
+      "A replacement for all packet headers"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "A network policy expresses intended behavior such as segmentation, access rules or quality-of-service treatment."
+  },
+  {
+    "id": 948,
+    "domain": "Automation and Programmability",
+    "subtopic": "Software-Defined Networking",
+    "difficulty": "Medium",
+    "questionText": "How can SDN assist with network segmentation?",
+    "options": [
+      "By requiring all users to share a broadcast domain",
+      "By disabling all access policies",
+      "By changing every IPv4 address to a hostname",
+      "By coordinating logical segmentation and access policies across the network"
+    ],
+    "correctAnswerIndex": 3,
+    "explanation": "Controllers can coordinate logical network segments and apply consistent access policies."
+  },
+  {
+    "id": 949,
+    "domain": "Automation and Programmability",
+    "subtopic": "Software-Defined Networking",
+    "difficulty": "Hard",
+    "questionText": "Which statement about SDN and physical networking is accurate?",
+    "options": [
+      "SDN still requires underlying infrastructure to transport packets",
+      "SDN eliminates all physical network links",
+      "SDN requires every packet to be broadcast",
+      "SDN prevents devices from having IP addresses"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "Software-defined control does not eliminate the need for physical or virtual forwarding infrastructure."
+  },
+  {
+    "id": 950,
+    "domain": "Automation and Programmability",
+    "subtopic": "Software-Defined Networking",
+    "difficulty": "Medium",
+    "questionText": "What can an application request through an SDN controller's northbound API?",
+    "options": [
+      "A physical cable repair performed automatically",
+      "Network services, policy changes or operational information",
+      "A replacement electrical power supply",
+      "A new hardware MAC address burned into every device"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Northbound APIs allow applications to interact with controller services and policies programmatically."
+  },
+  {
+    "id": 951,
+    "domain": "Automation and Programmability",
+    "subtopic": "Software-Defined Networking",
+    "difficulty": "Hard",
+    "questionText": "What is a possible risk when an SDN controller manages hundreds of network devices?",
+    "options": [
+      "Controllers cannot make configuration changes",
+      "Every policy is guaranteed to be correct",
+      "An incorrect centralized policy could affect many devices quickly",
+      "Audit logging becomes impossible"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "Centralized control can magnify the impact of incorrect changes, making validation and access controls important."
+  },
+  {
+    "id": 952,
+    "domain": "Automation and Programmability",
+    "subtopic": "Software-Defined Networking",
+    "difficulty": "Medium",
+    "questionText": "What is an SDN overlay?",
+    "options": [
+      "A fiber connector standard",
+      "An NTP synchronization level",
+      "A method that replaces all physical networking",
+      "Logical connectivity constructed over an underlay network"
+    ],
+    "correctAnswerIndex": 3,
+    "explanation": "An overlay provides logical network connectivity over an underlying transport infrastructure."
+  },
+  {
+    "id": 953,
+    "domain": "Automation and Programmability",
+    "subtopic": "Software-Defined Networking",
+    "difficulty": "Hard",
+    "questionText": "Why is it useful for an SDN controller to publish a documented API?",
+    "options": [
+      "External tools can integrate with controller services through repeatable software requests",
+      "It automatically repairs broken switches",
+      "It removes the need for network authentication",
+      "It prevents all routing loops without configuration"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "A documented API enables reliable integration with network automation, orchestration and monitoring tools."
+  }
+]

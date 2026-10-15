@@ -1,0 +1,1007 @@
+[
+  {
+    "id": 909,
+    "domain": "Automation and Programmability",
+    "subtopic": "Network Automation",
+    "difficulty": "Easy",
+    "questionText": "What is a primary benefit of network automation?",
+    "options": [ "Increasing the number of manual configuration steps", "Applying repeatable network changes with reduced manual effort", "Eliminating the need for network security", "Replacing all IP addresses with MAC addresses" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Network automation applies defined tasks consistently and repeatedly, reducing manual work and the risk of configuration errors."
+  },
+  {
+    "id": 910,
+    "domain": "Automation and Programmability",
+    "subtopic": "Network Automation",
+    "difficulty": "Easy",
+    "questionText": "Which task is a common candidate for network automation?",
+    "options": [ "Physically replacing a broken fiber cable", "Installing a switch into a rack", "Applying a standard configuration to many switches", "Cleaning network equipment" ],
+    "correctAnswerIndex": 2,
+    "explanation": "Standardized device configurations can be deployed through automation tools rather than entered individually on every device."
+  },
+  {
+    "id": 911,
+    "domain": "Automation and Programmability",
+    "subtopic": "Network Automation",
+    "difficulty": "Medium",
+    "questionText": "Why is configuration consistency important in network automation?",
+    "options": [ "It reduces unintended differences between similarly managed devices", "It guarantees that hardware can never fail", "It removes the requirement for authentication", "It prevents all Internet congestion" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Consistent configurations help reduce configuration drift and make network behavior more predictable."
+  },
+  {
+    "id": 912,
+    "domain": "Automation and Programmability",
+    "subtopic": "Network Automation",
+    "difficulty": "Medium",
+    "questionText": "What is configuration drift?",
+    "options": [ "Normal changes in radio signal strength", "The automatic expiration of DNS records", "A decrease in router clock speed", "A device configuration becoming different from its intended baseline" ],
+    "correctAnswerIndex": 3,
+    "explanation": "Configuration drift occurs when actual device settings diverge from the approved or desired configuration."
+  },
+  {
+    "id": 913,
+    "domain": "Automation and Programmability",
+    "subtopic": "Network Automation",
+    "difficulty": "Medium",
+    "questionText": "Which approach best reduces the risk of a large automated configuration rollout?",
+    "options": [ "Apply changes to every production device without validation", "Test changes on a limited set of devices before a wider deployment", "Disable configuration backups", "Ignore error messages from automation tools" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Testing and staged deployment help identify problems before changes affect the entire network."
+  },
+  {
+    "id": 914,
+    "domain": "Automation and Programmability",
+    "subtopic": "Network Automation",
+    "difficulty": "Easy",
+    "questionText": "What does a network automation script generally do?",
+    "options": [ "Only replace physical routers", "Disable all routing protocols", "Execute a defined sequence of instructions or operations", "Automatically increase available Internet bandwidth" ],
+    "correctAnswerIndex": 2,
+    "explanation": "Scripts execute specified tasks and can interact with devices or APIs to perform network operations."
+  },
+  {
+    "id": 915,
+    "domain": "Automation and Programmability",
+    "subtopic": "Network Automation",
+    "difficulty": "Medium",
+    "questionText": "What is a key operational advantage of using templates for switch configurations?",
+    "options": [ "Common settings can be reused while device-specific values are supplied separately", "Every switch must use the same management IP address", "Templates automatically replace physical cabling", "Templates remove the need for testing" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Templates separate reusable configuration structures from variables such as hostnames, interface identifiers and IP addresses."
+  },
+  {
+    "id": 916,
+    "domain": "Automation and Programmability",
+    "subtopic": "Network Automation",
+    "difficulty": "Medium",
+    "questionText": "Which statement describes idempotent automation?",
+    "options": [ "Every execution must create duplicate configuration entries", "The script only runs once in its lifetime", "The script must use an interactive console", "Repeated execution converges on the intended state without unnecessary additional changes" ],
+    "correctAnswerIndex": 3,
+    "explanation": "Idempotent operations can be repeated without producing unintended extra changes once the desired state is reached."
+  },
+  {
+    "id": 917,
+    "domain": "Automation and Programmability",
+    "subtopic": "Network Automation",
+    "difficulty": "Hard",
+    "questionText": "An automation job is designed to ensure an NTP server is configured on each router. What should a well-designed idempotent job do if the correct server is already configured?",
+    "options": [ "Delete and recreate the entire running configuration", "Leave the correct setting unchanged", "Disable NTP permanently", "Assign a new router ID" ],
+    "correctAnswerIndex": 1,
+    "explanation": "An idempotent job checks the current state and avoids unnecessary changes when the desired configuration already exists."
+  },
+  {
+    "id": 918,
+    "domain": "Automation and Programmability",
+    "subtopic": "Network Automation",
+    "difficulty": "Medium",
+    "questionText": "What is an important reason to keep network configurations in a version control system?",
+    "options": [ "It removes the need for privileged access", "It changes every router into a controller", "It provides change history and supports reviewing or reverting modifications", "It automatically prevents every configuration mistake" ],
+    "correctAnswerIndex": 2,
+    "explanation": "Version control records changes, supports collaboration and makes it easier to identify or revert unwanted modifications."
+  },
+  {
+    "id": 919,
+    "domain": "Automation and Programmability",
+    "subtopic": "Network Automation",
+    "difficulty": "Medium",
+    "questionText": "Which technology commonly enables a program to exchange structured information with a network controller?",
+    "options": [ "An application programming interface", "A copper patch panel", "An optical power meter", "An Ethernet crossover cable" ],
+    "correctAnswerIndex": 0,
+    "explanation": "APIs allow software to request information or changes through documented interfaces and structured data."
+  },
+  {
+    "id": 920,
+    "domain": "Automation and Programmability",
+    "subtopic": "Network Automation",
+    "difficulty": "Hard",
+    "questionText": "A network administrator wants to collect interface operational status from hundreds of routers every five minutes. Which approach is most scalable?",
+    "options": [ "Physically visit each router", "Ask users to report the state of every port", "Disable interface monitoring", "Use automated telemetry or programmatic queries" ],
+    "correctAnswerIndex": 3,
+    "explanation": "Automated monitoring can efficiently collect status data across large device fleets at regular intervals."
+  },
+  {
+    "id": 921,
+    "domain": "Automation and Programmability",
+    "subtopic": "Network Automation",
+    "difficulty": "Medium",
+    "questionText": "What is the role of validation in an automated network configuration workflow?",
+    "options": [ "Increase the number of unreviewed changes", "Confirm that the intended configuration and behavior meet defined requirements", "Replace all network monitoring", "Eliminate the need for a rollback plan" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Validation checks syntax, state and operational outcomes so automated changes can be assessed against requirements."
+  },
+  {
+    "id": 922,
+    "domain": "Automation and Programmability",
+    "subtopic": "Network Automation",
+    "difficulty": "Hard",
+    "questionText": "Why should automation credentials generally be kept in a secrets manager rather than embedded directly in scripts?",
+    "options": [ "Secrets managers assign IP addresses to routers", "Scripts cannot use authentication", "It reduces accidental credential exposure and supports controlled access", "Hardcoded passwords automatically expire after every command" ],
+    "correctAnswerIndex": 2,
+    "explanation": "Separating secrets from source code helps limit exposure in repositories, logs and shared configuration files."
+  },
+  {
+    "id": 923,
+    "domain": "Automation and Programmability",
+    "subtopic": "Network Automation",
+    "difficulty": "Hard",
+    "questionText": "A script reports success after sending commands, but several interfaces remain incorrectly configured. Which improvement best addresses the issue?",
+    "options": [ "Add post-change verification against the desired network state", "Suppress all error output", "Remove all backups", "Increase every interface MTU" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Successful command execution alone does not establish that the desired operational state was achieved. Verification provides that assurance."
+  },
+  {
+    "id": 924,
+    "domain": "Automation and Programmability",
+    "subtopic": "Controller-Based Networking",
+    "difficulty": "Easy",
+    "questionText": "What is a network controller in a controller-based architecture?",
+    "options": [ "A device used only for electrical power distribution", "Software or a system providing centralized network control and management functions", "An Ethernet cable tester", "A router that cannot communicate with other devices" ],
+    "correctAnswerIndex": 1,
+    "explanation": "A network controller centralizes selected management, policy or control functions across multiple network devices."
+  },
+  {
+    "id": 925,
+    "domain": "Automation and Programmability",
+    "subtopic": "Controller-Based Networking",
+    "difficulty": "Easy",
+    "questionText": "Which plane is primarily responsible for forwarding user packets according to installed forwarding information?",
+    "options": [ "Management plane", "Control plane", "Data plane", "Application plane" ],
+    "correctAnswerIndex": 2,
+    "explanation": "The data plane forwards traffic using forwarding entries and applicable policies."
+  },
+  {
+    "id": 926,
+    "domain": "Automation and Programmability",
+    "subtopic": "Controller-Based Networking",
+    "difficulty": "Easy",
+    "questionText": "Which plane is associated with building or maintaining routing and forwarding decisions?",
+    "options": [ "Control plane", "Physical cabling plane", "Application display plane", "Power plane" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The control plane runs protocols and processes that determine paths and maintain forwarding information."
+  },
+  {
+    "id": 927,
+    "domain": "Automation and Programmability",
+    "subtopic": "Controller-Based Networking",
+    "difficulty": "Medium",
+    "questionText": "Which plane handles functions such as network device configuration, monitoring and administrative access?",
+    "options": [ "Data plane only", "Electrical plane", "Transport layer", "Management plane" ],
+    "correctAnswerIndex": 3,
+    "explanation": "The management plane supports device administration, configuration, telemetry and monitoring."
+  },
+  {
+    "id": 928,
+    "domain": "Automation and Programmability",
+    "subtopic": "Controller-Based Networking",
+    "difficulty": "Medium",
+    "questionText": "What is a main advantage of policy-driven networking through a controller?",
+    "options": [ "Policies must be typed separately on every port", "A centralized intent can be translated into consistent device configurations", "Every device must have an identical IP address", "Routing protocols can no longer be used" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Controllers can translate higher-level network policy into coordinated device configuration, improving consistency."
+  },
+  {
+    "id": 929,
+    "domain": "Automation and Programmability",
+    "subtopic": "Controller-Based Networking",
+    "difficulty": "Medium",
+    "questionText": "What is a northbound API in a controller-based network?",
+    "options": [ "An interface used only for power cables", "A protocol for connecting switch stacking cables", "An interface through which applications or orchestration systems communicate with the controller", "An API exclusively used for Ethernet auto-negotiation" ],
+    "correctAnswerIndex": 2,
+    "explanation": "Northbound APIs expose controller capabilities to applications, automation tools or higher-level management platforms."
+  },
+  {
+    "id": 930,
+    "domain": "Automation and Programmability",
+    "subtopic": "Controller-Based Networking",
+    "difficulty": "Medium",
+    "questionText": "What is a southbound interface in a controller-based architecture?",
+    "options": [ "A mechanism for communication between a controller and managed network devices", "An Internet DNS record", "A console cable type", "A user authentication factor" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Southbound interfaces are used by controllers to communicate with network infrastructure and apply or collect information."
+  },
+  {
+    "id": 931,
+    "domain": "Automation and Programmability",
+    "subtopic": "Controller-Based Networking",
+    "difficulty": "Medium",
+    "questionText": "Which Cisco platform is associated with centralized campus network automation, assurance and policy management?",
+    "options": [ "Cisco Packet Tracer", "Cisco IOS ROMMON", "Cisco TFTP Client", "Cisco Catalyst Center" ],
+    "correctAnswerIndex": 3,
+    "explanation": "Cisco Catalyst Center provides controller-based capabilities for supported enterprise networks, including automation and assurance."
+  },
+  {
+    "id": 932,
+    "domain": "Automation and Programmability",
+    "subtopic": "Controller-Based Networking",
+    "difficulty": "Medium",
+    "questionText": "Which feature of a network controller helps administrators identify operational problems across managed devices?",
+    "options": [ "Disabling all device logs", "Centralized assurance and visibility", "Removing all interface counters", "Using only handwritten documentation" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Controller-based assurance combines device and network data to help identify performance and connectivity issues."
+  },
+  {
+    "id": 933,
+    "domain": "Automation and Programmability",
+    "subtopic": "Controller-Based Networking",
+    "difficulty": "Hard",
+    "questionText": "What does a logically centralized control model mean?",
+    "options": [ "The controller must be installed inside every endpoint", "There is no control information in the network", "Control functions are presented as a coordinated logical system even if implemented by multiple nodes", "Every forwarding switch shares one MAC address" ],
+    "correctAnswerIndex": 2,
+    "explanation": "Logical centralization describes coordinated network control without necessarily requiring one physical controller instance."
+  },
+  {
+    "id": 934,
+    "domain": "Automation and Programmability",
+    "subtopic": "Controller-Based Networking",
+    "difficulty": "Medium",
+    "questionText": "What is an underlay network in a controller-managed fabric design?",
+    "options": [ "The physical or routed transport infrastructure that provides connectivity between fabric nodes", "The user-facing application login screen", "A database of user passwords", "The encrypted application payload only" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The underlay provides the physical and IP transport connectivity supporting higher-level fabric or overlay services."
+  },
+  {
+    "id": 935,
+    "domain": "Automation and Programmability",
+    "subtopic": "Controller-Based Networking",
+    "difficulty": "Medium",
+    "questionText": "What is an overlay network?",
+    "options": [ "A replacement for all physical links", "A network that can operate without any transport connectivity", "A network made entirely from console connections", "A logical network built over an underlying transport network" ],
+    "correctAnswerIndex": 3,
+    "explanation": "An overlay provides logical connectivity and segmentation over the underlay, often using encapsulation."
+  },
+  {
+    "id": 936,
+    "domain": "Automation and Programmability",
+    "subtopic": "Controller-Based Networking",
+    "difficulty": "Hard",
+    "questionText": "Which statement best distinguishes a controller-based architecture from managing every router independently?",
+    "options": [ "Controller-based networks prohibit all routing", "A controller offers coordinated management and policy across multiple devices", "Traditional routers cannot use CLI commands", "A controller removes every possible point of failure" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Controller-based management can coordinate operations across a fleet, while device-by-device management generally requires more independent actions."
+  },
+  {
+    "id": 937,
+    "domain": "Automation and Programmability",
+    "subtopic": "Controller-Based Networking",
+    "difficulty": "Hard",
+    "questionText": "What design consideration helps improve availability when an important controller service fails?",
+    "options": [ "Disable backups and monitoring", "Use only one unmanaged device", "Implement supported redundancy and resilient controller deployment", "Assign the same physical MAC address to every switch" ],
+    "correctAnswerIndex": 2,
+    "explanation": "Controller redundancy, clustering and appropriate failure handling can improve service availability."
+  },
+  {
+    "id": 938,
+    "domain": "Automation and Programmability",
+    "subtopic": "Controller-Based Networking",
+    "difficulty": "Hard",
+    "questionText": "An application requests a new network policy through a controller API. What is a typical next step for the controller?",
+    "options": [ "Translate the requested policy into appropriate changes on managed infrastructure", "Physically replace every cable", "Erase all device configurations", "Change every client's hostname" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A controller can validate a policy request and coordinate changes across devices using its southbound management capabilities."
+  },
+  {
+    "id": 939,
+    "domain": "Automation and Programmability",
+    "subtopic": "Software-Defined Networking",
+    "difficulty": "Easy",
+    "questionText": "What does SDN stand for?",
+    "options": [ "Secure Device Naming", "Software-Defined Networking", "Static Domain Numbering", "Switched Data Negotiation" ],
+    "correctAnswerIndex": 1,
+    "explanation": "SDN stands for Software-Defined Networking, an architectural approach emphasizing programmable network control."
+  },
+  {
+    "id": 940,
+    "domain": "Automation and Programmability",
+    "subtopic": "Software-Defined Networking",
+    "difficulty": "Easy",
+    "questionText": "Which concept is central to many SDN architectures?",
+    "options": [ "Replacing Ethernet with only serial cables", "Eliminating all network policies", "Separating or abstracting network control from packet forwarding", "Removing the need for IP addresses" ],
+    "correctAnswerIndex": 2,
+    "explanation": "SDN architectures commonly separate or abstract control functions from forwarding behavior to enable programmability."
+  },
+  {
+    "id": 941,
+    "domain": "Automation and Programmability",
+    "subtopic": "Software-Defined Networking",
+    "difficulty": "Medium",
+    "questionText": "In a traditional distributed routing architecture, where are routing control processes commonly executed?",
+    "options": [ "On individual routers participating in routing protocols", "Only on end-user laptops", "Only inside a DNS server", "Only within a network management browser" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Traditional routers commonly run their own control-plane protocols and maintain local forwarding decisions."
+  },
+  {
+    "id": 942,
+    "domain": "Automation and Programmability",
+    "subtopic": "Software-Defined Networking",
+    "difficulty": "Medium",
+    "questionText": "Which capability is a typical motivation for adopting SDN?",
+    "options": [ "Making network changes less predictable", "Eliminating all physical network equipment", "Removing network monitoring", "Providing programmable control and more consistent policy deployment" ],
+    "correctAnswerIndex": 3,
+    "explanation": "SDN can improve programmability, policy consistency and centralized operational visibility."
+  },
+  {
+    "id": 943,
+    "domain": "Automation and Programmability",
+    "subtopic": "Software-Defined Networking",
+    "difficulty": "Medium",
+    "questionText": "Which protocol is historically associated with programming forwarding behavior on SDN switches?",
+    "options": [ "SMTP", "OpenFlow", "TFTP", "NTP" ],
+    "correctAnswerIndex": 1,
+    "explanation": "OpenFlow is an example of a southbound interface developed to let controllers program forwarding behavior."
+  },
+  {
+    "id": 944,
+    "domain": "Automation and Programmability",
+    "subtopic": "Software-Defined Networking",
+    "difficulty": "Medium",
+    "questionText": "Does every SDN deployment have to use OpenFlow?",
+    "options": [ "Yes, OpenFlow is mandatory for all SDN implementations", "Yes, but only for IPv6 networks", "No, SDN can use different controller and device communication mechanisms", "No, because SDN never communicates with forwarding devices" ],
+    "correctAnswerIndex": 2,
+    "explanation": "SDN is an architectural concept; different implementations use various protocols, APIs and management methods."
+  },
+  {
+    "id": 945,
+    "domain": "Automation and Programmability",
+    "subtopic": "Software-Defined Networking",
+    "difficulty": "Medium",
+    "questionText": "What is a programmable forwarding plane?",
+    "options": [ "A forwarding system whose packet-handling behavior can be configured using software-defined rules", "A router that cannot forward packets", "A network containing only wireless clients", "A switch with no management interface" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Programmable forwarding allows software or controllers to define supported traffic handling behavior."
+  },
+  {
+    "id": 946,
+    "domain": "Automation and Programmability",
+    "subtopic": "Software-Defined Networking",
+    "difficulty": "Hard",
+    "questionText": "An SDN controller loses connectivity to a forwarding device. What happens to existing traffic?",
+    "options": [ "All packets must always be dropped immediately", "Every client automatically receives a new MAC address", "The network automatically becomes an unmanaged wireless LAN", "Behavior depends on the device's previously installed forwarding state and failover design" ],
+    "correctAnswerIndex": 3,
+    "explanation": "Some devices continue using existing forwarding rules during controller disruption, while others depend on controller interactions or configured failover behavior."
+  },
+  {
+    "id": 947,
+    "domain": "Automation and Programmability",
+    "subtopic": "Software-Defined Networking",
+    "difficulty": "Medium",
+    "questionText": "What is a network policy in an SDN context?",
+    "options": [ "A physical cable standard only", "A rule expressing intended network access or traffic behavior", "A router's serial number", "A replacement for all cryptographic authentication" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Policies express intended behaviors such as access permissions, segmentation or traffic priorities."
+  },
+  {
+    "id": 948,
+    "domain": "Automation and Programmability",
+    "subtopic": "Software-Defined Networking",
+    "difficulty": "Medium",
+    "questionText": "How can SDN improve network segmentation?",
+    "options": [ "By requiring all devices to share a broadcast domain", "By removing every ACL", "By enabling centrally managed logical segmentation and policy enforcement", "By changing every IPv4 address into a hostname" ],
+    "correctAnswerIndex": 2,
+    "explanation": "SDN controllers can coordinate logical segmentation and associated access policies across supported infrastructure."
+  },
+  {
+    "id": 949,
+    "domain": "Automation and Programmability",
+    "subtopic": "Software-Defined Networking",
+    "difficulty": "Hard",
+    "questionText": "Which statement about SDN and physical networking is correct?",
+    "options": [ "SDN generally still relies on physical or virtual infrastructure to transport packets", "SDN eliminates the need for network links", "SDN requires all traffic to be broadcast", "SDN prevents the use of routing protocols" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Software-defined control does not eliminate the requirement for infrastructure that actually transports packets."
+  },
+  {
+    "id": 950,
+    "domain": "Automation and Programmability",
+    "subtopic": "Software-Defined Networking",
+    "difficulty": "Medium",
+    "questionText": "In a controller-based SDN design, what is a common role of an application using a northbound API?",
+    "options": [ "Provide power to network routers", "Negotiate copper wire pairs", "Elect the STP root bridge directly", "Request network services or policies from the controller" ],
+    "correctAnswerIndex": 3,
+    "explanation": "Applications use northbound interfaces to request services, policies or operational information from the controller."
+  },
+  {
+    "id": 951,
+    "domain": "Automation and Programmability",
+    "subtopic": "Software-Defined Networking",
+    "difficulty": "Hard",
+    "questionText": "Which operational risk should be considered when a controller can change the configuration of hundreds of devices?",
+    "options": [ "Automation prevents every mistake", "An incorrect centralized policy can affect many devices quickly", "No audit logging is possible", "Controllers cannot use authentication" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Centralized control increases operational reach, making validation, access control and rollback important."
+  },
+  {
+    "id": 952,
+    "domain": "Automation and Programmability",
+    "subtopic": "Software-Defined Networking",
+    "difficulty": "Medium",
+    "questionText": "Which statement best describes an SDN overlay?",
+    "options": [ "A fiber connector standard", "An NTP stratum level", "Logical connectivity or segmentation implemented over a transport underlay", "A TCP retransmission mechanism" ],
+    "correctAnswerIndex": 2,
+    "explanation": "An overlay uses the underlying network to carry logically separated traffic or tunnels."
+  },
+  {
+    "id": 953,
+    "domain": "Automation and Programmability",
+    "subtopic": "Software-Defined Networking",
+    "difficulty": "Hard",
+    "questionText": "Why is it useful for an SDN controller to expose a documented API?",
+    "options": [ "External tools can integrate with network control without relying only on manual device configuration", "The API automatically fixes damaged cables", "The controller no longer needs access controls", "The network can operate without forwarding tables" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A documented API supports repeatable integration, automation and management workflows."
+  },
+  {
+    "id": 954,
+    "domain": "Automation and Programmability",
+    "subtopic": "REST APIs",
+    "difficulty": "Easy",
+    "questionText": "What does API stand for?",
+    "options": [ "Automated Packet Inspection", "Application Programming Interface", "Address Protocol Identifier", "Advanced Port Installation" ],
+    "correctAnswerIndex": 1,
+    "explanation": "An Application Programming Interface defines how software components exchange requests, responses and data."
+  },
+  {
+    "id": 955,
+    "domain": "Automation and Programmability",
+    "subtopic": "REST APIs",
+    "difficulty": "Easy",
+    "questionText": "What does REST stand for?",
+    "options": [ "Routing Ethernet Security Transport", "Remote Execution Service Tunnel", "Representational State Transfer", "Reliable Endpoint Switching Technology" ],
+    "correctAnswerIndex": 2,
+    "explanation": "Representational State Transfer is an architectural style frequently used in web APIs."
+  },
+  {
+    "id": 956,
+    "domain": "Automation and Programmability",
+    "subtopic": "REST APIs",
+    "difficulty": "Easy",
+    "questionText": "Which protocol is commonly used to exchange requests and responses with a REST API?",
+    "options": [ "HTTP", "STP", "ARP", "LACP" ],
+    "correctAnswerIndex": 0,
+    "explanation": "REST APIs commonly use HTTP methods and response status codes to access and manipulate resources."
+  },
+  {
+    "id": 957,
+    "domain": "Automation and Programmability",
+    "subtopic": "REST APIs",
+    "difficulty": "Easy",
+    "questionText": "Which HTTP method is normally used to retrieve a resource without requesting a modification?",
+    "options": [ "POST", "DELETE", "PATCH", "GET" ],
+    "correctAnswerIndex": 3,
+    "explanation": "GET requests retrieve a representation of a resource and are defined as safe operations."
+  },
+  {
+    "id": 958,
+    "domain": "Automation and Programmability",
+    "subtopic": "REST APIs",
+    "difficulty": "Easy",
+    "questionText": "Which HTTP method is commonly used to submit data for creation or server-side processing?",
+    "options": [ "GET", "POST", "HEAD", "OPTIONS" ],
+    "correctAnswerIndex": 1,
+    "explanation": "POST submits a representation to a resource, commonly causing resource creation or other processing."
+  },
+  {
+    "id": 959,
+    "domain": "Automation and Programmability",
+    "subtopic": "REST APIs",
+    "difficulty": "Medium",
+    "questionText": "Which HTTP method is commonly associated with replacing the representation of an identified resource?",
+    "options": [ "TRACE", "CONNECT", "PUT", "GET" ],
+    "correctAnswerIndex": 2,
+    "explanation": "PUT requests create or replace the state of the identified resource according to the API contract."
+  },
+  {
+    "id": 960,
+    "domain": "Automation and Programmability",
+    "subtopic": "REST APIs",
+    "difficulty": "Medium",
+    "questionText": "Which HTTP method is commonly used for a partial modification of a resource?",
+    "options": [ "PATCH", "GET", "HEAD", "OPTIONS" ],
+    "correctAnswerIndex": 0,
+    "explanation": "PATCH applies a set of changes to an existing resource, with details defined by the patch format and API."
+  },
+  {
+    "id": 961,
+    "domain": "Automation and Programmability",
+    "subtopic": "REST APIs",
+    "difficulty": "Easy",
+    "questionText": "Which HTTP method requests removal of a specified resource?",
+    "options": [ "GET", "POST", "PUT", "DELETE" ],
+    "correctAnswerIndex": 3,
+    "explanation": "DELETE requests that the server remove the association or resource identified by the request target."
+  },
+  {
+    "id": 962,
+    "domain": "Automation and Programmability",
+    "subtopic": "REST APIs",
+    "difficulty": "Medium",
+    "questionText": "What does HTTP status code 200 normally indicate?",
+    "options": [ "Authentication is required", "The request succeeded", "The resource was not found", "The server encountered an internal error" ],
+    "correctAnswerIndex": 1,
+    "explanation": "200 OK is a success response indicating that the request was handled successfully."
+  },
+  {
+    "id": 963,
+    "domain": "Automation and Programmability",
+    "subtopic": "REST APIs",
+    "difficulty": "Medium",
+    "questionText": "What does HTTP status code 201 normally indicate?",
+    "options": [ "The request has an invalid syntax", "The server is unavailable", "A resource was created successfully", "The requested resource is forbidden" ],
+    "correctAnswerIndex": 2,
+    "explanation": "201 Created indicates successful processing that resulted in one or more new resources."
+  },
+  {
+    "id": 964,
+    "domain": "Automation and Programmability",
+    "subtopic": "REST APIs",
+    "difficulty": "Medium",
+    "questionText": "What does HTTP status code 204 mean?",
+    "options": [ "The request succeeded and no response body is returned", "The server requires authentication", "The resource moved permanently", "The request timed out at the gateway" ],
+    "correctAnswerIndex": 0,
+    "explanation": "204 No Content indicates successful handling without response content."
+  },
+  {
+    "id": 965,
+    "domain": "Automation and Programmability",
+    "subtopic": "REST APIs",
+    "difficulty": "Medium",
+    "questionText": "Which status code commonly means that a client request is malformed?",
+    "options": [ "200", "201", "503", "400" ],
+    "correctAnswerIndex": 3,
+    "explanation": "400 Bad Request indicates that the server cannot or will not process a request because of a perceived client error."
+  },
+  {
+    "id": 966,
+    "domain": "Automation and Programmability",
+    "subtopic": "REST APIs",
+    "difficulty": "Medium",
+    "questionText": "What does HTTP status code 401 generally indicate?",
+    "options": [ "A resource was created", "The request lacks valid authentication credentials", "The server is working normally and returned data", "The network cable is disconnected" ],
+    "correctAnswerIndex": 1,
+    "explanation": "401 Unauthorized is used for requests lacking valid authentication credentials for the target resource."
+  },
+  {
+    "id": 967,
+    "domain": "Automation and Programmability",
+    "subtopic": "REST APIs",
+    "difficulty": "Medium",
+    "questionText": "What does HTTP status code 403 usually indicate?",
+    "options": [ "A successful creation", "A successful deletion", "The server understands the request but refuses to authorize it", "The requested URL redirected permanently" ],
+    "correctAnswerIndex": 2,
+    "explanation": "403 Forbidden indicates that the server refuses to fulfill the request, commonly for permission reasons."
+  },
+  {
+    "id": 968,
+    "domain": "Automation and Programmability",
+    "subtopic": "REST APIs",
+    "difficulty": "Medium",
+    "questionText": "What does HTTP status code 404 normally indicate?",
+    "options": [ "The requested resource was not found", "The request succeeded", "The server created a resource", "The client successfully authenticated" ],
+    "correctAnswerIndex": 0,
+    "explanation": "404 Not Found indicates that the server cannot find a current representation of the target resource."
+  },
+  {
+    "id": 969,
+    "domain": "Automation and Programmability",
+    "subtopic": "REST APIs",
+    "difficulty": "Medium",
+    "questionText": "What does HTTP status code 500 generally indicate?",
+    "options": [ "An HTTP redirect", "A valid authentication response", "A client-side success", "An internal server error" ],
+    "correctAnswerIndex": 3,
+    "explanation": "500 Internal Server Error indicates that the server encountered an unexpected condition while fulfilling a request."
+  },
+  {
+    "id": 970,
+    "domain": "Automation and Programmability",
+    "subtopic": "REST APIs",
+    "difficulty": "Medium",
+    "questionText": "Which HTTP request header normally identifies the media type of a JSON request body?",
+    "options": [ "Authorization: application/json", "Content-Type: application/json", "Accept: text/html only", "Host: application/json" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Content-Type: application/json specifies that the request content is represented as JSON."
+  },
+  {
+    "id": 971,
+    "domain": "Automation and Programmability",
+    "subtopic": "REST APIs",
+    "difficulty": "Medium",
+    "questionText": "What does the HTTP Accept header communicate?",
+    "options": [ "The client's switch MAC address", "The destination router's OSPF cost", "The response media types acceptable to the client", "The physical link speed" ],
+    "correctAnswerIndex": 2,
+    "explanation": "The Accept header lets a client express which response media types it can process."
+  },
+  {
+    "id": 972,
+    "domain": "Automation and Programmability",
+    "subtopic": "REST APIs",
+    "difficulty": "Hard",
+    "questionText": "What does statelessness mean in REST?",
+    "options": [ "Each client request contains the information required for the server to process it without relying on stored client session context", "A REST API can never store any resources", "HTTP responses cannot contain status codes", "Authentication is not permitted" ],
+    "correctAnswerIndex": 0,
+    "explanation": "REST's stateless constraint means individual requests must contain the context necessary for processing; the server may still store application resource state."
+  },
+  {
+    "id": 973,
+    "domain": "Automation and Programmability",
+    "subtopic": "REST APIs",
+    "difficulty": "Hard",
+    "questionText": "A network API returns HTTP 429 after many rapid requests. What is the most appropriate client response?",
+    "options": [ "Send requests continuously without delay", "Assume the device has an invalid MAC address", "Disable HTTPS authentication", "Respect rate limiting and retry according to the API guidance" ],
+    "correctAnswerIndex": 3,
+    "explanation": "429 Too Many Requests signals rate limiting. Clients should back off and respect Retry-After or other documented guidance."
+  },
+  {
+    "id": 974,
+    "domain": "Automation and Programmability",
+    "subtopic": "JSON Data Formats",
+    "difficulty": "Easy",
+    "questionText": "What does JSON stand for?",
+    "options": [ "JavaScript Object Notation", "Java Standard Output Network", "Joined System Object Naming", "Java Security Operations Node" ],
+    "correctAnswerIndex": 0,
+    "explanation": "JSON stands for JavaScript Object Notation, a lightweight structured data interchange format."
+  },
+  {
+    "id": 975,
+    "domain": "Automation and Programmability",
+    "subtopic": "JSON Data Formats",
+    "difficulty": "Easy",
+    "questionText": "Which character pair surrounds a JSON object?",
+    "options": [ "Square brackets [ ]", "Curly braces { }", "Parentheses ( )", "Angle brackets" ],
+    "correctAnswerIndex": 1,
+    "explanation": "A JSON object is enclosed in curly braces and contains comma-separated name/value members."
+  },
+  {
+    "id": 976,
+    "domain": "Automation and Programmability",
+    "subtopic": "JSON Data Formats",
+    "difficulty": "Easy",
+    "questionText": "Which character pair surrounds a JSON array?",
+    "options": [ "Curly braces", "Parentheses", "Square brackets [ ]", "Quotation marks" ],
+    "correctAnswerIndex": 2,
+    "explanation": "A JSON array is enclosed in square brackets and contains an ordered sequence of values."
+  },
+  {
+    "id": 977,
+    "domain": "Automation and Programmability",
+    "subtopic": "JSON Data Formats",
+    "difficulty": "Easy",
+    "questionText": "Which symbol separates a JSON object member's name from its value?",
+    "options": [ "Semicolon", "Equals sign", "Hyphen", "Colon" ],
+    "correctAnswerIndex": 3,
+    "explanation": "JSON object members use a colon between the quoted property name and its value."
+  },
+  {
+    "id": 978,
+    "domain": "Automation and Programmability",
+    "subtopic": "JSON Data Formats",
+    "difficulty": "Medium",
+    "questionText": "Which example is a valid JSON object?",
+    "options": [ "{\"hostname\":\"R1\",\"enabled\":true}", "{hostname:'R1',enabled:True}", "{'hostname':'R1'}", "{\"hostname\":\"R1\",}" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Valid JSON uses double-quoted property names and string values, lowercase true/false and no trailing commas."
+  },
+  {
+    "id": 979,
+    "domain": "Automation and Programmability",
+    "subtopic": "JSON Data Formats",
+    "difficulty": "Medium",
+    "questionText": "Which values are valid JSON Boolean literals?",
+    "options": [
+      "True and False",
+      "true and false",
+      "YES and NO",
+      "On and Off"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "JSON Boolean values are written as lowercase true or false, without quotation marks."
+  },
+  {
+    "id": 980,
+    "domain": "Automation and Programmability",
+    "subtopic": "JSON Data Formats",
+    "difficulty": "Medium",
+    "questionText": "Which JSON literal represents the absence of a value?",
+    "options": [ "undefined", "None", "null", "empty" ],
+    "correctAnswerIndex": 2,
+    "explanation": "The JSON literal null represents a null value. undefined and None are not JSON literals."
+  },
+  {
+    "id": 981,
+    "domain": "Automation and Programmability",
+    "subtopic": "JSON Data Formats",
+    "difficulty": "Medium",
+    "questionText": "Consider JSON '{\"ports\":[\"Gi0/1\",\"Gi0/2\"]}'. What is the value of the ports property?",
+    "options": [ "An array containing two strings", "A Boolean value", "A single numeric value", "A null value" ],
+    "correctAnswerIndex": 0,
+    "explanation": "The ports property contains a JSON array with two string elements."
+  },
+  {
+    "id": 982,
+    "domain": "Automation and Programmability",
+    "subtopic": "JSON Data Formats",
+    "difficulty": "Medium",
+    "questionText": "Given JSON '{\"device\":{\"hostname\":\"SW1\",\"vlan\":10}}', what is the value of device.hostname?",
+    "options": [ "10", "device", "vlan", "SW1" ],
+    "correctAnswerIndex": 3,
+    "explanation": "The device property contains a nested object whose hostname property has string value SW1."
+  },
+  {
+    "id": 983,
+    "domain": "Automation and Programmability",
+    "subtopic": "JSON Data Formats",
+    "difficulty": "Medium",
+    "questionText": "How are strings represented in JSON?",
+    "options": [ "Only inside single quotation marks", "Inside double quotation marks", "Without quotation marks", "Only inside square brackets" ],
+    "correctAnswerIndex": 1,
+    "explanation": "JSON strings use double quotation marks, with escaping rules for special characters."
+  },
+  {
+    "id": 984,
+    "domain": "Automation and Programmability",
+    "subtopic": "JSON Data Formats",
+    "difficulty": "Medium",
+    "questionText": "Which JSON value is a number rather than a string?",
+    "options": [ "\"42\"", "\"10.5\"", "42", "\"0\"" ],
+    "correctAnswerIndex": 2,
+    "explanation": "A JSON number is not enclosed in quotes. A quoted sequence such as \"42\" is a string."
+  },
+  {
+    "id": 985,
+    "domain": "Automation and Programmability",
+    "subtopic": "JSON Data Formats",
+    "difficulty": "Hard",
+    "questionText": "Why is '{\"interfaces\":[\"Gi0/0\",]}' not valid JSON?",
+    "options": [ "JSON arrays do not permit trailing commas", "The object contains a string", "JSON does not support arrays", "The property name is double-quoted" ],
+    "correctAnswerIndex": 0,
+    "explanation": "JSON does not allow a comma after the final element in an array or object."
+  },
+  {
+    "id": 986,
+    "domain": "Automation and Programmability",
+    "subtopic": "JSON Data Formats",
+    "difficulty": "Hard",
+    "questionText": "Given JSON '{\"interfaces\":[{\"name\":\"Gi0/0\",\"up\":true},{\"name\":\"Gi0/1\",\"up\":false}]}', which interface has up equal to false?",
+    "options": [ "Both interfaces", "Neither interface", "Gi0/0", "Gi0/1" ],
+    "correctAnswerIndex": 3,
+    "explanation": "The second object in the interfaces array contains name Gi0/1 and Boolean up set to false."
+  },
+  {
+    "id": 987,
+    "domain": "Automation and Programmability",
+    "subtopic": "JSON Data Formats",
+    "difficulty": "Hard",
+    "questionText": "What is wrong with the JSON text '{\"ip\":\"192.0.2.1\" // router address}'?",
+    "options": [ "JSON cannot contain IP addresses", "Standard JSON does not support comments", "JSON property names cannot be strings", "A JSON object must always contain an array" ],
+    "correctAnswerIndex": 1,
+    "explanation": "JSON syntax does not support // or /* */ comments."
+  },
+  {
+    "id": 988,
+    "domain": "Automation and Programmability",
+    "subtopic": "JSON Data Formats",
+    "difficulty": "Hard",
+    "questionText": "A REST API responds with '{\"status\":\"ok\",\"count\":3,\"items\":[]}'. Which interpretation is correct?",
+    "options": [ "count is a string and items is an object", "status is a Boolean and items is null", "status is a string, count is a number and items is an empty array", "All three values are numbers" ],
+    "correctAnswerIndex": 2,
+    "explanation": "The object contains a string, a numeric value and an array with no elements."
+  },
+  {
+    "id": 989,
+    "domain": "Automation and Programmability",
+    "subtopic": "Configuration Management",
+    "difficulty": "Easy",
+    "questionText": "What is the main purpose of a configuration management tool in networking?",
+    "options": [ "Physically repair switch interfaces", "Replace the need for network addressing", "Provide guaranteed unlimited bandwidth", "Define, deploy and maintain intended device configurations" ],
+    "correctAnswerIndex": 3,
+    "explanation": "Configuration management tools help apply and maintain consistent desired settings across managed devices."
+  },
+  {
+    "id": 990,
+    "domain": "Automation and Programmability",
+    "subtopic": "Configuration Management",
+    "difficulty": "Easy",
+    "questionText": "Which tool commonly uses YAML playbooks to automate configuration tasks?",
+    "options": [ "Ansible", "Wireshark", "Nmap", "TFTP" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Ansible uses YAML playbooks to define automation tasks and configuration operations."
+  },
+  {
+    "id": 991,
+    "domain": "Automation and Programmability",
+    "subtopic": "Configuration Management",
+    "difficulty": "Medium",
+    "questionText": "Which statement correctly describes the common network automation approach used by Ansible?",
+    "options": [ "It requires a permanently installed agent on every router in all cases", "It is commonly agentless and can use SSH or supported network APIs", "It operates only over Ethernet broadcasts", "It can only configure Linux desktop computers" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Ansible commonly works without requiring an agent installed on managed network devices, using supported transport connections or APIs."
+  },
+  {
+    "id": 992,
+    "domain": "Automation and Programmability",
+    "subtopic": "Configuration Management",
+    "difficulty": "Medium",
+    "questionText": "What is an Ansible inventory?",
+    "options": [ "A list of physical Ethernet cable lengths only", "A table containing only DNS MX records", "A definition of managed hosts and optionally their groups and variables", "A record of packets dropped by STP" ],
+    "correctAnswerIndex": 2,
+    "explanation": "An Ansible inventory identifies targets for automation and can organize them into groups with associated variables."
+  },
+  {
+    "id": 993,
+    "domain": "Automation and Programmability",
+    "subtopic": "Configuration Management",
+    "difficulty": "Medium",
+    "questionText": "Which data format is most commonly associated with Ansible playbooks?",
+    "options": [ "YAML", "JPEG", "PCAP", "MP3" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Ansible playbooks are generally written in YAML, a human-readable structured data format."
+  },
+  {
+    "id": 994,
+    "domain": "Automation and Programmability",
+    "subtopic": "Configuration Management",
+    "difficulty": "Medium",
+    "questionText": "Which tool is widely associated with infrastructure as code and declarative resource provisioning?",
+    "options": [ "CDP", "PAgP", "Syslog", "Terraform" ],
+    "correctAnswerIndex": 3,
+    "explanation": "Terraform is an infrastructure-as-code tool that manages resources through declarative configuration and provider integrations."
+  },
+  {
+    "id": 995,
+    "domain": "Automation and Programmability",
+    "subtopic": "Configuration Management",
+    "difficulty": "Medium",
+    "questionText": "What is meant by declarative configuration management?",
+    "options": [ "Every command must be typed interactively", "The desired end state is specified and the tool determines the actions to reach it", "The tool is forbidden from reading current state", "Only physical interface installation is automated" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Declarative systems describe the desired state, allowing tooling to plan or apply the necessary changes."
+  },
+  {
+    "id": 996,
+    "domain": "Automation and Programmability",
+    "subtopic": "Configuration Management",
+    "difficulty": "Hard",
+    "questionText": "A configuration management tool reports that a switch already meets the desired VLAN configuration. What result is most consistent with idempotent operation?",
+    "options": [ "Delete the VLAN and recreate it during every run", "Disable the management interface", "Report no change required", "Generate a random replacement VLAN ID" ],
+    "correctAnswerIndex": 2,
+    "explanation": "An idempotent configuration operation does not need to alter a compliant device."
+  },
+  {
+    "id": 997,
+    "domain": "Automation and Programmability",
+    "subtopic": "Configuration Management",
+    "difficulty": "Hard",
+    "questionText": "Why is a dry run or plan useful before applying infrastructure automation changes?",
+    "options": [ "It helps review intended actions and identify unexpected changes", "It guarantees no device can fail afterward", "It removes the need for permissions", "It always writes configuration changes immediately" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A supported planning or check mode can show proposed changes before execution, supporting safer review."
+  },
+  {
+    "id": 998,
+    "domain": "Automation and Programmability",
+    "subtopic": "Configuration Management",
+    "difficulty": "Hard",
+    "questionText": "An automation system stores device configurations in Git but administrators routinely make undocumented CLI changes. Which improvement best addresses configuration drift?",
+    "options": [ "Ignore live configurations", "Delete all configuration history", "Disable network monitoring", "Regularly compare deployed state with the version-controlled intended state" ],
+    "correctAnswerIndex": 3,
+    "explanation": "Detecting differences between live settings and approved configuration definitions helps identify and correct drift."
+  },
+  {
+    "id": 999,
+    "domain": "Automation and Programmability",
+    "subtopic": "AI & Machine Learning in Networking",
+    "difficulty": "Easy",
+    "questionText": "What is machine learning?",
+    "options": [ "A process that requires all routing decisions to be entered manually", "A field in which models learn patterns from data for predictions or decisions", "A method of physically rewiring switches", "A replacement for Ethernet framing" ],
+    "correctAnswerIndex": 1,
+    "explanation": "Machine learning uses data to develop models that can identify patterns, make predictions or support decisions."
+  },
+  {
+    "id": 1000,
+    "domain": "Automation and Programmability",
+    "subtopic": "AI & Machine Learning in Networking",
+    "difficulty": "Easy",
+    "questionText": "Which is a possible use of machine learning in network operations?",
+    "options": [ "Replacing all fiber-optic transceivers automatically", "Eliminating the need for an IP address", "Detecting unusual traffic patterns that may indicate an operational problem", "Making every router use a different Ethernet standard" ],
+    "correctAnswerIndex": 2,
+    "explanation": "Machine learning can help identify anomalous behavior in network telemetry and assist operational investigations."
+  },
+  {
+    "id": 1001,
+    "domain": "Automation and Programmability",
+    "subtopic": "AI & Machine Learning in Networking",
+    "difficulty": "Medium",
+    "questionText": "What is anomaly detection in network monitoring?",
+    "options": [ "Identifying behavior that differs significantly from expected patterns", "Assigning VLAN IDs alphabetically", "Encrypting every DHCP lease", "Changing all routing metrics to one" ],
+    "correctAnswerIndex": 0,
+    "explanation": "Anomaly detection identifies departures from normal behavior, such as unexpected traffic spikes or changes in performance metrics."
+  },
+  {
+    "id": 1002,
+    "domain": "Automation and Programmability",
+    "subtopic": "AI & Machine Learning in Networking",
+    "difficulty": "Medium",
+    "questionText": "Which input data is especially useful for an AI-assisted network performance monitoring system?",
+    "options": [ "Only router chassis color", "Only employee surnames", "Only Ethernet cable labels", "Interface counters, telemetry, logs and performance measurements" ],
+    "correctAnswerIndex": 3,
+    "explanation": "Operational measurements such as utilization, errors, latency and device events provide useful data for analysis."
+  },
+  {
+    "id": 1003,
+    "domain": "Automation and Programmability",
+    "subtopic": "AI & Machine Learning in Networking",
+    "difficulty": "Medium",
+    "questionText": "How can AI-assisted analytics improve troubleshooting?",
+    "options": [ "By guaranteeing every prediction is correct", "By correlating telemetry and highlighting likely causes for investigation", "By removing the need to verify changes", "By automatically replacing damaged cables" ],
+    "correctAnswerIndex": 1,
+    "explanation": "AI-assisted analysis can correlate large volumes of network data and suggest likely issues, but results still require validation."
+  },
+  {
+    "id": 1004,
+    "domain": "Automation and Programmability",
+    "subtopic": "AI & Machine Learning in Networking",
+    "difficulty": "Medium",
+    "questionText": "What is a false positive in network anomaly detection?",
+    "options": [ "A real attack that the system fails to detect", "A completed configuration backup", "Normal behavior incorrectly flagged as suspicious", "A packet with a correct checksum" ],
+    "correctAnswerIndex": 2,
+    "explanation": "A false positive occurs when the system raises an alert for activity that is actually benign or expected."
+  },
+  {
+    "id": 1005,
+    "domain": "Automation and Programmability",
+    "subtopic": "AI & Machine Learning in Networking",
+    "difficulty": "Medium",
+    "questionText": "What is a false negative in network security detection?",
+    "options": [ "A genuine harmful event that is not detected", "Normal traffic correctly classified as normal", "A harmless event flagged as an attack", "An interface operating at negotiated speed" ],
+    "correctAnswerIndex": 0,
+    "explanation": "A false negative occurs when an actual problem or attack goes undetected."
+  },
+  {
+    "id": 1006,
+    "domain": "Automation and Programmability",
+    "subtopic": "AI & Machine Learning in Networking",
+    "difficulty": "Hard",
+    "questionText": "Why is training data quality important for machine learning systems in networking?",
+    "options": [ "Poor data automatically increases available bandwidth", "Machine learning never uses historical data", "Training data determines Ethernet connector type", "Incomplete or unrepresentative data can produce unreliable predictions" ],
+    "correctAnswerIndex": 3,
+    "explanation": "Model quality depends partly on the accuracy, relevance and representativeness of training data."
+  },
+  {
+    "id": 1007,
+    "domain": "Automation and Programmability",
+    "subtopic": "AI & Machine Learning in Networking",
+    "difficulty": "Hard",
+    "questionText": "What is a major operational risk of automatically applying every AI-generated network configuration recommendation without review?",
+    "options": [ "All recommendations are guaranteed harmless", "Incorrect recommendations may create outages or security exposure", "AI automatically disables network access control", "Automation cannot change router settings" ],
+    "correctAnswerIndex": 1,
+    "explanation": "AI-generated recommendations can be incorrect or incomplete, so verification, policy controls and rollback planning are important."
+  },
+  {
+    "id": 1008,
+    "domain": "Automation and Programmability",
+    "subtopic": "AI & Machine Learning in Networking",
+    "difficulty": "Hard",
+    "questionText": "Which approach best combines AI-assisted operations with safe network change management?",
+    "options": [ "Apply every AI suggestion to production immediately", "Remove all logs after an AI recommendation", "Use AI to identify possible issues, then validate proposed changes before controlled deployment", "Allow unauthenticated users to approve device configuration changes" ],
+    "correctAnswerIndex": 2,
+    "explanation": "AI can assist analysis and recommendations, while validation and controlled deployment help protect production networks."
+  }
+]
